@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>WORLD//STATE · Live Geopolitical Engine</title>
   <link rel="stylesheet" href="./styles-v2.css">
+  <style>
+    .autonomy-strip{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 14px}.autonomy-strip span{padding:7px 10px;border:1px solid var(--line);background:var(--panel);border-radius:9px;font-size:12px}.autostats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:7px}.autostats>div,.depgrid>div{border:1px solid var(--line);background:rgba(255,255,255,.025);border-radius:9px;padding:9px}.autostats b,.depgrid b{display:block;font-size:20px}.autostats span,.depgrid span,.depgrid small{font-size:11px;color:var(--muted)}.autolist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;margin-top:9px}.autoedge{border-top:1px solid var(--line);padding:7px 0}.autoedge b,.autoedge span{display:block}.autoedge span{font-size:11px;color:var(--muted)}.depgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.braincard{border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:8px;background:rgba(255,255,255,.02)}.brainweights{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}.brainweights span{font-size:11px;border:1px solid var(--line);padding:4px 6px;border-radius:7px}.brainmoves>div{margin-top:7px;padding-top:7px;border-top:1px solid var(--line);font-size:12px}.brainmoves span{color:var(--muted)}@media(max-width:720px){.autostats{grid-template-columns:repeat(2,1fr)}.autolist,.depgrid{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
 <div id="app" class="app">
@@ -12,7 +15,7 @@
     <div>
       <div class="ey">WORLD//STATE · LIVE GEOPOLITICAL ENGINE</div>
       <h1>MAPA DEL <span>DESASTRE</span></h1>
-      <div class="muted">News memory + bilateral vectors + GearWatch causal pressure + political calendar + autonomous country bots + playable fork.</div>
+      <div class="muted">News memory + auto-edge discovery + real dependencies + GearWatch causal pressure + political calendar + autonomous country brains + playable fork.</div>
     </div>
     <div class="toolbar">
       <button id="liveBtn" class="btn primary live active">● LIVE WORLD</button>
@@ -20,6 +23,8 @@
       <button id="refreshBtn" class="btn">↻ Refresh</button>
     </div>
   </header>
+
+  <div id="autonomyStatus" class="autonomy-strip"><span>EDGE DISCOVERY <b>—</b></span><span>COMTRADE <b>—</b></span><span>COUNTRY BRAINS <b>—</b></span></div>
 
   <section class="kpis">
     <div class="kpi"><div class="small muted">GLOBAL RISK</div><b id="riskKpi">—</b></div>
@@ -33,30 +38,15 @@
   <div class="layout">
     <main class="card mapcard">
       <div class="row" style="justify-content:space-between;margin-bottom:8px">
-        <div>
-          <div class="ey">Strategic world viewer</div>
-          <h2 style="margin:3px 0">Layer: <span id="layerName">overall</span></h2>
-        </div>
-        <div class="toolbar">
-          <button id="zoomIn" class="btn">+</button><button id="zoomOut" class="btn">−</button><button id="zoomReset" class="btn">World</button>
-        </div>
+        <div><div class="ey">Strategic world viewer</div><h2 style="margin:3px 0">Layer: <span id="layerName">overall</span></h2></div>
+        <div class="toolbar"><button id="zoomIn" class="btn">+</button><button id="zoomOut" class="btn">−</button><button id="zoomReset" class="btn">World</button></div>
       </div>
       <div class="mapwrap">
         <svg id="worldMap" viewBox="0 0 1200 680" aria-label="Mapa estratégico mundial"></svg>
-        <div class="maphud">
-          <span class="chip"><span class="statusdot"></span><span id="modeText">LIVE WORLD</span></span>
-          <span class="chip" id="updatedChip">Updating…</span>
-          <span class="chip">click country / arc</span><span class="chip">wheel + drag</span>
-        </div>
+        <div class="maphud"><span class="chip"><span class="statusdot"></span><span id="modeText">LIVE WORLD</span></span><span class="chip" id="updatedChip">Updating…</span><span class="chip">click country / arc</span><span class="chip">wheel + drag</span></div>
       </div>
       <div class="toolbar" style="margin-top:8px">
-        <button class="btn layer active" data-layer="score">⚡ Overall</button>
-        <button class="btn layer" data-layer="military">🛡 Military</button>
-        <button class="btn layer" data-layer="territorial">◆ Territorial</button>
-        <button class="btn layer" data-layer="energy">◈ Energy</button>
-        <button class="btn layer" data-layer="trade">⇄ Trade</button>
-        <button class="btn layer" data-layer="diplomatic">◎ Diplomatic</button>
-        <button class="btn layer" data-layer="domestic">◉ Domestic</button>
+        <button class="btn layer active" data-layer="score">⚡ Overall</button><button class="btn layer" data-layer="military">🛡 Military</button><button class="btn layer" data-layer="territorial">◆ Territorial</button><button class="btn layer" data-layer="energy">◈ Energy</button><button class="btn layer" data-layer="trade">⇄ Trade</button><button class="btn layer" data-layer="diplomatic">◎ Diplomatic</button><button class="btn layer" data-layer="domestic">◉ Domestic</button>
       </div>
       <div class="legend"><span>edge width = pressure on selected layer</span><span>country = hottest active front</span><span>diamond = chokepoint stress</span></div>
     </main>
@@ -65,19 +55,16 @@
       <section class="card">
         <div class="ey">Selected bilateral relationship</div>
         <div class="fronthead"><div><h2 id="frontTitle" style="margin:5px 0">Select a front</h2><div id="frontTrend" class="small muted">—</div></div><div id="frontScore" class="score">—</div></div>
-        <p id="frontSummary" class="muted"></p>
-        <div id="frontDomains" class="domain"></div>
-        <div class="ey" style="margin-top:12px">Tension vector</div>
-        <div id="vectors" class="vectors"></div>
-        <div class="ey" style="margin-top:12px;color:var(--green)">Escalation restraints</div>
-        <div id="restraints" class="restraints"></div>
-        <div class="ey" style="margin-top:12px">Why this score</div>
-        <div id="drivers" class="small"></div>
-        <div id="pairGear" class="domain" style="margin-top:8px"></div>
+        <p id="frontSummary" class="muted"></p><div id="frontDomains" class="domain"></div>
+        <div class="ey" style="margin-top:12px">Tension vector</div><div id="vectors" class="vectors"></div>
+        <div class="ey" style="margin-top:12px;color:var(--green)">Escalation restraints</div><div id="restraints" class="restraints"></div>
+        <div class="ey" style="margin-top:12px">Real dependency graph</div><div id="dependencies"><span class="muted small">Waiting for dependency cache…</span></div>
+        <div class="ey" style="margin-top:12px">Why this score</div><div id="drivers" class="small"></div><div id="pairGear" class="domain" style="margin-top:8px"></div>
         <div class="simonly" style="margin-top:12px"><div class="ey">Player action</div><div id="actions" class="actiongrid"></div></div>
       </section>
 
       <section class="card liveonly"><div class="ey">Country bots</div><h3 style="margin:4px 0">Strategic options inferred for this front</h3><div id="botMoves" class="bots muted small"></div></section>
+      <section class="card"><div class="ey">Country Brain</div><div id="brainMeta" class="small muted">Waiting for autonomous strategy layer…</div><div id="countryBrain"></div></section>
       <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Disaster ranking</div><h3 style="margin:3px 0">Hottest relations</h3></div><div class="small muted">selected layer</div></div><div id="ranking" class="ranking"></div></section>
       <section class="card"><div class="ey">Evidence feed</div><h3 style="margin:4px 0">Relevant news attached to this relationship</h3><div id="news" class="news small muted"></div></section>
       <section class="card simonly"><div class="row" style="justify-content:space-between"><div><div class="ey">Fork timeline</div><h3 id="simDate" style="margin:4px 0">—</h3></div><button id="nextTurn" class="btn primary">Resolve week →</button></div><div id="simLog" class="log small muted"></div></section>
@@ -86,11 +73,10 @@
 
   <section class="lower">
     <div class="lowerleft">
+      <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Autonomous relation graph</div><h2 style="margin:4px 0">What relationships matter today?</h2></div><div class="pill">AUTO-EDGE DISCOVERY</div></div><div id="autoGraph"><div class="muted">Waiting for the discovery cycle…</div></div></section>
       <section class="card">
         <div class="row" style="justify-content:space-between"><div><div class="ey">GearWatch causal layer</div><h2 id="gearHeadline" style="margin:4px 0">Causal mechanisms</h2></div><div class="pill">GearWatch → WORLD//STATE</div></div>
-        <p id="gearBrief" class="muted"></p>
-        <div id="causalPulse" class="causalpulse"><b>Click a GearWatch mechanism.</b> See which bilateral fronts and chokepoints it pressures.</div>
-        <div id="gearBoard" class="gearboard" style="margin-top:9px"></div>
+        <p id="gearBrief" class="muted"></p><div id="causalPulse" class="causalpulse"><b>Click a GearWatch mechanism.</b> See which bilateral fronts and chokepoints it pressures.</div><div id="gearBoard" class="gearboard" style="margin-top:9px"></div>
       </section>
       <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Strategic chokepoints</div><h3 style="margin:3px 0">Where geopolitics becomes physics</h3></div><div class="small muted">tension + GearWatch pressure</div></div><div id="chokes" class="chokes"></div></section>
     </div>
@@ -102,9 +88,10 @@
     </div>
   </section>
 
-  <footer class="footer">LIVE uses public news signals, a relevance quality gate, verified political dates, stored historical memory and GearWatch causal outputs. FORK / PLAY creates a fictional branch. All scores are research/simulation indices — not probabilities, forecasts, intelligence assessments or investment advice.</footer>
+  <footer class="footer">LIVE uses public news signals, automatic edge discovery, a relevance quality gate, UN Comtrade dependency estimates, verified political dates, stored historical memory and GearWatch causal outputs. FORK / PLAY creates a fictional branch. All scores are research/simulation indices — not probabilities, forecasts, intelligence assessments or investment advice.</footer>
 </div>
 <script type="module" src="./app-v2.js"></script>
 <script type="module" src="./political-widget.js"></script>
+<script type="module" src="./autonomy-widget.js"></script>
 </body>
 </html>
