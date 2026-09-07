@@ -17,6 +17,7 @@ jobs:
         run: |
           node --check app-v2.js
           node --check scripts/world-scan-v2.mjs
+          node --check scripts/news-quality-enrich.mjs
           node --check scripts/calendar-enrich.mjs
           node --check scripts/world-scan.mjs
       - name: Validate JSON model and live state
