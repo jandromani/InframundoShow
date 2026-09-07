@@ -15,6 +15,10 @@ jobs:
           node-version: '22'
       - name: Validate JavaScript syntax
         run: |
+          node --check world-map-data.js
+          node --check app-v3-core.js
+          node --check app-v3-ui.js
+          node --check app-v3-map.js
           node --check app-v2.js
           node --check political-widget.js
           node --check autonomy-widget.js
@@ -30,15 +34,23 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('config/world-model.json','utf8')); console.log('world-model.json OK')"
           node -e "JSON.parse(require('fs').readFileSync('config/political-calendar.json','utf8')); console.log('political-calendar.json OK')"
           node -e "JSON.parse(require('fs').readFileSync('data/live.json','utf8')); console.log('live.json OK')"
-      - name: Validate required frontend selectors
+      - name: Validate Civilization frontend contract
         run: |
           grep -q 'id="worldMap"' index.html
+          grep -q 'id="autoPlayBtn"' index.html
+          grep -q 'id="speedSelect"' index.html
+          grep -q 'id="aiNewsFeed"' index.html
+          grep -q 'id="routeInspector"' index.html
           grep -q 'id="vectors"' index.html
           grep -q 'id="gearBoard"' index.html
           grep -q 'id="politicalCalendar"' index.html
           grep -q 'id="autoGraph"' index.html
           grep -q 'id="countryBrain"' index.html
           grep -q 'id="dependencies"' index.html
-          grep -q 'app-v2.js' index.html
+          grep -q 'world-map-data.js' index.html
+          grep -q 'app-v3-core.js' index.html
+          grep -q 'app-v3-ui.js' index.html
+          grep -q 'app-v3-map.js' index.html
           grep -q 'political-widget.js' index.html
           grep -q 'autonomy-widget.js' index.html
+          node -e "require('./world-map-data.js'); if (!global.WORLD_PATHS || global.WORLD_PATHS.length < 150) process.exit(1); console.log('Bundled map:', global.WORLD_PATHS.length, 'countries')"
