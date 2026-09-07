@@ -8,15 +8,16 @@ async function load(){
   try{const r=await fetch(RAW+'?autonomy='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error(String(r.status));state=await r.json();renderAll()}catch(e){console.warn('autonomy widget',e)}
 }
 function fmtPct(v){return Number.isFinite(Number(v))?Number(v).toFixed(1)+'%':'—'}
-function bar(label,value){const v=clamp(value);return `<div class="vector"><div class="vectorhead"><span>${esc(label)}</span><b>${Math.round(v)}</b></div><div class="track"><div class="fill" style="width:${v}%"></div></div></div>`}
 function selectedPair(){
   if(!state)return null;const title=$('#frontTitle')?.textContent||'';
   return (state.pairs||[]).find(p=>{const a=state.countries?.[p.a]?.name||p.a,b=state.countries?.[p.b]?.name||p.b;return title.includes(a)&&title.includes(b)})||null;
 }
+function typeIcon(t){return t==='rivalry'?'⚡':t==='cooperation'?'🤝':'◐'}
 function renderAuto(){
   const h=$('#autoGraph');if(!h||!state)return;const a=state.auto_discovery||{};
-  const auto=(state.pairs||[]).filter(p=>p.origin==='auto-discovery').sort((x,y)=>(y.evidence_score||0)-(x.evidence_score||0));
-  h.innerHTML=`<div class="autostats"><div><b>${a.catalog_countries??'—'}</b><span>country catalog</span></div><div><b>${a.articles_scanned??'—'}</b><span>discovery articles</span></div><div><b>${a.candidate_edges??'—'}</b><span>candidate edges</span></div><div><b>${a.active_auto_edges??auto.length}</b><span>live auto edges</span></div><div><b>${a.total_edges??state.pairs?.length??'—'}</b><span>total world edges</span></div></div><div class="small muted" style="margin-top:8px">Edges require repeated evidence and decay when signals disappear. Auto-discovery threshold: ${a.threshold??'—'}.</div><div class="autolist">${auto.slice(0,12).map(p=>{const A=state.countries?.[p.a],B=state.countries?.[p.b];return `<div class="autoedge"><b>${A?.flag||''} ${esc(A?.name||p.a)} ↔ ${B?.flag||''} ${esc(B?.name||p.b)}</b><span>evidence ${Math.round(p.evidence_score||0)} · ${p.source_diversity||0} sources · ${p.fresh_hits||0} fresh</span></div>`}).join('')||'<div class="muted">No auto edge has crossed the activation threshold yet.</div>'}</div>`;
+  const auto=(state.pairs||[]).filter(p=>p.origin==='auto-discovery').sort((x,y)=>(y.strategic_relevance||y.evidence_score||0)-(x.strategic_relevance||x.evidence_score||0));
+  const ty=a.types||{};
+  h.innerHTML=`<div class="autostats"><div><b>${a.catalog_countries??'—'}</b><span>country catalog</span></div><div><b>${a.articles_scanned??'—'}</b><span>discovery articles</span></div><div><b>${a.candidate_edges??'—'}</b><span>candidate edges</span></div><div><b>${a.active_auto_edges??auto.length}</b><span>live auto edges</span></div><div><b>${a.total_edges??state.pairs?.length??'—'}</b><span>total world edges</span></div></div><div class="small muted" style="margin-top:8px">Typed relationships: ⚡ rivalry ${ty.rivalry??0} · ◐ mixed ${ty.mixed??0} · 🤝 cooperation ${ty.cooperation??0}. Publisher names are excluded from entity resolution; evidence decays when signals disappear.</div><div class="autolist">${auto.slice(0,12).map(p=>{const A=state.countries?.[p.a],B=state.countries?.[p.b],t=p.relation_type||'mixed';return `<div class="autoedge"><b>${typeIcon(t)} ${A?.flag||''} ${esc(A?.name||p.a)} ↔ ${B?.flag||''} ${esc(B?.name||p.b)}</b><span>${esc(t)} · relevance ${Math.round(p.strategic_relevance||p.evidence_score||0)} · tension ${Math.round(p.score||0)} · ${p.source_diversity||0} sources · ${p.fresh_hits||0} fresh</span></div>`}).join('')||'<div class="muted">No auto edge has crossed the activation threshold yet.</div>'}</div>`;
 }
 function renderDependency(){
   const h=$('#dependencies');if(!h||!state)return;const p=selectedPair();if(!p){h.innerHTML='<span class="muted small">Select a bilateral relationship.</span>';return}
