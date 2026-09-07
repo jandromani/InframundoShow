@@ -53,4 +53,4 @@ jobs:
           grep -q 'app-v3-map.js' index.html
           grep -q 'political-widget.js' index.html
           grep -q 'autonomy-widget.js' index.html
-          node -e "require('./world-map-data.js'); if (!global.WORLD_PATHS || global.WORLD_PATHS.length < 150) process.exit(1); console.log('Bundled map:', global.WORLD_PATHS.length, 'countries')"
+          node -e "global.window=global; require('./world-map-data.js'); if (!global.WORLD_PATHS || global.WORLD_PATHS.length < 150) process.exit(1); console.log('Bundled map:', global.WORLD_PATHS.length, 'countries')"
