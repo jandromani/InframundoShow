@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>WORLD//STATE · Live Geopolitical Simulation</title>
-  <link rel="stylesheet" href="./styles.css">
+  <title>WORLD//STATE · Live Geopolitical Engine</title>
+  <link rel="stylesheet" href="./styles-v2.css">
 </head>
 <body>
 <div id="app" class="app">
@@ -12,34 +12,33 @@
     <div>
       <div class="ey">WORLD//STATE · LIVE GEOPOLITICAL ENGINE</div>
       <h1>MAPA DEL <span>DESASTRE</span></h1>
-      <div class="muted">Real world → tension graph → causal sensors → country bots → playable fork.</div>
+      <div class="muted">News memory + bilateral vectors + GearWatch causal pressure + autonomous country bots + playable fork.</div>
     </div>
     <div class="toolbar">
-      <button id="liveBtn" class="btn primary active">● LIVE</button>
-      <button id="simBtn" class="btn">⎇ FORK / SIM</button>
+      <button id="liveBtn" class="btn primary live active">● LIVE WORLD</button>
+      <button id="simBtn" class="btn">⎇ FORK / PLAY</button>
       <button id="refreshBtn" class="btn">↻ Refresh</button>
     </div>
   </header>
 
   <section class="kpis">
     <div class="kpi"><div class="small muted">GLOBAL RISK</div><b id="riskKpi">—</b></div>
-    <div class="kpi"><div class="small muted">SHIPPING STRESS</div><b id="shipKpi">—</b></div>
-    <div class="kpi"><div class="small muted">ENERGY STRESS</div><b id="energyKpi">—</b></div>
-    <div class="kpi"><div class="small muted">TRADE STRESS</div><b id="tradeKpi">—</b></div>
-    <div class="kpi"><div class="small muted">WORLD MEMORY</div><b id="memoryKpi">—</b></div>
+    <div class="kpi"><div class="small muted">SHIPPING</div><b id="shipKpi">—</b></div>
+    <div class="kpi"><div class="small muted">ENERGY</div><b id="energyKpi">—</b></div>
+    <div class="kpi"><div class="small muted">TRADE</div><b id="tradeKpi">—</b></div>
+    <div class="kpi"><div class="small muted">POLITICAL</div><b id="politicalKpi">—</b></div>
+    <div class="kpi"><div class="small muted">MEMORY</div><b id="memoryKpi">—</b></div>
   </section>
 
   <div class="layout">
-    <main class="mapcard card">
-      <div class="row" style="margin-bottom:8px">
+    <main class="card mapcard">
+      <div class="row" style="justify-content:space-between;margin-bottom:8px">
         <div>
           <div class="ey">Strategic world viewer</div>
-          <h2 style="margin:3px 0">Tensions, chokepoints and causal pressure</h2>
+          <h2 style="margin:3px 0">Layer: <span id="layerName">overall</span></h2>
         </div>
         <div class="toolbar">
-          <button id="zoomIn" class="btn">+</button>
-          <button id="zoomOut" class="btn">−</button>
-          <button id="zoomReset" class="btn">World</button>
+          <button id="zoomIn" class="btn">+</button><button id="zoomOut" class="btn">−</button><button id="zoomReset" class="btn">World</button>
         </div>
       </div>
       <div class="mapwrap">
@@ -47,62 +46,63 @@
         <div class="maphud">
           <span class="chip"><span class="statusdot"></span><span id="modeText">LIVE WORLD</span></span>
           <span class="chip" id="updatedChip">Updating…</span>
-          <span class="chip">click country / arc</span>
-          <span class="chip">wheel + drag</span>
+          <span class="chip">click country / arc</span><span class="chip">wheel + drag</span>
         </div>
       </div>
       <div class="toolbar" style="margin-top:8px">
-        <button class="btn active layer" data-layer="tensions">⚡ Tensions</button>
-        <button class="btn active layer" data-layer="chokes">◆ Chokepoints</button>
-        <button class="btn active layer" data-layer="labels">◉ Labels</button>
+        <button class="btn layer active" data-layer="score">⚡ Overall</button>
+        <button class="btn layer" data-layer="military">🛡 Military</button>
+        <button class="btn layer" data-layer="territorial">◆ Territorial</button>
+        <button class="btn layer" data-layer="energy">◈ Energy</button>
+        <button class="btn layer" data-layer="trade">⇄ Trade</button>
+        <button class="btn layer" data-layer="diplomatic">◎ Diplomatic</button>
+        <button class="btn layer" data-layer="domestic">◉ Domestic</button>
       </div>
+      <div class="legend"><span>edge width = pressure on selected layer</span><span>country = hottest active front</span><span>diamond = chokepoint stress</span></div>
     </main>
 
     <aside class="side">
       <section class="card">
-        <div class="ey">Selected front</div>
-        <div class="row"><h2 id="frontTitle">Select a tension</h2><div id="frontScore" class="score">—</div></div>
-        <div id="frontTrend" class="small muted">—</div>
-        <p id="frontSummary" class="muted">Click a tension arc or ranking row.</p>
+        <div class="ey">Selected bilateral relationship</div>
+        <div class="fronthead"><div><h2 id="frontTitle" style="margin:5px 0">Select a front</h2><div id="frontTrend" class="small muted">—</div></div><div id="frontScore" class="score">—</div></div>
+        <p id="frontSummary" class="muted"></p>
         <div id="frontDomains" class="domain"></div>
-        <div class="simonly" style="margin-top:10px">
-          <div class="ey">Player action</div>
-          <div id="actions" class="actiongrid"></div>
-        </div>
+        <div class="ey" style="margin-top:12px">Tension vector</div>
+        <div id="vectors" class="vectors"></div>
+        <div class="ey" style="margin-top:12px;color:var(--green)">Escalation restraints</div>
+        <div id="restraints" class="restraints"></div>
+        <div class="ey" style="margin-top:12px">Why this score</div>
+        <div id="drivers" class="small"></div>
+        <div id="pairGear" class="domain" style="margin-top:8px"></div>
+        <div class="simonly" style="margin-top:12px"><div class="ey">Player action</div><div id="actions" class="actiongrid"></div></div>
       </section>
 
-      <section class="card liveonly">
-        <div class="ey">Country bots</div>
-        <h3>Likely strategic moves</h3>
-        <div id="botMoves" class="bots muted small"></div>
-      </section>
-
-      <section class="card">
-        <div class="row"><div><div class="ey">Disaster ranking</div><h3>Highest tensions now</h3></div><div class="small muted">0—100 index</div></div>
-        <div id="ranking" class="ranking"></div>
-      </section>
-
-      <section class="card">
-        <div class="ey">Latest evidence</div>
-        <h3>News attached to this front</h3>
-        <div id="news" class="news small muted"></div>
-      </section>
-
-      <section class="card">
-        <div class="ey">GearWatch bridge</div>
-        <h3 id="gearHeadline">Causal sensor</h3>
-        <div id="gear" class="gear small muted"></div>
-      </section>
-
-      <section class="card simonly">
-        <div class="row"><div><div class="ey">Fork timeline</div><h3 id="simDate">—</h3></div><button id="nextTurn" class="btn primary">Resolve week →</button></div>
-        <div id="simLog" class="log small muted"></div>
-      </section>
+      <section class="card liveonly"><div class="ey">Country bots</div><h3 style="margin:4px 0">Strategic options inferred for this front</h3><div id="botMoves" class="bots muted small"></div></section>
+      <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Disaster ranking</div><h3 style="margin:3px 0">Hottest relations</h3></div><div class="small muted">selected layer</div></div><div id="ranking" class="ranking"></div></section>
+      <section class="card"><div class="ey">Evidence feed</div><h3 style="margin:4px 0">News attached to this relationship</h3><div id="news" class="news small muted"></div></section>
+      <section class="card simonly"><div class="row" style="justify-content:space-between"><div><div class="ey">Fork timeline</div><h3 id="simDate" style="margin:4px 0">—</h3></div><button id="nextTurn" class="btn primary">Resolve week →</button></div><div id="simLog" class="log small muted"></div></section>
     </aside>
   </div>
 
-  <footer class="footer">LIVE mode shows a research index built from public news signals and GearWatch outputs. FORK / SIM creates a fictional branch from the live snapshot. Scores are not probabilities, intelligence assessments or forecasts.</footer>
+  <section class="lower">
+    <div class="lowerleft">
+      <section class="card">
+        <div class="row" style="justify-content:space-between"><div><div class="ey">GearWatch causal layer</div><h2 id="gearHeadline" style="margin:4px 0">Causal mechanisms</h2></div><div class="pill">GearWatch → WORLD//STATE</div></div>
+        <p id="gearBrief" class="muted"></p>
+        <div id="causalPulse" class="causalpulse"><b>Click a GearWatch mechanism.</b> See which bilateral fronts and chokepoints it pressures.</div>
+        <div id="gearBoard" class="gearboard" style="margin-top:9px"></div>
+      </section>
+      <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Strategic chokepoints</div><h3 style="margin:3px 0">Where geopolitics becomes physics</h3></div><div class="small muted">tension + GearWatch pressure</div></div><div id="chokes" class="chokes"></div></section>
+    </div>
+
+    <div class="lowerright">
+      <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">World memory</div><h3 style="margin:3px 0">Global-risk history</h3></div><div id="historyLabel" class="small muted">—</div></div><svg id="spark" class="spark" viewBox="0 0 600 110" preserveAspectRatio="none"></svg></section>
+      <section class="card"><div class="ey">Country pressure board</div><h3 style="margin:3px 0">States under the most active pressure</h3><div id="countries" class="countrygrid"></div></section>
+    </div>
+  </section>
+
+  <footer class="footer">LIVE uses public news signals, stored historical memory and GearWatch causal outputs. FORK / PLAY creates a fictional branch. All scores are research/simulation indices — not probabilities, forecasts, intelligence assessments or investment advice.</footer>
 </div>
-<script type="module" src="./app.js"></script>
+<script type="module" src="./app-v2.js"></script>
 </body>
 </html>
