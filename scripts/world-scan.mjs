@@ -2,7 +2,8 @@ import fs from 'node:fs/promises';
 
 const STATE_PATH = new URL('../data/live.json', import.meta.url);
 const GEARWATCH_RAW = 'https://raw.githubusercontent.com/jandromani/HolaInframundo/master/';
-const FETCH_TIMEOUT_MS = 10_000;
+const FETCH_TIMEOUT_MS = 8_000;
+const GDELT_TIMEOUT_MS = 2_500;
 const LLM_TIMEOUT_MS = 30_000;
 
 const PAIRS = [
@@ -31,16 +32,34 @@ const DEESCALATE = [
 ];
 const clamp=(x,a=0,b=100)=>Math.max(a,Math.min(b,x));
 
+async function request(url, timeoutMs=FETCH_TIMEOUT_MS) {
+  return fetch(url,{
+    headers:{
+      'user-agent':'worldstate-live/0.2 (+https://github.com/jandromani/InframundoShow)',
+      'accept':'application/json, application/rss+xml, application/xml, text/xml, text/plain;q=0.8, */*;q=0.5'
+    },
+    signal:AbortSignal.timeout(timeoutMs)
+  });
+}
+
 async function getJson(url, fallback={}, timeoutMs=FETCH_TIMEOUT_MS) {
   try {
-    const r=await fetch(url,{
-      headers:{'user-agent':'worldstate-live/0.1'},
-      signal:AbortSignal.timeout(timeoutMs)
-    });
+    const r=await request(url,timeoutMs);
     if(!r.ok) throw new Error(`${r.status} ${r.statusText}`);
     return await r.json();
   } catch(err) {
-    console.warn('fetch failed', url, err.name || err.message);
+    console.warn('json fetch failed', url, err.name || err.message);
+    return fallback;
+  }
+}
+
+async function getText(url, fallback='', timeoutMs=FETCH_TIMEOUT_MS) {
+  try {
+    const r=await request(url,timeoutMs);
+    if(!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+    return await r.text();
+  } catch(err) {
+    console.warn('text fetch failed', url, err.name || err.message);
     return fallback;
   }
 }
@@ -62,11 +81,47 @@ function uniqueArticles(articles=[]) {
   });
 }
 
+function decodeXml(s='') {
+  return String(s)
+    .replace(/<!\[CDATA\[|\]\]>/g,'')
+    .replace(/&#(\d+);/g,(_,n)=>String.fromCodePoint(Number(n)))
+    .replace(/&#x([0-9a-f]+);/gi,(_,n)=>String.fromCodePoint(parseInt(n,16)))
+    .replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>')
+    .replace(/&quot;/g,'"').replace(/&apos;|&#39;/g,"'")
+    .replace(/<[^>]+>/g,'').trim();
+}
+
+function xmlTag(block,name) {
+  const m=block.match(new RegExp(`<${name}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${name}>`,'i'));
+  return m?decodeXml(m[1]):'';
+}
+
+function parseRss(xml='') {
+  const items=[...xml.matchAll(/<item(?:\s[^>]*)?>([\s\S]*?)<\/item>/gi)].map(m=>m[1]);
+  return items.map(item=>{
+    const title=xmlTag(item,'title');
+    const url=xmlTag(item,'link');
+    const source=xmlTag(item,'source')||'Google News';
+    const rawDate=xmlTag(item,'pubDate');
+    const parsed=Date.parse(rawDate);
+    return {title,source,url,seen:Number.isFinite(parsed)?new Date(parsed).toISOString():rawDate};
+  }).filter(a=>a.title&&a.url);
+}
+
+async function googleNews(pair) {
+  const params=new URLSearchParams({
+    q:`${pair.query} when:7d`,
+    hl:'en-US',gl:'US',ceid:'US:en'
+  });
+  const xml=await getText(`https://news.google.com/rss/search?${params}`,'',FETCH_TIMEOUT_MS);
+  return uniqueArticles(parseRss(xml)).slice(0,50);
+}
+
 async function gdelt(pair) {
-  const params=new URLSearchParams({query:pair.query,mode:'ArtList',maxrecords:'75',format:'json',timespan:'7d',sort:'HybridRel'});
+  const params=new URLSearchParams({query:pair.query,mode:'ArtList',maxrecords:'50',format:'json',timespan:'7d',sort:'HybridRel'});
   const url=`https://api.gdeltproject.org/api/v2/doc/doc?${params}`;
-  const json=await getJson(url,{articles:[]});
-  const articles=uniqueArticles(json.articles||[]).slice(0,75);
+  const json=await getJson(url,{articles:[]},GDELT_TIMEOUT_MS);
+  const articles=uniqueArticles(json.articles||[]).slice(0,50);
   return articles.map(a=>({
     title:a.title||'',
     source:a.domain||a.sourcecountry||'GDELT source',
@@ -78,7 +133,8 @@ async function gdelt(pair) {
 function scorePair(pair, old, articles) {
   const oldScore=Number(old?.score ?? pair.floor);
   if(!articles.length){
-    return {score:Math.round(clamp(oldScore*.97+pair.floor*.03)),trend:Math.round(clamp(oldScore*.97+pair.floor*.03))-oldScore,observed:null};
+    const fallbackScore=Math.round(clamp(oldScore*.985+pair.floor*.015));
+    return {score:fallbackScore,trend:fallbackScore-oldScore,observed:null};
   }
   const titleScore=articles.reduce((s,a)=>s+textSignal(a.title),0);
   const volume=Math.min(14,Math.log2(articles.length+1)*3.2);
@@ -150,7 +206,8 @@ function globalState(pairs) {
 }
 
 async function scanOne(pair, prior){
-  const articles=await gdelt(pair);
+  const [rssArticles,gdeltArticles]=await Promise.all([googleNews(pair),gdelt(pair)]);
+  const articles=uniqueArticles([...rssArticles,...gdeltArticles]);
   const score=scorePair(pair,prior,articles);
   return {
     ...prior,
@@ -158,9 +215,10 @@ async function scanOne(pair, prior){
     score:score.score,trend:score.trend,
     observed_signal:score.observed,
     summary:fallbackSummary(prior,articles),
-    news:articles.length?articles.slice(0,6):(prior.news||[]).slice(0,6),
+    news:articles.length?articles.slice(0,8):(prior.news||[]).slice(0,8),
     scan_articles:articles.length,
-    sensor_status:articles.length?'fresh':'fallback-memory'
+    sensor_status:articles.length?'fresh':'fallback-memory',
+    sensors:{google_news:rssArticles.length,gdelt:gdeltArticles.length}
   };
 }
 
@@ -196,7 +254,7 @@ async function main(){
   const gearwatch=await readGearWatch();
   const history=[...(old.history||[]),{at:now,scores:Object.fromEntries(pairs.map(p=>[p.id,p.score]))}].slice(-72);
   const next={
-    version:1,
+    version:2,
     updated_at:now,
     mode:synthesis?'live-llm':'live-deterministic',
     disclaimer:'Tension scores are model indices for exploration, not probabilities or forecasts.',
@@ -206,7 +264,7 @@ async function main(){
     history
   };
   await fs.writeFile(STATE_PATH,JSON.stringify(next,null,2)+'\n');
-  console.log(`WORLD//STATE scan complete: ${pairs.length} pairs, mode=${next.mode}, fresh=${pairs.filter(p=>p.sensor_status==='fresh').length}`);
+  console.log(`WORLD//STATE scan complete: ${pairs.length} pairs, mode=${next.mode}, fresh=${pairs.filter(p=>p.sensor_status==='fresh').length}, rss=${pairs.reduce((s,p)=>s+(p.sensors?.google_news||0),0)}, gdelt=${pairs.reduce((s,p)=>s+(p.sensors?.gdelt||0),0)}`);
 }
 
 main().catch(err=>{console.error(err);process.exitCode=1;});
