@@ -17,10 +17,12 @@ jobs:
         run: |
           node --check app-v2.js
           node --check scripts/world-scan-v2.mjs
+          node --check scripts/calendar-enrich.mjs
           node --check scripts/world-scan.mjs
       - name: Validate JSON model and live state
         run: |
           node -e "JSON.parse(require('fs').readFileSync('config/world-model.json','utf8')); console.log('world-model.json OK')"
+          node -e "JSON.parse(require('fs').readFileSync('config/political-calendar.json','utf8')); console.log('political-calendar.json OK')"
           node -e "JSON.parse(require('fs').readFileSync('data/live.json','utf8')); console.log('live.json OK')"
       - name: Validate required frontend selectors
         run: |
