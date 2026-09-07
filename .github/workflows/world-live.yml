@@ -4,6 +4,12 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '23 * * * *'
+  push:
+    branches: [master]
+    paths:
+      - 'scripts/world-scan.mjs'
+      - '.github/workflows/world-live.yml'
+      - 'package.json'
 
 permissions:
   contents: write
