@@ -20,6 +20,9 @@ jobs:
           node --check scripts/world-scan-v2.mjs
           node --check scripts/news-quality-enrich.mjs
           node --check scripts/calendar-enrich.mjs
+          node --check scripts/auto-edge-discovery.mjs
+          node --check scripts/dependency-enrich.mjs
+          node --check scripts/country-brain.mjs
           node --check scripts/world-scan.mjs
       - name: Validate JSON model and live state
         run: |
