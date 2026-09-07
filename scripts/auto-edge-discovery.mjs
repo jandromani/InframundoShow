@@ -33,11 +33,11 @@ const THEME_WORDS={
 };
 const ESCALATE=['war','attack','strike','missile','blockade','threat','clash','sanction','mobiliz','incursion','killed','deadly','crisis','ultimatum','nuclear','intercept','sovereignty'];
 const DEESCALATE=['ceasefire','talk','negotiat','agreement','deal','dialogue','de-escal','withdraw','truce','mediat','cooperation','peace'];
-const ALIAS_STOP=new Set(['united','republic','state','states','islands','island','georgia','jersey','china']);
+const ALIAS_STOP=new Set(['united','republic','state','states','islands','island','georgia','jersey']);
 const clamp=(x,a=0,b=100)=>Math.max(a,Math.min(b,Number(x)||0));
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]+/g,' ').replace(/\s+/g,' ').trim();
 
-async function text(url,timeout=TIMEOUT){try{const r=await fetch(url,{headers:{'user-agent':'worldstate-edge-discovery/0.1'},signal:AbortSignal.timeout(timeout)});if(!r.ok)throw new Error(String(r.status));return await r.text()}catch(e){console.warn('fetch failed',e.name||e.message,url);return ''}}
+async function text(url,timeout=TIMEOUT){try{const r=await fetch(url,{headers:{'user-agent':'worldstate-edge-discovery/0.2'},signal:AbortSignal.timeout(timeout)});if(!r.ok)throw new Error(String(r.status));return await r.text()}catch(e){console.warn('fetch failed',e.name||e.message,url);return ''}}
 async function json(url,fallback){const t=await text(url);if(!t)return fallback;try{return JSON.parse(t)}catch{return fallback}}
 function decodeXml(s=''){return s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')}
 function tag(block,name){const m=block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\\/${name}>`,'i'));return decodeXml(m?.[1]?.trim()||'')}
@@ -52,13 +52,11 @@ function countryCatalog(raw,state){
     const aliases=[c.name.common,c.name.official,...(c.altSpellings||[])].map(norm).filter(a=>a.length>=4&&!ALIAS_STOP.has(a));
     out[code]={code,name:c.name.common,official:c.name.official,flag:c.flag||'',coord:[Number(c.latlng[1])||0,Number(c.latlng[0])||0],m49:c.ccn3||null,region:c.region||'',subregion:c.subregion||'',aliases:[...new Set(aliases)]};
   }
-  // Preserve canonical names/flags/coords already curated in WORLD//STATE.
   for(const [code,c] of Object.entries(state.countries||{})){
     out[code]??={code,name:c.name||code,flag:c.flag||'',coord:c.coord||[0,0],m49:c.m49||null,region:c.region||'',aliases:[norm(c.name||code)]};
     out[code].name=c.name||out[code].name;out[code].flag=c.flag||out[code].flag;out[code].coord=c.coord||out[code].coord;
   }
-  // Common geopolitical aliases that are especially useful in headlines.
-  const extra={USA:['us','u s','america','washington'],GBR:['uk','u k','britain','british'],RUS:['moscow'],CHN:['beijing','prc'],TWN:['taipei'],PRK:['north korea','pyongyang'],KOR:['south korea','seoul'],COD:['dr congo','drc','congo kinshasa'],COG:['republic of congo','congo brazzaville'],CIV:['ivory coast'],TUR:['turkey','turkiye'],CZE:['czech republic'],MMR:['burma','myanmar'],SWZ:['eswatini','swaziland'],MKD:['north macedonia'],PSE:['palestine','palestinian territories'],IRN:['tehran'],ISR:['tel aviv']};
+  const extra={USA:['america','washington','united states'],GBR:['britain','british','united kingdom'],RUS:['moscow','russia'],CHN:['china','beijing','prc'],TWN:['taiwan','taipei'],PRK:['north korea','pyongyang'],KOR:['south korea','seoul'],COD:['dr congo','drc','congo kinshasa'],COG:['republic of congo','congo brazzaville'],CIV:['ivory coast'],TUR:['turkey','turkiye'],CZE:['czech republic'],MMR:['burma','myanmar'],SWZ:['eswatini','swaziland'],MKD:['north macedonia'],PSE:['palestine','palestinian territories'],IRN:['iran','tehran'],ISR:['israel','tel aviv']};
   for(const [code,arr] of Object.entries(extra))if(out[code])out[code].aliases=[...new Set([...(out[code].aliases||[]),...arr.map(norm)])];
   return out;
 }
@@ -73,8 +71,9 @@ function mentions(title,catalog){
 function themes(title){const t=norm(title),out={};for(const [k,words] of Object.entries(THEME_WORDS)){const n=words.filter(w=>t.includes(w)).length;if(n)out[k]=n}return out}
 function directional(title){const t=norm(title);let s=0;for(const w of ESCALATE)if(t.includes(w))s+=1;for(const w of DEESCALATE)if(t.includes(w))s-=1;return s}
 function pairId(a,b){return [a,b].sort().join('-')}
+function sameEndpoints(p,a,b){return (p.a===a&&p.b===b)||(p.a===b&&p.b===a)}
 function defaultVector(signal){const v={diplomatic:28,military:20,territorial:18,trade:20,energy:15,domestic:18,information:15};for(const [k,n] of Object.entries(signal.themes||{}))v[k]=clamp(v[k]+Math.min(48,n*9));if(signal.escalation>0){v.diplomatic=clamp(v.diplomatic+signal.escalation*3);v.military=clamp(v.military+signal.escalation*4)}return v}
-function defaultRestraints(a,b){return {economic_interdependence:30,alliance_mediation:42,security_cooperation:18,deterrence:48}}
+function defaultRestraints(){return {economic_interdependence:30,alliance_mediation:42,security_cooperation:18,deterrence:48}}
 
 async function main(){
   const state=JSON.parse(await fs.readFile(STATE_PATH,'utf8'));
@@ -106,19 +105,18 @@ async function main(){
     next[x.id]={id:x.id,a:x.a,b:x.b,score:Number(score.toFixed(1)),fresh_hits:x.hits,source_diversity:sourceDiversity,themes:x.themes,escalation:x.escalation,evidence:x.evidence,first_seen:old?.first_seen||new Date().toISOString(),updated_at:new Date().toISOString()};
   }
   const ranked=Object.values(next).filter(x=>x.score>=MIN_EDGE_SCORE).sort((a,b)=>b.score-a.score).slice(0,MAX_AUTO_EDGES);
-  const fixedIds=new Set((state.pairs||[]).filter(p=>p.origin!=='auto-discovery').map(p=>p.id));
   const keepFixed=(state.pairs||[]).filter(p=>p.origin!=='auto-discovery');
+  const priorAuto=(state.pairs||[]).filter(p=>p.origin==='auto-discovery');
   const auto=[];
   for(const e of ranked){
-    if(fixedIds.has(e.id)||e.score<ACTIVE_EDGE_SCORE)continue;
+    if(e.score<ACTIVE_EDGE_SCORE||keepFixed.some(p=>sameEndpoints(p,e.a,e.b)))continue;
     const ca=catalog[e.a],cb=catalog[e.b];if(!ca||!cb)continue;
-    const old=(state.pairs||[]).find(p=>p.id===e.id);
+    const old=priorAuto.find(p=>sameEndpoints(p,e.a,e.b));
     const v=old?.vector||defaultVector(e);for(const [k,n] of Object.entries(e.themes||{}))v[k]=clamp((v[k]||20)*.78+Math.min(95,24+n*7)*.22);
     const score=Math.round(clamp((e.score*.58)+Object.values(v).reduce((s,n)=>s+n,0)/7*.42));
-    auto.push({id:e.id,a:e.a,b:e.b,origin:'auto-discovery',discovered_at:e.first_seen,evidence_score:e.score,source_diversity:e.source_diversity,fresh_hits:e.fresh_hits,domains:Object.entries(e.themes||{}).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([k])=>k),vector:v,restraints:old?.restraints||defaultRestraints(e.a,e.b),score,trend:old?score-old.score:0,summary:e.evidence?.[0]?.title?`Auto-discovered from repeated public-news co-occurrence. Latest: ${e.evidence[0].title}`:'Auto-discovered geopolitical relationship.',news:(e.evidence||[]).map(x=>({title:x.title,url:x.url,seen:x.seen,source:(x.title.match(/ - ([^-]+)$/)?.[1]||'Google News')})),scan_articles:e.fresh_hits||0,sensor_status:e.fresh_hits?'fresh':'memory',drivers:[`auto-edge evidence ${Math.round(e.score)}`,`source diversity ${e.source_diversity||0}`],bot_moves:old?.bot_moves||[]});
+    auto.push({id:e.id,a:e.a,b:e.b,origin:'auto-discovery',discovered_at:e.first_seen,evidence_score:e.score,source_diversity:e.source_diversity,fresh_hits:e.fresh_hits,domains:Object.entries(e.themes||{}).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([k])=>k),vector:v,restraints:old?.restraints||defaultRestraints(),score,trend:old?score-old.score:0,summary:e.evidence?.[0]?.title?`Auto-discovered from repeated public-news co-occurrence. Latest: ${e.evidence[0].title}`:'Auto-discovered geopolitical relationship.',news:(e.evidence||[]).map(x=>({title:x.title,url:x.url,seen:x.seen,source:(x.title.match(/ - ([^-]+)$/)?.[1]||'Google News')})),scan_articles:e.fresh_hits||0,sensor_status:e.fresh_hits?'fresh':'memory',drivers:[`auto-edge evidence ${Math.round(e.score)}`,`source diversity ${e.source_diversity||0}`],bot_moves:old?.bot_moves||[]});
     for(const code of [e.a,e.b])if(!state.countries?.[code]){const c=catalog[code];state.countries[code]={name:c.name,flag:c.flag,coord:c.coord,m49:c.m49,region:c.region,power:45,economy:50,energy_security:50,military:45,stability:55,influence:45,fronts:0,pressure:0,max_front:0,stability_live:55,economy_live:50,aliases:c.aliases};}
   }
-  // Enrich existing countries with stable numeric codes / aliases for dependency lookups and map resolution.
   for(const [code,c] of Object.entries(state.countries||{})){const cat=catalog[code];if(cat){c.m49??=cat.m49;c.region??=cat.region;c.aliases=[...new Set([...(c.aliases||[]),...(cat.aliases||[])])];}}
   state.pairs=[...keepFixed,...auto];
   for(const c of Object.values(state.countries||{})){c.fronts=0;c.pressure=0;c.max_front=0;}
