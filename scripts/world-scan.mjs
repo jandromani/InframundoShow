@@ -2,6 +2,8 @@ import fs from 'node:fs/promises';
 
 const STATE_PATH = new URL('../data/live.json', import.meta.url);
 const GEARWATCH_RAW = 'https://raw.githubusercontent.com/jandromani/HolaInframundo/master/';
+const FETCH_TIMEOUT_MS = 10_000;
+const LLM_TIMEOUT_MS = 30_000;
 
 const PAIRS = [
   {id:'ESP-MAR',a:'ESP',b:'MAR',floor:61,query:'(Spain Morocco OR Ceuta Morocco OR Melilla Morocco)'},
@@ -28,15 +30,17 @@ const DEESCALATE = [
   ['de-escal',-5],['withdraw',-3],['truce',-5],['mediat',-3],['cooperation',-2],['corridor',-2]
 ];
 const clamp=(x,a=0,b=100)=>Math.max(a,Math.min(b,x));
-const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 
-async function getJson(url, fallback={}) {
+async function getJson(url, fallback={}, timeoutMs=FETCH_TIMEOUT_MS) {
   try {
-    const r=await fetch(url,{headers:{'user-agent':'worldstate-live/0.1'}});
+    const r=await fetch(url,{
+      headers:{'user-agent':'worldstate-live/0.1'},
+      signal:AbortSignal.timeout(timeoutMs)
+    });
     if(!r.ok) throw new Error(`${r.status} ${r.statusText}`);
     return await r.json();
   } catch(err) {
-    console.warn('fetch failed', url, err.message);
+    console.warn('fetch failed', url, err.name || err.message);
     return fallback;
   }
 }
@@ -67,12 +71,15 @@ async function gdelt(pair) {
     title:a.title||'',
     source:a.domain||a.sourcecountry||'GDELT source',
     url:a.url||'',
-    seen:a.seendate||a.socialimage||''
+    seen:a.seendate||''
   }));
 }
 
 function scorePair(pair, old, articles) {
   const oldScore=Number(old?.score ?? pair.floor);
+  if(!articles.length){
+    return {score:Math.round(clamp(oldScore*.97+pair.floor*.03)),trend:Math.round(clamp(oldScore*.97+pair.floor*.03))-oldScore,observed:null};
+  }
   const titleScore=articles.reduce((s,a)=>s+textSignal(a.title),0);
   const volume=Math.min(14,Math.log2(articles.length+1)*3.2);
   const directional=clamp(titleScore,-22,28);
@@ -97,14 +104,15 @@ async function llmSynthesis(pairs) {
     const r=await fetch('https://openrouter.ai/api/v1/chat/completions',{
       method:'POST',
       headers:{'authorization':`Bearer ${key}`,'content-type':'application/json','x-title':'WORLDSTATE Live'},
-      body:JSON.stringify({model,messages:[{role:'user',content:prompt}],temperature:0.15,response_format:{type:'json_object'}})
+      body:JSON.stringify({model,messages:[{role:'user',content:prompt}],temperature:0.15,response_format:{type:'json_object'}}),
+      signal:AbortSignal.timeout(LLM_TIMEOUT_MS)
     });
     if(!r.ok) throw new Error(`${r.status} ${await r.text()}`);
     const j=await r.json();
     const txt=j.choices?.[0]?.message?.content||'';
     return JSON.parse(txt);
   } catch(err) {
-    console.warn('LLM synthesis failed:',err.message);
+    console.warn('LLM synthesis failed:',err.name || err.message);
     return null;
   }
 }
@@ -141,25 +149,39 @@ function globalState(pairs) {
   };
 }
 
+async function scanOne(pair, prior){
+  const articles=await gdelt(pair);
+  const score=scorePair(pair,prior,articles);
+  return {
+    ...prior,
+    id:pair.id,a:pair.a,b:pair.b,
+    score:score.score,trend:score.trend,
+    observed_signal:score.observed,
+    summary:fallbackSummary(prior,articles),
+    news:articles.length?articles.slice(0,6):(prior.news||[]).slice(0,6),
+    scan_articles:articles.length,
+    sensor_status:articles.length?'fresh':'fallback-memory'
+  };
+}
+
+async function mapLimit(items, limit, fn){
+  const out=new Array(items.length);
+  let next=0;
+  async function worker(){
+    while(true){
+      const i=next++;
+      if(i>=items.length) return;
+      out[i]=await fn(items[i],i);
+    }
+  }
+  await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));
+  return out;
+}
+
 async function main(){
   const old=JSON.parse(await fs.readFile(STATE_PATH,'utf8'));
   const oldBy=Object.fromEntries((old.pairs||[]).map(p=>[p.id,p]));
-  const pairs=[];
-  for(const pair of PAIRS){
-    const prior=oldBy[pair.id]||{};
-    const articles=await gdelt(pair);
-    const score=scorePair(pair,prior,articles);
-    pairs.push({
-      ...prior,
-      id:pair.id,a:pair.a,b:pair.b,
-      score:score.score,trend:score.trend,
-      observed_signal:score.observed,
-      summary:fallbackSummary(prior,articles),
-      news:articles.slice(0,6),
-      scan_articles:articles.length
-    });
-    await sleep(350);
-  }
+  const pairs=await mapLimit(PAIRS,4,(pair)=>scanOne(pair,oldBy[pair.id]||{}));
 
   const synthesis=await llmSynthesis(pairs);
   if(synthesis?.pairs){
@@ -184,7 +206,7 @@ async function main(){
     history
   };
   await fs.writeFile(STATE_PATH,JSON.stringify(next,null,2)+'\n');
-  console.log(`WORLD//STATE scan complete: ${pairs.length} pairs, mode=${next.mode}`);
+  console.log(`WORLD//STATE scan complete: ${pairs.length} pairs, mode=${next.mode}, fresh=${pairs.filter(p=>p.sensor_status==='fresh').length}`);
 }
 
 main().catch(err=>{console.error(err);process.exitCode=1;});
