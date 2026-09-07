@@ -16,10 +16,12 @@ jobs:
       - name: Validate JavaScript syntax
         run: |
           node --check world-map-data.js
+          node --check runtime-guard.js
           node --check app-v3-core.js
+          node --check logistics-v2.js
           node --check app-v3-ui.js
           node --check app-v3-map.js
-          node --check app-v2.js
+          node --check logistics-ui.js
           node --check political-widget.js
           node --check autonomy-widget.js
           node --check scripts/world-scan-v2.mjs
@@ -36,21 +38,14 @@ jobs:
           node -e "JSON.parse(require('fs').readFileSync('data/live.json','utf8')); console.log('live.json OK')"
       - name: Validate Civilization frontend contract
         run: |
-          grep -q 'id="worldMap"' index.html
-          grep -q 'id="autoPlayBtn"' index.html
-          grep -q 'id="speedSelect"' index.html
-          grep -q 'id="aiNewsFeed"' index.html
-          grep -q 'id="routeInspector"' index.html
-          grep -q 'id="vectors"' index.html
-          grep -q 'id="gearBoard"' index.html
-          grep -q 'id="politicalCalendar"' index.html
-          grep -q 'id="autoGraph"' index.html
-          grep -q 'id="countryBrain"' index.html
-          grep -q 'id="dependencies"' index.html
-          grep -q 'world-map-data.js' index.html
-          grep -q 'app-v3-core.js' index.html
-          grep -q 'app-v3-ui.js' index.html
-          grep -q 'app-v3-map.js' index.html
-          grep -q 'political-widget.js' index.html
-          grep -q 'autonomy-widget.js' index.html
+          node - <<'NODE'
+          const fs=require('fs');const h=fs.readFileSync('index.html','utf8');
+          const ids=['worldMap','riskKpi','energyKpi','shipKpi','tradeKpi','politicalKpi','memoryKpi','updatedChip','modeText','aiActing','simClock','turnCounter','turnDate','frontTitle','frontScore','frontTrend','frontSummary','frontDomains','vectors','restraints','drivers','botMoves','news','pairGear','ranking','agentRoster','agentSearch','selectedCountryFlag','selectedCountryName','selectedCountryPosture','selectedCountryStats','selectedObjectives','selectedDependenciesMini','selectedRoutes','countryRiskBars','selectedQueue','aiNewsFeed','forecastMeta','gearHeadline','gearBrief','gearBoard','causalPulse','chokes','countries','spark','historyLabel','simDate','simLog','actions','layerName','routeInspector','politicalCalendar','autonomyStatus','autoGraph','countryBrain','dependencies','brainMeta','nextTurn','zoomIn','zoomOut','zoomReset','liveBtn','simBtn','autoPlayBtn','speedSelect','refreshBtn'];
+          const missing=ids.filter(id=>!h.includes(`id="${id}"`));if(missing.length){console.error('Missing DOM IDs',missing);process.exit(1)}console.log('DOM contract OK:',ids.length,'selectors');
+          for(const f of ['world-map-data.js','runtime-guard.js','app-v3-core.js','logistics-v2.js','app-v3-ui.js','app-v3-map.js','logistics-ui.js'])if(!h.includes(f)){console.error('Missing script',f);process.exit(1)}
+          NODE
           node -e "global.window=global; require('./world-map-data.js'); if (!global.WORLD_PATHS || global.WORLD_PATHS.length < 150) process.exit(1); console.log('Bundled map:', global.WORLD_PATHS.length, 'countries')"
+          grep -q 'LOGISTICS_META' logistics-v2.js
+          grep -q 'capacityPct' logistics-v2.js
+          grep -q 'insuranceIndex' logistics-v2.js
+          grep -q 'activeReroute' logistics-v2.js
