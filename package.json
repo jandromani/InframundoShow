@@ -1,12 +1,12 @@
 {
   "name": "worldstate-live",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "scan": "node scripts/world-scan-v2.mjs",
+    "scan": "node scripts/world-scan-v2.mjs && node scripts/calendar-enrich.mjs",
     "scan:v1": "node scripts/world-scan.mjs",
-    "check": "node --check app-v2.js && node --check scripts/world-scan-v2.mjs"
+    "check": "node --check app-v2.js && node --check scripts/world-scan-v2.mjs && node --check scripts/calendar-enrich.mjs"
   },
   "engines": {
     "node": ">=22"
