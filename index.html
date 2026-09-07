@@ -12,7 +12,7 @@
     <div>
       <div class="ey">WORLD//STATE · LIVE GEOPOLITICAL ENGINE</div>
       <h1>MAPA DEL <span>DESASTRE</span></h1>
-      <div class="muted">News memory + bilateral vectors + GearWatch causal pressure + autonomous country bots + playable fork.</div>
+      <div class="muted">News memory + bilateral vectors + GearWatch causal pressure + political calendar + autonomous country bots + playable fork.</div>
     </div>
     <div class="toolbar">
       <button id="liveBtn" class="btn primary live active">● LIVE WORLD</button>
@@ -79,7 +79,7 @@
 
       <section class="card liveonly"><div class="ey">Country bots</div><h3 style="margin:4px 0">Strategic options inferred for this front</h3><div id="botMoves" class="bots muted small"></div></section>
       <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Disaster ranking</div><h3 style="margin:3px 0">Hottest relations</h3></div><div class="small muted">selected layer</div></div><div id="ranking" class="ranking"></div></section>
-      <section class="card"><div class="ey">Evidence feed</div><h3 style="margin:4px 0">News attached to this relationship</h3><div id="news" class="news small muted"></div></section>
+      <section class="card"><div class="ey">Evidence feed</div><h3 style="margin:4px 0">Relevant news attached to this relationship</h3><div id="news" class="news small muted"></div></section>
       <section class="card simonly"><div class="row" style="justify-content:space-between"><div><div class="ey">Fork timeline</div><h3 id="simDate" style="margin:4px 0">—</h3></div><button id="nextTurn" class="btn primary">Resolve week →</button></div><div id="simLog" class="log small muted"></div></section>
     </aside>
   </div>
@@ -96,13 +96,15 @@
     </div>
 
     <div class="lowerright">
+      <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">Political calendar sensor</div><h3 style="margin:3px 0">Elections and scheduled domestic shocks</h3></div><div class="small muted">confirmed dates separated from anticipated windows</div></div><div id="politicalCalendar" class="countrygrid"></div></section>
       <section class="card"><div class="row" style="justify-content:space-between"><div><div class="ey">World memory</div><h3 style="margin:3px 0">Global-risk history</h3></div><div id="historyLabel" class="small muted">—</div></div><svg id="spark" class="spark" viewBox="0 0 600 110" preserveAspectRatio="none"></svg></section>
       <section class="card"><div class="ey">Country pressure board</div><h3 style="margin:3px 0">States under the most active pressure</h3><div id="countries" class="countrygrid"></div></section>
     </div>
   </section>
 
-  <footer class="footer">LIVE uses public news signals, stored historical memory and GearWatch causal outputs. FORK / PLAY creates a fictional branch. All scores are research/simulation indices — not probabilities, forecasts, intelligence assessments or investment advice.</footer>
+  <footer class="footer">LIVE uses public news signals, a relevance quality gate, verified political dates, stored historical memory and GearWatch causal outputs. FORK / PLAY creates a fictional branch. All scores are research/simulation indices — not probabilities, forecasts, intelligence assessments or investment advice.</footer>
 </div>
 <script type="module" src="./app-v2.js"></script>
+<script type="module" src="./political-widget.js"></script>
 </body>
 </html>
