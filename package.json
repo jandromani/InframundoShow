@@ -1,12 +1,12 @@
 {
   "name": "worldstate-live",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "scan": "node scripts/world-scan-v2.mjs && node scripts/news-quality-enrich.mjs && node scripts/calendar-enrich.mjs",
+    "scan": "node scripts/world-scan-v2.mjs && node scripts/news-quality-enrich.mjs && node scripts/calendar-enrich.mjs && node scripts/auto-edge-discovery.mjs && node scripts/dependency-enrich.mjs && node scripts/country-brain.mjs",
     "scan:v1": "node scripts/world-scan.mjs",
-    "check": "node --check app-v2.js && node --check scripts/world-scan-v2.mjs && node --check scripts/news-quality-enrich.mjs && node --check scripts/calendar-enrich.mjs"
+    "check": "node --check app-v2.js && node --check political-widget.js && node --check scripts/world-scan-v2.mjs && node --check scripts/news-quality-enrich.mjs && node --check scripts/calendar-enrich.mjs && node --check scripts/auto-edge-discovery.mjs && node --check scripts/dependency-enrich.mjs && node --check scripts/country-brain.mjs"
   },
   "engines": {
     "node": ">=22"
