@@ -10,6 +10,9 @@ on:
       - 'scripts/world-scan-v2.mjs'
       - 'scripts/news-quality-enrich.mjs'
       - 'scripts/calendar-enrich.mjs'
+      - 'scripts/auto-edge-discovery.mjs'
+      - 'scripts/dependency-enrich.mjs'
+      - 'scripts/country-brain.mjs'
       - 'config/world-model.json'
       - 'config/political-calendar.json'
       - '.github/workflows/world-live.yml'
@@ -36,18 +39,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Scan world tensions
+      - name: Scan world tensions and autonomous graph
         run: npm run scan
       - name: Persist world memory
         shell: bash
         run: |
           git config user.name 'worldstate-bot'
           git config user.email 'worldstate-bot@users.noreply.github.com'
-          git add data/live.json
+          git add data/live.json data/auto-edges.json data/dependencies.json
           if git diff --cached --quiet; then
             echo 'No state changes'
           else
-            git commit -m "data: world tension scan $(date -u +'%Y-%m-%dT%H:%MZ')"
+            git commit -m "data: autonomous world scan $(date -u +'%Y-%m-%dT%H:%MZ')"
             git fetch origin master
             git rebase origin/master
             git push origin HEAD:master
