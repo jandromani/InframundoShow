@@ -38,7 +38,12 @@ function routeMetrics(route,code=focusCountry){
   if(base.status==='contested'){capacity*=Math.max(.38,1-(Math.max(chokeMax,bilateral)-55)/100);insurance+=20+Math.max(chokeMax,bilateral)*.35;days+=route.kind==='cable'?.01:Math.max(1,Math.round((chokeMax-55)/10))}
   if(base.status==='blocked'){capacity=0;insurance+=85+Math.max(chokeMax,bilateral)*.45}
   if(mode==='sim'&&sim?.route_overrides?.[route.id]?.[code]?.capacityPct!=null)capacity=Number(sim.route_overrides[route.id][code].capacityPct);
-  const alternatives=(route.reroutes||[]).map(id=>ROUTES.find(x=>x.id===id)).filter(Boolean).map(alt=>{const a=_routeAccessV1(alt,code);return{id:alt.id,name:alt.name,status:a.status,days:Number(alt.transitDays)||0,capacity:Number(alt.capacity)||60}}).sort((a,b)=>({open:0,contested:1,blocked:2}[a.status]-({open:0,contested:1,blocked:2}[b.status])||a.days-b.days);
+  const weight={open:0,contested:1,blocked:2};
+  const alternatives=(route.reroutes||[])
+    .map(id=>ROUTES.find(x=>x.id===id))
+    .filter(Boolean)
+    .map(alt=>{const a=_routeAccessV1(alt,code);return{id:alt.id,name:alt.name,status:a.status,days:Number(alt.transitDays)||0,capacity:Number(alt.capacity)||60}})
+    .sort((a,b)=>(weight[a.status]??3)-(weight[b.status]??3)||a.days-b.days);
   let activeReroute=base.via?alternatives.find(a=>a.id===base.via):null;
   if(!activeReroute&&base.status==='blocked')activeReroute=alternatives.find(a=>a.status!=='blocked')||null;
   if(activeReroute){days=activeReroute.days;capacity=Math.max(capacity,activeReroute.capacity*(activeReroute.status==='open'?.72:.42));insurance+=activeReroute.status==='open'?15:35}
