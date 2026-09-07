@@ -1,66 +1,172 @@
 {
-  "version": 1,
-  "updated_at": "2026-09-07T16:33:35.537Z",
+  "version": 2,
+  "updated_at": "2026-09-07T16:35:36.920Z",
   "mode": "live-deterministic",
   "disclaimer": "Tension scores are model indices for exploration, not probabilities or forecasts.",
   "global": {
-    "risk": 84,
-    "shipping_stress": 89,
-    "energy_stress": 89,
-    "trade_stress": 81,
-    "political_stress": 72
+    "risk": 87,
+    "shipping_stress": 92,
+    "energy_stress": 91,
+    "trade_stress": 84,
+    "political_stress": 76
   },
   "pairs": [
     {
       "id": "ESP-MAR",
       "a": "ESP",
       "b": "MAR",
-      "score": 74,
-      "trend": 0,
+      "score": 80,
+      "trend": 6,
       "domain": [
         "border",
         "migration",
         "sovereignty",
         "domestic-politics"
       ],
-      "summary": "The Ceuta migration crisis, public anger in Spain and renewed Moroccan sovereignty claims keep bilateral friction elevated despite continued cooperation channels.",
+      "summary": "Latest signal: Spain’s Leader Questions Morocco Border Control During Ceuta Migrant Surge - nytimes.com",
       "bot_moves": [
         "Spain: seek EU burden-sharing while reinforcing Ceuta",
         "Morocco: preserve cooperation leverage without a full rupture"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "Spain’s Leader Questions Morocco Border Control During Ceuta Migrant Surge - nytimes.com",
+          "source": "nytimes.com",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOMnd1a2stWWdvWEJHeDBkWnMxdzVqNk5YeGViZU5FcUk3SDFMWVBLLW5jTFpwWjgtVTFleXF0VWs2dlZhOEVZNGlpTmNtYXJ1OTJqU1ZXcnNWOVpkZ3M4VF91U2xUNlhjM2dud25va2ZPQnQyRmJ5dW03aE5mbndsYzNIb3F0TGM?oc=5",
+          "seen": "2026-09-03T15:34:50.000Z"
+        },
+        {
+          "title": "Spain's PM Sanchez says no evidence Morocco orchestrated Ceuta border surge - Reuters",
+          "source": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOTTkzbWhhWktPS0RDWmlYRFBhRkJUUXBYNjFZYWpwZ3lwbHhFaHJqd2hVMWdzV3JDYkt5amxZYUVkd01iUVo5Z2U4a0QwRG1WYlVVaXd0eE45YzBSczEyNlRvY3JuNGdBaHFtT0NubGpsTHpqY2RqQk9ybW5PZzJ2Si1EcTNNaGlIbjZPMnhrR0s1bTBVTmNJUTVuODlkZlhvaGw1Q21ZbFdSNmlDN1o5eU1xRGFKSzBWLXhrNEdIaHE?oc=5",
+          "seen": "2026-09-03T10:51:46.000Z"
+        },
+        {
+          "title": "Spain’s leader struggles to answer lawmakers about Ceuta border crisis - AP News",
+          "source": "AP News",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaF9SeXNGT0JEYTdELURlOFEzUm5lcHJ0TG00aDNUaFNsQm5ncFhzMGdKaGgtNUhKTXZqWW0yb2JHLUN6cW5SWUZTZXU2Q3FGbThTaW41ZnZLUElYcHU4Z2xSR1VoRlZXd1pQaUlYazhWYXBLZkhCc0lKNkRRVlNGQ0FXNzM0YjVGXzJVWnNxRjUycHVZU09mOXFmaS1Ob0N1MHhDc2xkTnJaZms5LVMxOVRR?oc=5",
+          "seen": "2026-09-03T13:34:12.000Z"
+        },
+        {
+          "title": "Morocco not to blame for Ceuta border breach, says Spanish PM - The Guardian",
+          "source": "The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOSGdYeDVOTjQtUnJRd2dQQW5JakJqZmt4aGpaWjJvX0xCMDFFVGJyLW1MNzhuY0s1SDN2dGtRMFR5YXFlSUNFWVhVWDJ5LVVJZl9zWUc2RnlYS0ZyZElua0hMaDA0MjBQbHI2MjRRNWx0clEwalBKVUhVMk12WUxJVmc0Nnh1SW1fbVlBenBaNDlMZGlGVnM2cTVTTDllWE1pVHdwVkFMYmxHbGZt?oc=5",
+          "seen": "2026-09-01T01:30:00.000Z"
+        },
+        {
+          "title": "Leaked Spanish report claims 'total permissiveness' of Morocco over Ceuta crisis - lemonde.fr",
+          "source": "lemonde.fr",
+          "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxPSHZSZFhGWXJ0dmYzNWFqY2RpYkZTaUxrTldYYVpkNkJRemEzcVJuUFdGd2hUZHFlMVE0UDczNC1Bak5HM1Rzb1g0ekVHX2FlemdKSkNrSG5pbTRPN3kwOFNyT21sMHJ4U2VsLTFoOUYzSVJGazNrd21IaUQwZ25pNk92SWNCbmI3VTcxRDlxZ3RvUE9fYVVWSnh1TWJjbVIwUUJEYTdzbDJHS21OT2dVdkhqNVlHX3V0M1Qxa0RuMFNjRVBtakt5WG9pc2ZXQTdRVEd1dkpCam82a3ZBM09mYktvRmFNZ0E?oc=5",
+          "seen": "2026-09-03T09:48:56.000Z"
+        },
+        {
+          "title": "Spain in disarray over leaked reports about Morocco’s role in Ceuta - Euronews.com",
+          "source": "Euronews.com",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNVDdXQWUzUWFwMHJXWWJBQkNENGsxanFVQjNHSnV4UE12X1hwLW5XZ0VsVTNpcFMzU01yVDJTZFdQc3lPeHp2TG52bE81dng3Y0MtUDVYeW04UGZaTDdGZHB3M1Z1Q0otZFkyb2RUVlQyNG04U3lQdTVRNDRuaHp4bjh5UmhWdTU0VU5mQWFuU2RMenhNY0J2TzhsTGhWS0J2STR6U0dTQWRkSGYwckVJdzZKTldmZ2xqMmRKZUR2OHhtUE9yQnJrTm1HYw?oc=5",
+          "seen": "2026-09-02T18:40:41.000Z"
+        },
+        {
+          "title": "Spain’s PM says no evidence Morocco planned Ceuta border rush - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNc3lyc3NYcUpNcWY1aGxZcjFGemhSNXZickVWRnFuZ3A5SWFOQkdNZ3FULWd1STIxMllZeGVjZ25kbmFLY21BdWlRS25KMGd5eW1xckk2SDNvM2lVNmFkY29RTFAxcTNHUWc1a3NaWlZNX2pQSXhTblpOMXRFRUp3NGVRVk1yeUlPMUJIMjhYSU9WbHpyZHFiQlVZUUc1UGtjTXfSAacBQVVfeXFMUGxfd2hEN2QtWGNNS3J5UlBYN0N1c2tTeTR5RnZvTEZHdGc2cTVIRVVQS2pUUF9GQXVWSmRIYzE2U1NicUhaZ2hxQzdvbTd0UWdGcU5oSmtSUURERHFnYnVqZDZESGRyeUpHUFNzaXNFN2h1MWM4VlN1alI1UXZzTm5yZkJ0S3pUVXlqOUFsNjhJRGRkVHM0Y2s0SGdmUjAxYUg0WU05N0k?oc=5",
+          "seen": "2026-09-03T17:40:06.000Z"
+        },
+        {
+          "title": "Spain’s PM says he received no advance warnings of Ceuta influx as he defends handling of crisis - CNN",
+          "source": "CNN",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxPSXNlaTdlOFJuaDFYZXZnb3kxWkJtNU5BYnI5WkNzLUVybDQ4ZDZZczlWakdWV2puRExiQ0pRd0FBVnRPVlAtb1QzMHRzVE0xdjlxZS1DSFo0MjhtMjJPdHREWlNZM1RxR2dLTjF5VURGcHdHN2Z6bFlZQ0ZJcG5OeA?oc=5",
+          "seen": "2026-09-03T09:41:53.000Z"
+        }
+      ],
+      "observed_signal": 95,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "MAR-DZA",
       "a": "MAR",
       "b": "DZA",
-      "score": 70,
-      "trend": 0,
+      "score": 73,
+      "trend": 3,
       "domain": [
         "western-sahara",
         "diplomacy",
         "energy",
         "regional-rivalry"
       ],
-      "summary": "Long-running rivalry over Western Sahara, regional influence and closed diplomatic channels keeps the Maghreb strategically brittle.",
+      "summary": "Latest signal: The Plight of Western Sahara and the Sahrawi People - The Borgen Project",
       "bot_moves": [
         "Morocco: strengthen external diplomatic support",
         "Algeria: preserve deterrence and Sahrawi alignment"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "The Plight of Western Sahara and the Sahrawi People - The Borgen Project",
+          "source": "The Borgen Project",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTFBZVGdiRlJicV9WWFlNc3d2NHdlWE85X0NpSkFKRXI2ZkpFYW44MlgzSEFvM0Y3UWJmSmV4QS13enF1N2FBNjlqRDlGS3dvQWlzSFRWVlVfRVk?oc=5",
+          "seen": "2026-09-03T14:30:08.000Z"
+        },
+        {
+          "title": "The Sahel, the New Theatre of Algerian-Moroccan Rivalry: Two Competing Models of Influence - Morocco World News",
+          "source": "Morocco World News",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOSXA0SVRhQldicXNCX0tnRTd4dDlXSmI2cXg3eTB6NGs4S0dKWDZYQmpWbUMyNWtnZDlpUEREbXp0ekJ3dWZpRm5rc1B0VnpleGpQaklGc0NrRExFc05UM0VGR1c3d0xtb09WN3BSOWNjRElrUV83NU54VXZsNGFCM3dTUU4xWTRpZ0hyYVRnUjkzX1FuYXgtOGttUldzUHQ4WjFMRnNBZDR1WFE3OGdDcjBNUXFzRTR4WG5fQlRDT3JKbW9wV0RoQ2EtQjQ0Zmw4TGtN?oc=5",
+          "seen": "2026-09-05T12:59:42.000Z"
+        },
+        {
+          "title": "Spanish PM says no 'solid proof' Morocco planned Ceuta migrant rush - Courthouse News",
+          "source": "Courthouse News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSUJsakZKU0JNRURLcEZseTZPZEVEOXNKVmNNeFAzV1lMd1AtYmFBQXV2SFU3VUk4RXczcnlONHFQT3JUcUk0dmJZWUhVV2FlU2YwSTNYcTBIYXpkcDBlS1ZFdzBkaHM4WERKaFlCSGQ5cTBxWmR5RkVCY1Q4N1hHSzk3NnItU0tRcENfem1ldUVWVERwdjc0QThMal8?oc=5",
+          "seen": "2026-09-03T18:16:13.000Z"
+        },
+        {
+          "title": "Western Sahara: The Unhealed Wound of Colonialism in the 21st Century - elciudadano.com",
+          "source": "elciudadano.com",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZnpRMlp0WmU0elBUWDVWQXRjLWo0WVh5MDhCclZEOUpkM0dxczNuRWsyelRNUk5OZmJ0QnkxRE1KQmZNY0NFdGZXMC1SbEhCU3RHWkdQYWRhaFR5bzhwSmlZRnR4UVdmX09yRGNad0FfbHNxbE1kSkx6anBuWWtTWGdrRnlReDg2STBhbUZTT1VYS0xFRFhodHY1V2NkUV9MYzUzSlZqc2tYdw?oc=5",
+          "seen": "2026-09-01T23:21:36.000Z"
+        },
+        {
+          "title": "Becoming Goliath: Morocco, With Almost No Gas Reserves, Decides to Become an Energy Power - globalpost.com",
+          "source": "globalpost.com",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPOVRxYVRCUDM0cG1WVWRuc0VQMnpVZFIwNlpYR1FBMmFNeFQzUFlrTUU3MldUWWlzbXNIMDZIY1c3ZllLbEVZcEw3NlVxSGozZGNGWmtqUWw3RTVwYlNiRndtT0xwMzVxWnlfeEtPLWZsTWJCemFBWUUxa2JCZXo4anU5cTFlUDU1dTRzbG9TbGFYOXZpbzhtWmNjVVhSV2VURzdOSS1fNHRTTEgzQkEweVBPM2owNmhSYVE?oc=5",
+          "seen": "2026-09-01T11:31:49.000Z"
+        },
+        {
+          "title": "Morocco - Mountains, Plateaus, Valleys - Britannica",
+          "source": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1kZWNJSTRpeFdYVlNBejJCTVRFdC1PR0hBanN2TVlYOXQ1M3BXRTRnejFlc3ItenZ2TkE4ZXhnV3p3bFpzMENmeFdZRlRiV0haRzZZRHJhblpGNzg?oc=5",
+          "seen": "2026-09-05T05:00:00.000Z"
+        },
+        {
+          "title": "UN adopts new world map showing Western Sahara separately from Morocco - وكالة الأنباء الصحراوية",
+          "source": "وكالة الأنباء الصحراوية",
+          "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLeUFiTV9mTE9jeC1nSks3OWI5QnppYWMzMDVkRUZDdTQxUDFrZVFnRk1WcjR0Z0JET0hfZXpOZHpjSGsxdzhCSjBSazNlNjlHYWc2eERrM2xwSGgwSEE?oc=5",
+          "seen": "2026-09-05T20:01:29.000Z"
+        },
+        {
+          "title": "Macron moves to tighten France’s 1968 migration deal with Algeria after deporting more than 140 Algerians in 5 months - africa.businessinsider.com",
+          "source": "africa.businessinsider.com",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQdVZxcElIR2ZFcnVyaWNMVmMyZUFWcFNSYlNVZ2w5WGliM09hNGpkTmNyeEhwaklTQVFpb2czQ1pPSklOWnNCbnZFN2R6XzYzRTdEal9qZ3Q0eWtKNVZ5LWxIZTA1bHhJanI1ZmF4YkNTdkdHd3NVdUJFYXhNcDZ3OUFZQUdoUGZSdGZSbDB3XzBTZHVBc2hIMVhIQmNMZEV1T0QyVHQyQnhYUzBURjVibW1nNVdpRzdrb192MlVENjFlN05nV2NjNFVra29MU09TbDdzTS1sZ09LMmZf?oc=5",
+          "seen": "2026-09-05T18:30:00.000Z"
+        }
+      ],
+      "observed_signal": 80,
+      "scan_articles": 49,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 49,
+        "gdelt": 0
+      }
     },
     {
       "id": "USA-IRN",
       "a": "USA",
       "b": "IRN",
-      "score": 89,
-      "trend": -1,
+      "score": 92,
+      "trend": 3,
       "domain": [
         "war",
         "hormuz",
@@ -68,208 +174,702 @@
         "shipping",
         "sanctions"
       ],
-      "summary": "Mutual strikes, a US blockade and Iranian restrictions are turning Hormuz into the most dangerous global energy and shipping node in the current scenario.",
+      "summary": "Latest signal: U.S. strikes Iran again as Tehran targets American allies in Gulf region - PBS",
       "bot_moves": [
         "United States: maintain economic and maritime pressure",
         "Iran: raise costs while searching for a face-saving corridor"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "U.S. strikes Iran again as Tehran targets American allies in Gulf region - PBS",
+          "source": "PBS",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOTG5heFJKSUVWVHVsV3Y1cWp5NHREem5PN1pvcmRLeHBXMXl3WnFieWVoZHI5ZlctTWVDQW43NFQyNHBGbXVWakZLS002STFhbjFXS3pSSUFLZUV3Sll4MTZDSmFscXBjNWgwVV9qMjNfUkhGbzFCc3pWZkZaWGxqQ3o2eE1qczd2VXIwVUxyQVNQbWN2a2xZMHBrazlzVG5NMW5WLUhoLTA?oc=5",
+          "seen": "2026-09-02T22:55:26.000Z"
+        },
+        {
+          "title": "The Iran war and America’s widening strategy gap in Asia - Brookings",
+          "source": "Brookings",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNek45ZHhyY2ZBWWhuRXA3Mmw0ekhvaTNNcGlmLXlnOEVzbkxfVnM0Y3BWY0s5SzZjUVlFQThZOFJwNEdyenRhbHI5ZndEOUoxZmFjLVdfWnhYdzdTS0VBaHdDZHQ4eTQtaEY0MmN1WnZUOXpZOGd2dG14azYzbTRkdUpSMXRUdnhWdktUNnEtemVDbEhvV0E?oc=5",
+          "seen": "2026-09-02T16:03:55.000Z"
+        },
+        {
+          "title": "Vance \"extremely skeptical\" U.S. strike hit Iran wedding party, says he wouldn't call conflict a war - CBS News",
+          "source": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPaGpwVVBCeVNvZE5lV3RCSFl0M2E1cnZlZS0wMjVSRFlrS1E5ZXFWSml2MGdKZEFMaHlSRFc1Ylc1WkRPTy1IaEpRZzFrbFpBZFJJbmw4RnVYaDJxWDFUQ3hlVk9JMUJ5Zk1HXzQ1Z2RxbVpWN2dTa3lFTzdwN3V3QjFTb20tSEdkOTRnQS10eUEwaFBQWlcxSmQwbUZxRmhCOEptYXhaTWJyNGpnV0E?oc=5",
+          "seen": "2026-09-04T08:00:00.000Z"
+        },
+        {
+          "title": "Tehran targets U.S. allies in Gulf after U.S. launched ‘large and powerful’ strikes on Iran - NBC News",
+          "source": "NBC News",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQRWxnU3Z6ai1MZ2Y0Zktlanl3Q2dKQ1FpQUthWDVfeTJ0NjFQWUZLYWlxcnAzUUlVY0tHQkpEY2RMMjhRWmZpZDZVM3pqeE5DTlZKY05BS2pWWWlyT2JUYkRpTEhlS3IyMmtZNHB2LVMtZnVyaEIyZEdWSGFfRHJwdnpSM3Joc1ZjZDRxMlN0clI0bVNVbnN2V3RKYUw?oc=5",
+          "seen": "2026-09-03T02:13:00.000Z"
+        },
+        {
+          "title": "U.S. military strikes Iran, while Trump vows more for Tehran's retaliation - NPR",
+          "source": "NPR",
+          "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE43OVI4c2VSUGlEY214Y0VQQlB0ZnFsdjN2WG54LWtUTW02SGRsdkt4d1U4LU52UzFWb3lZWGlfZTctVE13SDNJRkhWVnpxRldOcjNTZWtncXlqejgtR213QlBOU2g?oc=5",
+          "seen": "2026-09-02T06:15:11.000Z"
+        },
+        {
+          "title": "US strikes 3 Iranian oil tankers after saying warships were targeted with ballistic missiles - AP News",
+          "source": "AP News",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUEtPbThoMkY0OEVqRWdxUlA0eDRZYlhPTG5qbEt5V1RnazFIVzBuZHJyU2VMVHdHMzBCWmQxRDhmZ0RnOTZ2WGZPLVJTQjExWFo2amZiMmJFM3Jkb3plWnJOd0dkeEtHLXFqaFRseExIc00wUHRONXdVVWVWMWhJRmxRZFhPVTJuS3J3?oc=5",
+          "seen": "2026-09-05T21:00:00.000Z"
+        },
+        {
+          "title": "US-Iran strikes raise fears of renewed war across the Middle East - Reuters",
+          "source": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxORjZ4d3JRTk1WcXR6eThpVm1wcVpzQV8wMm42eDB4bDJRMVhxelJpdmZTYXVPQ0JTUmtiNXFVWEZyb1NBTTZibmZJTkk4bjlRNGwtWTU1OF8zXzhENVZhWDN4TUwzekdfVG8xWUpmY3hmcHBDQk5TUzBLSERGbFJ0c05nekFpclo3cFdMcm93dHlEUXctVTY2MjJIMkkxSTRGWnc?oc=5",
+          "seen": "2026-09-02T15:55:10.000Z"
+        },
+        {
+          "title": "2026 Iran war | Deal, Explained, United States, Israel, Strait of Hormuz, Map, & Conflict - Britannica",
+          "source": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5nTzlhOGZTS180cWNtVG91c2VWRVJFYlk0cW5Ba1RHUEFOSEtldU15QktQT0EzRVY1ZVdZZ0VTRHVWTVhyN1IzeU1wbmlDMUhrQ3Roc1YxcmdMUQ?oc=5",
+          "seen": "2026-09-04T05:00:00.000Z"
+        }
+      ],
+      "observed_signal": 100,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "CHN-TWN",
       "a": "CHN",
       "b": "TWN",
-      "score": 84,
-      "trend": 0,
+      "score": 88,
+      "trend": 4,
       "domain": [
         "sovereignty",
         "military",
         "semiconductors",
         "diplomacy"
       ],
-      "summary": "Military pressure and diplomatic competition continue while Taiwan increasingly uses semiconductor investment as strategic leverage with allies.",
+      "summary": "Latest signal: How Taiwan Can Win the Strait - Foreign Affairs",
       "bot_moves": [
         "China: sustain coercive pressure below the war threshold",
         "Taiwan: deepen chip diplomacy and distributed resilience"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "How Taiwan Can Win the Strait - Foreign Affairs",
+          "source": "Foreign Affairs",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1mTDJiR1lXYVFmLWZXMVpMUksxUHRjVXROUFJ5UzJxekI0S3gyWlZ5TVBYTDZZNjFzeHNBOS1fVW9sUjVzZmMxbHczLXVybmhycTRyMm94NHl0Nmd4YXkzRnhqRjMxWEFSeEpNRUQ0cTM?oc=5",
+          "seen": "2026-09-04T04:00:00.000Z"
+        },
+        {
+          "title": "The PRC Normalizes “Law Enforcement” East of Taiwan - understandingwar.org",
+          "source": "understandingwar.org",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPU3Vqb3k3eGNJblJFbE9QSVpDQUxrSkZoNnpJR05tYi0ya1ZlakNiMllrX2xVRnVPQjIwMjVsLVY1WC12T2tRc1pVekowcUNzUWtvRlBkT2xXY1dOeDZ0dk81U0wyQUl2MlZFbXZZNEE5c0Y4RU41S292cmZSSVloUUl4cXRUS2c4NTBGLXMwUmJIak9sQ25Fa1UxSWFRSkFfcHJR?oc=5",
+          "seen": "2026-09-01T14:46:53.000Z"
+        },
+        {
+          "title": "Opinion | This obscure airport tells you a lot about China - The Washington Post",
+          "source": "The Washington Post",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPWUxIODVzbnN4WXVKdV80aDFrbG9HWVhBMFdNcGFxUFd4cUpfWThEeFNMSlVZM0UzZDlSVXc3aVdwcXNNbmUtbkl1RFhjcnd1ZFNjLXhWWFpib3gxYXZhMEdKN3QwdTlnUWlNZVJhYUxZNEdDd2hoVWJ1eGpmRjlBT3VLMUFNWUlVT2puODRPUHc5eVFvc0ZHZUFvNXhBOU00d1h3?oc=5",
+          "seen": "2026-09-04T17:15:00.000Z"
+        },
+        {
+          "title": "At Taiwan’s Temples, a Glimpse of What China Could Have Been - WSJ",
+          "source": "WSJ",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxORkVQMzc0SHAzWlc4bHBrV0xkandDZE4tLUhLbDJpUDJkcVMwUUJJS2p5dXlfb3hFQ2VRMXByY0ZqeFdZV1RIVE50RUtWWGY2SzMwcGp4NzJWM25xYmtoT0VPQmFaRkFZZ0JnWWdqcl91SkxheUo0V3p4VmJEM2UwVk1VajZDSUx4dnFYd1hTTjV4Tm9NZHJjTkRzWEE4emlQT3F5azhvRQ?oc=5",
+          "seen": "2026-09-07T16:31:30.000Z"
+        },
+        {
+          "title": "China Mounts Fresh Campaign To Encircle Taiwan With Patrols - gCaptain",
+          "source": "gCaptain",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNeDUzTXRZbV9HQmFhaHlfUVlPblV4d1dWbFNOWWtWOEpLWlkwQXJMdEh6OTNWVnAxbjEzWHNzblpnanpvMDFER1I0WWF3bFZSZENlREE0TU4zdnVobGFZbmhMdmU1SVZzcFJCSHZiUi1FbEtIWS1YNVI4cWpSRlVjeEdFYkp5UzJi?oc=5",
+          "seen": "2026-09-06T23:58:03.000Z"
+        },
+        {
+          "title": "China Piles Pressure on Taiwan With New Patrols Off Pacific Coast - Bloomberg.com",
+          "source": "Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPeEpZNF9UZHN3UXdwdlA0VUliMjc4NF9Da3hrRlpKY1M2YldLOXhtYVVPclp6ZnppZXAwU1JzeWRZejN5STZ0YklqRklKUGVpYjRkblBJMFBneXEzajVXZTQwUDluaXA5bE55Wlg3ZHl3STJGWXdyTXJxUTEyaHdraXV2TExOTnFpVFZpVWFGN1AzTFRmM1NKQ3kwQVNpWDJ2VGlWQ0MxTVAyRU9zRjFUUlFGWFg1Zw?oc=5",
+          "seen": "2026-09-06T23:00:00.000Z"
+        },
+        {
+          "title": "Rare Beijing spy series highlights real-life intelligence drama with Taiwan - scmp.com",
+          "source": "scmp.com",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPVjR6RVQzeFEtN1pYczBuRk5wbllkby1uVTRiREkzQ3VYQ0ExT2hQd3NNcGkyemJMN2xDMXVRa0RURnZZcVY1S01jVmRaVXlvaUdDZzhyMmpEV3JlLXBIZjRhX2NTdzVnQ3hhdkViSnNlQzhTcUd4VUpKNHNOSjcyV2l1b3BkQnhNbzF1ZG8wQzU2QWRSdnRUNHlKSmtGNXRTVE1uNkxLVHNtVUN1ei1Weks3anZIODVEU19va1ptMGl5SnEybWfSAcYBQVVfeXFMTVJoMnQyU0R4bDhlc3dObWw3QlkzbXg5amZOc25YVnB5U0diWURIS0RSaXNsX1Q2bzRGSy1BNnpSNFJfSHFuY2RtelNPbjNhbW4xdThPV1ZUWTVSQVB6MmptcmhzSlBfSG5lZFVmQkV4akpJdFJTMHA4bDFQMElFSTY0MlRhVHhsbXF4MGFxSklycUdkMnVTM2UtNXBnLUtvQ3dWaDNrdVNhVjF6a2Z2OEZHRFZxcjd5dUd1MXZXM0xnZW1ZWmhB?oc=5",
+          "seen": "2026-09-07T09:56:13.000Z"
+        },
+        {
+          "title": "Taiwan Strait 1958: The First Sidewinder Kill - MiGFlug",
+          "source": "MiGFlug",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOWC1aaFNRQTlZeWZBMHFMaU5pa3ZUSGY3aXlBU1NCZWRvNzJwMWp2T3I0bFhqMzdsX183UkFiYTgtUy1zek9NQUVLMWhYSDM0V09MeklNamkxMXdwbmJNSDRpcnJ1XzVrR0djS0RuVk1xOHBjMG1mM3JPUUttRU9JU1YwTkN5NUtJVkJGZWZKZ1V6UXVZOUFsV3psSQ?oc=5",
+          "seen": "2026-09-07T05:52:50.000Z"
+        }
+      ],
+      "observed_signal": 100,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "RUS-UKR",
       "a": "RUS",
       "b": "UKR",
-      "score": 95,
-      "trend": 0,
+      "score": 96,
+      "trend": 1,
       "domain": [
         "war",
         "defense",
         "energy",
         "sanctions"
       ],
-      "summary": "Active war remains a structural source of European defense, energy and industrial pressure.",
+      "summary": "Latest signal: US envoys arrive in Kyiv for Ukraine war talks after meeting Putin - Al Jazeera",
       "bot_moves": [
         "Russia: preserve military pressure and strategic depth",
         "Ukraine: sustain defense capacity and external support"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "US envoys arrive in Kyiv for Ukraine war talks after meeting Putin - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPa3lfVzJ5SVRIMUFBZEZpZkx5NzQ1cHU5cFMySTVUeEZzTVNNLV9WOGpMQXh5MFd1SUhiQ2V5T0FHSUZhZ1Jiblg4XzZfZkh3SzFBZVBvSXZNRElXcndKeWM5NGROanNCd2hkem9ieWxieUp3VEp5dzVMeVI3VzdQQjd2Y1VJWFJSQlczbkF6SGotaU12T1Q0RHBhSFo1X19pMFNlY3NIV1lfNUJ5UW82dW4wNzXSAboBQVVfeXFMTlBLcWhqSU1tMmxRWDNKajgzSldXRnl1cFlNeHZLMThQT0dmZjhkbHpCaE12NXVzZGw0LTVtMTY5N1ZQMlZhRWIxSU11TVdYanVHU3hvN0hHRXpfR2JDamVMWC05bmFjNS02SFduNWtRT3Z0YVNmLTNZVEhmbEdpdG9lOGZKdEt4WUlRQXA2YXRIZG5fYmlPQmx0U1pXcVpMRGszN29tRHF1NFZ6aElVR05CU0JVMmFRYmx3?oc=5",
+          "seen": "2026-09-05T18:13:13.000Z"
+        },
+        {
+          "title": "Russia may force more men to fight in Ukraine as military faces heavy losses - PBS",
+          "source": "PBS",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQa1M5Z2FzTEp0TzV6LW9fZU03cDhmYzBYNGl2QWF3bHloc09Sb1RCaEM3ajFNc3EzRE5nV2Y4NHZvM3lCTTVMT1h6MDhNQ0NfOFBBczhCR1hCS1NwejFyNGlPNnh3MmhUa0NiRTREZ1FOdU5hbjYzSWtRbkNLZ3MxaDhzWUNWTlU5a2NWQy1BZVh3Qm1iUnRfWkM4MklmXzBJWlhkOExzVnRJbTBPWTFJ?oc=5",
+          "seen": "2026-09-03T22:35:22.000Z"
+        },
+        {
+          "title": "Russian Offensive Campaign Assessment, September 6, 2026 - understandingwar.org",
+          "source": "understandingwar.org",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQS0VhNkVwLXhxSVFqMnprbWRWa2J6S1VacW9vcHUtUDBpckU2T0VzVmM2WTBCam1PUFFtZ3FybzlxUU5SYzVmRHBTejhqVkpzRml5SW1ncXFJVDN6azBua2taU3k0WjNmSjJXcUZqSlUwblN6Qzk1YTJhOWw5cVZDTTgyT0xmUHBaTUFUQTM2YVM0NzhWUzRKSmRaT3VuMk96SXRFazBsVXZBMDVL?oc=5",
+          "seen": "2026-09-07T01:15:28.000Z"
+        },
+        {
+          "title": "Russia-Ukraine war: Zelensky expects war to continue after US envoy talks - BBC",
+          "source": "BBC",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE50V2I1X09UNzZRdWxqX3FLb1NwN0stYkdhZDNNY0xHNFJBOGRUaUJLOXlZX3NtOTNZSDNMMjZtMi1hd1JPT2xVNXBTeEw5WEptNW8tajJVLXpsdw?oc=5",
+          "seen": "2026-09-06T20:41:58.000Z"
+        },
+        {
+          "title": "Putin floats 'chance' at peace with Ukraine as NATO chief warns Russia is becoming 'increasingly reckless' - CNBC",
+          "source": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQQVVwOVQ1eVI0dHRTbV9UOGwxeVRHOVJLSVJkUjJiWUtSbVRPZ19VTGFjREt6cDV2V1BGajdtM2I3VWlOcVllYmNXR1BHNUswZUVkamlDWjNxSVUtMjNVb09uT1VPcFQyUl9id0FTNFRnOTRiR3Y4dERKM01DaWI2NXpn0gGHAUFVX3lxTFAzNHBnUlUweVh6emJGRF8tTHk0OUY5LVg5ZlJkRkRXanBzSm5CMzlmUm9UZDhodmg3QUk1cFZJeVdKTVEyNjFjNzZkR0tYb3FYNm9URF93cnVYZWpKTmtlT1RaaEpMREtfdklMeE9mSzE0STRtcXE2QVBOQkVvVllyMnM0RlFZZw?oc=5",
+          "seen": "2026-09-03T09:09:09.000Z"
+        },
+        {
+          "title": "The Ukraine war is intensifying, expanding and stuck - The Economist",
+          "source": "The Economist",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQOGFuUVdlLU9BNVI4NUVaU1ZiYjJkMWdHM2tvV2llcVhZR1puSzZkVDdxclVrVHoyWHlaeVZZUE45akZsQnUwRngtQkVPUGF4TzdWa043d2YxaWFQQnpNT2hmdmVtRzJ4MkQ1RU4wQTlIcHp0aWJSNzBkc2sxd2g1OTMtQjA4eUhNZDBVWl83S2JoUUo3ZUs2NWhueGM2bFl1Tkp0cg?oc=5",
+          "seen": "2026-09-01T19:57:35.000Z"
+        },
+        {
+          "title": "Russia pounds Kyiv for more than 12 hours, killing at least a dozen in 6th straight day of attacks - AP News",
+          "source": "AP News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNGJjWlJwYTl3Y1dCUm5sakROdldmYUs2Q0pPWVVBdTJXTWFTQ21PWTFjaVdESnJCUm1taTJfVFJPZ0JDR3BSdmxQOHBDWmhuSmo2eFVTamVpeElVbGZYbThFRUpzX2xnQ3R0UnR6Qnh3M2JOV1VnWDdmNW54MFRTdlFWNl93SWoxbnhvbk1mbW81SXg2M2lEY2dVZk9MVUlWaVJyT2tmOGw?oc=5",
+          "seen": "2026-09-01T21:25:00.000Z"
+        },
+        {
+          "title": "Russian Offensive Campaign Assessment, September 1, 2026 - understandingwar.org",
+          "source": "understandingwar.org",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQLUgwNVlBeW5lTV80Wkc3ZjliVUxxSm8zU3ZkMDdlWU5lb201Y2RLTVBaaWJFNWV2ZklRaGoxY2hLeGVpaEsxNmpJUFExVDVMODJYSTQtaTBFTUVVd1J0N0cxYUNCQTM2aE1kLU9fX0sxLXR4bWRVcGhwb2RyV0VfUDdzd2p4aDJHX2pBazEtclFLWjctUmtlRGp3X054Y21IeV9hVGxTQXY2VDg2?oc=5",
+          "seen": "2026-09-02T02:47:52.000Z"
+        }
+      ],
+      "observed_signal": 100,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "PRK-KOR",
       "a": "PRK",
       "b": "KOR",
-      "score": 79,
-      "trend": 0,
+      "score": 85,
+      "trend": 6,
       "domain": [
         "nuclear",
         "missiles",
         "military"
       ],
-      "summary": "Nuclear and missile deterrence, military readiness and alliance signaling keep the peninsula in a persistent high-risk equilibrium.",
+      "summary": "Latest signal: North Korea deploys warship ‘capable of annihilating retaliatory strikes’ - Al Jazeera",
       "bot_moves": [
         "North Korea: demonstrate survivable deterrence",
         "South Korea: reinforce alliance readiness"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "North Korea deploys warship ‘capable of annihilating retaliatory strikes’ - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOC1weVRfdkdkamhvVG0zNTlmYjZEeFVRYVFNdFpnUWt0NVJUVVhsdGg0bmVjMDc1ZW44eEpWTVU1NWltb0h1NGY3UWVCNDllMGp3eC1MS2paUDlZS2w2SXIyV2JkTkFueDZpY2xpVXZFUS1QUGxhcTVOc25rSElYcENCQXVtTzdwSUFISmRGYjNGdk4zZ2JqekhDUVR0YlVuZ1VJUnB0MmFxQUZ4ZXF5cNIBtgFBVV95cUxOOE9MWmJMZm1SUmxnalZPbnJma3M3ak00Z3h4UXhjNEpJSEc1ZE13Y0hYWFB5UjJXSVZ3U2w0SjFXci16T1pxWThYZVJVS19UTk9FR3pFandSdkVmcVh0aHhwZEE4MUlqX1VLN3MySkVtY0tRNGRLbmFBRHZORXotZXZGNi1WYS1ubEhwWElIa1NCemdsRmo4VGg4Y0hQd05rMXhaa2M0U3F0aHhaU19ZajBPX0pLdw?oc=5",
+          "seen": "2026-09-07T07:03:14.000Z"
+        },
+        {
+          "title": "What North Korea’s new warship reveals about Kim’s aim to secure nearby waters - scmp.com",
+          "source": "scmp.com",
+          "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNRXZZcUxpaDZGVHdsY0J3YTZLNzBuejNfaVYyTUlBZ2NnWW1IQ25aMWdwbVlabjJ1QzUxSzgtc04zaVZxUE4tN01tN0poelp3QVQwQk9Hb2RSaml2U3g2VUdxQUFPTWNZbjJybGVOWjMxQjdXbHNkOHNUOHVQdDh3dlFCcG5keDIzTVlDdDJNRFNHaFBraVJJZTZNVnNEOF80LXl3cHd3cHU4YmtlNXJTNk83NzdIZWVHOU0wczl6Q0pZdENSTmVRblNIWC1YS2NEOUHSAdIBQVVfeXFMTUV2WXFMaWg2RlR3bGNCd2E2SzcwbnozX2lWMk1JQWdjZ1ltSENuWjFncG1ZWm4ydUM1MUs4LXNOM2lWcVBOLTdNbTdKaHpad0FUMEJPR29kUmppdlN4NlVHcUFBT01jWW4ycmxlTlozMUI3V2xzZDhzVDh1UHQ4d3ZRQnBuZHgyM01ZQ3QyTURTR2hQa2lSSWU2TVZzRDhfNC15d3B3d3B1OGJrZTVyUzZPNzc3SGVlRzlNMHM5ekNKWXRDUk5lUW5TSFgtWEtjRDlB?oc=5",
+          "seen": "2026-09-07T08:11:30.000Z"
+        },
+        {
+          "title": "Russia-North Korea Military Partnership Is Prolonging Ukraine War and Threatening Security, South Korea Says - UNITED24 Media",
+          "source": "UNITED24 Media",
+          "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPZ2JyUmpMd2FIWDFhZjRCWWJWVHcxVi1qMzAzZGZBQWV6alF6a2hmUnZhWjVYdjNmbkkzWGxRV21oTjNsWlo2ckwya190NGJ2SEhmSlRYQ1BfQnNhQkJ3cDR6V1JWV0syWUxldVIzNklpRDhSTDlSY1FSSnFMTHc0U20wNzRzQk1RUVpYVTN0MHB0YWtMRktVTm51allFQWF3OWptbFpDNWJ2bmJxY1VtTHFCV3hQV0NBT3VwZlVfTmV2MWdLdUgzNkpndXNrNkxvSGpMUmNWQ29TLThMWTNKTUJjTjJOQU1GbkE?oc=5",
+          "seen": "2026-09-02T07:29:42.000Z"
+        },
+        {
+          "title": "South Korea, Japan condemn North Korea-Russia military ties - upi.com",
+          "source": "upi.com",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNN1g4bnBrVG1LdHlUM0I4MGZ1SDVrb0lOVzQyeGZwbExqX29IQkRGVWQtZm9Pd0dUcndCUmxjV2dQZjI3ZXVBZWFvVll4THkzVzNaSmM2NkJxSXlYSTZ6ZFllaVZxWFprbjcyd3hqc1gxMlFlWklCUnRhbGhRU2xGWXFLQU9QRlFqQ2QtSGhZMGs5dE1xWFh3M2hoYW1qWTdyUnBURkJtT3VvdjlHLVQzMlROVVVydTh3ODJkS0o4eDgyZTB3Q0lzQTFCYmVPZFRhVEl6amtqS2Q2QnV1WUHSAeMBQVVfeXFMUEJGbzdDb25ka2ZQSEFFVDUtRjBzOGFsYVQ1QVBsMWZ1RXpjNUVId3lvZlBXZ0phWk1Sa0RuZUVWa01meEQzTnZ0YnpZeXdLSW1paDVqYkhMb0Z5aVlzTmFmTXZsdTZiRVk5TnI5MS0zd2dzUFRYcmdTU09Qdi1ZbVE4NWp2dThsWlVyVDBKYTlQT3VBcjJ2WG5ZWS1ILXdFNmg4Rl9vZEtBZjRieEdFNExhNXRkUnpFQ2kwZ3VEYzk5YTZsci1xLXNfMEtxOUlMS0ZzQlg4X1NoWm1PX1VPVGctNUE?oc=5",
+          "seen": "2026-09-02T08:36:21.000Z"
+        },
+        {
+          "title": "North Korean Missile Launches Challenge Efforts To Reduce Tensions - The Organization for World Peace",
+          "source": "The Organization for World Peace",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNN1lVamZ5aUZKcnhBSFllLWNRS09PbEhyZEZLaWFMQU9MMXVXMW5GYTFXSi1mNkE4S3QxbGV6Nk9nZklCU3IwUDBYUlByY2E4VWRuOXhfTjJQcDVFMHcxNE9kd0lfTHo4ZUpEcnp4X1I0clpIZFZLQVh0LVRqNUVOTlhrVUR0cGpVOEJLMEl4UQ?oc=5",
+          "seen": "2026-09-01T18:29:04.000Z"
+        },
+        {
+          "title": "North Korean Missiles Expose Europe’s Industrial Weakness in Air and Missile Defense - hudson.org",
+          "source": "hudson.org",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxQYWVpT1RuTFNKOTRqd3VNaUlEYmVFaG96a2thMXVLT1kxSjRIWjEtQk1FT2R4UmVkeEtBbHYzVnZQODZBak00Q19TYVZBd21iX3FGMXVkUUpPVmZBUmtmcnA5TEFOVUoyMnVuNWUyLUFkaklDZzVsblpjbVVKeGdDZzdOVzNTT0pOdllnSUlidjVMbERVc0t4MVkwSUFlMFYtU2lTSTJjZnVfdWQ3RGRaYW1GOFdaaE1JZlpGZmxXeDdpdVNiQ0RucWwtcw?oc=5",
+          "seen": "2026-09-01T12:00:00.000Z"
+        },
+        {
+          "title": "North Korea’s Kim Jong Un says new destroyer part of nuclear response system - WTVB",
+          "source": "WTVB",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNdzFLcnYybHVZSFc3WXh5TlMtYVJwUDdTMmtuUkJnLVk5Smw0MDR4WFdkRDNoY0ctaWMyc3dDN1daZUpwUWRKTXk0NEtmMi1oTHUzMFJ4b0JoRUdodmVsRndZNHlMemMtWGFwMTRqa1NfaUg3bHpEb2hRWkQtQVFqeTVlNkdGYjdESHZIc3NTMDFyTl85aGF1S0IwZEdnYkd1OEdLeldxMTdfQS1uckhZd0pNd1c?oc=5",
+          "seen": "2026-09-07T02:46:37.000Z"
+        },
+        {
+          "title": "South Korea calls for permanent peace regime with North - Türkiye Today",
+          "source": "Türkiye Today",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdHV6RXd5c1k5cmpFaDlEREt2Zk52S0hUWXdsdWxUbFZReFBsNV9ZLUNZQV9udVJJU29oZ0gxZ1RwRjRNdUVlOWYwV21rYzBCU0ltLTU4VEdNclhaci1NYl9jQ01LZTRacmZWbVdlenJ3U2cwQkN5UHRMT1puU3RVdVo2TkdIN2RjVS1PeXNvamRINFphcmhCWU9pS0Nlb0k?oc=5",
+          "seen": "2026-09-03T01:12:02.000Z"
+        }
+      ],
+      "observed_signal": 100,
+      "scan_articles": 38,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 38,
+        "gdelt": 0
+      }
     },
     {
       "id": "CHN-PHL",
       "a": "CHN",
       "b": "PHL",
-      "score": 70,
-      "trend": 0,
+      "score": 76,
+      "trend": 6,
       "domain": [
         "south-china-sea",
         "shipping",
         "alliances"
       ],
-      "summary": "Maritime friction and alliance commitments keep contested South China Sea waters exposed to accidental escalation.",
+      "summary": "Latest signal: Chinese Destroyer Involved in Fatal Collision Returns to South China Sea - USNI News",
       "bot_moves": [
         "China: maintain gray-zone maritime pressure",
         "Philippines: increase allied presence and documentation"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "Chinese Destroyer Involved in Fatal Collision Returns to South China Sea - USNI News",
+          "source": "USNI News",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNZ2RkTlhQLUxDYUpHaG9xS2h2NkdTblB5ai1pLWhpSTI2anBPWjZGeU5OcnJReWJ1RUIwdEx1dmoydnVhVlVLcDBLU0JZb29sRkZOQVJ2bjNpdjh3clVGTWRuNGp2bE5jNEM2TTkzRlNWWWdSeXc1aGhGaDl0TzYzaGxmdDJmSUY5cHhLeU5KV25YODI1Zml0ZlluTTFkeUZPNlNWaElJcVY?oc=5",
+          "seen": "2026-09-03T19:50:00.000Z"
+        },
+        {
+          "title": "South China Sea Disputes Test U.S. Allies and Defense Commitments - Legis1",
+          "source": "Legis1",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9ScXVHS3NLVU84cDA3Y0ZjZTFJVWNINzZkaUhqbVFmMmN6cGpDcXY3VDB6bHlwSlhpOGRGazdVb3VhZm95bDJ2cEgybzJlS3RnQURSa3Q3bjhPSkltOFROU1hfcUk5VVB1eThDVmZmU2RUVGxFOUNJUmNHMWIyZw?oc=5",
+          "seen": "2026-08-31T20:16:32.000Z"
+        },
+        {
+          "title": "Chinese armed trainer jets drive away Philippine aircraft over Scarborough Shoal - scmp.com",
+          "source": "scmp.com",
+          "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOWmpjci05NVpOLWlwaWVOVjZrSU90dlRZRVJvcU9pZlA1T3UySDBWYndQekE1YmNJV0NkTEhGN044NW5nb2F0NzA4eUdsQlJjQ19ua2FBYnJ4VERmTm0tZG5JUVhCMWwwanJpMzIyc1pKckJneklHS0NHRnB2WlhrdmZhamZvMVpsMGJlcmhNWlRCSFd6Sks4MGpsclpKcWJYRmh4X21VZV9FdEdzbXc2akpZcHdUdnY0ZjhXY0dETUQ1cEg3b2pVYWZzN2dmRklPcVQw0gHTAUFVX3lxTFB1bFJDSEpXVU9idDFFRlhFOVp2clBUME1fR0RaQnc3OHpfSWtzSWZPdHFzal81b1VsOG0xbUg5WmRrX290dVdWOXR1OVh2eGZkN0dVTEtvTDBRRDR2Uzl0WTY4Mkw4OExHVWN0TVRaNWVKaG9EbEJqXzkwR1RUWVZyN2tsc05aa2FBNUF5cmdpVDUxT21qQ0pmMHY4cUtSMk80UGdJUlV6Y0tQdjMweWszb3RMMXJibmEtS2F4cVVrS0FEMzl6eEh1M3RncWRUeEhZTjg?oc=5",
+          "seen": "2026-09-04T10:00:13.000Z"
+        },
+        {
+          "title": "Turning the tide: China seeks to set the rules at sea - Brookings",
+          "source": "Brookings",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQLUkzeXlMN2RGVlptREJTR3haNnN2NndSWV8zak8tSGNYdkFfVE9va0t4aWJnckh6SXVLLWdGV09wYk00NkdhT0dwQWd6YkF6WTdjWURBSzFrYVBxa2RBOHpVTWg2NjUxNk5oVUNUYl85Sy1DR3RqSU1Kd2FhZGZiTzRlSmNEM3BuaWVGRVZxb3dpZw?oc=5",
+          "seen": "2026-09-02T12:06:38.000Z"
+        },
+        {
+          "title": "China's Show of Strength in the South China Sea Reveals Its Weakness - JAPAN Forward",
+          "source": "JAPAN Forward",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQc2NiZmlDZ2x1OWE2ME4xcXlQN3o5MEllZXRMRElSNHJfc1ZLSGN5NXpoZFFSR1piU29KSXVEdEJUX1VRVlkxLXlfWWdjb2xuTmxYSGRfTWswT1Y4QU02TzJlcTUzT3MtUHVlVkw5TnBBMGg4MkFCSy1WRXhiZkZaeFNxYw?oc=5",
+          "seen": "2026-09-02T08:26:19.000Z"
+        },
+        {
+          "title": "Philippines' Teodoro says China could exploit cuts in US-South Korean exercises - Reuters",
+          "source": "Reuters",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPblpmdXplOXBOQVExNG5JSkkta1E0VEJYNDRqRG1ncUNrQ1Q3eS1RQmQ5T05OUG1rbUVYakhHM0hzWUwyRHJIa1FmWmFCeXdRbF8xbmctNVpXZ3ZDaldhMjJNMEVZMXlLU1ZSandKQl96MzhXMTJEdUhOcXNUZGJ3RE15X01hYlE5NFMzaEFPbjY0REQ1Z2Q3Q0RFeWpFZnFiUHpKckNCcjE0SEptdXRyZVlJRVAydHJCQjVYdHktZ3U0T3ZrVmNr?oc=5",
+          "seen": "2026-09-07T03:26:00.000Z"
+        },
+        {
+          "title": "China piles pressure on Taiwan with new patrols off Pacific coast - The Japan Times",
+          "source": "The Japan Times",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNRmxqYkh5Y2RWMmpsakY2Z3lnakxSenhyclllQlB2UGVUUWVkWEY4bmFiYWdCbV9abkQwS3lSTGNFN1Z4YTFGNXNzdzFmNEVsRHM5ekdIYU5tMllabDhCVFNFSVZCeGpXTHVvUWVYLXlESGhYQWs0cXdqdGVQQWR5aUw1Y0gwSjJ0cV9EUGVNMmRvUQ?oc=5",
+          "seen": "2026-09-07T06:57:54.000Z"
+        },
+        {
+          "title": "Beijing drives maritime militia aggression in South China Sea - Indo-Pacific Defense FORUM",
+          "source": "Indo-Pacific Defense FORUM",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNM1RUN2FnZkhpajR2THkycGtHMWZfVFprOE8zRGhUQnNWRUszM3N1dzd2ZU1fazY0Q1ZEZk9sb1doZ0J5YVZTRm5YaDZCMlRCZXdMbWo4bEJQN01lRUpNd3RCY2dWWW5HQzJnNXZDYUtlUVZGLVlYTlF4cHRVdmVNeG5uNEkzQk1QSERkWFN0ejdETlhNUnRnWVhyb05BZw?oc=5",
+          "seen": "2026-09-01T14:00:47.000Z"
+        }
+      ],
+      "observed_signal": 92,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "IND-PAK",
       "a": "IND",
       "b": "PAK",
-      "score": 64,
-      "trend": 0,
+      "score": 69,
+      "trend": 5,
       "domain": [
         "kashmir",
         "nuclear",
         "security"
       ],
-      "summary": "A nuclear-armed rivalry remains structurally dangerous even during quieter news cycles.",
+      "summary": "Latest signal: Pakistan wins Indus waters battle at The Hague, but India threat remains - Al Jazeera",
       "bot_moves": [
         "India: preserve deterrence and border readiness",
         "Pakistan: avoid isolation while maintaining deterrence"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "Pakistan wins Indus waters battle at The Hague, but India threat remains - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMmRpRDhuWnZ5NkRaYmNBcVdfcm1JRWxGeTZkYnVKMFJaX2hWd1Nja0YzOHpFcmNFNVdhRzF0VzdEYlFHT2FnTHpzWHo2emtzaXpuSTRLaWpyMnV2R1B6Y1NjR29NalE3LXBUUEs5LWNZNmlETGl1cWVBVjVZcENCcE14aGVCdVVoQXhuZElEZm43enM5WHgyMndhbkFieXVNS2Z1QXpHVDFsZ2dHaU81a9IBtgFBVV95cUxPaVlXRVFSa3VUVDRZMlVEWlU3bzdaekhsbllFbGsyVm1MSWpId1FZR1VXNGpjR0c5X01zcDJmTzNYa0xNcVJIZFE4bDJfbzFRTlcteDlBZ2NuMmNfRzlSaEQwSzB0SElaWW1ScmNIQklkcDdmS1ZEZUdpZ0F0aldadTBlQWU5dXd4enVwSVZweVlCQWlfTVA0d1R6MzYybjFvcnBidGQwZ0FER0tLcE02VlhILU5Tdw?oc=5",
+          "seen": "2026-09-02T06:08:29.000Z"
+        },
+        {
+          "title": "India Ordered to Uphold Pakistan Water Treaty, Curb Kashmir Dam - Bloomberg.com",
+          "source": "Bloomberg.com",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNR01CcHJ1NFBIbU5lWDdpbWtHNmxlc0pCSEF4ZVJzN2VpVDgySlkwLVVhZXJFNS1FQ05jaUc3YmhZTlZtOUR0ME5DbHZuZE50UUJyVHVXdGktVVlOODVad0o3QjVjRG5VYjJIU0JGOGdBMk5VZ1hQaEpBZjVJUXlBTGpSLXdkYkh5WkRtNFQtd1ljblZtUlIxcGJBdE5KQlNBQV9XOTNMQTV0Mmw4WGZJeTV4WQ?oc=5",
+          "seen": "2026-09-01T08:38:42.000Z"
+        },
+        {
+          "title": "India rejects court order to uphold decades-old water-sharing treaty with Pakistan - CNBC",
+          "source": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxPUXF3dlhjWkkzTzNLWHFfNFBTX2xEY2kyRXJkaVhiXzltUGo4UnNOalB4MWJpajN3aHY4Z05FZmRPVlJ6UHplaVZoX2lqczVvYnZ4aE9ZY2dHYS1uYXJ1SzgycW4yTUswOGlLU2lCRnhfNzd5NE9DTkdtckhtLXJIb2NHNNIBiAFBVV95cUxPa3p4MmU0ckg5X1hFblhydGlZWDg3cHpqbjVjY2RSQW10aV9hZnJFLVpEOHNsdG9KdnFDYWtJclBkSENDa0dHNlR0SXhFVW5Yc3NvUFlvSkUtZjUycWNaNFE1bXVQQ1RNRW1YUU80Mll5Rjk3RTY3NUY5dlRoVXF5aG5iWkpRLUw0?oc=5",
+          "seen": "2026-09-01T09:56:26.000Z"
+        },
+        {
+          "title": "'India Doesn't Need To Fear Turkish Or Saudi Interventions In A Future India-Pakistan Conflict' - Rediff",
+          "source": "Rediff",
+          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxORVZKOGVlSHgwak5wcXJMYWVGOEFuMWVpWVR3V2VZNHVKbV84SUxSWGFjTDJWdTN2MUZPalFHaTVBTUxUTFFFMFJaUjhvVTlUVThtNU5pbHBHc21DTDRnalhYd1dxdGNDdXNqc3EyY1ZYX01veHRZMkU3RjNzY3BKTzE5M0pVazJ3d0FiVkg2MklwTWIzM1hyVEVJWHpJTmZNd255Y25ESkdmcWpHZTF5SG0zT29hU0FBTHM3YnhqUkhDdVJWcXpPZm9NeVNoUUFGZ05xTHhhTEd3dzQ?oc=5",
+          "seen": "2026-09-02T03:39:01.000Z"
+        },
+        {
+          "title": "India rejects Hague ruling on Indus waters: What's next? - dw.com",
+          "source": "dw.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOUlV5bi0wZnByZ3R4dmpQM1RQREFPdzBjUm9FTnRiTEpKb3hSVGQwbVJVMWhlQS1aVFd3YmVsMVcta2pMeDdEUHdkX2o2bWhUUEtEcGFHbWlwWG9FaldldmxpQ2pnWmcxNXZYa2hNdlI2c2pnMXhkamhnaFBHZXNXd25yeHJERi1PQVBCUGhab9IBjwFBVV95cUxPVUdsYkdxRUVlY1Q2dEtrV2djeXFsQmRqcm1MLWladno2c0xmWGMzYVpVaHRUVUY2WFhpOFpBTnRibkMzYXBnYjJDUDd6UXJqWUc5RWdTeDZWYkZDeFlSdzFJRHNFRGFaaXJ4dFUyYmR4VjQtY3hCUGN5Y0N1MTBXUVhoV1pMUmdDMHFSTlpMMA?oc=5",
+          "seen": "2026-09-02T18:32:03.000Z"
+        },
+        {
+          "title": "India rejects Hague court order to restore Indus waters pact with Pakistan - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPOWtocnoyOE9FOWZWRnljU2kyYmd4cEJpTTZOdDVGcE4xR3p6QTIyMlBCUkhoVGc3M19LTktJQnFJN1FjakMtNG4tR0lRbEltSVlvVlE1ejVORDlkV2lieGdUVldvbUpKNi1FWHAxelhUUkJWd05GVVVzbHkzVGplNG93SXMzMFVWVEhnOW04Ukw5RHRwV2JMVFZneE1mZzB3RVRLY19FclROa3RvTFl1dl9id1pHZ9IBuwFBVV95cUxOazdnenVUT1RYZy1qQkI4el9EcUs4cll2SnF4dDlPUWZrNzJPbURuWnh6VFFDZGdtaEEtVmtzeGg1WmUyamN0d0R4YmdxYWxxa2UxcUQtallYM2ZLaXZnS0lVaXdOc1VJZHdpNmxzVWV5Y2F5dm5VN1FsVHh1azNZOG5xX3dxMVR4MWhCUU1RRFY5eEhsSlpWWDFNTWxqN051cXNFdjhNeUdaZWJZYTRpOHFBdG55Yk5aUU44?oc=5",
+          "seen": "2026-08-31T16:38:06.000Z"
+        },
+        {
+          "title": "Tribunal says India cannot withdraw from water treaty with Pakistan - CNA",
+          "source": "CNA",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPLWlJWU81Q1VSSEdnc2tKOS13aHhiTlMxaEFrMERPWnVhc2h4dXB3ekNUT1VPQmYtTW9OaElKa3JlOHVDLUxxU0NFVGZIOFFfVHZRbHVhbjJVbkFvV2dldnhIMWNkaDNXQVc5RXpzeWZVeU1QZ1NlU2EzS1ZJODFUOVltMmFnNjlzZFZXd1VfVS1raEN5NjRVeklsMmlCOGhFNEZyVGdn?oc=5",
+          "seen": "2026-08-31T16:42:00.000Z"
+        },
+        {
+          "title": "A day after India’s UN map remarks, Pakistan provokes again over Jammu and Kashmir | India News - hindustantimes.com",
+          "source": "hindustantimes.com",
+          "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMmdIZXRoZ0hHSFJoMHQ0QzN5eWtxTEhrS1AxX0I5X1hWdDZTSDhkdGZXSGlvdUV1a2lrdlFZTWFJaTViLW1TclNoNm51dlVKNTBneGJURmJ2dmt1QWozVEJCZkJjbHM0VWkweTdGY282dU5Ra2ZsWXpUSHRpWHBIWEtUd1FoY3JkZkJrUnJXTWFGbkJQMWRnbWxHUEY1UW5IYU1XY3RkWnRaZW43WnFRMXZRTEFEWnJKdjdSVVVFa3gzeWJ6S0VtNGxzNGZmZ3l0Mmlac0pkM0U4VVd0dnpoX0J0UjJlQTRWc01lU1M3M1ZxX0lkeUHSAfsBQVVfeXFMTmhwMDZYSnlkSC1IMWlNYXZ2RzI5R2RON3ZHS0E0dnpoY0RyNUh2cnhzX1VFankyZHdyWDlBWUx6NFd2aDY1TGRTNlpzWW1iUDN4MllrcFRkNWhGZ1ZlMEk3MG9TQXBUUWhhVXpMbUE0WF8wM2tsOWVpTkV4dTMwWmRrLUt6WUtwYW93c1piUld3TTFJWWVlTlBiRzBjT3hONWFwSzdlREQ3XzZZUGVOcklDN1hlaGdXM3ZWbkxVeWhNYnhuRTdNSkoyUEZramZxTVZLZVdNZ2Y4dWVGZ1dseEdFaDMzUngwYThuYnpUeUYwTzZDbUV0TWs1cFE?oc=5",
+          "seen": "2026-09-07T03:51:50.000Z"
+        }
+      ],
+      "observed_signal": 83,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "SRB-BIH",
       "a": "SRB",
       "b": "BIH",
-      "score": 61,
-      "trend": 0,
+      "score": 67,
+      "trend": 6,
       "domain": [
         "nationalism",
         "elections",
         "eu",
         "domestic-politics"
       ],
-      "summary": "Political unrest in Serbia and renewed nationalist symbolism are reopening regional wounds and raising diplomatic friction with Bosnia and the EU.",
+      "summary": "Latest signal: Bosnian Serbs strengthen ties with Israel amid tensions - Al Jazeera",
       "bot_moves": [
         "Serbia: channel unrest into an early election",
         "Bosnia: seek EU pressure against nationalist escalation"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "Bosnian Serbs strengthen ties with Israel amid tensions - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxOa1BGS3NSSTdWVzI5Ny1VM080b05PLVRoVUlhRVh3dXhzdkNFMlBZVGRIVTU5bW5Na3VWMnpMNThBR0hwZkNvVjRvb0s5Wm5mTjFNQnBaaTMtUmZWc25oNnhjcG80YTlJNjFjZGo4UFlZY1ZLaC03QlltSTdQTk5PTXh0RUZnVEo3bnN3bDNUZUN5TWtrRmZILTZySdIBoAFBVV95cUxNYXUxR1pfR2ZhckdKSGMxMFphQzctbHE3YU4za0diajJkRHh6ajlYU3prWmxVTTlxQXFSeENKVHdoZkxQbHV2SXJJNlpzaXVxZE5pa2pYYjBoWEM5STVvbWRQNnoxRmNjMkNiNDUwSE5XLW1LTGZkZGlPLV9nb2FGMGJFd3hGbWdWdUVIVTJVYjBSbzIxUHc4TTNUVTNDS05D?oc=5",
+          "seen": "2026-09-06T14:41:10.000Z"
+        },
+        {
+          "title": "Bosnian Serb War Criminal Ratko Mladic To Be Buried In Belgrade - Radio Free Europe/Radio Liberty",
+          "source": "Radio Free Europe/Radio Liberty",
+          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9EUFNnTFNHR3lhUUhXbE13TTMtYjVPa2NBcU5EVnJLZldraE81ZFJVZm55ZDhQOURLMjdMYzVLbm9Zc1lEcEY4QmpQR3h5a1M0MUZIYnBhc2ZnYjhZakxkY0tPcUlFYUZRN1ZYQWVXRkt0RnZZZnBTQ9IBeEFVX3lxTE9EUFNnTFNHR3lhUUhXbE13TTMtYjVPa2NBcU5EVnJLZldraE81ZFJVZm55ZDhQOURLMjdMYzVLbm9Zc1lEcEY4QmpQR3h5a1M0MUZIYnBhc2ZnYjhZakxkY0tPcUlFYUZRN1ZYQWVXRkt0RnZZZnBTQw?oc=5",
+          "seen": "2026-09-07T08:51:34.000Z"
+        },
+        {
+          "title": "Mladic's death, Bosnia and Serbia's unfinished reckoning - dw.com",
+          "source": "dw.com",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQdld2b05WU3pVajVOOVFvRmRfN1I2Zzh6QVZBMVdRaGFZcFNnOUhfR0hvbVhTZE0wejZNaEtZZVJIRjJPbGhVUmpRbFUzVHIxMDdZalVKczNsR0J1Tk01WHZPTURmblVoeElUWFdnNHY0Vl9qUGFVeDZob2lOb1B6NDJVN0RLOW5RYXRSVWo5RdIBjwFBVV95cUxORm1mcGx2ZVBqZl94bGJDdXFvY2ZtTUV4T3A5OXl5Ujk0OXR2QkhSSk5uZml1aW93VjBPSkZuQTUyWmpIZHJ2QnRjcW1WdHRoOGZsSjEyOHJnZWdMNEc5aFhCM0FsRDJDQjhqaFVpZXJjQ21SUEt5SEtJdldYQW42dkZmN3FMQ0JvZ1NOZV9iaw?oc=5",
+          "seen": "2026-09-01T13:13:01.000Z"
+        },
+        {
+          "title": "Serbian, Bosnian Serb Officials Join Hundreds at Ratko Mladic Commemoration - Balkan Insight",
+          "source": "Balkan Insight",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNVXVNTWZEbU9VeThSZ3VqNDAxZGI4Q2xzcUp6cG1IUDEyQU16WFI5ay1zckNzSnpMbjJxMFB4R2NkNHFmVkYwLXNpVHBrM2ZVc3UwOElRMjF0cEREUEJPTDBTVkdCcFVvNnhyWnhUU2RkYkZnZE9heV9WcHgza1RfNG9rM09SaDM0TkFHbUlLcG1tUmNtaHJLalZtc1lFS3FabWlmUnpaYkFVeUY2Wkk5bEZMaE1XNGc?oc=5",
+          "seen": "2026-09-05T15:58:20.000Z"
+        },
+        {
+          "title": "Srebrenica genocide | Facts, History, War Crimes, Map, & Photos - Britannica",
+          "source": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE51UFA4RlIyYmY3RkNCQTNqRWhDRmFrSk5OVWhBSmhaTURjd19nQlBfaGg3RGVNLWJyYVpvdW9yZjc1WEw0SU03aDNkMVlNa2J6Ujl2TGtOdDJNSC1QQ3VXMkF3?oc=5",
+          "seen": "2026-09-04T05:00:00.000Z"
+        },
+        {
+          "title": "Ratko Mladić is dead. His nationalist legacy lives on - New Eastern Europe",
+          "source": "New Eastern Europe",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZ3JCRFVrZXV0YWh5NXNRUXA2X0Z4UFpHTVdJVUVMRnhkR2pkOGNUUHZ1TkpYVFRMRF8tZ0NBN0pFbHdCTUc5LXNsZ1U1Z0hDNEN0Z0FfOGE1RmlkdWh0a2VkWDRxaFpOTnEwMkFCTWhhcjRnMnc0STl1RWdjUlp6dEFOSU1sUG5NWUU2RkQ1S210X0kzM1F3?oc=5",
+          "seen": "2026-09-04T08:34:28.000Z"
+        },
+        {
+          "title": "Balkans: Israel deepens ties with Bosnian Serb separatists through Banja Luka trade office - Middle East Eye",
+          "source": "Middle East Eye",
+          "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOQmtMWFpkQmZnTEJ4V3pyWmUyWktrSWQ4d0s0QkFUZko1RzBmTlZ4VUxCRFJvYTlRZ1FubEhzR0dONXhKNGo0ZU0yMzFYUTkwS0Etd01iSlNickRkZmEtWUt6QXhfQnRtQk9ZNmRCblRIRmJLV2hTZUU4b0dWV2xFT0dsckk1MDB1VEwwSjFhcnd2NmNLbHdQYllYUTlLV2NlVl9uS19IZE8wZmtGS0NFdA?oc=5",
+          "seen": "2026-09-05T21:20:27.000Z"
+        },
+        {
+          "title": "Reporter's Notebook: Bosnian Serbs reflect on life of Ratko Mladic - The Jerusalem Post",
+          "source": "The Jerusalem Post",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE1OZHQxbzFaVU5MUW12eEx6eVh2dDExeXVVdkFrS1ZiRnlPajlFcDEwX1Zndlg1LXNmZTlKTXVNbkJiRnF0RFBWckpVT0VjZjBselJvc1NaLXlGMEJ5Zm1V?oc=5",
+          "seen": "2026-09-07T13:52:17.000Z"
+        }
+      ],
+      "observed_signal": 82,
+      "scan_articles": 34,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 34,
+        "gdelt": 0
+      }
     },
     {
       "id": "COD-RWA",
       "a": "COD",
       "b": "RWA",
-      "score": 72,
-      "trend": 0,
+      "score": 77,
+      "trend": 5,
       "domain": [
         "armed-groups",
         "border",
         "minerals"
       ],
-      "summary": "Armed-group activity, cross-border accusations and strategic mineral geography keep the Great Lakes region vulnerable.",
+      "summary": "Latest signal: The Burundian Factor: Africa File Special Edition - Critical Threats",
       "bot_moves": [
         "DR Congo: press for external guarantees",
         "Rwanda: preserve security leverage while limiting sanctions exposure"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "The Burundian Factor: Africa File Special Edition - Critical Threats",
+          "source": "Critical Threats",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPZEZPUk54NjVsUHlSakQyVmRqdGtfZ3diSUJrRHVIQzhvS3FSZXg3NFRXTXU3b1pDdlcwVnBVN1BFOFRqX0FlUTJ5bGlWZjNhYWwxcm1mOUpZNGJpT1AwRzZOSmJtRHVjWHNwM1BLMHJ2ME1na0FPU3ZxaDNPM1AyMENMTGxVck9Ua1gwdE1nNG0wT0E?oc=5",
+          "seen": "2026-09-01T13:42:20.000Z"
+        },
+        {
+          "title": "Democratic Republic of the Congo - Central Africa, Conflict, Resources - Britannica",
+          "source": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNU0FYQXJtVUNFY2J2RzBGZmNOdW95ZzB1eDV3ZW02V3piY2tVVzA5MUdjZURObmJoRkJETjJWRzlTcUdPZ0wybnNnS2tRTFJDYVkxS2xyQWQwXzNOSnBaUUMtRGZWZHkwTWxiQ0hmdUR2OFhnRndVa05pNnVtVGlqR0J0bFpfdE9RbWdWSDVyV2t2czhKSmVkSHpGLW01RDlQSlhobA?oc=5",
+          "seen": "2026-09-02T05:00:00.000Z"
+        },
+        {
+          "title": "A New Genocide Convention Case in the ICJ: DRC v Rwanda Version 3.0 - Opinio Juris",
+          "source": "Opinio Juris",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcnpHZVlueW1mZW80ZkNKTmZnRkktQ0htbzQzcGpxTktuX3pmOXB4R00wbnRucXlQNGxGU3JfeGhhMGowNlhqSFFBakhxWm9FX1lXMlBfa0o4WERja0tha0xsVDhjV1N3T2RrNGw2dV9oWmJuSUNUcUxBNEtpbVVzWk8tZDlPbGhXeXB6TnJPRHVQOXRmQkFFQ2VlZ1pqVUVnYWV3?oc=5",
+          "seen": "2026-09-07T12:04:18.000Z"
+        },
+        {
+          "title": "DRC: AFC/M23’s parallel government exposes the limits of Kinshasa’s authority - The Africa Report",
+          "source": "The Africa Report",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNbFdqdUhfaC1aZUNISVhSS2FOOTlSU29IbndVdHhRY1VCY3hWck5RbFZHU0hSeGVlWlR2Q1hSMDVGRFdVU29BZDNsV0F4Q0lXeDNaek5ya3dzcGRFUV9LQTNQRUx4Q3dGdktiWDFTWEJxc1BMOEcwQXpEX0ZUSmI2ME9IWGRnc3NFTG1UQ2QtY2pFVUVGa3ZhWFZydF9JU1RPOFk2THcwSll3TFM0a2p4WkJkeEo?oc=5",
+          "seen": "2026-09-03T14:00:00.000Z"
+        },
+        {
+          "title": "DRC eyes Jerusalem embassy as Tshisekedi seeks Israel's support - RFI",
+          "source": "RFI",
+          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQaFdjX2FyQ3pFemFYcUZ4QlAxYm1hRnd0SlVpcld0cmxyWDA5c1ZwM2lzZl9TUDBsT1NneGl3T01hQlkwZWduNXloc2RuWk8yM3pLSGp3SXJodTNfTXluNWFVM1FvMTZhUlY1Q0RveXY2c2cwbEQzbmdLWEJWYmNKY0dlSmVpeDlzbXdTMFd3QnVLMUQyTlFPU0JMWUZTWVVnOHhv?oc=5",
+          "seen": "2026-09-04T13:40:06.000Z"
+        },
+        {
+          "title": "World: DRC forces launch attacks against M23 on multiple fro - NewVision.co.ug",
+          "source": "NewVision.co.ug",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPa2VqV0hZSDFxelVOQm5ZY3NMaG5Tc1NDUWxCYTJZZzNRQS11Y19hY0c0dGkyM2owOG1ES3RSNm95b1dsc0RJTE15YWdTYmMyajN1V0FWMUVSLXdYZXFlYXlHNmFjakY2TU5Cem0zcHd0RlBRMkVaRGR5MFpkd09oU3VwdzhaQ1Zvc204M09xcHZuMDZhR2dOdWw4NHl1RW1odlpCNzRUcHc?oc=5",
+          "seen": "2026-09-01T14:00:05.000Z"
+        },
+        {
+          "title": "Niger Thwarts Coup; The Sudanese Civil War Threatens To Regionalize; New Government Offensives In Eastern Drc: Africa File, September 3, 2026 - Critical Threats",
+          "source": "Critical Threats",
+          "url": "https://news.google.com/rss/articles/CBMi4ANBVV95cUxNT2FQSTRMYWxObV9LN0pUcmdnSXN6SERYaE9DbHhfblpMTmx3VHBydHMzS2dER1VQWURXckdaY09SZm96X2tORnFILW1UQVBpV1FEZkZPS3h2MERXWkdBU2tXTDBENXFRYnRPcVctOFUwcGU5Q3dtVmM2TkVoN09nVUJoSHhOV3h0NlhRZ3BwVTF2T01mVk5BWXI1YldLN1lBQ280LUU3QkJrRjJrd19QbjhjQ1pJS3VDVlVtaW5YUlEzaGVqY0FvMms2SzE0dHpNa0xVMDU0VHpua29SZ1dzS3NGeW5CN2tnWlgxNDdET0lDeE9xYUpHUVNha09DNlFSZnlYS1Y4aktqdTRMYVBQeHQ2d0NFZ1lIbW9sUEFvd2l1UWN5a0NzY3c1elM5akpxQjFDdHA1UzFIVHBsRmF4M3lRLUJDYUFFTk1Ob1RiMDFCRS1aQ01MM3g3N2xpOUUxUTF1ODNtT2F0bjU3RldBM21NWlFUVXJja2dQcVVhT1ROVFJocW1STC11XzdBRDREcEE4SmpNeXRnRzdRTVptMk1XOTdTODl6dXZtVkF2Zi1lQV9ETndSc2NWMzVFT2NBRzFXNXhfZmVRQlk4cXJPajJKNHg4dHNaeDEyZEhhQnk?oc=5",
+          "seen": "2026-09-03T21:02:45.000Z"
+        },
+        {
+          "title": "Kagame, UN Envoys Discuss Eastern Congo Conflict, Rwanda Security - ChimpReports",
+          "source": "ChimpReports",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcllndm5hTmxEWElIc2NsMERjUURIbWpPbThlZ3BRZ3BsYWxaWEJjUzVCcVN0eWlEVVNwaU9GWmxyNlJ2UmhONkk2VEpyT2czZ0U1djZ3U0xPVDVvWHIwQ2RBQ2tlMERxem5Wbm4zWE1MR1B1VWFYWEN6Q3pGd0VMZGVsckdEc0MyWk9IQU5SQzNZV00?oc=5",
+          "seen": "2026-09-03T13:30:58.000Z"
+        }
+      ],
+      "observed_signal": 92,
+      "scan_articles": 11,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 11,
+        "gdelt": 0
+      }
     },
     {
       "id": "ISR-IRN",
       "a": "ISR",
       "b": "IRN",
-      "score": 89,
-      "trend": 0,
+      "score": 92,
+      "trend": 3,
       "domain": [
         "war",
         "nuclear",
         "missiles",
         "regional-proxies"
       ],
-      "summary": "Direct and indirect military confrontation keeps the Israel-Iran axis near the top of the global escalation map.",
+      "summary": "Latest signal: Iran Update, September 3, 2026 - understandingwar.org",
       "bot_moves": [
         "Israel: preserve strike readiness",
         "Iran: maintain layered deterrence and proxy depth"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "Iran Update, September 3, 2026 - understandingwar.org",
+          "source": "understandingwar.org",
+          "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPdHZSYmo3d0ZaUnVEXzRTaF93bUZfQTZ6cFcyREsxeGxsUUFYQXhqS3RhU05yTVlJWU9NLTJxWXh0SXVFbDVxWWxSNXBhZm5OVkxoanVibGtVc2lGSUUzbGswOWdseVJiQVR2dW5rUlFQYjZpS0FzUDZQZVpqZ1MwRUpLckNvQQ?oc=5",
+          "seen": "2026-09-04T02:06:21.000Z"
+        },
+        {
+          "title": "Israel-Hezbollah clashes kill 11 as Mideast conflict escalation gathers pace after U.S.-Iran strikes - CNBC",
+          "source": "CNBC",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxObk5EbElublhva1o0aEYxbmpnTFB1aEU1dTNvenR2eHJndXFvYjVTTFJmYk5EQWpSVXdlaXhiM2lFeks5aFh6M1hQd2hJSDgwRXB1b3ducmllX19mam9CRFRjN0dlQVp5ak1QaEphcE8wUXpkYW4xUS1JYWpiTDJvcS1EOHduTjN5OWJWNy11anpKMlVoYlgtM2dwNGnSAaIBQVVfeXFMT0FyOVVHZVpXUUtqTWpKZ0hYdnVEZ1FhWTRWNk44bnZlS2Y2dkV5VTVGZjVYbm94MXcwMzN4TUY5YXBPX05qUUM2Q09sM3BYYl9uWlVFcmZsbmFCMjhCZE11bEN3bmt5VFpVdmdybHFfSExucWpXSVpZNVZjQTVOOFZIdXI3VWVvdjdsV1o2b1doQk9ZT0NxUldDTEdaRmZ3Mjh3?oc=5",
+          "seen": "2026-09-07T05:15:44.000Z"
+        },
+        {
+          "title": "2026 Iran war | Deal, Explained, United States, Israel, Strait of Hormuz, Map, & Conflict - Britannica",
+          "source": "Britannica",
+          "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5nTzlhOGZTS180cWNtVG91c2VWRVJFYlk0cW5Ba1RHUEFOSEtldU15QktQT0EzRVY1ZVdZZ0VTRHVWTVhyN1IzeU1wbmlDMUhrQ3Roc1YxcmdMUQ?oc=5",
+          "seen": "2026-09-04T05:00:00.000Z"
+        },
+        {
+          "title": "Live Updates: Latest from Israel, Iran, and the Middle East - The Jerusalem Post",
+          "source": "The Jerusalem Post",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBlZUtHclZYRDFFYjRlUTQ5S3VaNnc0SGx1WEM5ekVHb21CSndzSUQ4VmtxOVlGSk5TVlo5SWZPZFlrWGJyN0J5RWFiX192NVBkUWdIdUZOc1NjWHJvWDlyWlczSUVqcDV0a0NocmozQllweEpPZml6VjRhcjhFYkU?oc=5",
+          "seen": "2026-09-07T00:00:05.000Z"
+        },
+        {
+          "title": "Iran fires on its Gulf neighbors, retaliating for U.S. strikes after a monthlong lull - NPR",
+          "source": "NPR",
+          "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1uTFZRWTBDZ2kydEpnd3g4bWdheHJTYlF5TkFkdFBYWkM1VEE2U0tSaVhZX0RULTBuQ3JnOE9LNW0xbW8xdEF0cmVBUGx1RE91TG5ReUxoenNvMmExbGZXYWhhMmV3RkZJVHVmQzBQRVN5ZlQyMFVET1Z1aw?oc=5",
+          "seen": "2026-09-02T15:18:09.000Z"
+        },
+        {
+          "title": "Vance \"extremely skeptical\" U.S. strike hit Iran wedding party, says he wouldn't call conflict a war - CBS News",
+          "source": "CBS News",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPaGpwVVBCeVNvZE5lV3RCSFl0M2E1cnZlZS0wMjVSRFlrS1E5ZXFWSml2MGdKZEFMaHlSRFc1Ylc1WkRPTy1IaEpRZzFrbFpBZFJJbmw4RnVYaDJxWDFUQ3hlVk9JMUJ5Zk1HXzQ1Z2RxbVpWN2dTa3lFTzdwN3V3QjFTb20tSEdkOTRnQS10eUEwaFBQWlcxSmQwbUZxRmhCOEptYXhaTWJyNGpnV0E?oc=5",
+          "seen": "2026-09-04T08:00:00.000Z"
+        },
+        {
+          "title": "Iran targets US bases as Israel warns sanctions could drive Tehran to ‘desperate steps’ - The Guardian",
+          "source": "The Guardian",
+          "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNYWxnVThEUFBybnJWc0RXUGh4Q2Y3aEJydFB6SVMyVGR2ZG91Zm5mWjdubWJ3eGhUb0ZKa3JYU3FZX2ppOVRrU1RFenNTNzVhd2J3RjNNVUFKUlZBOUl0MXpKRTFWN3BkVUJ2MEFxUF9FRmNUTUY0NnBuejlBZDFkLVNDRHpyYmNOZDhrVGZVWVo2OGdMVlRlY3pQdUVPMXBUbmpObEI3d19pdVFYZk15bVptVFlkZ0xtdnBFQlR5TThtYnRaOHZ2RWFQcw?oc=5",
+          "seen": "2026-09-03T14:16:00.000Z"
+        },
+        {
+          "title": "Brothers in Arms - The Drift",
+          "source": "The Drift",
+          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE83WVQzUDRnN1MzN0piLXVKcDZPZmZrYlR1NmlCS1cyOGZVcTlTbnZNT0t4NGU2bzNoN1MzTU43Y19CZjBsQm15ZlJnRGVTNHhiSTNVd2Fwcmg?oc=5",
+          "seen": "2026-09-01T21:29:42.000Z"
+        }
+      ],
+      "observed_signal": 100,
+      "scan_articles": 50,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 50,
+        "gdelt": 0
+      }
     },
     {
       "id": "VEN-GUY",
       "a": "VEN",
       "b": "GUY",
-      "score": 54,
-      "trend": 0,
+      "score": 52,
+      "trend": -2,
       "domain": [
         "territorial",
         "oil",
         "border"
       ],
-      "summary": "The Essequibo dispute links territorial claims directly to offshore energy resources and remains a latent regional flashpoint.",
+      "summary": "Latest signal: Venezuela’s Oil Deal Has a Guyana Problem — and an OPEC One - moderndiplomacy.eu",
       "bot_moves": [
         "Venezuela: sustain territorial pressure",
         "Guyana: deepen external security and energy partnerships"
       ],
-      "news": [],
-      "observed_signal": null,
-      "scan_articles": 0,
-      "sensor_status": "fallback-memory"
+      "news": [
+        {
+          "title": "Venezuela’s Oil Deal Has a Guyana Problem — and an OPEC One - moderndiplomacy.eu",
+          "source": "moderndiplomacy.eu",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE94eWdzVnpERTdCbGlJa3BMSTA1am1YLXlVUWRlMGpDSTNxOGhZRkNCMkNBbWhvYllNZk45S2M0dmF6VF9EWm9TTmpNb3dqT3B5OXlFMnBOSHpEdm5ESHpqUHIwdUlLYjdvQTZDQzNXMnV6VjM0WndaZ3dPS1E?oc=5",
+          "seen": "2026-09-02T15:07:30.000Z"
+        },
+        {
+          "title": "PERSPECTIVE: The Road to First Oil – Every Man, Woman and Child Must Become Oil Minded Column 200 – September 7, 2026 Column 200: Sovereignty in the Age of Oil - Demerara Waves Online News- Guyana",
+          "source": "Demerara Waves Online News- Guyana",
+          "url": "https://news.google.com/rss/articles/CBMimAJBVV95cUxOX1hISWI2NGxSMUQ0WU9yaFNfMEwzd20wNkVIZ1V6SDJLRFR4SThidDVUM1VBNDJHQjJhT2xWTmQxVmtUUXpfVFowWUUxc1hRMXB1cko5M1lzamotbmJQOXc5WHJSRjh0dS1vcFJvdmNkR1BmZWVsaE1vRjNqWUNETl9HTmR2a2dMd3ZLekRkLUFVZlpXMkJkUnBfMDluMEJHVVlFdXJnekwwcmo2WlRZZkJOaGd6Yzc2OFFxM01fSlBBb2UxX1ZGbWgyeVRsZURhakFJOElkSmhZMzQyeTBmYlpBemhlLTVVU0pJclI4UHllZDN2Mms1ZEtBQzVkekMtSENRQkZ5cjFwUXU3eGJJTzBjYjJGai1U?oc=5",
+          "seen": "2026-09-07T11:46:59.000Z"
+        }
+      ],
+      "observed_signal": 47,
+      "scan_articles": 2,
+      "sensor_status": "fresh",
+      "sensors": {
+        "google_news": 2,
+        "gdelt": 0
+      }
     }
   ],
   "gearwatch": {
@@ -400,6 +1000,23 @@
         "COD-RWA": 72,
         "ISR-IRN": 89,
         "VEN-GUY": 54
+      }
+    },
+    {
+      "at": "2026-09-07T16:35:36.920Z",
+      "scores": {
+        "ESP-MAR": 80,
+        "MAR-DZA": 73,
+        "USA-IRN": 92,
+        "CHN-TWN": 88,
+        "RUS-UKR": 96,
+        "PRK-KOR": 85,
+        "CHN-PHL": 76,
+        "IND-PAK": 69,
+        "SRB-BIH": 67,
+        "COD-RWA": 77,
+        "ISR-IRN": 92,
+        "VEN-GUY": 52
       }
     }
   ]
