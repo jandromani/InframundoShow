@@ -15,7 +15,16 @@ jobs:
           node-version: '22'
       - name: Validate JavaScript syntax
         run: |
-          node --check app.js
+          node --check app-v2.js
+          node --check scripts/world-scan-v2.mjs
           node --check scripts/world-scan.mjs
-      - name: Validate state JSON
-        run: node -e "JSON.parse(require('fs').readFileSync('data/live.json','utf8')); console.log('live.json OK')"
+      - name: Validate JSON model and live state
+        run: |
+          node -e "JSON.parse(require('fs').readFileSync('config/world-model.json','utf8')); console.log('world-model.json OK')"
+          node -e "JSON.parse(require('fs').readFileSync('data/live.json','utf8')); console.log('live.json OK')"
+      - name: Validate required frontend selectors
+        run: |
+          grep -q 'id="worldMap"' index.html
+          grep -q 'id="vectors"' index.html
+          grep -q 'id="gearBoard"' index.html
+          grep -q 'app-v2.js' index.html
