@@ -1,170 +1,377 @@
 {
   "version": 1,
-  "updated_at": "2026-09-07T16:20:00Z",
-  "mode": "seed",
+  "updated_at": "2026-09-07T16:32:17.323Z",
+  "mode": "live-deterministic",
   "disclaimer": "Tension scores are model indices for exploration, not probabilities or forecasts.",
   "global": {
-    "risk": 78,
-    "shipping_stress": 82,
-    "energy_stress": 84,
-    "trade_stress": 69,
-    "political_stress": 64
+    "risk": 84,
+    "shipping_stress": 90,
+    "energy_stress": 89,
+    "trade_stress": 81,
+    "political_stress": 72
   },
   "pairs": [
     {
       "id": "ESP-MAR",
       "a": "ESP",
       "b": "MAR",
-      "score": 79,
-      "trend": 7,
-      "domain": ["border", "migration", "sovereignty", "domestic-politics"],
+      "score": 74,
+      "trend": -5,
+      "domain": [
+        "border",
+        "migration",
+        "sovereignty",
+        "domestic-politics"
+      ],
       "summary": "The Ceuta migration crisis, public anger in Spain and renewed Moroccan sovereignty claims keep bilateral friction elevated despite continued cooperation channels.",
-      "bot_moves": ["Spain: seek EU burden-sharing while reinforcing Ceuta", "Morocco: preserve cooperation leverage without a full rupture"],
-      "news": [
-        {"title": "Spanish public anger rises over handling of Ceuta crisis", "source": "Reuters", "url": "https://www.reuters.com/world/africa/majority-spaniards-unhappy-with-governments-handling-ceuta-crisis-poll-shows-2026-09-07/", "seen": "2026-09-07"},
-        {"title": "Spain says there is no solid evidence Morocco orchestrated the July surge", "source": "Reuters", "url": "https://www.reuters.com/world/europe/spains-pm-sanchez-says-no-evidence-morocco-orchestrated-ceuta-border-surge-2026-09-03/", "seen": "2026-09-03"}
-      ]
+      "bot_moves": [
+        "Spain: seek EU burden-sharing while reinforcing Ceuta",
+        "Morocco: preserve cooperation leverage without a full rupture"
+      ],
+      "news": [],
+      "observed_signal": 61,
+      "scan_articles": 0
     },
     {
       "id": "MAR-DZA",
       "a": "MAR",
       "b": "DZA",
-      "score": 73,
-      "trend": 1,
-      "domain": ["western-sahara", "diplomacy", "energy", "regional-rivalry"],
+      "score": 70,
+      "trend": -3,
+      "domain": [
+        "western-sahara",
+        "diplomacy",
+        "energy",
+        "regional-rivalry"
+      ],
       "summary": "Long-running rivalry over Western Sahara, regional influence and closed diplomatic channels keeps the Maghreb strategically brittle.",
-      "bot_moves": ["Morocco: strengthen external diplomatic support", "Algeria: preserve deterrence and Sahrawi alignment"],
-      "news": []
+      "bot_moves": [
+        "Morocco: strengthen external diplomatic support",
+        "Algeria: preserve deterrence and Sahrawi alignment"
+      ],
+      "news": [],
+      "observed_signal": 62,
+      "scan_articles": 0
     },
     {
       "id": "USA-IRN",
       "a": "USA",
       "b": "IRN",
-      "score": 97,
-      "trend": 9,
-      "domain": ["war", "hormuz", "energy", "shipping", "sanctions"],
+      "score": 90,
+      "trend": -7,
+      "domain": [
+        "war",
+        "hormuz",
+        "energy",
+        "shipping",
+        "sanctions"
+      ],
       "summary": "Mutual strikes, a US blockade and Iranian restrictions are turning Hormuz into the most dangerous global energy and shipping node in the current scenario.",
-      "bot_moves": ["United States: maintain economic and maritime pressure", "Iran: raise costs while searching for a face-saving corridor"],
-      "news": [
-        {"title": "Hormuz commodity traffic falls to its lowest level since May", "source": "Reuters", "url": "https://www.reuters.com/world/middle-east/hormuz-traffic-dips-lowest-since-may-after-us-iranian-strikes-ships-2026-09-06/", "seen": "2026-09-06"},
-        {"title": "Iran warns that US energy facilities in the Gulf are exposed", "source": "Reuters", "url": "https://www.reuters.com/world/middle-east/iran-says-announce-new-restricted-zone-gulf-coming-days-2026-09-07/", "seen": "2026-09-07"}
-      ]
+      "bot_moves": [
+        "United States: maintain economic and maritime pressure",
+        "Iran: raise costs while searching for a face-saving corridor"
+      ],
+      "news": [],
+      "observed_signal": 72,
+      "scan_articles": 0
     },
     {
       "id": "CHN-TWN",
       "a": "CHN",
       "b": "TWN",
-      "score": 88,
-      "trend": 3,
-      "domain": ["sovereignty", "military", "semiconductors", "diplomacy"],
+      "score": 84,
+      "trend": -4,
+      "domain": [
+        "sovereignty",
+        "military",
+        "semiconductors",
+        "diplomacy"
+      ],
       "summary": "Military pressure and diplomatic competition continue while Taiwan increasingly uses semiconductor investment as strategic leverage with allies.",
-      "bot_moves": ["China: sustain coercive pressure below the war threshold", "Taiwan: deepen chip diplomacy and distributed resilience"],
-      "news": [
-        {"title": "Taiwan expands chip diplomacy while allies seek more AI capacity", "source": "Reuters", "url": "https://www.reuters.com/world/china/taiwan-flexes-chip-diplomacy-muscles-it-faces-pressure-share-ai-wealth-with-2026-09-07/", "seen": "2026-09-07"},
-        {"title": "China-Taiwan tensions spill into Pacific leaders meeting", "source": "Reuters", "url": "https://www.reuters.com/world/china/china-warns-consequences-over-taiwans-attendance-pacific-leaders-meeting-2026-09-01/", "seen": "2026-09-01"}
-      ]
+      "bot_moves": [
+        "China: sustain coercive pressure below the war threshold",
+        "Taiwan: deepen chip diplomacy and distributed resilience"
+      ],
+      "news": [],
+      "observed_signal": 72,
+      "scan_articles": 0
     },
     {
       "id": "RUS-UKR",
       "a": "RUS",
       "b": "UKR",
-      "score": 98,
-      "trend": 0,
-      "domain": ["war", "defense", "energy", "sanctions"],
+      "score": 95,
+      "trend": -3,
+      "domain": [
+        "war",
+        "defense",
+        "energy",
+        "sanctions"
+      ],
       "summary": "Active war remains a structural source of European defense, energy and industrial pressure.",
-      "bot_moves": ["Russia: preserve military pressure and strategic depth", "Ukraine: sustain defense capacity and external support"],
-      "news": []
+      "bot_moves": [
+        "Russia: preserve military pressure and strategic depth",
+        "Ukraine: sustain defense capacity and external support"
+      ],
+      "news": [],
+      "observed_signal": 88,
+      "scan_articles": 0
     },
     {
       "id": "PRK-KOR",
       "a": "PRK",
       "b": "KOR",
-      "score": 83,
-      "trend": 4,
-      "domain": ["nuclear", "missiles", "military"],
+      "score": 79,
+      "trend": -4,
+      "domain": [
+        "nuclear",
+        "missiles",
+        "military"
+      ],
       "summary": "Nuclear and missile deterrence, military readiness and alliance signaling keep the peninsula in a persistent high-risk equilibrium.",
-      "bot_moves": ["North Korea: demonstrate survivable deterrence", "South Korea: reinforce alliance readiness"],
-      "news": []
+      "bot_moves": [
+        "North Korea: demonstrate survivable deterrence",
+        "South Korea: reinforce alliance readiness"
+      ],
+      "news": [],
+      "observed_signal": 67,
+      "scan_articles": 0
     },
     {
       "id": "CHN-PHL",
       "a": "CHN",
       "b": "PHL",
-      "score": 74,
-      "trend": 2,
-      "domain": ["south-china-sea", "shipping", "alliances"],
+      "score": 70,
+      "trend": -4,
+      "domain": [
+        "south-china-sea",
+        "shipping",
+        "alliances"
+      ],
       "summary": "Maritime friction and alliance commitments keep contested South China Sea waters exposed to accidental escalation.",
-      "bot_moves": ["China: maintain gray-zone maritime pressure", "Philippines: increase allied presence and documentation"],
-      "news": []
+      "bot_moves": [
+        "China: maintain gray-zone maritime pressure",
+        "Philippines: increase allied presence and documentation"
+      ],
+      "news": [],
+      "observed_signal": 58,
+      "scan_articles": 0
     },
     {
       "id": "IND-PAK",
       "a": "IND",
       "b": "PAK",
-      "score": 68,
-      "trend": -1,
-      "domain": ["kashmir", "nuclear", "security"],
+      "score": 64,
+      "trend": -4,
+      "domain": [
+        "kashmir",
+        "nuclear",
+        "security"
+      ],
       "summary": "A nuclear-armed rivalry remains structurally dangerous even during quieter news cycles.",
-      "bot_moves": ["India: preserve deterrence and border readiness", "Pakistan: avoid isolation while maintaining deterrence"],
-      "news": []
+      "bot_moves": [
+        "India: preserve deterrence and border readiness",
+        "Pakistan: avoid isolation while maintaining deterrence"
+      ],
+      "news": [],
+      "observed_signal": 54,
+      "scan_articles": 0
     },
     {
       "id": "SRB-BIH",
       "a": "SRB",
       "b": "BIH",
-      "score": 66,
-      "trend": 8,
-      "domain": ["nationalism", "elections", "eu", "domestic-politics"],
+      "score": 61,
+      "trend": -5,
+      "domain": [
+        "nationalism",
+        "elections",
+        "eu",
+        "domestic-politics"
+      ],
       "summary": "Political unrest in Serbia and renewed nationalist symbolism are reopening regional wounds and raising diplomatic friction with Bosnia and the EU.",
-      "bot_moves": ["Serbia: channel unrest into an early election", "Bosnia: seek EU pressure against nationalist escalation"],
-      "news": [
-        {"title": "Mladic funeral reopens regional wounds and draws EU criticism", "source": "Reuters", "url": "https://www.reuters.com/world/thousands-gather-belgrade-funeral-convicted-war-criminal-ratko-mladic-2026-09-07/", "seen": "2026-09-07"},
-        {"title": "Serbian government asks president to dissolve parliament for snap vote", "source": "Reuters", "url": "https://www.reuters.com/world/serbias-government-propose-dissolving-parliament-an-election-report-says-2026-09-07/", "seen": "2026-09-07"}
-      ]
+      "bot_moves": [
+        "Serbia: channel unrest into an early election",
+        "Bosnia: seek EU pressure against nationalist escalation"
+      ],
+      "news": [],
+      "observed_signal": 48,
+      "scan_articles": 0
     },
     {
       "id": "COD-RWA",
       "a": "COD",
       "b": "RWA",
-      "score": 76,
-      "trend": 1,
-      "domain": ["armed-groups", "border", "minerals"],
+      "score": 72,
+      "trend": -4,
+      "domain": [
+        "armed-groups",
+        "border",
+        "minerals"
+      ],
       "summary": "Armed-group activity, cross-border accusations and strategic mineral geography keep the Great Lakes region vulnerable.",
-      "bot_moves": ["DR Congo: press for external guarantees", "Rwanda: preserve security leverage while limiting sanctions exposure"],
-      "news": []
+      "bot_moves": [
+        "DR Congo: press for external guarantees",
+        "Rwanda: preserve security leverage while limiting sanctions exposure"
+      ],
+      "news": [],
+      "observed_signal": 60,
+      "scan_articles": 0
     },
     {
       "id": "ISR-IRN",
       "a": "ISR",
       "b": "IRN",
-      "score": 93,
-      "trend": 4,
-      "domain": ["war", "nuclear", "missiles", "regional-proxies"],
+      "score": 89,
+      "trend": -4,
+      "domain": [
+        "war",
+        "nuclear",
+        "missiles",
+        "regional-proxies"
+      ],
       "summary": "Direct and indirect military confrontation keeps the Israel-Iran axis near the top of the global escalation map.",
-      "bot_moves": ["Israel: preserve strike readiness", "Iran: maintain layered deterrence and proxy depth"],
-      "news": []
+      "bot_moves": [
+        "Israel: preserve strike readiness",
+        "Iran: maintain layered deterrence and proxy depth"
+      ],
+      "news": [],
+      "observed_signal": 78,
+      "scan_articles": 0
     },
     {
       "id": "VEN-GUY",
       "a": "VEN",
       "b": "GUY",
-      "score": 58,
-      "trend": 0,
-      "domain": ["territorial", "oil", "border"],
+      "score": 54,
+      "trend": -4,
+      "domain": [
+        "territorial",
+        "oil",
+        "border"
+      ],
       "summary": "The Essequibo dispute links territorial claims directly to offshore energy resources and remains a latent regional flashpoint.",
-      "bot_moves": ["Venezuela: sustain territorial pressure", "Guyana: deepen external security and energy partnerships"],
-      "news": []
+      "bot_moves": [
+        "Venezuela: sustain territorial pressure",
+        "Guyana: deepen external security and energy partnerships"
+      ],
+      "news": [],
+      "observed_signal": 43,
+      "scan_articles": 0
     }
   ],
   "gearwatch": {
     "source": "jandromani/HolaInframundo",
-    "headline": "GearWatch causal mechanisms will be merged into this map on the next scan.",
-    "mechanisms": []
+    "updated_at": "2026-09-07T12:39:32.656Z",
+    "headline": "El jardín se concentra en LNG rerouting, Japan carry unwind, Mine / underwater security",
+    "briefing": "Los mecanismos se ordenan por madurez causal, transmisión a empresas, cambio reciente y cuánto parece haber descontado ya el mercado. El objetivo no es predecir retornos pequeños: es detectar cuellos físicos o logísticos antes de que se conviertan en consenso.",
+    "mechanisms": [
+      {
+        "id": "JAPAN_CARRY_UNWIND",
+        "label": "Japan carry unwind",
+        "score": 56,
+        "state": "ARMING",
+        "delta": 0
+      },
+      {
+        "id": "LNG_REROUTING",
+        "label": "LNG rerouting",
+        "score": 55,
+        "state": "ARMING",
+        "delta": 2
+      },
+      {
+        "id": "UNDERWATER_SECURITY",
+        "label": "Mine / underwater security",
+        "score": 45,
+        "state": "ARMING",
+        "delta": 34
+      },
+      {
+        "id": "DIESEL_REFINING_CRISIS",
+        "label": "Diesel / refining crisis",
+        "score": 44,
+        "state": "WATCH",
+        "delta": -2
+      },
+      {
+        "id": "AI_GHOST_DEMAND",
+        "label": "AI ghost demand",
+        "score": 44,
+        "state": "WATCH",
+        "delta": 5
+      },
+      {
+        "id": "ARSENAL_DEPLETION",
+        "label": "Arsenal depletion / replenishment",
+        "score": 43,
+        "state": "WATCH",
+        "delta": 12
+      },
+      {
+        "id": "GLOBAL_REFINANCING_STRESS",
+        "label": "Global refinancing stress",
+        "score": 43,
+        "state": "WATCH",
+        "delta": -3
+      },
+      {
+        "id": "CRUDE_TANKER_DISLOCATION",
+        "label": "Crude tanker dislocation",
+        "score": 41,
+        "state": "WATCH",
+        "delta": 4
+      },
+      {
+        "id": "MILITARY_ENERGY_AUTONOMY",
+        "label": "Military energy autonomy",
+        "score": 41,
+        "state": "WATCH",
+        "delta": -1
+      },
+      {
+        "id": "RARE_EARTH_MAGNET_SHORTAGE",
+        "label": "Rare-earth magnets",
+        "score": 32,
+        "state": "WATCH",
+        "delta": 4
+      }
+    ]
   },
   "history": [
     {
       "at": "2026-09-07T16:20:00Z",
-      "scores": {"ESP-MAR":79,"MAR-DZA":73,"USA-IRN":97,"CHN-TWN":88,"RUS-UKR":98,"PRK-KOR":83,"CHN-PHL":74,"IND-PAK":68,"SRB-BIH":66,"COD-RWA":76,"ISR-IRN":93,"VEN-GUY":58}
+      "scores": {
+        "ESP-MAR": 79,
+        "MAR-DZA": 73,
+        "USA-IRN": 97,
+        "CHN-TWN": 88,
+        "RUS-UKR": 98,
+        "PRK-KOR": 83,
+        "CHN-PHL": 74,
+        "IND-PAK": 68,
+        "SRB-BIH": 66,
+        "COD-RWA": 76,
+        "ISR-IRN": 93,
+        "VEN-GUY": 58
+      }
+    },
+    {
+      "at": "2026-09-07T16:32:17.323Z",
+      "scores": {
+        "ESP-MAR": 74,
+        "MAR-DZA": 70,
+        "USA-IRN": 90,
+        "CHN-TWN": 84,
+        "RUS-UKR": 95,
+        "PRK-KOR": 79,
+        "CHN-PHL": 70,
+        "IND-PAK": 64,
+        "SRB-BIH": 61,
+        "COD-RWA": 72,
+        "ISR-IRN": 89,
+        "VEN-GUY": 54
+      }
     }
   ]
 }
