@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+const STATE_PATH=new URL('../data/live.json',import.meta.url);
+const CAL_PATH=new URL('../config/political-calendar.json',import.meta.url);
+const clamp=(x,a=0,b=100)=>Math.max(a,Math.min(b,Number(x)||0));
+function overall(p){const w={diplomatic:.17,military:.23,territorial:.18,trade:.10,energy:.09,domestic:.11,information:.07};let raw=Object.entries(w).reduce((s,[k,v])=>s+clamp(p.vector?.[k])*v,0)+(Number(p.gearwatch_pressure)||0)*.16;const r=Object.values(p.restraints||{}).map(Number).filter(Number.isFinite);if(r.length)raw-=r.reduce((a,b)=>a+b,0)/r.length*.055;return clamp(raw)}
+function eventDate(e){return e.date||e.window_start||null}
+const now=new Date();now.setUTCHours(0,0,0,0);
+const [state,cal]=await Promise.all([fs.readFile(STATE_PATH,'utf8').then(JSON.parse),fs.readFile(CAL_PATH,'utf8').then(JSON.parse)]);
+const events=(cal.events||[]).map(e=>{const d=eventDate(e)?new Date(eventDate(e)+'T00:00:00Z'):null;const days=d?Math.round((d-now)/86400000):null;const proximity=days==null||days<0?0:Math.exp(-days/38);const pressure=Math.round(clamp(Number(e.impact||50)*proximity)*10)/10;return{...e,days_to_event:days,pressure,status:e.confirmed?'confirmed':'window'}}).sort((a,b)=>(a.days_to_event??9999)-(b.days_to_event??9999));
+for(const [code,c] of Object.entries(state.countries||{})){const relevant=events.filter(e=>e.country===code&&e.days_to_event>=0&&e.days_to_event<=120);const pressure=relevant.length?Math.max(...relevant.map(e=>e.pressure)):0;c.political_event_pressure=Math.round(pressure);c.next_political_event=relevant[0]?{id:relevant[0].id,name:relevant[0].name,date:eventDate(relevant[0]),days_to_event:relevant[0].days_to_event,status:relevant[0].status}:null}
+for(const p of state.pairs||[]){const rel=events.filter(e=>(e.country===p.a||e.country===p.b)&&e.days_to_event>=0&&e.days_to_event<=90);const pressure=rel.length?Math.max(...rel.map(e=>e.pressure)):0;p.political_calendar_pressure=Math.round(pressure*10)/10;p.political_events=rel.slice(0,3).map(e=>({id:e.id,country:e.country,name:e.name,date:eventDate(e),days_to_event:e.days_to_event,status:e.status,pressure:e.pressure}));if(pressure>0){const oldDom=Number(p.vector?.domestic||0);p.vector.domestic=Math.round(clamp(oldDom+Math.min(12,pressure*.13)));if(!p.drivers)p.drivers=[];const label=`Political calendar ${Math.round(pressure)}`;p.drivers=[label,...p.drivers.filter(x=>!String(x).startsWith('Political calendar'))].slice(0,6);const oldScore=Number(p.score||0),calc=overall(p);p.score=Math.round(clamp(oldScore*.75+calc*.25));p.trend=Number(p.trend||0)+(p.score-oldScore)}}
+state.political_calendar={updated_at:cal.updated_at,events};
+await fs.writeFile(STATE_PATH,JSON.stringify(state,null,2)+'\n');
+console.log(`Political calendar enriched: ${events.length} events, ${events.filter(e=>e.pressure>0).length} future pressures`);
