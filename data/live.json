@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated_at": "2026-09-07T16:49:50.696Z",
+  "updated_at": "2026-09-07T16:56:20.126Z",
   "mode": "live-deterministic",
   "disclaimer": "Research/simulation indices, not probabilities, forecasts or intelligence assessments.",
   "dimensions": [
@@ -21,7 +21,7 @@
   "global": {
     "risk": 79,
     "shipping_stress": 66,
-    "energy_stress": 77,
+    "energy_stress": 76,
     "trade_stress": 58,
     "political_stress": 42
   },
@@ -40,10 +40,12 @@
       "stability": 64,
       "influence": 67,
       "fronts": 1,
-      "pressure": 70,
-      "max_front": 70,
+      "pressure": 67,
+      "max_front": 67,
       "stability_live": 62,
-      "economy_live": 69
+      "economy_live": 69,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "MAR": {
       "name": "Morocco",
@@ -59,10 +61,18 @@
       "stability": 69,
       "influence": 58,
       "fronts": 2,
-      "pressure": 69,
-      "max_front": 70,
+      "pressure": 67,
+      "max_front": 67,
       "stability_live": 67,
-      "economy_live": 56
+      "economy_live": 56,
+      "political_event_pressure": 54,
+      "next_political_event": {
+        "id": "MAR-2026-PARL",
+        "name": "Morocco House of Representatives election",
+        "date": "2026-09-23",
+        "days_to_event": 16,
+        "status": "confirmed"
+      }
     },
     "DZA": {
       "name": "Algeria",
@@ -78,10 +88,12 @@
       "stability": 61,
       "influence": 54,
       "fronts": 1,
-      "pressure": 67,
-      "max_front": 67,
+      "pressure": 66,
+      "max_front": 66,
       "stability_live": 59,
-      "economy_live": 54
+      "economy_live": 54,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "USA": {
       "name": "United States",
@@ -98,9 +110,17 @@
       "influence": 96,
       "fronts": 2,
       "pressure": 70,
-      "max_front": 84,
+      "max_front": 83,
       "stability_live": 61,
-      "economy_live": 90
+      "economy_live": 90,
+      "political_event_pressure": 17,
+      "next_political_event": {
+        "id": "USA-2026-MID",
+        "name": "United States mid-term congressional elections",
+        "date": "2026-11-03",
+        "days_to_event": 57,
+        "status": "confirmed"
+      }
     },
     "IRN": {
       "name": "Iran",
@@ -116,10 +136,12 @@
       "stability": 46,
       "influence": 68,
       "fronts": 2,
-      "pressure": 85,
-      "max_front": 85,
+      "pressure": 84,
+      "max_front": 84,
       "stability_live": 42,
-      "economy_live": 35
+      "economy_live": 35,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "ISR": {
       "name": "Israel",
@@ -135,10 +157,12 @@
       "stability": 51,
       "influence": 74,
       "fronts": 1,
-      "pressure": 85,
-      "max_front": 85,
+      "pressure": 84,
+      "max_front": 84,
       "stability_live": 47,
-      "economy_live": 73
+      "economy_live": 73,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "CHN": {
       "name": "China",
@@ -157,7 +181,9 @@
       "pressure": 66,
       "max_front": 85,
       "stability_live": 77,
-      "economy_live": 89
+      "economy_live": 89,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "TWN": {
       "name": "Taiwan",
@@ -176,7 +202,9 @@
       "pressure": 85,
       "max_front": 85,
       "stability_live": 71,
-      "economy_live": 82
+      "economy_live": 82,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "PHL": {
       "name": "Philippines",
@@ -192,10 +220,12 @@
       "stability": 61,
       "influence": 53,
       "fronts": 1,
-      "pressure": 69,
-      "max_front": 69,
+      "pressure": 68,
+      "max_front": 68,
       "stability_live": 59,
-      "economy_live": 61
+      "economy_live": 61,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "RUS": {
       "name": "Russia",
@@ -214,7 +244,15 @@
       "pressure": 95,
       "max_front": 95,
       "stability_live": 62,
-      "economy_live": 55
+      "economy_live": 55,
+      "political_event_pressure": 44,
+      "next_political_event": {
+        "id": "RUS-2026-DUMA",
+        "name": "Russian Federation parliamentary election",
+        "date": "2026-09-20",
+        "days_to_event": 13,
+        "status": "confirmed"
+      }
     },
     "UKR": {
       "name": "Ukraine",
@@ -233,7 +271,9 @@
       "pressure": 95,
       "max_front": 95,
       "stability_live": 43,
-      "economy_live": 36
+      "economy_live": 36,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "PRK": {
       "name": "North Korea",
@@ -249,10 +289,12 @@
       "stability": 81,
       "influence": 43,
       "fronts": 1,
-      "pressure": 78,
-      "max_front": 78,
+      "pressure": 77,
+      "max_front": 77,
       "stability_live": 78,
-      "economy_live": 17
+      "economy_live": 17,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "KOR": {
       "name": "South Korea",
@@ -268,10 +310,12 @@
       "stability": 74,
       "influence": 75,
       "fronts": 1,
-      "pressure": 78,
-      "max_front": 78,
+      "pressure": 77,
+      "max_front": 77,
       "stability_live": 71,
-      "economy_live": 82
+      "economy_live": 82,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "IND": {
       "name": "India",
@@ -287,10 +331,12 @@
       "stability": 70,
       "influence": 84,
       "fronts": 2,
-      "pressure": 59,
+      "pressure": 60,
       "max_front": 65,
       "stability_live": 69,
-      "economy_live": 80
+      "economy_live": 80,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "PAK": {
       "name": "Pakistan",
@@ -309,7 +355,9 @@
       "pressure": 65,
       "max_front": 65,
       "stability_live": 45,
-      "economy_live": 41
+      "economy_live": 41,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "SRB": {
       "name": "Serbia",
@@ -325,10 +373,18 @@
       "stability": 53,
       "influence": 48,
       "fronts": 1,
-      "pressure": 57,
-      "max_front": 57,
+      "pressure": 55,
+      "max_front": 55,
       "stability_live": 52,
-      "economy_live": 54
+      "economy_live": 54,
+      "political_event_pressure": 29,
+      "next_political_event": {
+        "id": "SRB-2026-SNAP",
+        "name": "Serbia anticipated early parliamentary election",
+        "date": "2026-10-18",
+        "days_to_event": 41,
+        "status": "window"
+      }
     },
     "BIH": {
       "name": "Bosnia & Herzegovina",
@@ -344,10 +400,18 @@
       "stability": 47,
       "influence": 37,
       "fronts": 1,
-      "pressure": 57,
-      "max_front": 57,
+      "pressure": 55,
+      "max_front": 55,
       "stability_live": 46,
-      "economy_live": 48
+      "economy_live": 48,
+      "political_event_pressure": 38,
+      "next_political_event": {
+        "id": "BIH-2026-GEN",
+        "name": "Bosnia and Herzegovina general election",
+        "date": "2026-10-04",
+        "days_to_event": 27,
+        "status": "confirmed"
+      }
     },
     "COD": {
       "name": "DR Congo",
@@ -363,10 +427,12 @@
       "stability": 31,
       "influence": 36,
       "fronts": 1,
-      "pressure": 68,
-      "max_front": 68,
+      "pressure": 66,
+      "max_front": 66,
       "stability_live": 29,
-      "economy_live": 34
+      "economy_live": 34,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "RWA": {
       "name": "Rwanda",
@@ -382,10 +448,12 @@
       "stability": 70,
       "influence": 47,
       "fronts": 1,
-      "pressure": 68,
-      "max_front": 68,
+      "pressure": 66,
+      "max_front": 66,
       "stability_live": 68,
-      "economy_live": 54
+      "economy_live": 54,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "VEN": {
       "name": "Venezuela",
@@ -401,10 +469,12 @@
       "stability": 43,
       "influence": 45,
       "fronts": 1,
-      "pressure": 56,
-      "max_front": 56,
+      "pressure": 58,
+      "max_front": 58,
       "stability_live": 42,
-      "economy_live": 31
+      "economy_live": 31,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "GUY": {
       "name": "Guyana",
@@ -420,10 +490,12 @@
       "stability": 67,
       "influence": 38,
       "fronts": 1,
-      "pressure": 56,
-      "max_front": 56,
+      "pressure": 58,
+      "max_front": 58,
       "stability_live": 66,
-      "economy_live": 66
+      "economy_live": 66,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "GRC": {
       "name": "Greece",
@@ -439,10 +511,12 @@
       "stability": 68,
       "influence": 57,
       "fronts": 1,
-      "pressure": 46,
-      "max_front": 46,
+      "pressure": 48,
+      "max_front": 48,
       "stability_live": 68,
-      "economy_live": 60
+      "economy_live": 60,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "TUR": {
       "name": "Türkiye",
@@ -458,10 +532,12 @@
       "stability": 59,
       "influence": 79,
       "fronts": 1,
-      "pressure": 46,
-      "max_front": 46,
+      "pressure": 48,
+      "max_front": 48,
       "stability_live": 59,
-      "economy_live": 67
+      "economy_live": 67,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "ARM": {
       "name": "Armenia",
@@ -477,10 +553,12 @@
       "stability": 57,
       "influence": 38,
       "fronts": 1,
-      "pressure": 54,
-      "max_front": 54,
-      "stability_live": 57,
-      "economy_live": 46
+      "pressure": 55,
+      "max_front": 55,
+      "stability_live": 56,
+      "economy_live": 46,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "AZE": {
       "name": "Azerbaijan",
@@ -496,10 +574,12 @@
       "stability": 70,
       "influence": 51,
       "fronts": 1,
-      "pressure": 54,
-      "max_front": 54,
-      "stability_live": 70,
-      "economy_live": 61
+      "pressure": 55,
+      "max_front": 55,
+      "stability_live": 69,
+      "economy_live": 61,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "ETH": {
       "name": "Ethiopia",
@@ -515,10 +595,12 @@
       "stability": 42,
       "influence": 49,
       "fronts": 1,
-      "pressure": 47,
-      "max_front": 47,
+      "pressure": 49,
+      "max_front": 49,
       "stability_live": 42,
-      "economy_live": 48
+      "economy_live": 48,
+      "political_event_pressure": 0,
+      "next_political_event": null
     },
     "ERI": {
       "name": "Eritrea",
@@ -534,10 +616,12 @@
       "stability": 55,
       "influence": 30,
       "fronts": 1,
-      "pressure": 47,
-      "max_front": 47,
+      "pressure": 49,
+      "max_front": 49,
       "stability_live": 55,
-      "economy_live": 27
+      "economy_live": 27,
+      "political_event_pressure": 0,
+      "next_political_event": null
     }
   },
   "pairs": [
@@ -554,13 +638,13 @@
         "domestic-politics"
       ],
       "vector": {
-        "diplomatic": 68,
-        "military": 37,
-        "territorial": 93,
-        "trade": 36,
-        "energy": 30,
-        "domestic": 89,
-        "information": 77
+        "diplomatic": 70,
+        "military": 39,
+        "territorial": 95,
+        "trade": 39,
+        "energy": 33,
+        "domestic": 98,
+        "information": 78
       },
       "restraints": {
         "economic_interdependence": 68,
@@ -568,7 +652,7 @@
         "security_cooperation": 63,
         "deterrence": 48
       },
-      "score": 70,
+      "score": 66,
       "trend": -4,
       "gearwatch_pressure": 28.5,
       "gearwatch_impacts": [
@@ -606,9 +690,10 @@
         }
       ],
       "drivers": [
-        "territorial 93",
-        "domestic 89",
-        "information 77",
+        "Political calendar 54",
+        "territorial 95",
+        "domestic 91",
+        "information 78",
         "GearWatch: LNG rerouting 55",
         "GearWatch: Diesel / refining crisis 44"
       ],
@@ -631,6 +716,12 @@
           "source": "Olive Press News Spain",
           "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9wU01ubS0waGkzNm82OHhaOHIzTVI3N1B3SVdkS3F3TjFwNG0yX3JObUxjaWVGUklWOTJoQkVTUVRhZDZSZEIwQ1lPc3F0dDJSSkM4NUJyQ0xMXzBqRlJRWjZpMUFiZUxCUHVWSU4tQkxhUjBtR1JBTVRMNjRoWTg?oc=5",
           "seen": "2026-09-07T11:21:00.000Z"
+        },
+        {
+          "title": "Ceuta and Melilla Will One Day Return to Us - Morocco World News",
+          "source": "Morocco World News",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZS1wclBqZkYtUEttUktHRjVoeHMybTZ1VEhENmljazVSUGhDbVh1VXAzakZnUE8wVzVMRzdPRFgyVXZ6VXlidzhPRTM2N0pqYUMwZEpKd2hGNVdsQXA2TFQ5bS13WmRycXM4WUhUOE5jQ09MYWh3bS1URDI4WkpJNWp5dVNIb25kbENYZmhiSTNBYzE0dEtN?oc=5",
+          "seen": "2026-09-07T09:39:10.000Z"
         },
         {
           "title": "Spain hardens stance towards Morocco: 'Its claims over Ceuta and Melilla damage bilateral relations' - Sur in English",
@@ -657,33 +748,39 @@
           "seen": "2026-09-06T09:26:53.000Z"
         },
         {
-          "title": "Spain says Morocco’s charge d’affaires attended protest meeting after ambassador was summoned - HESPRESS English - Morocco News",
-          "source": "Morocco News",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPZ0h2WVg0Z2pka3pHS1JwMk53OUROVG44Mm1GNHNxNVdFd2poMWJjTHJmLXExQmYxUC0xZ0VGLXJzRzA0d3JKclliZ1BoWnVwd3lpTGNxcjNpdDFiUlMzaFBxOENwQnduNDVhOWNadmRVTFNvNVJhZnFtXzBXQ1RLRFVNbGRvM3pOLWZ6VTJPUHJpQWkwNW5GMGZrVFVldmZHR2RHNGZNcmpmX2MxQUdGY0ZKVGFsWjA2SnRkYWMtQ0llTnExckE?oc=5",
-          "seen": "2026-09-04T17:06:24.000Z"
+          "title": "Ceuta: Should Morocco Have Killed Migrants at the Fence to Satisfy Spain? - Morocco World News",
+          "source": "Morocco World News",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNWXU2dFVqUlFvVHlKN3FCMXRUTy1KNEt4ZHpuQWNoNzZRRFFSNG9CSXFsV2dMV1RFa2FLREZwZWRnd0dfYkF4WmFNZnNvLTIzQzNYOVFUYzFaeEtILXBrNi1XUlVpN3F0aUNQVGhhV2tsTEctVFB4S0dteUZ1NjAxNnJ6c1htOTEtWl9zZGUzNENVREVEQ05kU0Z1OTYzNFRQeUpPNG5saXZ1V3hvdVEyamNGd2pOcTNzekF4cg?oc=5",
+          "seen": "2026-09-05T20:20:19.000Z"
         },
         {
-          "title": "Nizar Baraka weighs in on Ceuta and Melilla: «We will not relinquish a single inch of our land» - Yabiladi.com",
-          "source": "Yabiladi.com",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQM2dGMmhIMnJHY2dvZXFXOXhBVWVUeVBiRXluRzlqWVVZYVNPWE1hdEVpNzI2c2tZOE5hSlQ4X29vZXBld0F2LTFZX0pMeWFpd3B6aU5ORzhzSHQ5RGRVaWhmVmhpS0RJV2VUUFByYmJfanlKZF9TcTlQMzZSZGJza1A5a3UzcEM1b2ZmcDhSVQ?oc=5",
-          "seen": "2026-09-04T17:00:58.000Z"
-        },
-        {
-          "title": "Morocco ambassador was on vacation when Spain summoned her over Ceuta and Melilla - Yabiladi.com",
-          "source": "Yabiladi.com",
-          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOcFgyMlVTUGNnbjNQemRVVE9zSzNJZjNZV1pCdFJuamZzMldXRlExNnZzSmQxZHIwSG9BYzZxbUJ0T2NZSW1OdTJqTk1JVng2N3E3UGkxcVZMWXNVRjZqb3h2dE9JbERSSm5jbnU5S3ZaQnJLNnVhVzBrXzJNbGNhRjBtd09rN2cySDhnRHhPWjdWd2xBRHc?oc=5",
-          "seen": "2026-09-04T16:21:08.000Z"
+          "title": "Neither Evidence Nor Dignity: What the Ceuta Affair Reveals About Spain’s Right - Morocco World News",
+          "source": "Morocco World News",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPMlZzVjZ4dVFSa1ZVbk9ubjEzemtZUlJib3Rma1VqV0VONmRPckV6TFFtQy14WmstMWM0c29TcEplcEFXYVBPNHBObG12a1pCOU9TbEJCSjVraUNCQjl3Y3VqVVZhTkhIc1NVOVRha3ZBQmhJSWJud1RWYnFpVmhvODhYa2tuMGpnSlBhWVBkeTZ0QWhpZHR3eEtOUGhMLUNKbjBrS0pxUFFibWZzQlNwSjBteTZYS29TcEtwdVlPM3p6LThJ?oc=5",
+          "seen": "2026-09-05T16:53:05.000Z"
         }
       ],
       "scan_articles": 10,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 26,
+        "google_news": 48,
         "gdelt": 0
       },
       "bot_moves": [
         "Spain: harden sovereignty position while testing negotiation space",
         "Morocco: internationalise the dispute and reinforce claims"
+      ],
+      "political_calendar_pressure": 53.8,
+      "political_events": [
+        {
+          "id": "MAR-2026-PARL",
+          "country": "MAR",
+          "name": "Morocco House of Representatives election",
+          "date": "2026-09-23",
+          "days_to_event": 16,
+          "status": "confirmed",
+          "pressure": 53.8
+        }
       ]
     },
     {
@@ -698,13 +795,13 @@
         "energy"
       ],
       "vector": {
-        "diplomatic": 83,
-        "military": 63,
-        "territorial": 80,
-        "trade": 52,
-        "energy": 60,
-        "domestic": 54,
-        "information": 62
+        "diplomatic": 84,
+        "military": 64,
+        "territorial": 82,
+        "trade": 54,
+        "energy": 61,
+        "domestic": 63,
+        "information": 63
       },
       "restraints": {
         "economic_interdependence": 22,
@@ -712,14 +809,15 @@
         "security_cooperation": 14,
         "deterrence": 68
       },
-      "score": 67,
-      "trend": -2,
+      "score": 66,
+      "trend": -1,
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
-        "diplomatic 83",
-        "territorial 80",
-        "military 63"
+        "Political calendar 54",
+        "diplomatic 84",
+        "territorial 82",
+        "military 64"
       ],
       "summary": "Latest signal: French International School Opens New Laâyoune Campus - streamlinefeed.co.ke",
       "news": [
@@ -772,14 +870,14 @@
           "seen": "2026-09-05T12:59:42.000Z"
         },
         {
-          "title": "Morocco - Mountains, Plateaus, Valleys - Britannica",
-          "source": "Britannica",
+          "title": "Morocco - Mountains, Plateaus, Valleys - britannica.com",
+          "source": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1kZWNJSTRpeFdYVlNBejJCTVRFdC1PR0hBanN2TVlYOXQ1M3BXRTRnejFlc3ItenZ2TkE4ZXhnV3p3bFpzMENmeFdZRlRiV0haRzZZRHJhblpGNzg?oc=5",
           "seen": "2026-09-05T05:00:00.000Z"
         },
         {
-          "title": "Morocco - French Zone, Berbers, Sahara - Britannica",
-          "source": "Britannica",
+          "title": "Morocco - French Zone, Berbers, Sahara - britannica.com",
+          "source": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFBpOWtDWGl4YWQwVU85LXdxTFU4NFBaODlsWHBKdHlJNGNBeVR2X2d3aHBzcUVOZWNMRE9iSzVSVVpVUGdlQ3BqNTJPb2lCVEVyZEpURERCdURLZUNzQ1dULVBMY19ERHc?oc=5",
           "seen": "2026-09-05T05:00:00.000Z"
         }
@@ -793,6 +891,18 @@
       "bot_moves": [
         "Morocco: combine diplomatic signalling with domestic positioning",
         "Algeria: preserve bargaining leverage without forcing rupture"
+      ],
+      "political_calendar_pressure": 53.8,
+      "political_events": [
+        {
+          "id": "MAR-2026-PARL",
+          "country": "MAR",
+          "name": "Morocco House of Representatives election",
+          "date": "2026-09-23",
+          "days_to_event": 16,
+          "status": "confirmed",
+          "pressure": 53.8
+        }
       ]
     },
     {
@@ -809,13 +919,13 @@
         "sanctions"
       ],
       "vector": {
-        "diplomatic": 97,
-        "military": 96,
-        "territorial": 36,
-        "trade": 95,
-        "energy": 97,
-        "domestic": 72,
-        "information": 84
+        "diplomatic": 98,
+        "military": 97,
+        "territorial": 37,
+        "trade": 97,
+        "energy": 98,
+        "domestic": 75,
+        "information": 85
       },
       "restraints": {
         "economic_interdependence": 16,
@@ -823,8 +933,8 @@
         "security_cooperation": 5,
         "deterrence": 88
       },
-      "score": 84,
-      "trend": -3,
+      "score": 82,
+      "trend": -2,
       "gearwatch_pressure": 30,
       "gearwatch_impacts": [
         {
@@ -869,9 +979,10 @@
         }
       ],
       "drivers": [
-        "diplomatic 97",
-        "energy 97",
-        "military 96",
+        "Political calendar 17",
+        "diplomatic 98",
+        "energy 98",
+        "military 97",
         "GearWatch: LNG rerouting 55",
         "GearWatch: Diesel / refining crisis 44"
       ],
@@ -884,8 +995,8 @@
           "seen": "2026-09-07T11:03:45.000Z"
         },
         {
-          "title": "Iran plans new Hormuz corridor as shipping plunges and Gulf allies question US protection - ynetnews.com",
-          "source": "ynetnews.com",
+          "title": "Iran plans new Hormuz corridor as shipping plunges and Gulf allies question US protection - Ynetnews",
+          "source": "Ynetnews",
           "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBZM3RrdlBOd3Z1YUdaVU45TVBKOHYwazJZVTlHREpHU244eDVybmhKX2dZdjdNZ3FvbHNxRV83cU9rdHprQVRzLTlEWkVaRjUydXlDQlZ6SQ?oc=5",
           "seen": "2026-09-07T08:37:45.000Z"
         },
@@ -941,12 +1052,24 @@
       "scan_articles": 10,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 35,
+        "google_news": 34,
         "gdelt": 0
       },
       "bot_moves": [
         "United States: combine diplomatic signalling with domestic positioning",
         "Iran: preserve bargaining leverage without forcing rupture"
+      ],
+      "political_calendar_pressure": 16.5,
+      "political_events": [
+        {
+          "id": "USA-2026-MID",
+          "country": "USA",
+          "name": "United States mid-term congressional elections",
+          "date": "2026-11-03",
+          "days_to_event": 57,
+          "status": "confirmed",
+          "pressure": 16.5
+        }
       ]
     },
     {
@@ -962,13 +1085,13 @@
         "regional-power"
       ],
       "vector": {
-        "diplomatic": 98,
-        "military": 98,
-        "territorial": 43,
-        "trade": 89,
-        "energy": 74,
-        "domestic": 78,
-        "information": 91
+        "diplomatic": 99,
+        "military": 99,
+        "territorial": 44,
+        "trade": 91,
+        "energy": 77,
+        "domestic": 79,
+        "information": 92
       },
       "restraints": {
         "economic_interdependence": 5,
@@ -976,8 +1099,8 @@
         "security_cooperation": 2,
         "deterrence": 90
       },
-      "score": 85,
-      "trend": -2,
+      "score": 84,
+      "trend": -1,
       "gearwatch_pressure": 30,
       "gearwatch_impacts": [
         {
@@ -1022,9 +1145,9 @@
         }
       ],
       "drivers": [
-        "diplomatic 98",
-        "military 98",
-        "information 91",
+        "diplomatic 99",
+        "military 99",
+        "information 92",
         "GearWatch: Arsenal depletion / replenishment 43",
         "GearWatch: Crude tanker dislocation 41"
       ],
@@ -1035,12 +1158,6 @@
           "source": "Herald Sun",
           "url": "https://news.google.com/rss/articles/CBMiiwJBVV95cUxPdXV3QkRQZWRZUGgySC1IcF80Wk12ajlPR1E0QTZGVktoTnlRVU9UZjM5Ylc4Q1FqZHZxUHRqY1FZY0xYYUczOUJkNkJscWpmbGw2X3VpNVREWGd2N0hkc0tTcjdqZmFFUE9ZX2VBZWFwOEMzbFpFNGdSTmJORHhqbjJtU2N1NkFWaHRLbkFGM2RTbWk2bmlXdjhLOUdkdF9WZ2hmVWg5Q19NT19rQXE3Nk5sQlpDRmRZeFY0UDdfM041aV83OXcwLW0tR1RxUkw2WTFNTkZkX3ljcXpYN3kxR3NUalFIV1gtUk1PLVJQdGhUWnl5UHp6QU5lX0hOcUxmem1Rd0MtYXZqSDg?oc=5",
           "seen": "2026-09-07T15:39:55.000Z"
-        },
-        {
-          "title": "West Asia conflict escalates as US‑Israel strikes hit Iran, US Embassy attacked in Riyadh | Akashvani News - News On AIR",
-          "source": "News On AIR",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQZHhsMnRzT001OE5GdXBoSElzTl9qWjBIVWVZUHJXclN6ZUJTMVNvWHV5U3doRkEyRzJEaGQ1TzQ0b3lzOVgtVGJvQ0FEZ3IyZHRuU1dmT2t2UHYyR3lpZ2lraGFjM0tqS2hwUTlnV0JYZGVCODczZlZjTmhCeWxGOFQ3OTJnZU03d0pPZnNMSHlFd01FMHFmRzRMZ0FoRF8tRklmU2RaN3I0Nmo1aWEwUnIxUVJ5X2Ytemt5c2h3Yw?oc=5",
-          "seen": "2026-09-07T15:25:45.000Z"
         },
         {
           "title": "IAEA head urges Iran to reengage as western powers seek UN referral - The New Indian Express",
@@ -1059,6 +1176,12 @@
           "source": "News On AIR",
           "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOWVE1OXdqcC1sN0xLYkNJTS1qY0ljOUcwN3Nmc3hpOTZXZW5pUzlRelNlenJUSWxDSTVMVnBJcURJSTh0cEhSdnAzaF9EYUFaRkJjOTIyaDFTOHhWdUVGcmFvMnc1Uzh1dnUzdmtDQXBMRlFPOHctZGE0NGhNSEJCZFhVVzhNQVB2ay1DMkUtaTNzblpGeWl3eUpaTzhSZUJkSmdLV0FaelhneFM0UFpyck5IZFhlWEVxZWYyd0w0c1hhRnc?oc=5",
           "seen": "2026-09-07T11:05:16.000Z"
+        },
+        {
+          "title": "US signals Iran nuclear standoff could shift from diplomacy back to military strikes - worldisraelnews.com",
+          "source": "worldisraelnews.com",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSXVBbFpnZlRLZ3NjdE9yRHd2d09feGFwTVI0SG9nRzdFZkNuNjlodTFlUjF2ZTdKR1dYeW01bUozWElObUgzOExvakExZjhWOFVGZ2h2cUJLbnRQWnJwQTQ3OEpOYVAwbjV3OGZCM3NiUWFuTnFLSVpRcVFiM20taGFLMkpZRU15ak5WUkZ6SFJTRjJ4OTI1a19UVF9HRmR3cHp0WWlDUHJRdlVSMkZNQUtTSmphdWJl0gG4AUFVX3lxTE5JdUFsWmdmVEtnc2N0T3JEd3Z3T194YXBNUjRIb2dHN0VmQ242OWh1MWVSMXZlN0pHV1h5bTVtSjNYSU5tSDM4TG9qQTFmOFY4VUZnaHZxQktudFBacnBBNDc4Sk5hUDBuNXc4ZkIzc2JRYW5OcUtJWlFxUWIzbS1oYUsySllFTXlqTlZSRnpIUlNGMng5MjVrX1RUX0dGZHdwenRZaUNQclF2VVIyRk1BS1NKamF1YmU?oc=5",
+          "seen": "2026-09-07T10:46:11.000Z"
         },
         {
           "title": "Iran threatens \"more painful\" retaliation to U.S. strikes on Iranian oil tankers - CBS News",
@@ -1100,7 +1223,9 @@
       "bot_moves": [
         "Israel: combine diplomatic signalling with domestic positioning",
         "Iran: preserve bargaining leverage without forcing rupture"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "CHN-TWN",
@@ -1115,13 +1240,13 @@
         "sovereignty"
       ],
       "vector": {
-        "diplomatic": 93,
-        "military": 94,
+        "diplomatic": 94,
+        "military": 96,
         "territorial": 99,
-        "trade": 67,
-        "energy": 53,
-        "domestic": 77,
-        "information": 87
+        "trade": 71,
+        "energy": 55,
+        "domestic": 79,
+        "information": 88
       },
       "restraints": {
         "economic_interdependence": 78,
@@ -1130,7 +1255,7 @@
         "deterrence": 87
       },
       "score": 85,
-      "trend": -1,
+      "trend": 0,
       "gearwatch_pressure": 30,
       "gearwatch_impacts": [
         {
@@ -1176,8 +1301,8 @@
       ],
       "drivers": [
         "territorial 99",
-        "military 94",
-        "diplomatic 93",
+        "military 96",
+        "diplomatic 94",
         "GearWatch: LNG rerouting 55",
         "GearWatch: Mine / underwater security 45"
       ],
@@ -1253,7 +1378,9 @@
       "bot_moves": [
         "China: harden sovereignty position while testing negotiation space",
         "Taiwan: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "USA-CHN",
@@ -1268,13 +1395,13 @@
         "industrial-policy"
       ],
       "vector": {
-        "diplomatic": 68,
-        "military": 64,
-        "territorial": 28,
-        "trade": 92,
-        "energy": 47,
-        "domestic": 68,
-        "information": 75
+        "diplomatic": 70,
+        "military": 66,
+        "territorial": 30,
+        "trade": 95,
+        "energy": 49,
+        "domestic": 72,
+        "information": 76
       },
       "restraints": {
         "economic_interdependence": 86,
@@ -1282,8 +1409,8 @@
         "security_cooperation": 24,
         "deterrence": 86
       },
-      "score": 55,
-      "trend": 2,
+      "score": 58,
+      "trend": 3,
       "gearwatch_pressure": 23.7,
       "gearwatch_impacts": [
         {
@@ -1328,9 +1455,10 @@
         }
       ],
       "drivers": [
-        "trade 92",
-        "information 75",
-        "diplomatic 68",
+        "Political calendar 17",
+        "trade 95",
+        "information 76",
+        "diplomatic 70",
         "GearWatch: Japan carry unwind 56",
         "GearWatch: Global refinancing stress 43"
       ],
@@ -1391,21 +1519,33 @@
           "seen": "2026-09-06T08:58:00.000Z"
         },
         {
-          "title": "US Pacific Command chief meets Chinese commander overseeing Taiwan operations - Taiwan News",
-          "source": "Taiwan News",
-          "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE91SGw4V29zb0ZOWWdxZGdtb3BodURhT0JpRjdWQ2tnbjFmdEVyang1MjV4ZHplVFBBcFZnYUdLWkNDdllJSlRXY3pzVGdRb09oZEZaWVRmQXE?oc=5",
-          "seen": "2026-09-06T03:01:00.000Z"
+          "title": "Trump Rolls Out Red Carpet for Xi as US-China Tensions Persist - ibtimes.sg",
+          "source": "ibtimes.sg",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOVEg4TnVnSmdKcWo5bVU0SlZqU09aMTNUOEFjdEgtb0k5dUxzNUE1aFhFQlpweV9wZXVpdlpLbVp4X05lZ0dBSGZZR1NyQTNkT0ZNVlRRMU5WaWRLMk5LLWczSmwyT2pqZUprSmRVOGVQREIyOHFZZmxWM1hHTE9qYUg4UjJWdlBUeUFNcg?oc=5",
+          "seen": "2026-09-05T11:58:34.000Z"
         }
       ],
       "scan_articles": 10,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 34,
+        "google_news": 33,
         "gdelt": 0
       },
       "bot_moves": [
         "United States: diversify exposure and use economic leverage",
         "China: protect supply chains and seek substitute partners"
+      ],
+      "political_calendar_pressure": 16.5,
+      "political_events": [
+        {
+          "id": "USA-2026-MID",
+          "country": "USA",
+          "name": "United States mid-term congressional elections",
+          "date": "2026-11-03",
+          "days_to_event": 57,
+          "status": "confirmed",
+          "pressure": 16.5
+        }
       ]
     },
     {
@@ -1420,13 +1560,13 @@
         "alliance"
       ],
       "vector": {
-        "diplomatic": 73,
-        "military": 77,
-        "territorial": 94,
-        "trade": 52,
-        "energy": 40,
-        "domestic": 56,
-        "information": 61
+        "diplomatic": 74,
+        "military": 79,
+        "territorial": 96,
+        "trade": 54,
+        "energy": 41,
+        "domestic": 57,
+        "information": 62
       },
       "restraints": {
         "economic_interdependence": 63,
@@ -1434,8 +1574,8 @@
         "security_cooperation": 10,
         "deterrence": 72
       },
-      "score": 69,
-      "trend": -2,
+      "score": 68,
+      "trend": -1,
       "gearwatch_pressure": 6.6,
       "gearwatch_impacts": [
         {
@@ -1448,16 +1588,16 @@
         }
       ],
       "drivers": [
-        "territorial 94",
-        "military 77",
-        "diplomatic 73",
+        "territorial 96",
+        "military 79",
+        "diplomatic 74",
         "GearWatch: Mine / underwater security 45"
       ],
-      "summary": "Latest signal: Philippines’ Teodoro says China could exploit cuts in US-South Korean exercises - Daily Maverick",
+      "summary": "Latest signal: Philippines’ Teodoro says China could exploit cuts in US-South Korean exercises - dailymaverick.co.za",
       "news": [
         {
-          "title": "Philippines’ Teodoro says China could exploit cuts in US-South Korean exercises - Daily Maverick",
-          "source": "Daily Maverick",
+          "title": "Philippines’ Teodoro says China could exploit cuts in US-South Korean exercises - dailymaverick.co.za",
+          "source": "dailymaverick.co.za",
           "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPWlRWNkN0MlhiU0d4Ui1nYUxlYTh4Mk16b2hFSWpJRFA3MW5SZmJvZnYtbGtzNTd4ZHduMWV1LS1zTlVmVHZGR2gwRHZzamtDT3JVdENmeTdmaGgxNHZZMUJsUzVQclVsdVM5ODJsTkRDRTgzdjRmWFhqLWlZNnhEbHpyVWxkRHlLWkVpSE02SEkxQkhvd2h1UENRc0xDa0tYbnRudjEzZDdLRS1JT3dJLTkzRU1aOVhHNUY3OTdIYWRWTW1GdkFZT0Vn?oc=5",
           "seen": "2026-09-07T11:28:42.000Z"
         },
@@ -1498,8 +1638,8 @@
           "seen": "2026-09-06T23:00:00.000Z"
         },
         {
-          "title": "Indo-Pacific - Britannica",
-          "source": "Britannica",
+          "title": "Indo-Pacific - britannica.com",
+          "source": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE01NGViNGpsTjZmT0RGSEJRS3psX284cXdFd3dvU05uYm5BUHBwWWVxVU9Zc2R4N2YtTWkzZmk0WDZWR0hDNDJ0WXRGTG9CQlNJZTh6QnFFNF8?oc=5",
           "seen": "2026-09-06T05:00:00.000Z"
         },
@@ -1525,7 +1665,9 @@
       "bot_moves": [
         "China: harden sovereignty position while testing negotiation space",
         "Philippines: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "RUS-UKR",
@@ -1543,10 +1685,10 @@
         "diplomatic": 99,
         "military": 99,
         "territorial": 99,
-        "trade": 97,
-        "energy": 95,
-        "domestic": 89,
-        "information": 97
+        "trade": 98,
+        "energy": 97,
+        "domestic": 96,
+        "information": 98
       },
       "restraints": {
         "economic_interdependence": 14,
@@ -1600,6 +1742,7 @@
         }
       ],
       "drivers": [
+        "Political calendar 44",
         "diplomatic 99",
         "military 99",
         "territorial 99",
@@ -1672,12 +1815,24 @@
       "scan_articles": 10,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 49,
+        "google_news": 48,
         "gdelt": 0
       },
       "bot_moves": [
         "Russia: combine diplomatic signalling with domestic positioning",
         "Ukraine: preserve bargaining leverage without forcing rupture"
+      ],
+      "political_calendar_pressure": 44,
+      "political_events": [
+        {
+          "id": "RUS-2026-DUMA",
+          "country": "RUS",
+          "name": "Russian Federation parliamentary election",
+          "date": "2026-09-20",
+          "days_to_event": 13,
+          "status": "confirmed",
+          "pressure": 44
+        }
       ]
     },
     {
@@ -1692,13 +1847,13 @@
         "border"
       ],
       "vector": {
-        "diplomatic": 88,
-        "military": 95,
-        "territorial": 67,
-        "trade": 66,
-        "energy": 37,
-        "domestic": 63,
-        "information": 76
+        "diplomatic": 90,
+        "military": 97,
+        "territorial": 68,
+        "trade": 68,
+        "energy": 39,
+        "domestic": 65,
+        "information": 77
       },
       "restraints": {
         "economic_interdependence": 9,
@@ -1706,8 +1861,8 @@
         "security_cooperation": 3,
         "deterrence": 94
       },
-      "score": 78,
-      "trend": -2,
+      "score": 77,
+      "trend": -1,
       "gearwatch_pressure": 28.7,
       "gearwatch_impacts": [
         {
@@ -1744,9 +1899,9 @@
         }
       ],
       "drivers": [
-        "military 95",
-        "diplomatic 88",
-        "information 76",
+        "military 97",
+        "diplomatic 90",
+        "information 77",
         "GearWatch: LNG rerouting 55",
         "GearWatch: Arsenal depletion / replenishment 43"
       ],
@@ -1756,7 +1911,7 @@
           "title": "Russia and North Korea deepen relations with symbolic road bridge - Al Jazeera",
           "source": "Al Jazeera",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNkpVazFvOUpCSExULW1FbGpoWjhjczBYM0tTWWhSU25kaktoS2FOSDFEVFFNbmpsZE9PbTYzNTlZV1FoUFU0VklleFg0VVdPcGt1Uks4Ylh0LUZwcjBNWXhlbVNLVWRpVUt1RmtWWFQzOHE0ZTJ3aXBtMFhyN1hLTlR6bVU1WmJITkNOU1RDaVo1a3ZIcmtlc2ZIUC1EalhNWUtOaWZEMDjSAa4BQVVfeXFMTmFBREhuY254cy1FQy1fV2VuZTRlUmRTNU5pZnhWUjhiWUZQaFpBcjlTM0Nzc3ZOTzNpZ0pCWEZDV1dKZVYxZ205a1RxQlZqMUhmc05sVHBab2dzeVBDM1RPZmZTamI1TjA5djVNd0t4S25ndWRLQjFDOXpDbGNjUl9YQWZmSDgtV0hzQmVpR2JlbTFEQjQzUkFnb2szcjQ0ZzNncTBqamYyeUgzVHV3?oc=5",
-          "seen": "2026-09-07T16:30:00.000Z"
+          "seen": "2026-09-07T16:32:20.000Z"
         },
         {
           "title": "North Korea unveils nuke destroyer a year after warship ‘crushed’ - the-sun.com",
@@ -1765,8 +1920,8 @@
           "seen": "2026-09-07T14:42:41.000Z"
         },
         {
-          "title": "North Korea adds second naval destroyer as US, South Korea and Japan hold military exercise - news4jax.com",
-          "source": "news4jax.com",
+          "title": "North Korea adds second naval destroyer as US, South Korea and Japan hold military exercise - News4JAX",
+          "source": "News4JAX",
           "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNdzVSV0xoRnJiWlBYejZWWklaVHF4ZXRheGZRdDZRaHk1UFRaLU1tamNUdTZaajJBRzNBVVdaVlZUcWpubnRuUWNmZDBWWFkxNzhGdWpCUnBlSjgwSDRud0hhSllESWNGYWg3UWUtNUM2RWdIUjI3S2JZVDdSVFBUUzRwdm91NFZXdFZsN1ZOaGd5Nk00SXZCRDhCTGhlTVo5c3lZdVJvcjRkRkwwZ2V1Q3VKZGlpcmNSa2FtUE10TFE5aWE3MzB0SW4wVzM5ZURvWGtuX0ZHYjA3Zw?oc=5",
           "seen": "2026-09-07T10:44:59.000Z"
         },
@@ -1822,7 +1977,9 @@
       "bot_moves": [
         "North Korea: preserve deterrence while controlling escalation",
         "South Korea: reinforce readiness and seek external support"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "IND-PAK",
@@ -1836,13 +1993,13 @@
         "border"
       ],
       "vector": {
-        "diplomatic": 71,
-        "military": 78,
-        "territorial": 91,
-        "trade": 56,
-        "energy": 27,
-        "domestic": 63,
-        "information": 66
+        "diplomatic": 72,
+        "military": 81,
+        "territorial": 93,
+        "trade": 57,
+        "energy": 28,
+        "domestic": 65,
+        "information": 67
       },
       "restraints": {
         "economic_interdependence": 29,
@@ -1851,13 +2008,13 @@
         "deterrence": 94
       },
       "score": 65,
-      "trend": -1,
+      "trend": 0,
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
-        "territorial 91",
-        "military 78",
-        "diplomatic 71"
+        "territorial 93",
+        "military 81",
+        "diplomatic 72"
       ],
       "summary": "Latest signal: Detained Pakistani resident repatriated along IB in Jammu - Greater Kashmir",
       "news": [
@@ -1880,10 +2037,10 @@
           "seen": "2026-09-07T10:00:55.000Z"
         },
         {
-          "title": "Four killed in Indian shelling in Kashmir — Pakistan officials - Arab News PK",
-          "source": "Arab News PK",
-          "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeWZwTkQwZmFSajlGdGJwYkYxNzAya0FwNVotMjg1MHZzRmRvZmpqSG5CbG4tYVdJc1pzQUdaVUlBSjVNRm5ERmI5MEhYQ1k2cGZ3RldETzFVWXpJUDlLTVJJMVRBRUIxUGx2a3NKVk03TGk0OXFDSC05QkJaaDZiXy1tYjl2TDB4THFZbmx5WlFpVExTM3o0TjBZalpmMDRHSjE0?oc=5",
-          "seen": "2026-09-07T08:48:32.000Z"
+          "title": "Mess, Not Muscle: Why Turkey Joining the SCO After the Makkah Pact is a Bad Bargain For India - EurAsian Times",
+          "source": "EurAsian Times",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNbWlCNjhxTmxGb2xyNVpub1RfVXNCVTNiZmg3RV9PWVJHdVlERzktSlI2RGs4TlJDLWw2d3RTWVNmdl9MUHN3R0liU2trLVhyRy1BRURFWVgwMWhodWhYVHZ6cEV3UHZ2VXF3S3ZFZTlYVlZVamNLQzhKX1RXZGFOUnVlNHdrZlV4dDJWNlVNY3J6WllFbE83WkRHOHM5Q2tZUjZObjVhRXQ3RTAyZG1ybmwxSG5JRTh3cFFqRGtCMNIBvwFBVV95cUxNbWlCNjhxTmxGb2xyNVpub1RfVXNCVTNiZmg3RV9PWVJHdVlERzktSlI2RGs4TlJDLWw2d3RTWVNmdl9MUHN3R0liU2trLVhyRy1BRURFWVgwMWhodWhYVHZ6cEV3UHZ2VXF3S3ZFZTlYVlZVamNLQzhKX1RXZGFOUnVlNHdrZlV4dDJWNlVNY3J6WllFbE83WkRHOHM5Q2tZUjZObjVhRXQ3RTAyZG1ybmwxSG5JRTh3cFFqRGtCMA?oc=5",
+          "seen": "2026-09-07T08:39:09.000Z"
         },
         {
           "title": "Paris Protest Challenges Pakistan's Military Narrative on Defence Day - Devdiscourse",
@@ -1916,8 +2073,8 @@
           "seen": "2026-09-06T19:49:51.000Z"
         },
         {
-          "title": "PM Modi warns Pakistan of cross-border action if it indulges in ‘mischief’. - thekashmirhorizon.com",
-          "source": "thekashmirhorizon.com",
+          "title": "PM Modi warns Pakistan of cross-border action if it indulges in ‘mischief’. - The Kashmir Horizon",
+          "source": "The Kashmir Horizon",
           "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOZjEtRWR1T3ZZcEFfRVQ4YVBZWkNrbGk3MTBmcXpYek9DbmFHa0cxM1c4YkJpY3lNVG9aSjZCZkNHUDRKenN5VmU0dzVSdTZKc0t4SjBJM0lKMlFTWTFUYmtkVTh5YnowTndaQkpiVTRzY2NNbUlzS2Vyd29nbXVHemVIUjdLY1JvRkFLXzhMNmpPd3hzUWhXUzBac1kyX1ctY2ZpOXZLLTFjOUtXWUY1aWthWFQ?oc=5",
           "seen": "2026-09-06T14:49:32.000Z"
         }
@@ -1931,7 +2088,9 @@
       "bot_moves": [
         "India: harden sovereignty position while testing negotiation space",
         "Pakistan: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "IND-CHN",
@@ -1945,13 +2104,13 @@
         "regional-power"
       ],
       "vector": {
-        "diplomatic": 66,
-        "military": 67,
-        "territorial": 82,
-        "trade": 64,
-        "energy": 30,
-        "domestic": 49,
-        "information": 52
+        "diplomatic": 68,
+        "military": 69,
+        "territorial": 83,
+        "trade": 66,
+        "energy": 31,
+        "domestic": 50,
+        "information": 53
       },
       "restraints": {
         "economic_interdependence": 70,
@@ -1959,7 +2118,7 @@
         "security_cooperation": 13,
         "deterrence": 78
       },
-      "score": 53,
+      "score": 55,
       "trend": 2,
       "gearwatch_pressure": 4.8,
       "gearwatch_impacts": [
@@ -1973,9 +2132,9 @@
         }
       ],
       "drivers": [
-        "territorial 82",
-        "military 67",
-        "diplomatic 66",
+        "territorial 83",
+        "military 69",
+        "diplomatic 68",
         "GearWatch: Rare-earth magnets 32"
       ],
       "summary": "Latest signal: India, China hold first corps commander talks in Arunachal Pradesh’s eastern sector - The Times of India",
@@ -2050,7 +2209,9 @@
       "bot_moves": [
         "India: harden sovereignty position while testing negotiation space",
         "China: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "SRB-BIH",
@@ -2064,13 +2225,13 @@
         "territorial"
       ],
       "vector": {
-        "diplomatic": 62,
-        "military": 47,
-        "territorial": 67,
-        "trade": 38,
-        "energy": 29,
-        "domestic": 74,
-        "information": 68
+        "diplomatic": 63,
+        "military": 49,
+        "territorial": 68,
+        "trade": 40,
+        "energy": 30,
+        "domestic": 81,
+        "information": 69
       },
       "restraints": {
         "economic_interdependence": 61,
@@ -2078,8 +2239,8 @@
         "security_cooperation": 35,
         "deterrence": 55
       },
-      "score": 57,
-      "trend": -4,
+      "score": 54,
+      "trend": -3,
       "gearwatch_pressure": 5.4,
       "gearwatch_impacts": [
         {
@@ -2092,9 +2253,10 @@
         }
       ],
       "drivers": [
-        "domestic 74",
-        "information 68",
-        "territorial 67",
+        "Political calendar 38",
+        "domestic 76",
+        "information 69",
+        "territorial 68",
         "GearWatch: Global refinancing stress 43"
       ],
       "summary": "Latest signal: Convicted war criminal Ratko Mladic gets hero’s burial in Serbia - Al Jazeera",
@@ -2112,8 +2274,8 @@
           "seen": "2026-09-07T13:52:17.000Z"
         },
         {
-          "title": "Behind the scenes of the Eternal Derby: ‘Pravac Potočari’ and Ratko Mladić socks - Serbian Monitor",
-          "source": "Serbian Monitor",
+          "title": "Behind the scenes of the Eternal Derby: ‘Pravac Potočari’ and Ratko Mladić socks - serbianmonitor.com",
+          "source": "serbianmonitor.com",
           "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONXVZR1NqWU0yeHNYZE5NN244cFk5ejV6YWN0RVZMYzVESFFSNnUxUzF4YkhhSURpbW9vSGtsNURmSV91elRCVnhXb2UxUE93LWRGYVN6cE9KR2FDMWNZWEJZWWZVUS10RW9OOUx6VTREOERRenNTek13bHVYVm10Qjg2TjRRZ1U5YlN0M0s3MnpMajVFQnJBRVFxNGRTRmFtYjZYRGRvMnNpcXBJYTl3RWRB?oc=5",
           "seen": "2026-09-07T08:57:26.000Z"
         },
@@ -2142,8 +2304,8 @@
           "seen": "2026-09-06T06:00:00.000Z"
         },
         {
-          "title": "Commemoration held for late Serb war criminal Ratko Mladic - scmp.com",
-          "source": "scmp.com",
+          "title": "Commemoration held for late Serb war criminal Ratko Mladic - South China Morning Post",
+          "source": "South China Morning Post",
           "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOblJVcVpxd0oySVF6ZkdLbnBXNV9MZTBJMlFnbkhSaWJ3Qlc1QkQtU05PLUlJRFNRYXNSblUtSG96TWlySk9lVENRekNCOFNXSl90LWcycFZ2RTdUb21ETjJnYktLS0FsVHNndjlfN3l0RnljYjVMZmR0a0U1bW1YbnVkd1g1aXZUUFVZU0tVQUhKRG52dk94TExUNVNMYmxVRzVRXzhzVEtmZTQ0d0HSAa4BQVVfeXFMTm5SVXFacXdKMklRemZHS25wVzVfTGUwSTJRZ25IUmlid0JXNUJELVNOTy1JSURTUWFzUm5VLUhvek1pckpPZVRDUXpDQjhTV0pfdC1nMnBWdkU3VG9tRE4yZ2JLS0tBbFRzZ3Y5Xzd5dEZ5Y2I1TGZkdGtFNW1tWG51ZHdYNWl2VFBVWVNLVUFISkRudnZPeExMVDVTTGJsVUc1UV84c1RLZmU0NHdB?oc=5",
           "seen": "2026-09-05T19:57:58.000Z"
         },
@@ -2154,8 +2316,8 @@
           "seen": "2026-09-05T12:12:28.000Z"
         },
         {
-          "title": "Bosnian War | Overview, Combatants, Death Toll, & War Crimes - Britannica",
-          "source": "Britannica",
+          "title": "Bosnian War | Overview, Combatants, Death Toll, & War Crimes - britannica.com",
+          "source": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1zVXVuR19ZRGhJNmxBVGFQUUxoUU5YSDF5bjRnbkh3TTlWRl9VSGg2T05HOHU1bWY3dXd3bUlqem1nLUZGUGN0SWdxcXEzT3dVM2NpQnk4aw?oc=5",
           "seen": "2026-09-05T05:00:00.000Z"
         }
@@ -2163,12 +2325,33 @@
       "scan_articles": 10,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 14,
+        "google_news": 15,
         "gdelt": 0
       },
       "bot_moves": [
         "Serbia: combine diplomatic signalling with domestic positioning",
         "Bosnia & Herzegovina: preserve bargaining leverage without forcing rupture"
+      ],
+      "political_calendar_pressure": 38.3,
+      "political_events": [
+        {
+          "id": "BIH-2026-GEN",
+          "country": "BIH",
+          "name": "Bosnia and Herzegovina general election",
+          "date": "2026-10-04",
+          "days_to_event": 27,
+          "status": "confirmed",
+          "pressure": 38.3
+        },
+        {
+          "id": "SRB-2026-SNAP",
+          "country": "SRB",
+          "name": "Serbia anticipated early parliamentary election",
+          "date": "2026-10-18",
+          "days_to_event": 41,
+          "status": "window",
+          "pressure": 28.6
+        }
       ]
     },
     {
@@ -2184,13 +2367,13 @@
         "energy"
       ],
       "vector": {
-        "diplomatic": 56,
-        "military": 59,
-        "territorial": 77,
-        "trade": 29,
-        "energy": 53,
-        "domestic": 47,
-        "information": 49
+        "diplomatic": 57,
+        "military": 61,
+        "territorial": 79,
+        "trade": 31,
+        "energy": 54,
+        "domestic": 48,
+        "information": 50
       },
       "restraints": {
         "economic_interdependence": 58,
@@ -2198,7 +2381,7 @@
         "security_cooperation": 54,
         "deterrence": 73
       },
-      "score": 46,
+      "score": 48,
       "trend": 2,
       "gearwatch_pressure": 3.8,
       "gearwatch_impacts": [
@@ -2212,9 +2395,9 @@
         }
       ],
       "drivers": [
-        "territorial 77",
-        "military 59",
-        "diplomatic 56",
+        "territorial 79",
+        "military 61",
+        "diplomatic 57",
         "GearWatch: European strategic autonomy 31"
       ],
       "summary": "Latest signal: Greece signals 12 nautical mile territorial waters option to Turkey as tensions rise - Greek City Times",
@@ -2274,8 +2457,8 @@
           "seen": "2026-09-04T10:05:38.000Z"
         },
         {
-          "title": "Turkey’s Marine Parks in the Aegean and the Eastern Mediterranean Provoke Regional Turbulence - moderndiplomacy.eu",
-          "source": "moderndiplomacy.eu",
+          "title": "Turkey’s Marine Parks in the Aegean and the Eastern Mediterranean Provoke Regional Turbulence - Modern Diplomacy",
+          "source": "Modern Diplomacy",
           "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQSW84WGZSWWpNOTZzZHFJako3bkxDdllkeUFFQWtTNHlaMlJxRWhjbVFzMU14elM2OFQwLTQxSExYazYya09zUlN4Ql90QlUtSUxMNVJEOVBFM1FMTGtIbXdCQW1fc2NYeWxDZEZqM2hFdVBfZHpXQU1IclVrWER0cHQ5TFNvMi1XSnBkSkRNU1VvdzFVM0VGa0owWnA?oc=5",
           "seen": "2026-09-04T02:00:49.000Z"
         }
@@ -2289,7 +2472,9 @@
       "bot_moves": [
         "Greece: harden sovereignty position while testing negotiation space",
         "Türkiye: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "ARM-AZE",
@@ -2303,13 +2488,13 @@
         "corridor"
       ],
       "vector": {
-        "diplomatic": 69,
-        "military": 67,
-        "territorial": 80,
-        "trade": 43,
-        "energy": 38,
-        "domestic": 53,
-        "information": 60
+        "diplomatic": 70,
+        "military": 69,
+        "territorial": 81,
+        "trade": 44,
+        "energy": 39,
+        "domestic": 54,
+        "information": 61
       },
       "restraints": {
         "economic_interdependence": 24,
@@ -2317,20 +2502,20 @@
         "security_cooperation": 8,
         "deterrence": 61
       },
-      "score": 54,
-      "trend": 2,
+      "score": 55,
+      "trend": 1,
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
-        "territorial 80",
-        "diplomatic 69",
-        "military 67"
+        "territorial 81",
+        "diplomatic 70",
+        "military 69"
       ],
-      "summary": "Latest signal: Armenia Courts Central Asia As TRIPP Corridor Takes Shape - Radio Free Europe/Radio Liberty",
+      "summary": "Latest signal: Armenia Courts Central Asia As TRIPP Corridor Takes Shape - rferl.org",
       "news": [
         {
-          "title": "Armenia Courts Central Asia As TRIPP Corridor Takes Shape - Radio Free Europe/Radio Liberty",
-          "source": "Radio Free Europe/Radio Liberty",
+          "title": "Armenia Courts Central Asia As TRIPP Corridor Takes Shape - rferl.org",
+          "source": "rferl.org",
           "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOSEZxajJQZFdoLVEzSVRXNjJnUGFrQ0JRLWJZMEZRamt0a0stRWVhR2RObGhJT3J2ZXVhVHJFZlYtYmlaLU9ia3pWcXFZNGhkM0hVZ0l3RWxCMjZ1S1h5TDdjbnF2VTU3MjZrbXFXNlNnNWdsS1lHeFZQSjNEUnVuN3JTVl94ekhVUmJNZTJlMWxhalhfcGZv0gGaAUFVX3lxTE4yUzBDMDNrREg5a0Y3QjRzd1VCdkszV1ZYM1lwZjFaZ1h6S0pCWW01T1J4eFZOMjVoOW5YbWNqVjFoN1JvZWpGQnZuaWpaaVNwdFEtSjNwMTEySnQ4MUdzUVJtajNDalNEalZhUGlwaW00eVlhSGo5QThZUmtsU0UxZHd5dWxJWEpYd1R3dDdxSUxUcjdfNnJRLUE?oc=5",
           "seen": "2026-09-06T11:34:14.000Z"
         },
@@ -2341,8 +2526,8 @@
           "seen": "2026-09-06T10:15:59.000Z"
         },
         {
-          "title": "State of the Trump Corridor, One Year After the Meeting with Pashinyan and Aliyev - خبرگزاری دفاع مقدس",
-          "source": "خبرگزاری دفاع مقدس",
+          "title": "State of the Trump Corridor, One Year After the Meeting with Pashinyan and Aliyev - defapress.ir",
+          "source": "defapress.ir",
           "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQd1EzQlZJWENiS2ZmOTMyZDRnM3lGZkFORWxSbGFReDlieEsxbnN4Y0xtNDhoLWdmZVUxZktlOUlsblVmdloxbFAzOW96eC1IRGlaSl9HMGVtN0RMXzJaUFM5cllDZHY1NktIZlNkd2FYNzE2YnJCeUR1b2FubTA1YkltNFlqaXZyT0pqWGtZbkpCdC1aNTFDSXU0WE5rVExraWVfT3dyUVU5eEtsQjA2dUhDVU91UQ?oc=5",
           "seen": "2026-09-06T05:02:00.000Z"
         },
@@ -2398,7 +2583,9 @@
       "bot_moves": [
         "Armenia: harden sovereignty position while testing negotiation space",
         "Azerbaijan: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "COD-RWA",
@@ -2412,13 +2599,13 @@
         "border"
       ],
       "vector": {
-        "diplomatic": 80,
-        "military": 87,
-        "territorial": 72,
-        "trade": 46,
-        "energy": 21,
-        "domestic": 61,
-        "information": 63
+        "diplomatic": 81,
+        "military": 89,
+        "territorial": 73,
+        "trade": 47,
+        "energy": 22,
+        "domestic": 63,
+        "information": 64
       },
       "restraints": {
         "economic_interdependence": 48,
@@ -2426,14 +2613,14 @@
         "security_cooperation": 12,
         "deterrence": 47
       },
-      "score": 68,
-      "trend": -3,
+      "score": 66,
+      "trend": -2,
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
-        "military 87",
-        "diplomatic 80",
-        "territorial 72"
+        "military 89",
+        "diplomatic 81",
+        "territorial 73"
       ],
       "summary": "Latest signal: South Kivu : the front line flares up, violent clashes erupt between FARDC, Burundian soldiers, and Wazalendo militias against the AFC/M23-Twirwaneho - SOS Médias Burundi",
       "news": [
@@ -2456,8 +2643,8 @@
           "seen": "2026-09-03T14:00:00.000Z"
         },
         {
-          "title": "Democratic Republic of the Congo - Central Africa, Conflict, Resources - Britannica",
-          "source": "Britannica",
+          "title": "Democratic Republic of the Congo - Central Africa, Conflict, Resources - britannica.com",
+          "source": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNU0FYQXJtVUNFY2J2RzBGZmNOdW95ZzB1eDV3ZW02V3piY2tVVzA5MUdjZURObmJoRkJETjJWRzlTcUdPZ0wybnNnS2tRTFJDYVkxS2xyQWQwXzNOSnBaUUMtRGZWZHkwTWxiQ0hmdUR2OFhnRndVa05pNnVtVGlqR0J0bFpfdE9RbWdWSDVyV2t2czhKSmVkSHpGLW01RDlQSlhobA?oc=5",
           "seen": "2026-09-02T05:00:00.000Z"
         },
@@ -2495,7 +2682,9 @@
       "bot_moves": [
         "DR Congo: preserve deterrence while controlling escalation",
         "Rwanda: reinforce readiness and seek external support"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "VEN-GUY",
@@ -2509,13 +2698,13 @@
         "border"
       ],
       "vector": {
-        "diplomatic": 63,
-        "military": 52,
-        "territorial": 94,
-        "trade": 40,
-        "energy": 79,
-        "domestic": 56,
-        "information": 57
+        "diplomatic": 64,
+        "military": 53,
+        "territorial": 95,
+        "trade": 41,
+        "energy": 80,
+        "domestic": 57,
+        "information": 58
       },
       "restraints": {
         "economic_interdependence": 27,
@@ -2523,7 +2712,7 @@
         "security_cooperation": 6,
         "deterrence": 56
       },
-      "score": 56,
+      "score": 58,
       "trend": 2,
       "gearwatch_pressure": 8,
       "gearwatch_impacts": [
@@ -2545,9 +2734,9 @@
         }
       ],
       "drivers": [
-        "territorial 94",
-        "energy 79",
-        "diplomatic 63",
+        "territorial 95",
+        "energy 80",
+        "diplomatic 64",
         "GearWatch: Global refinancing stress 43",
         "GearWatch: Oil-service CAPEX second wave 23"
       ],
@@ -2566,14 +2755,14 @@
           "seen": "2026-09-03T12:59:03.000Z"
         },
         {
-          "title": "Venezuela - Britannica",
-          "source": "Britannica",
+          "title": "Venezuela - britannica.com",
+          "source": "britannica.com",
           "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5zMXhpakVHQkdiblpRcm1XdVo4cHNEa05kZGNDX1FBQzNqSVNqZEg1Z2lhTnZ0ZU8wMThFRzB5RHJLWHNJbnBTeUJLcHpFQTlfaUJzag?oc=5",
           "seen": "2026-09-03T05:00:00.000Z"
         },
         {
-          "title": "Venezuela’s Oil Deal Has a Guyana Problem — and an OPEC One - moderndiplomacy.eu",
-          "source": "moderndiplomacy.eu",
+          "title": "Venezuela’s Oil Deal Has a Guyana Problem — and an OPEC One - Modern Diplomacy",
+          "source": "Modern Diplomacy",
           "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE94eWdzVnpERTdCbGlJa3BMSTA1am1YLXlVUWRlMGpDSTNxOGhZRkNCMkNBbWhvYllNZk45S2M0dmF6VF9EWm9TTmpNb3dqT3B5OXlFMnBOSHpEdm5ESHpqUHIwdUlLYjdvQTZDQzNXMnV6VjM0WndaZ3dPS1E?oc=5",
           "seen": "2026-09-02T15:07:30.000Z"
         }
@@ -2587,7 +2776,9 @@
       "bot_moves": [
         "Venezuela: harden sovereignty position while testing negotiation space",
         "Guyana: internationalise the dispute and reinforce claims"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     },
     {
       "id": "ETH-ERI",
@@ -2601,13 +2792,13 @@
         "regional-security"
       ],
       "vector": {
-        "diplomatic": 62,
-        "military": 68,
-        "territorial": 63,
-        "trade": 43,
-        "energy": 36,
-        "domestic": 51,
-        "information": 46
+        "diplomatic": 63,
+        "military": 70,
+        "territorial": 65,
+        "trade": 44,
+        "energy": 37,
+        "domestic": 52,
+        "information": 47
       },
       "restraints": {
         "economic_interdependence": 45,
@@ -2615,14 +2806,14 @@
         "security_cooperation": 23,
         "deterrence": 54
       },
-      "score": 47,
+      "score": 49,
       "trend": 2,
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
-        "military 68",
-        "territorial 63",
-        "diplomatic 62"
+        "military 70",
+        "territorial 65",
+        "diplomatic 63"
       ],
       "summary": "Latest signal: Sudan’s Borders Have Become as Dangerous as the War Itself - The Media Line",
       "news": [
@@ -2663,8 +2854,8 @@
           "seen": "2026-09-05T09:15:09.000Z"
         },
         {
-          "title": "Could Sudan’s Conflict Become a Regional War? - twaslnews1.twaslnews.com",
-          "source": "twaslnews1.twaslnews.com",
+          "title": "Could Sudan’s Conflict Become a Regional War? - شبكة تواصل الإخبارية",
+          "source": "شبكة تواصل الإخبارية",
           "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5rVFdUbE85emFGY05wUWpKbl81Ui0yUGV2SXM5cDFVZFJENU8zX29WNXpUdUtsMFlBQWUtZkcxU3hiMEY1aWpWWkNtU1ZBOFZDS0kw?oc=5",
           "seen": "2026-09-05T08:56:51.000Z"
         },
@@ -2696,7 +2887,9 @@
       "bot_moves": [
         "Ethiopia: preserve deterrence while controlling escalation",
         "Eritrea: reinforce readiness and seek external support"
-      ]
+      ],
+      "political_calendar_pressure": 0,
+      "political_events": []
     }
   ],
   "chokepoints": [
@@ -2712,7 +2905,7 @@
         "energy",
         "shipping"
       ],
-      "score": 90,
+      "score": 89,
       "gearwatch_pressure": 12.9
     },
     {
@@ -2773,7 +2966,7 @@
         "shipping",
         "trade"
       ],
-      "score": 46,
+      "score": 45,
       "gearwatch_pressure": 0
     },
     {
@@ -2788,7 +2981,7 @@
         "shipping",
         "trade"
       ],
-      "score": 42,
+      "score": 43,
       "gearwatch_pressure": 0
     }
   ],
@@ -3548,6 +3741,139 @@
         "ETH-ERI": 47
       },
       "global_risk": 79
+    },
+    {
+      "at": "2026-09-07T16:56:20.126Z",
+      "scores": {
+        "ESP-MAR": 67,
+        "MAR-DZA": 66,
+        "USA-IRN": 83,
+        "ISR-IRN": 84,
+        "CHN-TWN": 85,
+        "USA-CHN": 57,
+        "CHN-PHL": 68,
+        "RUS-UKR": 95,
+        "PRK-KOR": 77,
+        "IND-PAK": 65,
+        "IND-CHN": 55,
+        "SRB-BIH": 55,
+        "GRC-TUR": 48,
+        "ARM-AZE": 55,
+        "COD-RWA": 66,
+        "VEN-GUY": 58,
+        "ETH-ERI": 49
+      },
+      "global_risk": 79
     }
-  ]
+  ],
+  "political_calendar": {
+    "updated_at": "2026-09-07",
+    "events": [
+      {
+        "id": "SWE-2026-PARL",
+        "country": "SWE",
+        "name": "Sweden parliamentary election",
+        "date": "2026-09-13",
+        "type": "parliamentary",
+        "confirmed": true,
+        "impact": 68,
+        "source": "https://www.val.se/english/future-elections/2026-elections---the-riksdag-and-regional-and-municipal-councils",
+        "days_to_event": 6,
+        "pressure": 58.1,
+        "status": "confirmed"
+      },
+      {
+        "id": "RUS-2026-DUMA",
+        "country": "RUS",
+        "name": "Russian Federation parliamentary election",
+        "date": "2026-09-20",
+        "type": "parliamentary",
+        "confirmed": true,
+        "impact": 62,
+        "source": "https://odihr.osce.org/odihr/elections",
+        "days_to_event": 13,
+        "pressure": 44,
+        "status": "confirmed"
+      },
+      {
+        "id": "MAR-2026-PARL",
+        "country": "MAR",
+        "name": "Morocco House of Representatives election",
+        "date": "2026-09-23",
+        "type": "parliamentary",
+        "confirmed": true,
+        "impact": 82,
+        "source": "https://www.maroc.ma/fr/elections-legislatives-marocaines-2026",
+        "days_to_event": 16,
+        "pressure": 53.8,
+        "status": "confirmed"
+      },
+      {
+        "id": "LVA-2026-PARL",
+        "country": "LVA",
+        "name": "Latvia parliamentary election",
+        "date": "2026-10-03",
+        "type": "parliamentary",
+        "confirmed": true,
+        "impact": 58,
+        "source": "https://odihr.osce.org/odihr/elections",
+        "days_to_event": 26,
+        "pressure": 29.3,
+        "status": "confirmed"
+      },
+      {
+        "id": "BIH-2026-GEN",
+        "country": "BIH",
+        "name": "Bosnia and Herzegovina general election",
+        "date": "2026-10-04",
+        "type": "general",
+        "confirmed": true,
+        "impact": 78,
+        "source": "https://www.izbori.ba/?CategoryID=183&Id=6034&Lang=6",
+        "days_to_event": 27,
+        "pressure": 38.3,
+        "status": "confirmed"
+      },
+      {
+        "id": "SRB-2026-SNAP",
+        "country": "SRB",
+        "name": "Serbia anticipated early parliamentary election",
+        "window_start": "2026-10-18",
+        "window_end": "2026-10-25",
+        "type": "parliamentary",
+        "confirmed": false,
+        "impact": 84,
+        "source": "https://www.reuters.com/world/serbias-government-propose-dissolving-parliament-an-election-report-says-2026-09-07/",
+        "days_to_event": 41,
+        "pressure": 28.6,
+        "status": "window"
+      },
+      {
+        "id": "BGR-2026-PRES",
+        "country": "BGR",
+        "name": "Bulgaria presidential election",
+        "date": "2026-10-25",
+        "type": "presidential",
+        "confirmed": true,
+        "impact": 62,
+        "source": "https://www.parliament.bg/en/news/ID/6600",
+        "days_to_event": 48,
+        "pressure": 17.5,
+        "status": "confirmed"
+      },
+      {
+        "id": "USA-2026-MID",
+        "country": "USA",
+        "name": "United States mid-term congressional elections",
+        "date": "2026-11-03",
+        "type": "legislative",
+        "confirmed": true,
+        "impact": 74,
+        "source": "https://odihr.osce.org/odihr/elections",
+        "days_to_event": 57,
+        "pressure": 16.5,
+        "status": "confirmed"
+      }
+    ]
+  }
 }
