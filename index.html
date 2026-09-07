@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WORLD//STATE · Live Geopolitical Simulation</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div id="app" class="app">
+  <header class="top">
+    <div>
+      <div class="ey">WORLD//STATE · LIVE GEOPOLITICAL ENGINE</div>
+      <h1>MAPA DEL <span>DESASTRE</span></h1>
+      <div class="muted">Real world → tension graph → causal sensors → country bots → playable fork.</div>
+    </div>
+    <div class="toolbar">
+      <button id="liveBtn" class="btn primary active">● LIVE</button>
+      <button id="simBtn" class="btn">⎇ FORK / SIM</button>
+      <button id="refreshBtn" class="btn">↻ Refresh</button>
+    </div>
+  </header>
+
+  <section class="kpis">
+    <div class="kpi"><div class="small muted">GLOBAL RISK</div><b id="riskKpi">—</b></div>
+    <div class="kpi"><div class="small muted">SHIPPING STRESS</div><b id="shipKpi">—</b></div>
+    <div class="kpi"><div class="small muted">ENERGY STRESS</div><b id="energyKpi">—</b></div>
+    <div class="kpi"><div class="small muted">TRADE STRESS</div><b id="tradeKpi">—</b></div>
+    <div class="kpi"><div class="small muted">WORLD MEMORY</div><b id="memoryKpi">—</b></div>
+  </section>
+
+  <div class="layout">
+    <main class="mapcard card">
+      <div class="row" style="margin-bottom:8px">
+        <div>
+          <div class="ey">Strategic world viewer</div>
+          <h2 style="margin:3px 0">Tensions, chokepoints and causal pressure</h2>
+        </div>
+        <div class="toolbar">
+          <button id="zoomIn" class="btn">+</button>
+          <button id="zoomOut" class="btn">−</button>
+          <button id="zoomReset" class="btn">World</button>
+        </div>
+      </div>
+      <div class="mapwrap">
+        <svg id="worldMap" viewBox="0 0 1200 680" aria-label="Mapa estratégico mundial"></svg>
+        <div class="maphud">
+          <span class="chip"><span class="statusdot"></span><span id="modeText">LIVE WORLD</span></span>
+          <span class="chip" id="updatedChip">Updating…</span>
+          <span class="chip">click country / arc</span>
+          <span class="chip">wheel + drag</span>
+        </div>
+      </div>
+      <div class="toolbar" style="margin-top:8px">
+        <button class="btn active layer" data-layer="tensions">⚡ Tensions</button>
+        <button class="btn active layer" data-layer="chokes">◆ Chokepoints</button>
+        <button class="btn active layer" data-layer="labels">◉ Labels</button>
+      </div>
+    </main>
+
+    <aside class="side">
+      <section class="card">
+        <div class="ey">Selected front</div>
+        <div class="row"><h2 id="frontTitle">Select a tension</h2><div id="frontScore" class="score">—</div></div>
+        <div id="frontTrend" class="small muted">—</div>
+        <p id="frontSummary" class="muted">Click a tension arc or ranking row.</p>
+        <div id="frontDomains" class="domain"></div>
+        <div class="simonly" style="margin-top:10px">
+          <div class="ey">Player action</div>
+          <div id="actions" class="actiongrid"></div>
+        </div>
+      </section>
+
+      <section class="card liveonly">
+        <div class="ey">Country bots</div>
+        <h3>Likely strategic moves</h3>
+        <div id="botMoves" class="bots muted small"></div>
+      </section>
+
+      <section class="card">
+        <div class="row"><div><div class="ey">Disaster ranking</div><h3>Highest tensions now</h3></div><div class="small muted">0—100 index</div></div>
+        <div id="ranking" class="ranking"></div>
+      </section>
+
+      <section class="card">
+        <div class="ey">Latest evidence</div>
+        <h3>News attached to this front</h3>
+        <div id="news" class="news small muted"></div>
+      </section>
+
+      <section class="card">
+        <div class="ey">GearWatch bridge</div>
+        <h3 id="gearHeadline">Causal sensor</h3>
+        <div id="gear" class="gear small muted"></div>
+      </section>
+
+      <section class="card simonly">
+        <div class="row"><div><div class="ey">Fork timeline</div><h3 id="simDate">—</h3></div><button id="nextTurn" class="btn primary">Resolve week →</button></div>
+        <div id="simLog" class="log small muted"></div>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">LIVE mode shows a research index built from public news signals and GearWatch outputs. FORK / SIM creates a fictional branch from the live snapshot. Scores are not probabilities, intelligence assessments or forecasts.</footer>
+</div>
+<script type="module" src="./app.js"></script>
+</body>
+</html>
