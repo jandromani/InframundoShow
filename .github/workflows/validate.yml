@@ -17,6 +17,7 @@ jobs:
         run: |
           node --check app-v2.js
           node --check political-widget.js
+          node --check autonomy-widget.js
           node --check scripts/world-scan-v2.mjs
           node --check scripts/news-quality-enrich.mjs
           node --check scripts/calendar-enrich.mjs
@@ -35,5 +36,9 @@ jobs:
           grep -q 'id="vectors"' index.html
           grep -q 'id="gearBoard"' index.html
           grep -q 'id="politicalCalendar"' index.html
+          grep -q 'id="autoGraph"' index.html
+          grep -q 'id="countryBrain"' index.html
+          grep -q 'id="dependencies"' index.html
           grep -q 'app-v2.js' index.html
           grep -q 'political-widget.js' index.html
+          grep -q 'autonomy-widget.js' index.html
