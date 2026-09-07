@@ -8,6 +8,7 @@ const MAX_AUTO_EDGES=120;
 const MIN_EDGE_SCORE=13;
 const ACTIVE_EDGE_SCORE=20;
 const HOUR=3600000;
+const MEMORY_VERSION=2;
 
 const QUERIES=[
   'international tensions military border sanctions war when:2d',
@@ -31,19 +32,21 @@ const THEME_WORDS={
   domestic:['election','protest','government','parliament','president','opposition','migration','migrant','unrest'],
   information:['cyber','hack','espionage','disinformation','propaganda','intelligence','media','leak']
 };
-const ESCALATE=['war','attack','strike','missile','blockade','threat','clash','sanction','mobiliz','incursion','killed','deadly','crisis','ultimatum','nuclear','intercept','sovereignty'];
-const DEESCALATE=['ceasefire','talk','negotiat','agreement','deal','dialogue','de-escal','withdraw','truce','mediat','cooperation','peace'];
+const ESCALATE=['war','attack','strike','missile','blockade','threat','clash','sanction','mobiliz','incursion','killed','deadly','crisis','ultimatum','nuclear','intercept','sovereignty','destroyer'];
+const DEESCALATE=['ceasefire','talk','negotiat','agreement','deal','dialogue','de-escal','withdraw','truce','mediat','peace'];
+const COOPERATE=['joint','allied','alliance','partnership','cooperation','cooperate','coordinate','trilateral','bilateral exercise','security pact','defense pact','defence pact'];
 const ALIAS_STOP=new Set(['united','republic','state','states','islands','island','georgia','jersey']);
 const clamp=(x,a=0,b=100)=>Math.max(a,Math.min(b,Number(x)||0));
 const norm=s=>String(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9 ]+/g,' ').replace(/\s+/g,' ').trim();
 
-async function text(url,timeout=TIMEOUT){try{const r=await fetch(url,{headers:{'user-agent':'worldstate-edge-discovery/0.2'},signal:AbortSignal.timeout(timeout)});if(!r.ok)throw new Error(String(r.status));return await r.text()}catch(e){console.warn('fetch failed',e.name||e.message,url);return ''}}
+async function text(url,timeout=TIMEOUT){try{const r=await fetch(url,{headers:{'user-agent':'worldstate-edge-discovery/0.3'},signal:AbortSignal.timeout(timeout)});if(!r.ok)throw new Error(String(r.status));return await r.text()}catch(e){console.warn('fetch failed',e.name||e.message,url);return ''}}
 async function json(url,fallback){const t=await text(url);if(!t)return fallback;try{return JSON.parse(t)}catch{return fallback}}
 function decodeXml(s=''){return s.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g,'$1').replace(/&amp;/g,'&').replace(/&quot;/g,'"').replace(/&#39;|&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>')}
 function tag(block,name){const m=block.match(new RegExp(`<${name}[^>]*>([\\s\\S]*?)<\\/${name}>`,'i'));return decodeXml(m?.[1]?.trim()||'')}
-function parseRss(xml){return (xml.match(/<item>[\s\S]*?<\/item>/gi)||[]).map(x=>({title:tag(x,'title'),url:tag(x,'link'),seen:tag(x,'pubDate')})).filter(x=>x.title)}
+function stripPublisher(title=''){const i=title.lastIndexOf(' - ');return i>20?title.slice(0,i).trim():title.trim()}
+function parseRss(xml){return (xml.match(/<item>[\s\S]*?<\/item>/gi)||[]).map(x=>({title:tag(x,'title'),headline:stripPublisher(tag(x,'title')),source:tag(x,'source')||((tag(x,'title').match(/ - ([^-]+)$/)||[])[1]||'Google News'),url:tag(x,'link'),seen:tag(x,'pubDate')})).filter(x=>x.headline)}
 async function rss(q){const u='https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=en-US&gl=US&ceid=US:en';return parseRss(await text(u))}
-async function readMemory(){try{return JSON.parse(await fs.readFile(MEMORY_PATH,'utf8'))}catch{return {version:1,edges:{}}}}
+async function readMemory(){try{const m=JSON.parse(await fs.readFile(MEMORY_PATH,'utf8'));return m.version===MEMORY_VERSION?m:{version:MEMORY_VERSION,edges:{}}}catch{return {version:MEMORY_VERSION,edges:{}}}}
 
 function countryCatalog(raw,state){
   const out={};
@@ -60,20 +63,30 @@ function countryCatalog(raw,state){
   for(const [code,arr] of Object.entries(extra))if(out[code])out[code].aliases=[...new Set([...(out[code].aliases||[]),...arr.map(norm)])];
   return out;
 }
-function mentions(title,catalog){
-  const t=' '+norm(title)+' ';const found=[];
+function mentions(headline,catalog){
+  const t=' '+norm(headline)+' ';const found=[];
   for(const c of Object.values(catalog)){
     const ok=(c.aliases||[]).some(a=>a.length>=4&&t.includes(' '+a+' '));
     if(ok)found.push(c.code);
   }
   return [...new Set(found)];
 }
-function themes(title){const t=norm(title),out={};for(const [k,words] of Object.entries(THEME_WORDS)){const n=words.filter(w=>t.includes(w)).length;if(n)out[k]=n}return out}
-function directional(title){const t=norm(title);let s=0;for(const w of ESCALATE)if(t.includes(w))s+=1;for(const w of DEESCALATE)if(t.includes(w))s-=1;return s}
+function themes(headline){const t=norm(headline),out={};for(const [k,words] of Object.entries(THEME_WORDS)){const n=words.filter(w=>t.includes(w)).length;if(n)out[k]=n}return out}
+function countTerms(headline,terms){const t=norm(headline);return terms.filter(w=>t.includes(w)).length}
+function directional(headline){return countTerms(headline,ESCALATE)-countTerms(headline,DEESCALATE)}
+function cooperationSignal(headline){return countTerms(headline,COOPERATE)}
+function relationType(escalation,cooperation){if(cooperation>=escalation+2)return 'cooperation';if(escalation>=cooperation+2)return 'rivalry';return 'mixed'}
 function pairId(a,b){return [a,b].sort().join('-')}
 function sameEndpoints(p,a,b){return (p.a===a&&p.b===b)||(p.a===b&&p.b===a)}
-function defaultVector(signal){const v={diplomatic:28,military:20,territorial:18,trade:20,energy:15,domestic:18,information:15};for(const [k,n] of Object.entries(signal.themes||{}))v[k]=clamp(v[k]+Math.min(48,n*9));if(signal.escalation>0){v.diplomatic=clamp(v.diplomatic+signal.escalation*3);v.military=clamp(v.military+signal.escalation*4)}return v}
-function defaultRestraints(){return {economic_interdependence:30,alliance_mediation:42,security_cooperation:18,deterrence:48}}
+function defaultVector(signal){
+  const type=signal.relation_type||relationType(signal.escalation||0,signal.cooperation||0);
+  const v=type==='cooperation'?{diplomatic:16,military:14,territorial:10,trade:14,energy:10,domestic:12,information:12}:{diplomatic:28,military:20,territorial:18,trade:20,energy:15,domestic:18,information:15};
+  for(const [k,n] of Object.entries(signal.themes||{}))v[k]=clamp(v[k]+Math.min(type==='cooperation'?25:48,n*(type==='cooperation'?4:9)));
+  if(signal.escalation>0&&type!=='cooperation'){v.diplomatic=clamp(v.diplomatic+signal.escalation*3);v.military=clamp(v.military+signal.escalation*4)}
+  return v;
+}
+function defaultRestraints(signal){const type=signal.relation_type||'mixed';return type==='cooperation'?{economic_interdependence:48,alliance_mediation:68,security_cooperation:78,deterrence:58}:{economic_interdependence:30,alliance_mediation:42,security_cooperation:18,deterrence:48}}
+function tensionScore(e,v){const avg=Object.values(v).reduce((s,n)=>s+n,0)/7;if(e.relation_type==='cooperation')return Math.round(clamp(e.score*.18+avg*.42));if(e.relation_type==='mixed')return Math.round(clamp(e.score*.42+avg*.48));return Math.round(clamp(e.score*.58+avg*.42))}
 
 async function main(){
   const state=JSON.parse(await fs.readFile(STATE_PATH,'utf8'));
@@ -82,14 +95,14 @@ async function main(){
   const catalog=countryCatalog(rawCountries,state);
   const batches=await Promise.all(QUERIES.map(rss));
   const articles=[];const seen=new Set();
-  for(const batch of batches)for(const a of batch){const k=a.url||a.title;if(!k||seen.has(k))continue;seen.add(k);articles.push(a)}
+  for(const batch of batches)for(const a of batch){const k=a.url||a.headline;if(!k||seen.has(k))continue;seen.add(k);articles.push(a)}
   const observed={};
   for(const a of articles){
-    const cs=mentions(a.title,catalog);if(cs.length<2||cs.length>5)continue;
-    const th=themes(a.title),dir=directional(a.title);
+    const cs=mentions(a.headline,catalog);if(cs.length<2||cs.length>5)continue;
+    const th=themes(a.headline),dir=directional(a.headline),coop=cooperationSignal(a.headline);
     for(let i=0;i<cs.length;i++)for(let j=i+1;j<cs.length;j++){
-      const id=pairId(cs[i],cs[j]);const x=observed[id]??={id,a:[cs[i],cs[j]].sort()[0],b:[cs[i],cs[j]].sort()[1],hits:0,sources:new Set(),themes:{},escalation:0,evidence:[]};
-      x.hits++;const sm=a.title.match(/ - ([^-]+)$/);if(sm?.[1])x.sources.add(sm[1]);x.escalation+=dir;
+      const id=pairId(cs[i],cs[j]);const x=observed[id]??={id,a:[cs[i],cs[j]].sort()[0],b:[cs[i],cs[j]].sort()[1],hits:0,sources:new Set(),themes:{},escalation:0,cooperation:0,evidence:[]};
+      x.hits++;if(a.source)x.sources.add(a.source);x.escalation+=dir;x.cooperation+=coop;
       for(const [k,n] of Object.entries(th))x.themes[k]=(x.themes[k]||0)+n;
       if(x.evidence.length<6)x.evidence.push(a);
     }
@@ -99,10 +112,10 @@ async function main(){
     const age=Math.max(1,(now-new Date(p.updated_at||0).getTime())/HOUR);const decay=Math.pow(.985,Math.min(age,168));const score=(Number(p.score)||0)*decay;if(score>=5)next[id]={...p,score:Number(score.toFixed(1)),fresh_hits:0};
   }
   for(const x of Object.values(observed)){
-    const sourceDiversity=x.sources.size;const themeBreadth=Object.keys(x.themes).length;
-    const evidenceScore=Math.min(75,x.hits*6+sourceDiversity*3+themeBreadth*2+Math.max(0,x.escalation)*1.8);
-    const old=next[x.id];const score=clamp((old?.score||0)*.68+evidenceScore*.55,0,100);
-    next[x.id]={id:x.id,a:x.a,b:x.b,score:Number(score.toFixed(1)),fresh_hits:x.hits,source_diversity:sourceDiversity,themes:x.themes,escalation:x.escalation,evidence:x.evidence,first_seen:old?.first_seen||new Date().toISOString(),updated_at:new Date().toISOString()};
+    const sourceDiversity=x.sources.size,themeBreadth=Object.keys(x.themes).length,type=relationType(x.escalation,x.cooperation);
+    const evidenceScore=Math.min(75,x.hits*6+sourceDiversity*3+themeBreadth*2+Math.max(0,x.escalation)*1.8+x.cooperation*.8);
+    const old=next[x.id],score=clamp((old?.score||0)*.68+evidenceScore*.55,0,100);
+    next[x.id]={id:x.id,a:x.a,b:x.b,score:Number(score.toFixed(1)),fresh_hits:x.hits,source_diversity:sourceDiversity,themes:x.themes,escalation:x.escalation,cooperation:x.cooperation,relation_type:type,evidence:x.evidence,first_seen:old?.first_seen||new Date().toISOString(),last_fresh_at:new Date().toISOString(),updated_at:new Date().toISOString()};
   }
   const ranked=Object.values(next).filter(x=>x.score>=MIN_EDGE_SCORE).sort((a,b)=>b.score-a.score).slice(0,MAX_AUTO_EDGES);
   const keepFixed=(state.pairs||[]).filter(p=>p.origin!=='auto-discovery');
@@ -112,9 +125,10 @@ async function main(){
     if(e.score<ACTIVE_EDGE_SCORE||keepFixed.some(p=>sameEndpoints(p,e.a,e.b)))continue;
     const ca=catalog[e.a],cb=catalog[e.b];if(!ca||!cb)continue;
     const old=priorAuto.find(p=>sameEndpoints(p,e.a,e.b));
-    const v=old?.vector||defaultVector(e);for(const [k,n] of Object.entries(e.themes||{}))v[k]=clamp((v[k]||20)*.78+Math.min(95,24+n*7)*.22);
-    const score=Math.round(clamp((e.score*.58)+Object.values(v).reduce((s,n)=>s+n,0)/7*.42));
-    auto.push({id:e.id,a:e.a,b:e.b,origin:'auto-discovery',discovered_at:e.first_seen,evidence_score:e.score,source_diversity:e.source_diversity,fresh_hits:e.fresh_hits,domains:Object.entries(e.themes||{}).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([k])=>k),vector:v,restraints:old?.restraints||defaultRestraints(),score,trend:old?score-old.score:0,summary:e.evidence?.[0]?.title?`Auto-discovered from repeated public-news co-occurrence. Latest: ${e.evidence[0].title}`:'Auto-discovered geopolitical relationship.',news:(e.evidence||[]).map(x=>({title:x.title,url:x.url,seen:x.seen,source:(x.title.match(/ - ([^-]+)$/)?.[1]||'Google News')})),scan_articles:e.fresh_hits||0,sensor_status:e.fresh_hits?'fresh':'memory',drivers:[`auto-edge evidence ${Math.round(e.score)}`,`source diversity ${e.source_diversity||0}`],bot_moves:old?.bot_moves||[]});
+    const v=old?.vector||defaultVector(e);for(const [k,n] of Object.entries(e.themes||{}))v[k]=clamp((v[k]||20)*.78+Math.min(e.relation_type==='cooperation'?55:95,18+n*(e.relation_type==='cooperation'?3:7))*.22);
+    const score=tensionScore(e,v),restraints=old?.restraints||defaultRestraints(e);
+    if(e.relation_type==='cooperation')restraints.security_cooperation=Math.max(restraints.security_cooperation||0,72);
+    auto.push({id:e.id,a:e.a,b:e.b,origin:'auto-discovery',relation_type:e.relation_type,strategic_relevance:Math.round(e.score),discovered_at:e.first_seen,evidence_score:e.score,source_diversity:e.source_diversity,fresh_hits:e.fresh_hits,domains:Object.entries(e.themes||{}).sort((a,b)=>b[1]-a[1]).slice(0,4).map(([k])=>k),vector:v,restraints,score,trend:old?score-old.score:0,summary:e.evidence?.[0]?.headline?`Auto-discovered ${e.relation_type} relationship. Latest: ${e.evidence[0].headline}`:'Auto-discovered geopolitical relationship.',news:(e.evidence||[]).map(x=>({title:x.headline||stripPublisher(x.title),url:x.url,seen:x.seen,source:x.source||'Google News'})),scan_articles:e.fresh_hits||0,sensor_status:e.fresh_hits?'fresh':'memory',drivers:[`auto-edge relevance ${Math.round(e.score)}`,`relation type ${e.relation_type}`,`source diversity ${e.source_diversity||0}`],bot_moves:old?.bot_moves||[]});
     for(const code of [e.a,e.b])if(!state.countries?.[code]){const c=catalog[code];state.countries[code]={name:c.name,flag:c.flag,coord:c.coord,m49:c.m49,region:c.region,power:45,economy:50,energy_security:50,military:45,stability:55,influence:45,fronts:0,pressure:0,max_front:0,stability_live:55,economy_live:50,aliases:c.aliases};}
   }
   for(const [code,c] of Object.entries(state.countries||{})){const cat=catalog[code];if(cat){c.m49??=cat.m49;c.region??=cat.region;c.aliases=[...new Set([...(c.aliases||[]),...(cat.aliases||[])])];}}
@@ -122,9 +136,9 @@ async function main(){
   for(const c of Object.values(state.countries||{})){c.fronts=0;c.pressure=0;c.max_front=0;}
   for(const p of state.pairs){for(const code of [p.a,p.b]){const c=state.countries?.[code];if(!c)continue;c.fronts++;c.pressure+=Number(p.score||0);c.max_front=Math.max(c.max_front,Number(p.score||0));}}
   for(const c of Object.values(state.countries||{}))if(c.fronts)c.pressure=Math.round(c.pressure/c.fronts);
-  state.auto_discovery={updated_at:new Date().toISOString(),catalog_countries:Object.keys(catalog).length,articles_scanned:articles.length,candidate_edges:ranked.length,active_auto_edges:auto.length,total_edges:state.pairs.length,threshold:ACTIVE_EDGE_SCORE};
-  await fs.writeFile(MEMORY_PATH,JSON.stringify({version:1,updated_at:new Date().toISOString(),edges:Object.fromEntries(ranked.map(x=>[x.id,x]))},null,2)+'\n');
+  state.auto_discovery={updated_at:new Date().toISOString(),memory_version:MEMORY_VERSION,catalog_countries:Object.keys(catalog).length,articles_scanned:articles.length,candidate_edges:ranked.length,active_auto_edges:auto.length,total_edges:state.pairs.length,threshold:ACTIVE_EDGE_SCORE,types:Object.fromEntries(['rivalry','mixed','cooperation'].map(t=>[t,auto.filter(e=>e.relation_type===t).length]))};
+  await fs.writeFile(MEMORY_PATH,JSON.stringify({version:MEMORY_VERSION,updated_at:new Date().toISOString(),edges:Object.fromEntries(ranked.map(x=>[x.id,x]))},null,2)+'\n');
   await fs.writeFile(STATE_PATH,JSON.stringify(state,null,2)+'\n');
-  console.log(`Auto-edge discovery: ${articles.length} articles -> ${ranked.length} candidates -> ${auto.length} live auto edges; world=${state.pairs.length}`);
+  console.log(`Auto-edge v2: ${articles.length} articles -> ${ranked.length} candidates -> ${auto.length} live [${state.auto_discovery.types.rivalry} rivalry, ${state.auto_discovery.types.mixed} mixed, ${state.auto_discovery.types.cooperation} cooperation]; world=${state.pairs.length}`);
 }
 main().catch(e=>{console.error(e);process.exitCode=1});
