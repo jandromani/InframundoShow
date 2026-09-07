@@ -1,0 +1,21 @@
+name: Validate WORLDSTATE
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript syntax
+        run: |
+          node --check app.js
+          node --check scripts/world-scan.mjs
+      - name: Validate state JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('data/live.json','utf8')); console.log('live.json OK')"
