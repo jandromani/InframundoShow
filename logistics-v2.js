@@ -25,6 +25,7 @@ const LOGISTICS_META={
  'seamewe5':{capacity:86,commodities:['data'],transitDays:0.13,insurance:106,reroutes:['africa-cable']},
  'africa-cable':{capacity:77,commodities:['data'],transitDays:0.16,insurance:103,reroutes:[]}
 };
+const LOGISTICS_STATUS_WEIGHT={open:0,contested:1,blocked:2};
 for(const r of ROUTES){Object.assign(r,LOGISTICS_META[r.id]||{capacity:60,commodities:[r.subtype||r.kind],transitDays:r.kind==='cable'?.1:10,insurance:105,reroutes:[]})}
 const _routeAccessV1=routeAccess;
 function logisticsPairPressure(route,code){
@@ -33,29 +34,63 @@ function logisticsPairPressure(route,code){
   return max
 }
 function routeMetrics(route,code=focusCountry){
-  const base=_routeAccessV1(route,code),chokes=(route.gates||[]).map(findChoke).filter(Boolean),chokeMax=Math.max(0,...chokes.map(c=>Number(c.score)||0));
-  const bilateral=logisticsPairPressure(route,code);let capacity=Number(route.capacity)||60,insurance=Number(route.insurance)||100,days=Number(route.transitDays)||0;
-  if(base.status==='contested'){capacity*=Math.max(.38,1-(Math.max(chokeMax,bilateral)-55)/100);insurance+=20+Math.max(chokeMax,bilateral)*.35;days+=route.kind==='cable'?.01:Math.max(1,Math.round((chokeMax-55)/10))}
-  if(base.status==='blocked'){capacity=0;insurance+=85+Math.max(chokeMax,bilateral)*.45}
-  if(mode==='sim'&&sim?.route_overrides?.[route.id]?.[code]?.capacityPct!=null)capacity=Number(sim.route_overrides[route.id][code].capacityPct);
-  const weight={open:0,contested:1,blocked:2};
+  const base=_routeAccessV1(route,code);
+  const chokes=(route.gates||[]).map(findChoke).filter(Boolean);
+  const chokeMax=Math.max(0,...chokes.map(c=>Number(c.score)||0));
+  const bilateral=logisticsPairPressure(route,code);
+  let capacity=Number(route.capacity)||60;
+  let insurance=Number(route.insurance)||100;
+  let days=Number(route.transitDays)||0;
+  if(base.status==='contested'){
+    capacity*=Math.max(.38,1-(Math.max(chokeMax,bilateral)-55)/100);
+    insurance+=20+Math.max(chokeMax,bilateral)*.35;
+    days+=route.kind==='cable'?.01:Math.max(1,Math.round((chokeMax-55)/10));
+  }
+  if(base.status==='blocked'){
+    capacity=0;
+    insurance+=85+Math.max(chokeMax,bilateral)*.45;
+  }
+  if(mode==='sim'&&sim?.route_overrides?.[route.id]?.[code]?.capacityPct!=null){
+    capacity=Number(sim.route_overrides[route.id][code].capacityPct);
+  }
   const alternatives=(route.reroutes||[])
     .map(id=>ROUTES.find(x=>x.id===id))
     .filter(Boolean)
-    .map(alt=>{const a=_routeAccessV1(alt,code);return{id:alt.id,name:alt.name,status:a.status,days:Number(alt.transitDays)||0,capacity:Number(alt.capacity)||60}})
-    .sort((a,b)=>(weight[a.status]??3)-(weight[b.status]??3)||a.days-b.days);
+    .map(alt=>{
+      const a=_routeAccessV1(alt,code);
+      return{id:alt.id,name:alt.name,status:a.status,days:Number(alt.transitDays)||0,capacity:Number(alt.capacity)||60};
+    })
+    .sort((a,b)=>(LOGISTICS_STATUS_WEIGHT[a.status]??3)-(LOGISTICS_STATUS_WEIGHT[b.status]??3)||a.days-b.days);
   let activeReroute=base.via?alternatives.find(a=>a.id===base.via):null;
   if(!activeReroute&&base.status==='blocked')activeReroute=alternatives.find(a=>a.status!=='blocked')||null;
-  if(activeReroute){days=activeReroute.days;capacity=Math.max(capacity,activeReroute.capacity*(activeReroute.status==='open'?.72:.42));insurance+=activeReroute.status==='open'?15:35}
-  return{...base,capacityPct:Math.round(clamp(capacity)),insuranceIndex:Math.round(insurance),transitDays:Math.round(days*10)/10,commodities:route.commodities||[],chokeRisk:Math.round(chokeMax),bilateralRisk:Math.round(bilateral),alternatives,activeReroute}
+  if(activeReroute){
+    days=activeReroute.days;
+    capacity=Math.max(capacity,activeReroute.capacity*(activeReroute.status==='open'?.72:.42));
+    insurance+=activeReroute.status==='open'?15:35;
+  }
+  return{...base,capacityPct:Math.round(clamp(capacity)),insuranceIndex:Math.round(insurance),transitDays:Math.round(days*10)/10,commodities:route.commodities||[],chokeRisk:Math.round(chokeMax),bilateralRisk:Math.round(bilateral),alternatives,activeReroute};
 }
 routeAccess=function(route,code=focusCountry){return routeMetrics(route,code)};
 function buildLogisticsSnapshot(code=focusCountry){
-  return ROUTES.map(r=>({id:r.id,name:r.name,kind:r.kind,...routeMetrics(r,code)})).sort((a,b)=>({blocked:2,contested:1,open:0}[b.status]-({blocked:2,contested:1,open:0}[a.status])||b.insuranceIndex-a.insuranceIndex)
+  return ROUTES
+    .map(r=>({id:r.id,name:r.name,kind:r.kind,...routeMetrics(r,code)}))
+    .sort((a,b)=>(LOGISTICS_STATUS_WEIGHT[b.status]??0)-(LOGISTICS_STATUS_WEIGHT[a.status]??0)||b.insuranceIndex-a.insuranceIndex);
 }
 function recomputeLogisticsState(){
   if(!world)return null;
-  const countries={};for(const code of Object.keys(world.countries||{})){const rows=buildLogisticsSnapshot(code).filter(r=>ROUTES.find(x=>x.id===r.id)?.countries.includes(code));if(!rows.length)continue;countries[code]={open:rows.filter(x=>x.status==='open').length,contested:rows.filter(x=>x.status==='contested').length,blocked:rows.filter(x=>x.status==='blocked').length,avgCapacity:Math.round(rows.reduce((s,x)=>s+x.capacityPct,0)/rows.length),avgInsurance:Math.round(rows.reduce((s,x)=>s+x.insuranceIndex,0)/rows.length)}}
-  world.logistics_state={updated_at:mode==='sim'?(sim?.sim_date||new Date().toISOString()):new Date().toISOString(),countries,routes:buildLogisticsSnapshot(focusCountry)};return world.logistics_state
+  const countries={};
+  for(const code of Object.keys(world.countries||{})){
+    const rows=buildLogisticsSnapshot(code).filter(r=>ROUTES.find(x=>x.id===r.id)?.countries.includes(code));
+    if(!rows.length)continue;
+    countries[code]={
+      open:rows.filter(x=>x.status==='open').length,
+      contested:rows.filter(x=>x.status==='contested').length,
+      blocked:rows.filter(x=>x.status==='blocked').length,
+      avgCapacity:Math.round(rows.reduce((s,x)=>s+x.capacityPct,0)/rows.length),
+      avgInsurance:Math.round(rows.reduce((s,x)=>s+x.insuranceIndex,0)/rows.length)
+    };
+  }
+  world.logistics_state={updated_at:mode==='sim'?(sim?.sim_date||new Date().toISOString()):new Date().toISOString(),countries,routes:buildLogisticsSnapshot(focusCountry)};
+  return world.logistics_state;
 }
 window.WORLDSTATE_LOGISTICS={meta:LOGISTICS_META,routeMetrics,buildLogisticsSnapshot,recomputeLogisticsState};
