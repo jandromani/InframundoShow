@@ -35,23 +35,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 20
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
       - name: Scan world tensions and autonomous graph
         run: npm run scan
-      - name: Persist world memory
+      - name: Persist world memory safely
         shell: bash
         run: |
+          set -euo pipefail
           git config user.name 'worldstate-bot'
           git config user.email 'worldstate-bot@users.noreply.github.com'
           git add data/live.json data/auto-edges.json data/dependencies.json
           if git diff --cached --quiet; then
             echo 'No state changes'
-          else
-            git commit -m "data: autonomous world scan $(date -u +'%Y-%m-%dT%H:%MZ')"
+            exit 0
+          fi
+          git commit -m "data: autonomous world scan $(date -u +'%Y-%m-%dT%H:%MZ')"
+          for attempt in 1 2 3 4 5; do
+            echo "Persist attempt $attempt"
             git fetch origin master
             git rebase origin/master
-            git push origin HEAD:master
-          fi
+            if git push origin HEAD:master; then
+              echo 'World memory persisted'
+              exit 0
+            fi
+            sleep $((attempt * 2))
+          done
+          echo 'Unable to persist world memory after retries' >&2
+          exit 1
