@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "updated_at": "2026-10-12T23:03:36.151Z",
+  "updated_at": "2026-10-13T03:38:09.062Z",
   "mode": "live-deterministic",
   "disclaimer": "Research/simulation indices, not probabilities, forecasts or intelligence assessments.",
   "dimensions": [
@@ -21,7 +21,7 @@
   "global": {
     "risk": 79,
     "shipping_stress": 63,
-    "energy_stress": 72,
+    "energy_stress": 71,
     "trade_stress": 56,
     "political_stress": 42
   },
@@ -134,16 +134,16 @@
       "stability": 63,
       "influence": 96,
       "fronts": 2,
-      "pressure": 71,
+      "pressure": 72,
       "max_front": 82,
       "stability_live": 61,
       "economy_live": 90,
-      "political_event_pressure": 42,
+      "political_event_pressure": 43,
       "next_political_event": {
         "id": "USA-2026-MID",
         "name": "United States mid-term congressional elections",
         "date": "2026-11-03",
-        "days_to_event": 22,
+        "days_to_event": 21,
         "status": "confirmed"
       },
       "m49": "840",
@@ -219,7 +219,7 @@
         "medinat yisra el",
         "tel aviv"
       ],
-      "trade_dependency_risk": 21.8,
+      "trade_dependency_risk": 15.4,
       "energy_dependency_risk": 0.3,
       "dependency_coverage": 3
     },
@@ -527,16 +527,16 @@
       "stability": 53,
       "influence": 48,
       "fronts": 6,
-      "pressure": 22,
-      "max_front": 57,
+      "pressure": 23,
+      "max_front": 58,
       "stability_live": 52,
       "economy_live": 54,
-      "political_event_pressure": 72,
+      "political_event_pressure": 74,
       "next_political_event": {
         "id": "SRB-2026-SNAP",
         "name": "Serbia anticipated early parliamentary election",
         "date": "2026-10-18",
-        "days_to_event": 6,
+        "days_to_event": 5,
         "status": "window"
       },
       "m49": "688",
@@ -566,7 +566,7 @@
       "influence": 37,
       "fronts": 5,
       "pressure": 25,
-      "max_front": 57,
+      "max_front": 58,
       "stability_live": 46,
       "economy_live": 48,
       "political_event_pressure": 0,
@@ -2018,12 +2018,12 @@
         "domestic-politics"
       ],
       "vector": {
-        "diplomatic": 71,
-        "military": 43,
+        "diplomatic": 70,
+        "military": 44,
         "territorial": 99,
-        "trade": 58,
-        "energy": 63,
-        "domestic": 96,
+        "trade": 59,
+        "energy": 62,
+        "domestic": 98,
         "information": 80
       },
       "restraints": {
@@ -2033,53 +2033,65 @@
         "deterrence": 48
       },
       "score": 66,
-      "trend": 1,
-      "gearwatch_pressure": 22.7,
+      "trend": 0,
+      "gearwatch_pressure": 25.6,
       "gearwatch_impacts": [
+        {
+          "id": "GLOBAL_REFINANCING_STRESS",
+          "label": "Global refinancing stress",
+          "score": 84,
+          "state": "WATCH",
+          "delta": 40,
+          "pressure": 10.6
+        },
         {
           "id": "DIESEL_REFINING_CRISIS",
           "label": "Diesel / refining crisis",
-          "score": 45,
+          "score": 47,
           "state": "ARMING",
-          "delta": 35,
-          "pressure": 8.2
+          "delta": 2,
+          "pressure": 8.6
         },
         {
           "id": "LNG_REROUTING",
           "label": "LNG rerouting",
-          "score": 31,
-          "state": "WATCH",
-          "delta": -1,
-          "pressure": 6.3
-        },
-        {
-          "id": "GLOBAL_REFINANCING_STRESS",
-          "label": "Global refinancing stress",
-          "score": 44,
-          "state": "WATCH",
-          "delta": -8,
-          "pressure": 5.5
+          "score": 20,
+          "state": "DORMANT",
+          "delta": -11,
+          "pressure": 4.1
         },
         {
           "id": "EUROPE_STRATEGIC_AUTONOMY",
           "label": "European strategic autonomy",
-          "score": 21,
+          "score": 19,
           "state": "DORMANT",
           "delta": -2,
-          "pressure": 2.6
+          "pressure": 2.3
         }
       ],
       "drivers": [
         "territorial 99",
-        "domestic 96",
+        "domestic 98",
         "information 80",
-        "GearWatch: Diesel / refining crisis 45",
-        "GearWatch: LNG rerouting 31",
+        "GearWatch: Global refinancing stress 84",
+        "GearWatch: Diesel / refining crisis 47",
         "Comtrade: bilateral import dependence up to 14.7%",
         "Comtrade: HS27 energy-import dependence up to 20.2%"
       ],
-      "summary": "Latest relevant signal: Who Does Morocco Want to Win Spain’s Election? The Answer Is Pretty Obvious. - PJ Media",
+      "summary": "Latest relevant signal: Poll: Spaniards say Ceuta crisis could spark armed conflict with Morocco - POLITICO.eu",
       "news": [
+        {
+          "title": "Poll: Spaniards say Ceuta crisis could spark armed conflict with Morocco - POLITICO.eu",
+          "source": "POLITICO.eu",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQN3lnei1CMFh0NE81aVM4OVNfZ01PdFZfR1N6d0NkTnh1dUZELWVGS0l0YTVoOXpoR3BGYUlzX1ByVjFOTWlqRlYzRHFkY0c1Yi02MXg0Y25QaWZDSDZCeVhzaFJXUzl5ejYzNS0yZkdJRmJqTUtrMFNsRmdGTDZXMVlwRW04TTFhUmZweXBsUW90MktCS0JFLXk2TXNWb1JrUUlhLWZWWE9TZw?oc=5",
+          "seen": "2026-10-13T02:03:11.000Z"
+        },
+        {
+          "title": "Why Ceuta and Melilla remain a point of contention between Spain and Morocco - Le Monde.fr",
+          "source": "Le Monde.fr",
+          "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQLWYwXzFsQUcyYUg2eVg4b3h3NVRha09reGF2QW9mM2NfTjF4YzFWMGlYam84VDY4RGUtMjB0aUR4aWpjZW9xWndfdEpadnJaT3Z1RlFIcUlrU3hJQXBIMHl2VWZHWjVJVG1BV2tGWlNiZFlMUUtlTTIzeFNIajJKeGhVNTJRSG9qWC1GUjZYdHNNRF9jZUV6RFRpRjNETDktWnNGWnJPdDVDYkV6VDdhYXpkcVA2MUswZF9ySnNlOGMtYTlaTUYtOW4ySTNJdDZLTGJaaHJ4RmVRbWdCRldid0Jzdy0?oc=5",
+          "seen": "2026-10-13T02:00:07.000Z"
+        },
         {
           "title": "Who Does Morocco Want to Win Spain’s Election? The Answer Is Pretty Obvious. - PJ Media",
           "source": "PJ Media",
@@ -2087,22 +2099,22 @@
           "seen": "2026-10-12T20:22:02.000Z"
         },
         {
+          "title": "Spanish PM Sanchez: Unauthorized Moroccan navy ships entered Spanish waters during Ceuta crisis - The Jerusalem Post",
+          "source": "The Jerusalem Post",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE44TEFxZzRfMDhQVWtGRnFYeURDX0hxTkhqajdVOG1zTmt6bXBRcncySGlsakEwWk5kTW5sbGdrTk9CV3RQVGxSWEVTRVVsdGZmQTY0UjhrMllabmV1REZj?oc=5",
+          "seen": "2026-10-12T20:03:14.000Z"
+        },
+        {
+          "title": "Moroccan warships sailed into Spanish waters at same time 80k migrants invaded - The Sun",
+          "source": "The Sun",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPRENZV25JenQwaEktLUlsWkM0eW9vMi01LXBWS1JSaTVwVjN4NHE2NnFMTF9qR1ZtQmh5bGI1a1F2LVJxMUVqX3hPUGctdlhQYkNyY0JsdHU4cDVmZnZfelpFbTdXelJlTzNlX2Fnd0FFejU0YUIzb3BvZWdnZnRvajRQLWltdkU?oc=5",
+          "seen": "2026-10-12T19:13:50.000Z"
+        },
+        {
           "title": "Spain, Morocco try to halt deadly rush on Spanish enclave after tens of thousands cross in a day - DD News",
           "source": "DD News",
           "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPM1Zwdk5XWm5EVWxCQWtIeC1heGtkZ1poTTNfRzR6S0RXQW0xcnJWTzlDOTEzMEZEaDdneHZEVEFUMGVoZ2xfUGlHbGZkZEJGS3U1c3ZqWmNYSXY3eW90b2cxMldZbmZJY1NVaDhvcHJUelhhYmdvVXFYb3VjZzBOY2VUVlkzTDZkZGRRVmZBLWZhT1k?oc=5",
           "seen": "2026-10-12T18:49:09.000Z"
-        },
-        {
-          "title": "Sánchez confirms naval tensions with Morocco off Ceuta, says high-level talks resolved incident - Yabiladi.com",
-          "source": "Yabiladi.com",
-          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQUE0ybzdmU1ROZnUxVThxWW5TdFA2N0RLQXR4cnpZYjJTZnNRWksydWZoNXBDVlExX0xrWUFjNE9FNHlac04tSm96cjRyVzZ6ZXFqTi1fUUJfdWNhSjd0cFMyRExqV0VyZHh5ZzFYdm0tWHdGS2hmSW5IZzZ6MHo1RGJhWDNYQVFneldXdkJvT05MMmM?oc=5",
-          "seen": "2026-10-12T18:04:11.000Z"
-        },
-        {
-          "title": "Moroccan navy vessels entered Spanish waters during Ceuta crisis, Sanchez says - SRN News",
-          "source": "SRN News",
-          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQOHVaR3FQU2Y5eUEtemg4cnRyUFgzcDFyd21GOTQxdURKUjBkTG0tdXFyXzdGRjFTdDh5TFhoaHYxNWFuSl9NRXc4MWp4QVhlNlR5U3ZRMk5VOGxIakV6YWNSR2hYazltZXd4U0RRTzFiLWN6eFlnRW1JbUJzZ3Ewa2oyaS1VTnZKMXVlNnE3QkpyeTNvUmtZYnZ5ZFJ1cDg?oc=5",
-          "seen": "2026-10-12T17:55:33.000Z"
         },
         {
           "title": "Did Morocco Violate Ceuta’s Territorial Waters? The Contradictions in the El País Article - Morocco World News",
@@ -2120,31 +2132,19 @@
           "title": "Spanish military Chinook flies over Ceuta days before Felipe VI visit - HESPRESS English - Morocco News",
           "source": "Morocco News",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPLUJPakxDOU9iYkF0bjZERnBxQlZaRTlWOHJhTk1QSUMtbmxQeTBRMmJmZUIyTUloU3Zrb2hKWkNSdUZiTVQ5U1JnajE1QVJNZjdET2t6bGdmTEdiNFFCVzBxYmJ6VDY2RTlqaHoxcEx0WVA2RUdmd1M4UC1oQXN0LXZuYlljQXp1aXh6eUctOXhmT3hPdnMwbjY2NTVhbXlyMzdWWnpTNE0?oc=5",
-          "seen": "2026-10-12T17:15:26.000Z"
+          "seen": "2026-10-12T17:19:02.000Z"
         },
         {
           "title": "Morocco navy entered Spanish waters during Ceuta migrant crisis - Olive Press News Spain",
           "source": "Olive Press News Spain",
           "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOckRVSGYzSTRMNml1OVVFNVpwcFBPOHRPcThXQmNjMlR1cVhNLWZ6YVRva0ZjSjF3WFAwT1RsZlJUa1M0ZGdUbHF3X3Z2Y2JSSU96U2pINERSSUxoaHpQNEdUSTBMYVNxY196VlZVUVo3M0M5QVFxZVhITktEQllrNTFYLVVyd1VGdFRkLWNDMlRoZw?oc=5",
           "seen": "2026-10-12T16:59:00.000Z"
-        },
-        {
-          "title": "Moroccan Naval Presence in Occupied Ceuta Waters Frustrates Spain - Morocco World News",
-          "source": "Morocco World News",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOSXpPenQxc3MyWXJnd0JXOFoxNVpKUTV6bzN3TnRhcHhpQlFtNXZ3dldod1A0WTQ1RmlUaFFsQlR3WFVQdDc2eVZUTFV5Z3VZZHBMemdrQ3doemFCODZEa19tZmxqbUZ0NUNaM3lVR0lOTHRzNjJNQnVyMGdLLU1PdEE2eU1sLVhMaWN0YXdVOHphdE9zNUMzVi1MdU5HN3lIVWdPaEJPanNheXVvNWphbFBMZG4?oc=5",
-          "seen": "2026-10-12T15:36:49.000Z"
-        },
-        {
-          "title": "Moroccan warships entered Ceuta waters during migrant surge - RUSSPAIN.com",
-          "source": "RUSSPAIN.com",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMXZtYlN4WHBJTlNDQ0o1UnRpaEJpbTdtaFlhOVR1SmFWYkFsLTdiMk1nRXh5a3NOd0hoME5idmNqWmIyWjNYQmZqejc1V01WOElqdE1IRHJ1WWhFc21BMlAtdjFZU1BEb2ZOV21aZXpkbjJqRjBWdEJNUzZVeDZkOGdGNkFiV3hoOWRQb3VkOGdjSmlLa01kZw?oc=5",
-          "seen": "2026-10-12T14:47:19.000Z"
         }
       ],
       "scan_articles": 10,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 35,
+        "google_news": 34,
         "gdelt": 0
       },
       "bot_moves": [
@@ -2171,7 +2171,7 @@
         "period": "2025",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -2188,7 +2188,7 @@
       "vector": {
         "diplomatic": 84,
         "military": 65,
-        "territorial": 84,
+        "territorial": 85,
         "trade": 54,
         "energy": 61,
         "domestic": 55,
@@ -2205,8 +2205,8 @@
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
+        "territorial 85",
         "diplomatic 84",
-        "territorial 84",
         "military 65"
       ],
       "summary": "Latest relevant signal: Algeria arrests 61 Moroccans over alleged sabotage plot as questions surround evidence - HESPRESS English - Morocco News",
@@ -2277,7 +2277,7 @@
         "period": "2025",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -2296,11 +2296,11 @@
       "vector": {
         "diplomatic": 99,
         "military": 99,
-        "territorial": 37,
+        "territorial": 38,
         "trade": 99,
         "energy": 99,
-        "domestic": 82,
-        "information": 85
+        "domestic": 83,
+        "information": 86
       },
       "restraints": {
         "economic_interdependence": 16,
@@ -2315,59 +2315,59 @@
         {
           "id": "DIESEL_REFINING_CRISIS",
           "label": "Diesel / refining crisis",
-          "score": 45,
+          "score": 47,
           "state": "ARMING",
-          "delta": 35,
-          "pressure": 8.2
-        },
-        {
-          "id": "LNG_REROUTING",
-          "label": "LNG rerouting",
-          "score": 31,
-          "state": "WATCH",
-          "delta": -1,
-          "pressure": 6.3
-        },
-        {
-          "id": "ARSENAL_DEPLETION",
-          "label": "Arsenal depletion / replenishment",
-          "score": 25,
-          "state": "WATCH",
-          "delta": 4,
-          "pressure": 4.5
-        },
-        {
-          "id": "ENERGETICS_SHORTAGE",
-          "label": "Energetics / explosives shortage",
-          "score": 32,
-          "state": "WATCH",
-          "delta": 9,
-          "pressure": 3.8
+          "delta": 2,
+          "pressure": 8.6
         },
         {
           "id": "CRUDE_TANKER_DISLOCATION",
           "label": "Crude tanker dislocation",
+          "score": 29,
+          "state": "WATCH",
+          "delta": 9,
+          "pressure": 5.4
+        },
+        {
+          "id": "LNG_REROUTING",
+          "label": "LNG rerouting",
           "score": 20,
           "state": "DORMANT",
-          "delta": 7,
-          "pressure": 3.7
+          "delta": -11,
+          "pressure": 4.1
+        },
+        {
+          "id": "ARSENAL_DEPLETION",
+          "label": "Arsenal depletion / replenishment",
+          "score": 20,
+          "state": "DORMANT",
+          "delta": -5,
+          "pressure": 3.6
+        },
+        {
+          "id": "ROCKET_MOTOR_SHORTAGE",
+          "label": "Rocket motor bottleneck",
+          "score": 27,
+          "state": "WATCH",
+          "delta": 3,
+          "pressure": 3.4
         }
       ],
       "drivers": [
-        "Political calendar 42",
+        "Political calendar 43",
         "diplomatic 99",
         "military 99",
         "trade 99",
-        "GearWatch: Diesel / refining crisis 45",
-        "GearWatch: LNG rerouting 31"
+        "GearWatch: Diesel / refining crisis 47",
+        "GearWatch: Crude tanker dislocation 29"
       ],
-      "summary": "Latest relevant signal: Iranian Military Official Rejects Partial U.S. Concessions on Peace Terms - TOKENPOST",
+      "summary": "Latest relevant signal: Iran-US nuclear talks: Tehran is open to a deal, but says it won’t start from square one - Open Magazine",
       "news": [
         {
-          "title": "Iranian Military Official Rejects Partial U.S. Concessions on Peace Terms - TOKENPOST",
-          "source": "TOKENPOST",
-          "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE5zQnc0UWQ1U09mN2xva05yZ2tIbGRkbnpoWVpISDU3cVpVOHVSdkY2a2Jkci1HNHBfX0ZSTEE0cDFlY2lNVVI5QW00a2VBYnNKMk5sRVkteFV6RFU?oc=5",
-          "seen": "2026-10-12T15:38:52.000Z"
+          "title": "Iran-US nuclear talks: Tehran is open to a deal, but says it won’t start from square one - Open Magazine",
+          "source": "Open Magazine",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQd2RINUNZbmZpZndSWVBnTWEyaVFsMmhxYXk3VFRSWGd6OW5xOUhMcXVxbDVtM2RmQnZ6dVRhTlVraW15R25VRThaUzBmYUdkOHllLThrZDZVR1YwY0lwbjktTHhNSXRVUHd0T1RlQW41M0dUWWc5UWtIN1BJQ203M0R1UUJ5aldfS3RFTl9YMjZ4UnFxVHV6T0Z1UFY0S1RvcWlIYUNuakxpQUIxLXA3QlpYLXFjaS03UGtZ?oc=5",
+          "seen": "2026-10-12T16:30:00.000Z"
         },
         {
           "title": "Is Trump Signalling A Return To War With Iran After The US Midterms? - Outlook India",
@@ -2396,7 +2396,7 @@
         {
           "title": "Claims do not correspond to what we see on the ground: Iran rejects US assertions of control over Hormuz - The Tribune",
           "source": "The Tribune",
-          "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxPM0hOOUwwa3RnUTNZS09qR0I2TER1eG9GZTlwUzlqdzdYRVdVbkNYVU8yM2puR2E0YXpSZGtmcEJmUEUzSmxrOUtqdFV3NWRmbndFanpBUXd3TDlFM2xXeHRmQjJDREh2Y3FWWWMxeTVKM3h5UWNxOHY0Nms1QXBfZ2xLNkpNRzBiVXVWLVByaVY3YUxuZU50NTlDNjZhU0c0RFlRcTBQVi11aV9ZLXVORFpUNl9OYjFHSTV6N3Myakx0UndlNGRsY1hMTjBBS3BBenAzc0gtMmVmOERaODE4OdIB4AFBVV95cUxPM0hOOUwwa3RnUTNZS09qR0I2TER1eG9GZTlwUzlqdzdYRVdVbkNYVU8yM2puR2E0YXpSZGtmcEJmUEUzSmxrOUtqdFV3NWRmbndFanpBUXd3TDlFM2xXeHRmQjJDREh2Y3FWWWMxeTVKM3h5UWNxOHY0Nms1QXBfZ2xLNkpNRzBiVXVWLVByaVY3YUxuZU50NTlDNjZhU0c0RFlRcTBQVi11aV9ZLXVORFpUNl9OYjFHSTV6N3Myakx0UndlNGRsY1hMTjBBS3BBenAzc0gtMmVmOERaODE4OQ?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQY0lyTGhuZG1yQjNlNDZLOHFxQVhiTzBhTmtLWnN6VmYwT01vTzQwb1p2dnI4NkkzS2FscFV1RkNDUFBxT3o2U0x0ZF9EclNlT0xrUlhsRTlyMVNFQnRjYllKSlVaZnY4LTI5cWd4dV9pYjh2cGpSWTZpSktqckZQYWl0S3NQNUNNM0doRFhYRTJJVDhiVDJUUVhqWkhUOEE0Uks0anMzZ1BmeE1KcVowT1dQSnFKNTVaME9LdW9xUWZ2SnFFeERFNGRvQ2hoSEZQQUxxQUFjNWFieFBn0gHgAUFVX3lxTE8zSE45TDBrdGdRM1lLT2pHQjZMRHV4b0ZlOXBTOWp3N1hFV1VuQ1hVTzIzam5HYTRhelJka2ZwQmZQRTNKbGs5S2p0VXc1ZGZud0VqekFRd3dMOUUzbFd4dGZCMkNESHZjcVZZYzF5NUozeHlRY3E4djQ2azVBcF9nbEs2Sk1HMGJVdVYtUHJpVjdhTG5lTnQ1OUM2NmFTRzREWVFxMFBWLXVpX1ktdU5EWlQ2X05iMUdJNXo3czJqTHRSd2U0ZGxjWExOMEFLcEF6cDNzSC0yZWY4RFo4MTg5?oc=5",
           "seen": "2026-10-12T11:25:56.000Z"
         },
         {
@@ -2410,9 +2410,15 @@
           "source": "Mathrubhumi English",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSTh1clY3bkdqcWRlMzlKTl9fems0M0ROcUZDd1VqNGVyWFlQOF9hUkItd1pLQlBQRVpDSkNnRXlHUHF3RGV3eXN6WjRyYi1ScXRoTW5VdmZxZHZIYUtqc3VUcDB1aldKY29CQ053SjZaVEVTRnpPVFJld25wamhGWERLX2g3Ym4zMlM4LXI5aGNfOExn0gGaAUFVX3lxTE85djEzRVBrYWdaOG00bUl2azd2a3BvSjFWRU9NZU1qX0NON3lfRHJoeGtsdGVkWHBDMTU3MmpnREUybGdGems4cVRXR3NGNGRWX2F2b1QtR0tTdHRDcnhxaG9Va1JSaVJINlY3YnJKMHRCdmlyVTlWT29zYnU5LThLX25KSGg3eURKNTJNejNaSTQ3QTRlczlxN2c?oc=5",
           "seen": "2026-10-12T02:33:43.000Z"
+        },
+        {
+          "title": "Iran calls US response to seven-day Hormuz proposal ‘insufficient’ - The Times of India",
+          "source": "The Times of India",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxPVUs0NmMxblB5R0owTEtBdmxGakJRaTdySFBib0ljUV9OUkx5R09pay1PWmFsXzE2YWE1bV91VXQ1dHJTblhoZXpMaVYwZU1NWU5VZ05iSjVucjJ2Tl94Z29FZjFpQVZCUzI2cnhHODR5RFlpM2V1YTRLc0NUalZjbVczRTl3dmZybktHMzNmaXJpNzZDOHN6VGJxQXpGaXFIQzJKUTlCdGlleXpuSTNkSWJuUzhhTlppc291NWV1RVlxcE9KblBjZHZtejdGcHlia0FLdjlvYl9HWnk30gHiAUFVX3lxTE9DTlJJcm9GUkliUC1RdmtDM1h6Yi1UQXk1LXItTzR6MWlXY0FqY3dLUk9ySHVzc1VxdDNmRDllYk50THRoc3FvcnFEbDQwWWVZWEpVczlzT0VGemlGS2M5NV9CWnoxaEx3UktrV2EwbHE4UjdqY1Zrb0xXb2owdjluUG13RC04R2JUZ2FmRUZUY0ZIZFNHeWMxMEN6T01IUFhjclNHclFzVlQ5QlEzYkFnX2JEQXlOR0ZtX2ZROHBMeUluRW9xMjdiQ3hVWnJyVWlDVEh2VmlDTlBFTVdjWVB3d3c?oc=5",
+          "seen": "2026-10-11T17:59:00.000Z"
         }
       ],
-      "scan_articles": 8,
+      "scan_articles": 9,
       "sensor_status": "fresh",
       "sensors": {
         "google_news": 50,
@@ -2424,20 +2430,20 @@
       ],
       "news_quality": {
         "before": 10,
-        "accepted": 8,
-        "dropped": 2,
+        "accepted": 9,
+        "dropped": 1,
         "gate": "actors-or-specific-topic"
       },
-      "political_calendar_pressure": 41.5,
+      "political_calendar_pressure": 42.6,
       "political_events": [
         {
           "id": "USA-2026-MID",
           "country": "USA",
           "name": "United States mid-term congressional elections",
           "date": "2026-11-03",
-          "days_to_event": 22,
+          "days_to_event": 21,
           "status": "confirmed",
-          "pressure": 41.5
+          "pressure": 42.6
         }
       ]
     },
@@ -2457,9 +2463,9 @@
         "diplomatic": 99,
         "military": 99,
         "territorial": 44,
-        "trade": 90,
-        "energy": 74,
-        "domestic": 80,
+        "trade": 91,
+        "energy": 75,
+        "domestic": 79,
         "information": 93
       },
       "restraints": {
@@ -2470,31 +2476,31 @@
       },
       "score": 81,
       "trend": 0,
-      "gearwatch_pressure": 24.4,
+      "gearwatch_pressure": 24.5,
       "gearwatch_impacts": [
-        {
-          "id": "ARSENAL_DEPLETION",
-          "label": "Arsenal depletion / replenishment",
-          "score": 25,
-          "state": "WATCH",
-          "delta": 4,
-          "pressure": 4.5
-        },
-        {
-          "id": "ENERGETICS_SHORTAGE",
-          "label": "Energetics / explosives shortage",
-          "score": 32,
-          "state": "WATCH",
-          "delta": 9,
-          "pressure": 3.8
-        },
         {
           "id": "CRUDE_TANKER_DISLOCATION",
           "label": "Crude tanker dislocation",
+          "score": 29,
+          "state": "WATCH",
+          "delta": 9,
+          "pressure": 5.4
+        },
+        {
+          "id": "ARSENAL_DEPLETION",
+          "label": "Arsenal depletion / replenishment",
           "score": 20,
           "state": "DORMANT",
-          "delta": 7,
-          "pressure": 3.7
+          "delta": -5,
+          "pressure": 3.6
+        },
+        {
+          "id": "ROCKET_MOTOR_SHORTAGE",
+          "label": "Rocket motor bottleneck",
+          "score": 27,
+          "state": "WATCH",
+          "delta": 3,
+          "pressure": 3.4
         },
         {
           "id": "COUNTER_UAS_COST_CURVE",
@@ -2505,20 +2511,20 @@
           "pressure": 3.2
         },
         {
-          "id": "ROCKET_MOTOR_SHORTAGE",
-          "label": "Rocket motor bottleneck",
-          "score": 24,
+          "id": "PRODUCT_TANKER_TONMILES",
+          "label": "Product tanker ton-miles",
+          "score": 17,
           "state": "DORMANT",
-          "delta": -19,
-          "pressure": 3
+          "delta": -1,
+          "pressure": 2.8
         }
       ],
       "drivers": [
         "diplomatic 99",
         "military 99",
         "information 93",
-        "GearWatch: Arsenal depletion / replenishment 25",
-        "GearWatch: Energetics / explosives shortage 32"
+        "GearWatch: Crude tanker dislocation 29",
+        "GearWatch: Arsenal depletion / replenishment 20"
       ],
       "summary": "Latest relevant signal: What the U.S.-Israel-Iran War Broke in the Rules of Conventional Conflict - CAPSS India",
       "news": [
@@ -2533,12 +2539,6 @@
           "source": "Social News XYZ",
           "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVG9rTFRESVhScV9IZk12d1ZjdWhYay1MS1hfX1RILUpIODlPYXRYVkVicFJqYS1kUUNJTW50VVdWQ0p0Q3V3NWNabFZDZ2ZYTktTZlNmZG9tLXM3Q2tJSTRuRE1Nc1BmZmVxb2RTLWtzZTlzTVRVUU41cGd3emxwQ0d1eEw0T3ZrT3o5d255TUg2RVRmUHVLN2hVYXBXNmZtSGkyR09MZk12TVBqRVVfRmdVMThhZlVSM0NrWTdPWlE0QdIBwgFBVV95cUxPVG9rTFRESVhScV9IZk12d1ZjdWhYay1MS1hfX1RILUpIODlPYXRYVkVicFJqYS1kUUNJTW50VVdWQ0p0Q3V3NWNabFZDZ2ZYTktTZlNmZG9tLXM3Q2tJSTRuRE1Nc1BmZmVxb2RTLWtzZTlzTVRVUU41cGd3emxwQ0d1eEw0T3ZrT3o5d255TUg2RVRmUHVLN2hVYXBXNmZtSGkyR09MZk12TVBqRVVfRmdVMThhZlVSM0NrWTdPWlE0QQ?oc=5",
           "seen": "2026-10-12T00:55:23.000Z"
-        },
-        {
-          "title": "US-Israel-Iran War Latest Live News: Iran President Masoud Pezeshkian, Oman Sultan Haitham bin Tariq Discuss Regional Peace & Stability In Phone Call; Check Key Details - The Sunday Guardian",
-          "source": "The Sunday Guardian",
-          "url": "https://news.google.com/rss/articles/CBMitwJBVV95cUxNNXdhdDd3R01Nc2txSWhLdWRmTEJ0U1NLZ2ZhNndnOFJlYnltTlZDSE01aTJldGdsYUp1SFRtQlliVDNHLWdWYUxTRDdmM3F2aFc0R1hRY0tFa0pNWVMwVTNYaFUzZWxubkE0SzdmOWVBaWllbVBiR2U3WUFlZUxySUNmNEpPVTBTQlRGOEQ3UWs5WnYtVGRIUEN6dTNudnNNakNLbUtJajVTME9yOUp3d3AzSzVUMmhWd252Z3N0cExQR1ZENDNkZXFYbDBOZ29lYTRSYWFMZlhCSnExdHRJckJRNEpKSW0wVFBIa3MzakhkdlhNNTFPSVU0a0sxMmotLWRBQ0Q5SkdjQ2ZkX3RqMVV6SDVXaUgtcml0aUhRM1dDRlBhZzlNWm5HaUh4dng0NXMyc25fTdIBtwJBVV95cUxNNXdhdDd3R01Nc2txSWhLdWRmTEJ0U1NLZ2ZhNndnOFJlYnltTlZDSE01aTJldGdsYUp1SFRtQlliVDNHLWdWYUxTRDdmM3F2aFc0R1hRY0tFa0pNWVMwVTNYaFUzZWxubkE0SzdmOWVBaWllbVBiR2U3WUFlZUxySUNmNEpPVTBTQlRGOEQ3UWs5WnYtVGRIUEN6dTNudnNNakNLbUtJajVTME9yOUp3d3AzSzVUMmhWd252Z3N0cExQR1ZENDNkZXFYbDBOZ29lYTRSYWFMZlhCSnExdHRJckJRNEpKSW0wVFBIa3MzakhkdlhNNTFPSVU0a0sxMmotLWRBQ0Q5SkdjQ2ZkX3RqMVV6SDVXaUgtcml0aUhRM1dDRlBhZzlNWm5HaUh4dng0NXMyc25fTQ?oc=5",
-          "seen": "2026-10-11T12:58:45.000Z"
         },
         {
           "title": "Iran at peak readiness for next Israel strike, expert warns - JFeed",
@@ -2565,7 +2565,7 @@
           "seen": "2026-10-11T02:22:29.000Z"
         }
       ],
-      "scan_articles": 7,
+      "scan_articles": 6,
       "sensor_status": "fresh",
       "sensors": {
         "google_news": 50,
@@ -2576,8 +2576,8 @@
       ],
       "news_quality": {
         "before": 10,
-        "accepted": 7,
-        "dropped": 3,
+        "accepted": 6,
+        "dropped": 4,
         "gate": "actors-or-specific-topic"
       },
       "political_calendar_pressure": 0,
@@ -2594,7 +2594,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -2611,10 +2611,10 @@
       ],
       "vector": {
         "diplomatic": 95,
-        "military": 98,
+        "military": 97,
         "territorial": 99,
         "trade": 69,
-        "energy": 54,
+        "energy": 53,
         "domestic": 79,
         "information": 88
       },
@@ -2626,55 +2626,55 @@
       },
       "score": 83,
       "trend": 0,
-      "gearwatch_pressure": 20.9,
+      "gearwatch_pressure": 18.5,
       "gearwatch_impacts": [
-        {
-          "id": "LNG_REROUTING",
-          "label": "LNG rerouting",
-          "score": 31,
-          "state": "WATCH",
-          "delta": -1,
-          "pressure": 6.3
-        },
         {
           "id": "JAPAN_CARRY_UNWIND",
           "label": "Japan carry unwind",
-          "score": 39,
-          "state": "WATCH",
-          "delta": 16,
+          "score": 53,
+          "state": "ARMING",
+          "delta": 14,
+          "pressure": 5.6
+        },
+        {
+          "id": "LNG_REROUTING",
+          "label": "LNG rerouting",
+          "score": 20,
+          "state": "DORMANT",
+          "delta": -11,
           "pressure": 4.1
         },
         {
           "id": "UNDERWATER_SECURITY",
           "label": "Mine / underwater security",
-          "score": 19,
-          "state": "DORMANT",
-          "delta": -10,
-          "pressure": 2.8
-        },
-        {
-          "id": "RARE_EARTH_MAGNET_SHORTAGE",
-          "label": "Rare-earth magnets",
           "score": 18,
           "state": "DORMANT",
-          "delta": 2,
-          "pressure": 2.7
+          "delta": -1,
+          "pressure": 2.6
+        },
+        {
+          "id": "ROBOTICS_DECOUPLING",
+          "label": "Robotics decoupling",
+          "score": 27,
+          "state": "WATCH",
+          "delta": -1,
+          "pressure": 2.3
         },
         {
           "id": "AI_TIME_TO_POWER",
           "label": "AI time-to-power",
-          "score": 29,
+          "score": 25,
           "state": "WATCH",
-          "delta": 6,
-          "pressure": 2.6
+          "delta": -4,
+          "pressure": 2.3
         }
       ],
       "drivers": [
         "territorial 99",
-        "military 98",
+        "military 97",
         "diplomatic 95",
-        "GearWatch: LNG rerouting 31",
-        "GearWatch: Japan carry unwind 39"
+        "GearWatch: Japan carry unwind 53",
+        "GearWatch: LNG rerouting 20"
       ],
       "summary": "Latest relevant signal: Beijing sanctions Paraguayan and Belizean ministers over support for Taiwan - South China Morning Post",
       "news": [
@@ -2706,7 +2706,7 @@
       "scan_articles": 4,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 30,
+        "google_news": 32,
         "gdelt": 0
       },
       "bot_moves": [
@@ -2733,7 +2733,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -2751,10 +2751,10 @@
       "vector": {
         "diplomatic": 69,
         "military": 66,
-        "territorial": 27,
-        "trade": 97,
+        "territorial": 26,
+        "trade": 98,
         "energy": 50,
-        "domestic": 79,
+        "domestic": 81,
         "information": 76
       },
       "restraints": {
@@ -2763,58 +2763,58 @@
         "security_cooperation": 24,
         "deterrence": 86
       },
-      "score": 60,
-      "trend": 0,
-      "gearwatch_pressure": 20.6,
+      "score": 61,
+      "trend": 1,
+      "gearwatch_pressure": 24.6,
       "gearwatch_impacts": [
         {
           "id": "GLOBAL_REFINANCING_STRESS",
           "label": "Global refinancing stress",
-          "score": 44,
+          "score": 84,
           "state": "WATCH",
-          "delta": -8,
-          "pressure": 5.5
+          "delta": 40,
+          "pressure": 10.6
         },
         {
           "id": "JAPAN_CARRY_UNWIND",
           "label": "Japan carry unwind",
-          "score": 39,
-          "state": "WATCH",
-          "delta": 16,
-          "pressure": 4.1
+          "score": 53,
+          "state": "ARMING",
+          "delta": 14,
+          "pressure": 5.6
         },
         {
-          "id": "NUCLEAR_FUEL_SOVEREIGNTY",
-          "label": "Nuclear fuel sovereignty",
-          "score": 31,
+          "id": "ROBOTICS_DECOUPLING",
+          "label": "Robotics decoupling",
+          "score": 27,
           "state": "WATCH",
           "delta": -1,
-          "pressure": 3.3
-        },
-        {
-          "id": "RARE_EARTH_MAGNET_SHORTAGE",
-          "label": "Rare-earth magnets",
-          "score": 18,
-          "state": "DORMANT",
-          "delta": 2,
-          "pressure": 2.7
+          "pressure": 2.3
         },
         {
           "id": "AI_TIME_TO_POWER",
           "label": "AI time-to-power",
-          "score": 29,
+          "score": 25,
           "state": "WATCH",
-          "delta": 6,
-          "pressure": 2.6
+          "delta": -4,
+          "pressure": 2.3
+        },
+        {
+          "id": "NUCLEAR_FUEL_SOVEREIGNTY",
+          "label": "Nuclear fuel sovereignty",
+          "score": 21,
+          "state": "DORMANT",
+          "delta": -10,
+          "pressure": 2.3
         }
       ],
       "drivers": [
-        "Political calendar 42",
-        "trade 97",
+        "Political calendar 43",
+        "trade 98",
         "information 76",
-        "domestic 74",
-        "GearWatch: Global refinancing stress 44",
-        "GearWatch: Japan carry unwind 39"
+        "domestic 75",
+        "GearWatch: Global refinancing stress 84",
+        "GearWatch: Japan carry unwind 53"
       ],
       "summary": "Latest relevant signal: [Jeong Ingyo's Trade-Off] U.S.-China Tariff Truce Extended by Two Months... What Did Trump Gain? - 아시아경제",
       "news": [
@@ -2835,37 +2835,31 @@
           "source": "Fakti.bg",
           "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQVnhXdnk3ekFmX1FsR0N3ZVQ2cEdaTGpuTVNhZi00WU9CbGVqdTNhMU5IbzR6NGhOdk1iNFg2X1RBc2FZVmhCTGFFRWlYUE5aWWNFVGd5dmpRQUNUTDRQWHl0ZVpvc2kxb2YxMkNlSUVKaUNkMVhDU3pkOGIxTmthM1hMQnBwNXlQcXM1QzR6bVh5ZnkzNVE3ckktTjA0UQ?oc=5",
           "seen": "2026-10-10T12:07:00.000Z"
-        },
-        {
-          "title": "Top Chinese US Expert: China Could Cut Purchases from the US by 10 Times the Value of US Arms Sales to Taiwan - Geopolitechs",
-          "source": "Geopolitechs",
-          "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE15SFJoNkNFS2p6RkpoZnlDOXJRc05EdXd2V2tLTDQ2N1RPcjktRFJ1WlhHWFRWMGk0M1gydm00R01tU256cXhady1aMkNjWmlSdDIxN2J6dzgweEdTRENCNmVGSkJqZTJrMTZrZXY1UVU0Zw?oc=5",
-          "seen": "2026-10-10T11:00:57.000Z"
         }
       ],
-      "scan_articles": 4,
+      "scan_articles": 3,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 34,
+        "google_news": 35,
         "gdelt": 0
       },
       "bot_moves": [],
       "news_quality": {
         "before": 10,
-        "accepted": 4,
-        "dropped": 6,
+        "accepted": 3,
+        "dropped": 7,
         "gate": "actors-or-specific-topic"
       },
-      "political_calendar_pressure": 41.5,
+      "political_calendar_pressure": 42.6,
       "political_events": [
         {
           "id": "USA-2026-MID",
           "country": "USA",
           "name": "United States mid-term congressional elections",
           "date": "2026-11-03",
-          "days_to_event": 22,
+          "days_to_event": 21,
           "status": "confirmed",
-          "pressure": 41.5
+          "pressure": 42.6
         }
       ],
       "dependencies": {
@@ -2880,7 +2874,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -2896,7 +2890,7 @@
       ],
       "vector": {
         "diplomatic": 74,
-        "military": 77,
+        "military": 78,
         "territorial": 93,
         "trade": 77,
         "energy": 57,
@@ -2911,27 +2905,33 @@
       },
       "score": 67,
       "trend": 0,
-      "gearwatch_pressure": 2.8,
+      "gearwatch_pressure": 2.6,
       "gearwatch_impacts": [
         {
           "id": "UNDERWATER_SECURITY",
           "label": "Mine / underwater security",
-          "score": 19,
+          "score": 18,
           "state": "DORMANT",
-          "delta": -10,
-          "pressure": 2.8
+          "delta": -1,
+          "pressure": 2.6
         }
       ],
       "drivers": [
         "territorial 93",
-        "military 77",
+        "military 78",
         "diplomatic 74",
-        "GearWatch: Mine / underwater security 19",
+        "GearWatch: Mine / underwater security 18",
         "Comtrade: bilateral import dependence up to 28.4%",
         "Comtrade: HS27 energy-import dependence up to 11.8%"
       ],
-      "summary": "Latest relevant signal: China is Not Just Claiming the South China Sea. It is Learning to Govern It - Wired Gov",
+      "summary": "Latest relevant signal: The U.S. Needs Its Own Grey-Zone Tactics in the South China Sea - RealClearDefense",
       "news": [
+        {
+          "title": "The U.S. Needs Its Own Grey-Zone Tactics in the South China Sea - RealClearDefense",
+          "source": "RealClearDefense",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQanlMcUxkdGQxU2ZiZlBvZThJVEVZZjV2dWRseThNeE4zX3ViZzBsSlZqRmJpcmwtZFkwUXd1YVpKQnpsb1VfcnJsZWdiaTNyTE1QSTM3RmF6UnBiQzBlb3BFVE5PTnVHQjVFUThGMkd1RFpKa0gyNnhvSEkybTlpd0pmdlZmeEo2N2w1YzR0Q2dmcTBKd3Btd3dZTjNyTG1sSTRhTXUtTWlKTHJwYjJ4MlZrOE56QmhOZU1jWC0xa0tPZVdBZlE?oc=5",
+          "seen": "2026-10-12T23:41:20.000Z"
+        },
         {
           "title": "China is Not Just Claiming the South China Sea. It is Learning to Govern It - Wired Gov",
           "source": "Wired Gov",
@@ -2955,12 +2955,6 @@
           "source": "Eurasia Review",
           "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPVjJjU0NsZk81T2lWUG9yUDVFblRpaEZlLUdHNk9TbnprcjRtSUxRTVEwVTUtVVRhOWtWV1ZJMlllbkpxZ2RWMUpZQVFKRFpzamt1UnQ3N3JwMG15Umx1OUhjWEtla3ZUQkF2Ni12czg3Y09fU1BYY2NpOWNhOWhEUHBDMlgwLVN1NkZLQmFxbm1uMklDcVF5eGdSejNXM2xMYkRfMkF0dlgzcXdxOUtsWA?oc=5",
           "seen": "2026-10-12T00:27:34.000Z"
-        },
-        {
-          "title": "Marcos: Ayungin Shoal Incident May Impact ASEAN-China South China Sea Code Talks - Daily Tribune",
-          "source": "Daily Tribune",
-          "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZkN2T3J4VnFPRU1vU09xb2owR2stSXNfTUF0bkJtdWk0QzZ2d1hGN0k3UDBRVGQ2Q0EzV25DTWxvQjRLY1lBaHFmNERENElrelhHSWNkQkR0WWMxdTlNaWNQcnpvdDlMUjluQjhFRDZvLXBKRzk2TnE5STJDZGM1RmJpa3Q4SU1mWVZlTDBsOG5HWl85?oc=5",
-          "seen": "2026-10-11T11:24:23.000Z"
         }
       ],
       "scan_articles": 5,
@@ -2992,7 +2986,7 @@
         "period": "2025",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3011,10 +3005,10 @@
         "diplomatic": 99,
         "military": 99,
         "territorial": 99,
-        "trade": 98,
+        "trade": 99,
         "energy": 99,
         "domestic": 90,
-        "information": 98
+        "information": 99
       },
       "restraints": {
         "economic_interdependence": 17,
@@ -3029,34 +3023,26 @@
         {
           "id": "DIESEL_REFINING_CRISIS",
           "label": "Diesel / refining crisis",
-          "score": 45,
+          "score": 47,
           "state": "ARMING",
-          "delta": 35,
-          "pressure": 8.2
+          "delta": 2,
+          "pressure": 8.6
         },
         {
           "id": "ARSENAL_DEPLETION",
           "label": "Arsenal depletion / replenishment",
-          "score": 25,
-          "state": "WATCH",
-          "delta": 4,
-          "pressure": 4.5
+          "score": 20,
+          "state": "DORMANT",
+          "delta": -5,
+          "pressure": 3.6
         },
         {
-          "id": "ENERGETICS_SHORTAGE",
-          "label": "Energetics / explosives shortage",
-          "score": 32,
+          "id": "ROCKET_MOTOR_SHORTAGE",
+          "label": "Rocket motor bottleneck",
+          "score": 27,
           "state": "WATCH",
-          "delta": 9,
-          "pressure": 3.8
-        },
-        {
-          "id": "NUCLEAR_FUEL_SOVEREIGNTY",
-          "label": "Nuclear fuel sovereignty",
-          "score": 31,
-          "state": "WATCH",
-          "delta": -1,
-          "pressure": 3.3
+          "delta": 3,
+          "pressure": 3.4
         },
         {
           "id": "COUNTER_UAS_COST_CURVE",
@@ -3065,17 +3051,43 @@
           "state": "WATCH",
           "delta": 0,
           "pressure": 3.2
+        },
+        {
+          "id": "CHEAP_DRONE_SCALING",
+          "label": "Cheap-drone scaling",
+          "score": 22,
+          "state": "DORMANT",
+          "delta": 7,
+          "pressure": 2.6
         }
       ],
       "drivers": [
         "diplomatic 99",
         "military 99",
         "territorial 99",
-        "GearWatch: Diesel / refining crisis 45",
-        "GearWatch: Arsenal depletion / replenishment 25"
+        "GearWatch: Diesel / refining crisis 47",
+        "GearWatch: Arsenal depletion / replenishment 20"
       ],
-      "summary": "Latest relevant signal: Ukraine’s Zelenskyy accuses Russia of violating Trump’s ‘energy ceasefire’ - Al Jazeera",
+      "summary": "Latest relevant signal: Trump insists energy ceasefire holds as Ukraine reports new Russian strikes - Al Jazeera",
       "news": [
+        {
+          "title": "Trump insists energy ceasefire holds as Ukraine reports new Russian strikes - Al Jazeera",
+          "source": "Al Jazeera",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPMU5hQ2Z1WXdJZF93U24zN1FqbVlYNFN4bWFRNmVRS2d4eTVyQU1xTXRFNVJRdWN4TnhGRUVfcDdidEJ3dUFyaXhFY01ZbHJHZFJSSTFWb2dJOFJzcXoyZHNVRm5KQzI4TXRUb2NfSzBkazVlVE9tLUtjY0ZPa0ExMUNVZ3BKdldiN0FoSE9feDZBWndDODBiYUJYcE1UTEx5RXpjd2d2ekxrNjJYbFVyWmN2Qjg3anBibG82U9IBwgFBVV95cUxNdzQ0NGxoUW5xZU1HRHJESXhwZ1ZXMmFhbG1WVzVMczRpR3h1V3dfdTRNQVNRLWNNQUs0VzIzLVZReHpOSzA5STFwbjNUeVZaTTBYOGt6ZVEzblBZYjV3cGsyMmhUSlFHZlVGMTBHRnVEbU12Y0tUUnV6STlOblhVZjM5aE1iQ0tRSktxd1lSSzA2dlJxTFN2ZENuWmQzMnBhQzlEVnoxTjNEQTI5REExR2NOTkJNNjM0RE5rX1BFaWlUdw?oc=5",
+          "seen": "2026-10-13T03:33:45.000Z"
+        },
+        {
+          "title": "Angry at Trump's Russian diesel deal? Here's how you can help Ukraine bomb Russia - The Kyiv Independent",
+          "source": "The Kyiv Independent",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdG1Cd1dLWnpkcFNXbnFpOVltUzdiektPVUNDZHB2TjF1Zm1SOE1tbFRlMnZjRWdOSE40NkQwT2lTMkFmVy1LVktTRDQ4eUk0M3ZhNWxvNzRGOFdVdUFydzVUTzJTM0dPVWpzNnNsVkt5SGZOWmxzUFpBbG9OcVB1TDI3bDhqaHZtTE94VzBLakRkTkhRd3VQOWJBMXVvQTlyRndOMloxYXJpOEk?oc=5",
+          "seen": "2026-10-12T17:39:45.000Z"
+        },
+        {
+          "title": "Trump Gives Putin a Hand in Russia’s Economic War With Ukraine - The New York Times",
+          "source": "The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBULVM1THpjc3laQTlrMW12dmVuXzMxNjdXcmtreExYSUNlVlhidG5aR19nb3I5cWJranBUNGlCQms2bDY4UzdXbi1hRXNjbWlucjhrdGJuT2pCU2EzeUJseFBHNmQ5WWpfckxnTi13SWkwVnNTSlM4T1RjVW8?oc=5",
+          "seen": "2026-10-12T17:20:15.000Z"
+        },
         {
           "title": "Ukraine’s Zelenskyy accuses Russia of violating Trump’s ‘energy ceasefire’ - Al Jazeera",
           "source": "Al Jazeera",
@@ -3085,17 +3097,11 @@
         {
           "title": "EU slaps 1,600 new sanctions on Russian military-industrial complex over Ukraine war, says Kallas - Firstpost",
           "source": "Firstpost",
-          "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNTUZicDFjWVZoVzk4NElBWGFiN1NqYXZreTNhWU1INEExTTV0dzlNZ3F3ZnNHdk5fcXFXWGMzS2pUd1JrMDBJaTJxSEVoUkVuWWJDOC1LUjRJSFZ1bEthUnljSnVvM0czenZsbjA3ZEFsTU1nVXV5YnlWVFZiN0NDeXRKd0dIUnpBdVU3eG1zU0pkMzdydHhwamh4emhGV3o2WjhXYjhzUld2aU9IQkhCc0Q4c1dDRkxvT1hDUmlycmVKc2Y4ams3eDNxVUNHU0VhNTMxMURnOTFIMUdjQmtwRkM2LVBUX1NTM0hnTW1JbEZPenlQZHFZ0gH3AUFVX3lxTE1NRmJwMWNZVmhXOTg0SUFYYWI3U2phdmt5M2FZTUg0QTFNNXR3OU1ncXdmc0d2Tl9xcVdYYzNLalR3UmswMElpMnFIRWhSRW5ZYkM4LUtSNElIVnVsS2FSeWNKdW8zRzN6dmxuMDdkQWxNTWdVdXlieVZUVmI3Q0N5dEp3R0hSekF1VTd4bXNTSmQzN3J0eHBqaHh6aEZXejZaOFdiOHNSV3ZpT0hCSEJzRDhzV0NGTG9PWENSaXJyZUpzZjhqazd4M3FVQ0dTRWE1MzExRGc5MUgxR2NCa3BGQzYtUFRfU1MzSGdNbUlsRk96eVBkcVk?oc=5",
+          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNSTJYTnlISmduZzNTbWdMRVJkNzZMLW1lUFNJRjlzZE85Y252R1ZjaTJKWTNONWZ3N0hHc216ZDdxRUlqQVF6aGFmNVNMRHg1cWYwaUhRc1VCTGFfSVdPSXFrSF9GVHA3NDh1WWJLczg1MHpIZ2djaDRPSzNjTmMwM0NnS2xfZnprTmNwdEFlaHVCQWtzYXI1cl9SNU1uVzJDMGdOTlFCZUJNSzk2T3UyZHZoeUNCanQ2MF9FM0w1NW1OQy1zcmlORWRxOEw4cnpxbGFwRWFiN0Vwald5OFZqVnVidnk3azNEWWxsUFBPUmFJZ9IB9wFBVV95cUxNTUZicDFjWVZoVzk4NElBWGFiN1NqYXZreTNhWU1INEExTTV0dzlNZ3F3ZnNHdk5fcXFXWGMzS2pUd1JrMDBJaTJxSEVoUkVuWWJDOC1LUjRJSFZ1bEthUnljSnVvM0czenZsbjA3ZEFsTU1nVXV5YnlWVFZiN0NDeXRKd0dIUnpBdVU3eG1zU0pkMzdydHhwamh4emhGV3o2WjhXYjhzUld2aU9IQkhCc0Q4c1dDRkxvT1hDUmlycmVKc2Y4ams3eDNxVUNHU0VhNTMxMURnOTFIMUdjQmtwRkM2LVBUX1NTM0hnTW1JbEZPenlQZHFZ?oc=5",
           "seen": "2026-10-12T11:16:19.000Z"
-        },
-        {
-          "title": "Trump calls on Ukraine to replace Zelenskyy amid tensions over Russia deal - Al Jazeera",
-          "source": "Al Jazeera",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNVGhVUFFuc21VY0Yxd29Rb1plWTVoWWo0WVpfOTEyTzJVanJRd1JCSTVRV0phdjM2UkRtMUZMaUJuckVLZC1vLTV1X3pDU2JCOWZFb1B6OEpfcGptOU1ZNWlKRnhWSnZ5UEhZd2NIVjNkMUNjbmNhMTFKT3VUUVZjZUVGSi15cUVlNHVxbGhvVWduX1gzRFppc3BBNThtSkQwc1pkMTlKSlh5c1YtTXFnVDZ30gG3AUFVX3lxTFBYNHcyeFdIRkpzd21TZGZDcVZJblgzNXV6NWZfckNyMDQzLUxlYzJzcFhmYlhrengzZ3V5WElmUU9SNlA5VFR5Yk5LMU1xNWo1eWptVjNzQ1QySUpTNE1fSlo5Z3lJX3FvUTRJT2Fpekp3eDlQd0YtYU8zWS1jdGhQNmU2WjBiWlFvN0E2RVd4N1NNMFF2czl1enpFTzNfUWJZa1RXNEV2U3BHRGxNSWQ1SEtCc0w5SQ?oc=5",
-          "seen": "2026-10-11T06:56:45.000Z"
         }
       ],
-      "scan_articles": 3,
+      "scan_articles": 5,
       "sensor_status": "fresh",
       "sensors": {
         "google_news": 50,
@@ -3107,8 +3113,8 @@
       ],
       "news_quality": {
         "before": 10,
-        "accepted": 3,
-        "dropped": 7,
+        "accepted": 5,
+        "dropped": 5,
         "gate": "actors-or-specific-topic"
       },
       "political_calendar_pressure": 0,
@@ -3125,7 +3131,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3144,8 +3150,8 @@
         "military": 99,
         "territorial": 68,
         "trade": 68,
-        "energy": 38,
-        "domestic": 64,
+        "energy": 37,
+        "domestic": 65,
         "information": 78
       },
       "restraints": {
@@ -3156,47 +3162,47 @@
       },
       "score": 73,
       "trend": 0,
-      "gearwatch_pressure": 17.9,
+      "gearwatch_pressure": 16.6,
       "gearwatch_impacts": [
+        {
+          "id": "JAPAN_CARRY_UNWIND",
+          "label": "Japan carry unwind",
+          "score": 53,
+          "state": "ARMING",
+          "delta": 14,
+          "pressure": 5.6
+        },
         {
           "id": "LNG_REROUTING",
           "label": "LNG rerouting",
-          "score": 31,
-          "state": "WATCH",
-          "delta": -1,
-          "pressure": 6.3
+          "score": 20,
+          "state": "DORMANT",
+          "delta": -11,
+          "pressure": 4.1
         },
         {
           "id": "ARSENAL_DEPLETION",
           "label": "Arsenal depletion / replenishment",
-          "score": 25,
-          "state": "WATCH",
-          "delta": 4,
-          "pressure": 4.5
-        },
-        {
-          "id": "JAPAN_CARRY_UNWIND",
-          "label": "Japan carry unwind",
-          "score": 39,
-          "state": "WATCH",
-          "delta": 16,
-          "pressure": 4.1
+          "score": 20,
+          "state": "DORMANT",
+          "delta": -5,
+          "pressure": 3.6
         },
         {
           "id": "ROCKET_MOTOR_SHORTAGE",
           "label": "Rocket motor bottleneck",
-          "score": 24,
-          "state": "DORMANT",
-          "delta": -19,
-          "pressure": 3
+          "score": 27,
+          "state": "WATCH",
+          "delta": 3,
+          "pressure": 3.4
         }
       ],
       "drivers": [
         "military 99",
         "diplomatic 90",
         "information 78",
-        "GearWatch: LNG rerouting 31",
-        "GearWatch: Arsenal depletion / replenishment 25"
+        "GearWatch: Japan carry unwind 53",
+        "GearWatch: LNG rerouting 20"
       ],
       "summary": "Latest relevant signal: North Korea fires several ballistic missiles days after South Korea’s first hypersonic test. One flew more than 900 km - Plataforma Media",
       "news": [
@@ -3205,12 +3211,6 @@
           "source": "Plataforma Media",
           "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPYTZSVi1FdFdnUE5jVVVPNTZKSl9zbGN6NzAwRXA4OEg5S1h5MVhVUXdZbFFJRERCQTJkZ0RWTFZNV1ZjUEFOVHg2MjR2dzNSZTBJR0YxSzBWZ2Q2V3IzODFFWkxTQ0F0enFvbmJ0Y3RVM1hOMzlUeDlzQW9fcTJnTDVrSEx2SVVwUVBMZVR5ZDBWdEtpcDdDWkdoalhPT2RGd1RndThEOUtSU25SR0ozcU15S1AwWHBrRXhtOFc4bWNQZDBqa0lpYjhwQkljM1p2eEpZUDRwRTBZR1dVQWxsY044ODJMT25raDBIc3c4MGFvWlcxRFE?oc=5",
           "seen": "2026-10-12T10:13:45.000Z"
-        },
-        {
-          "title": "North Korea fires 'several ballistic missiles' into Sea of Japan, Seoul's military says - inkl",
-          "source": "inkl",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNNGpGWE00QjlJODNobm1qTEhmQVdDQW4xejBhckFLOXhuUWpGc0hzLUVYOVk3bVBjUmlFZVZ5MnhlR1M1TTRjazdmMzlEWjY2SzJVQ295QXE5aVZmXzFaTW9adWtCRTcyWjdOZl9rRWhnS1lVTGIwb0RULUFQSVowSnpXWkJsSGFLUjlOejNNaXRnV083SW5XaWJZZllRLW1aQmEteHpvcXFyQ2Z4bHc?oc=5",
-          "seen": "2026-10-12T05:30:46.000Z"
         },
         {
           "title": "North Korea launches multiple ballistic missiles, South Korea says - The Jerusalem Post",
@@ -3235,12 +3235,18 @@
           "source": "Breaking News, Latest News and Videos",
           "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNUnpycFZaQ2lJWEF1TE9qVzZPd2xxZUEwdTdyWEVaOV9xdHh5QmEtYkN3ZllwcGY2MzhrR1JmT3hvVVhRZlJyQjVoQ1k1ZTVOTjBwVGc5OUFtSzJSRGtoQWxzMU96UTVBeExPcklYWV8xU2Y2ekVWYmh1aUZ4YnBTMTNHT2x1aWxnU1JDLURfVmFIc1JYVkxRMkU4RUdJNGhPeUw2QjZzRnNnLUo30gGyAUFVX3lxTFBWNWpmWGhkNldNd2Z1Yi1WMzQzc3IySFZJMUZwdklXb3YzZmotS3RRTl81LUxPeXo2VXVUUG95cU1DWUd1MW9GazFLREI0cUszU1RveVg2TzJsaGVjRDdVQTBITkhhTUJWVjl1ZHZBNHQ4OXh2a1B5cXJndk0xbm16YkFkbVVSMk81eWRnTm1HNnJSZzBRbVZDOFFpbzMwQ25hakpSM21HcG5lbHRRdFgydEE?oc=5",
           "seen": "2026-10-12T01:28:51.000Z"
+        },
+        {
+          "title": "South Korea’s military says North Korea fired a projectile toward the sea - 朝日新聞",
+          "source": "朝日新聞",
+          "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9tU2dHNVZldU9hUFR0Q1RDZTUwOFZjYjVwVFR3Q0t0cGRiV3BFaTV4R1ZVT1BDUW1qREhNTkhqMEtsRzZ5Z3MxUEpkWnFrdmNCVVFGMERR?oc=5",
+          "seen": "2026-10-12T00:50:00.000Z"
         }
       ],
       "scan_articles": 6,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 15,
+        "google_news": 14,
         "gdelt": 0
       },
       "bot_moves": [
@@ -3267,7 +3273,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3283,7 +3289,7 @@
       ],
       "vector": {
         "diplomatic": 72,
-        "military": 77,
+        "military": 76,
         "territorial": 95,
         "trade": 57,
         "energy": 29,
@@ -3302,28 +3308,16 @@
       "gearwatch_impacts": [],
       "drivers": [
         "territorial 95",
-        "military 77",
+        "military 76",
         "diplomatic 72"
       ],
-      "summary": "Latest relevant signal: 4 LeT terrorists killed in landmine blast at LoC in Poonch - Brighter Kashmir",
+      "summary": "Latest relevant signal: The India-Pakistan Cold War - Free Malaysia Today",
       "news": [
         {
-          "title": "4 LeT terrorists killed in landmine blast at LoC in Poonch - Brighter Kashmir",
-          "source": "Brighter Kashmir",
-          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdE1va3huNHRjQjRrSXlfenRsakd1TjlJQk54cC1tLVR1NjZjX2RlZ3lOT2NpREhSZW5aWDNJVUU0TG1BWGY4SG1lcFZBclRBbVIwX3czOGppX0tORGVLbXpMQ3hBZGpuV3lZenNvMDM4dnJyTUJUQndmeVBhODlVYkc4M0QxQk1UbC10ZEZNRQ?oc=5",
-          "seen": "2026-10-12T20:08:15.000Z"
-        },
-        {
-          "title": "Poonch LoC: Four killed in IED blast on Pakistan-occupied Jammu and Kashmir side, vigilance heightened - Livemint",
-          "source": "Livemint",
-          "url": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxQY0JTdkxBaTRUY1BKa2VaN3dqd1U1M3ZzLVYyVkxtUFRVcktMYXdqV1NYbXN3Qnl3RDZpUWw4SlN5c1Npc1RzbjYweDlRWlVNQnB4aWJfUU1ZZnVLUlJOdi0zVWJVdmZjTGZoaDBuNkNpeTFZZU9WbmNWTmViU0c0anBQWG8yLWxHZkpxOERGRHVSQVVQRS1xbkpjRUZyZzlvTnhMTC1DZW9FUlkyQVlsQzh4M0dISHh1QXNwTE1BbWJ6U1FIYk02Z2RzVFRNM0hjWEdHOTRrS0J4bXRpNHVCdXVtZnVzd28zZmt6b3JoaWdnQdIB8gFBVV95cUxQY0JTdkxBaTRUY1BKa2VaN3dqd1U1M3ZzLVYyVkxtUFRVcktMYXdqV1NYbXN3Qnl3RDZpUWw4SlN5c1Npc1RzbjYweDlRWlVNQnB4aWJfUU1ZZnVLUlJOdi0zVWJVdmZjTGZoaDBuNkNpeTFZZU9WbmNWTmViU0c0anBQWG8yLWxHZkpxOERGRHVSQVVQRS1xbkpjRUZyZzlvTnhMTC1DZW9FUlkyQVlsQzh4M0dISHh1QXNwTE1BbWJ6U1FIYk02Z2RzVFRNM0hjWEdHOTRrS0J4bXRpNHVCdXVtZnVzd28zZmt6b3JoaWdnQQ?oc=5",
-          "seen": "2026-10-12T18:39:12.000Z"
-        },
-        {
-          "title": "Four PoJK Residents Killed in IED Blast Across Poonch, Security Tightened - Kashmir Observer",
-          "source": "Kashmir Observer",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNeGZqYVRfVm1nN0RPMHBTSEQtOXptVlVfT04wMTRISDUwdU82a1VXcHJuVGl5ckRkeHA5elpOMlpmTkNiQWVQLUhCNjlHRmRLOXhKVkZ5Yi1rVGM2d0ctZVJ2aXVSSER5SnlaOGxDOS11TWJmVFlWNDE1QmhXVGVTb1JmeW0yVk8tanljaURtNC1DVUJONG5pRW9rZjBONVlhdElXOXd6WkZjZDcwMDRHX0FR?oc=5",
-          "seen": "2026-10-12T18:19:23.000Z"
+          "title": "The India-Pakistan Cold War - Free Malaysia Today",
+          "source": "Free Malaysia Today",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxObnM4T0lhbkdoSW42MkhCYVJPbFlJajBYZ3VMZndvWWV2WGtJVXhWZGNQdVVPZUw1YlpIa2JWbnVYSGhSVnJ3RTFuVlpKYmdDQks5eTN4bVVaTXo1NFpiTThEZjhzbWdpbXMzOGV5TG9FYnFyX1NpcVFnWFhuSDhDcDdIc3R4Y0tJTGxWLXFFQ1R2Ulk?oc=5",
+          "seen": "2026-10-12T23:00:00.000Z"
         },
         {
           "title": "4 Pakistani infiltrators killed in landmine blast in Jammu and Kashmirs Poonch - The Tribune",
@@ -3338,6 +3332,12 @@
           "seen": "2026-10-12T16:36:43.000Z"
         },
         {
+          "title": "Four PoJK residents killed in IED blast across J&K's Poonch; security heightened - Greater Kashmir",
+          "source": "Greater Kashmir",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNN0NEcnI5Y0NZU09WWS1LQlRyXy1DTVpUWHp0RHdnWkhTMUVaMUpFZUlzMkpGR2ZhaEpiRFV5QnB1bXIxYlhNdlJiU05zSklvbzdwbEVEMXZ2eXNwb3lIWU1nOFlNZjBRSnFQQWJQXzF6Sm9vTjF5WW9SWnRSMGYzS1liR2ppTlg0bFFVOTdmQWdrVUNVMGdhb1dwZWFUc3NPMTlwRzZHQy01VEpPblc3dkg4WUE5RklBaHJSbkROVWhFYnU1aWZB0gHMAUFVX3lxTE9jT0w3ei1zWHRYMGZKSjA2VHBWZGJ2aXdTMkVFYWpyNno1R3daMFJRVHR3TWhTSVRuZGM3R1l6bEtKWEhuQ3EtdlNlVU93S2xBOTl5WmhfanBONm9reHduNktZV3lxUV9oUEJxTDI4MVA0eFJva19XWlBqYngtRXk4ZFo0VGNDa3JxcF9ZMEE2N1lIZWxKT1pMSVF3dXVTbHpwU0Rqc1hRSUJJNDlWZ1Y0NnBEN0YwRjFXbFRkcEVjVEJFdVVKcmpWVUE1cg?oc=5",
+          "seen": "2026-10-12T16:23:55.000Z"
+        },
+        {
           "title": "Pakistan Army’s Training Aircraft Crashes, Two Pilots Killed - Kashmir Life",
           "source": "Kashmir Life",
           "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZGEtOVFneVJtZ2N1WS14OC1pbXFXMUI5M2pRRTF1aWNxekdwRmMydmlNYjZWOFNwZ0JqcmdDZTRHLTlOV3B4bjVtRlIyQlJTM0FWRzZuSUZFZVd1RV92MDljZ1BTY0NtYWFHR0oydm9VR1preDRiRmJOMnRpMFJNSEMwVzFlMUJOd0hBZlVUWlNWX2Zf?oc=5",
@@ -3348,15 +3348,9 @@
           "source": "India.com",
           "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaC00cG1FZVdjUURiZ2ZSaHczVDR6dVdDUnNPalgwbkdCSDBFdnVZZ3pIT3JFZTFzU3JqSmFsYkthdHFVQ05WOUE3VEN0QkpvaGJfaHI4QlFaWGlqUVh3bDI3VVQxbDV3d3dQcDBKbUUtYWlWRGlLamJKUU83UFFLVzdwMnEzVXJWNTNrbVYtOUc2bDNyZEtOQmJxQ1h3YjFKVFdTS0k5eXhGa2NyTnpfdVV2V0hrdmxiNzl3VzMwUnLSAcABQVVfeXFMTWgtNHBtRWVXY1FEYmdmUmh3M1Q0enVXQ1JzT2pYMG5HQkgwRXZ1WWd6SE9yRWUxc1NyakphbGJLYXRxVUNOVjlBN1RDdEJKb2hiX2hyOEJRWlhpalFYd2wyN1VUMWw1d3d3UHAwSm1FLWFpVkRpS2piSlFPN1BRS1c3cDJxM1VyVjUza21WLTlHNmwzcmRLTkJicUNYd2IxSlRXU0tJOXl4Rmtjck56X3VVdldIa3ZsYjc5d1czMFJy?oc=5",
           "seen": "2026-10-12T14:57:50.000Z"
-        },
-        {
-          "title": "Powerful blast rocks forward areas in J-K's Poonch; security heightened - Greater Kashmir",
-          "source": "Greater Kashmir",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPNkRqYTJoNlVvdG9lOUN3UTRjX2c0NGJsdDkyQ29mTGdIbE9WVUliWFBEbmVfMTlkdGxnb2pGNTBVT2tGeXRfajg2UzRMVTd4SERXNHM1a2lOc0xCSDZiWG5oTDdaMDdId2g2R1owZ3dnSUhGNmFNOXJwQmxOdU16N2lWZlc0Qm5LbTdOa2pua0plOE9iQjRJRGZMcFlIZUh5UXdneG9keTlMNUNIM3BxdU9JeS1oNnlpYmR4VdIBwgFBVV95cUxNUGRWcmRpS2pJNWZiYzZYc05HSnVyVzZZd2tkSFFQR3ZxOGZvaVlub001QVN1WXBYTk9oUHZyYkVyWXVXRkQ1cE1YS2dsT1lGbG42a3JJWDNNTlh4dV84NUdYeFBhSDdzV2lGektXT1lIU1BpQzF3NHhCSUFSOVpEcTFSZ0lvWnFPOVRYSVQ2cUU4VEI1SEZ3QjhYQVRIU01PN2VSbmxpLXFYM0FmYkN1ODg0bmdJd2tWU2lHTzBZNVdKdw?oc=5",
-          "seen": "2026-10-12T13:56:48.000Z"
         }
       ],
-      "scan_articles": 8,
+      "scan_articles": 6,
       "sensor_status": "fresh",
       "sensors": {
         "google_news": 50,
@@ -3368,8 +3362,8 @@
       ],
       "news_quality": {
         "before": 10,
-        "accepted": 8,
-        "dropped": 2,
+        "accepted": 6,
+        "dropped": 4,
         "gate": "actors-or-specific-topic"
       },
       "political_calendar_pressure": 0,
@@ -3386,7 +3380,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3417,22 +3411,22 @@
       },
       "score": 55,
       "trend": 0,
-      "gearwatch_pressure": 2.7,
+      "gearwatch_pressure": 1.7,
       "gearwatch_impacts": [
         {
           "id": "RARE_EARTH_MAGNET_SHORTAGE",
           "label": "Rare-earth magnets",
-          "score": 18,
+          "score": 11,
           "state": "DORMANT",
-          "delta": 2,
-          "pressure": 2.7
+          "delta": -7,
+          "pressure": 1.7
         }
       ],
       "drivers": [
         "territorial 80",
         "military 64",
         "trade 62",
-        "GearWatch: Rare-earth magnets 18"
+        "GearWatch: Rare-earth magnets 11"
       ],
       "summary": "Latest relevant signal: Afghanistan Wakhan Road to China: Why It Matters for India - Dainik Jagran MP CG",
       "news": [
@@ -3470,7 +3464,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3488,7 +3482,7 @@
         "diplomatic": 64,
         "military": 47,
         "territorial": 69,
-        "trade": 63,
+        "trade": 64,
         "energy": 68,
         "domestic": 100,
         "information": 70
@@ -3499,25 +3493,25 @@
         "security_cooperation": 35,
         "deterrence": 55
       },
-      "score": 57,
-      "trend": 0,
-      "gearwatch_pressure": 5.5,
+      "score": 58,
+      "trend": 1,
+      "gearwatch_pressure": 10.6,
       "gearwatch_impacts": [
         {
           "id": "GLOBAL_REFINANCING_STRESS",
           "label": "Global refinancing stress",
-          "score": 44,
+          "score": 84,
           "state": "WATCH",
-          "delta": -8,
-          "pressure": 5.5
+          "delta": 40,
+          "pressure": 10.6
         }
       ],
       "drivers": [
-        "Political calendar 72",
+        "Political calendar 74",
         "domestic 95",
         "information 70",
         "territorial 69",
-        "GearWatch: Global refinancing stress 44",
+        "GearWatch: Global refinancing stress 84",
         "Comtrade: bilateral import dependence up to 10.6%",
         "Comtrade: HS27 energy-import dependence up to 14.1%"
       ],
@@ -3566,6 +3560,12 @@
           "seen": "2026-10-07T17:05:58.000Z"
         },
         {
+          "title": "Christian Schmidt on Bosnia's Election and Dodik's Plans - srpske.rs",
+          "source": "srpske.rs",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQV0N5ZEpIX1pNMjFfNjFiRWxHdV9QbGFwS1NvS3BhVGhmcVRMYkVmZzdrd0JRRk1IbmJZQWJSMm5fLUdpaUtySkh6V2pJMkltT0RWaGgydTJ4bFhmMzExUTZjR082SGtPWEJIdFk2MkpZTE0ydThLVFVjSm5DdmtlX0J4T3NTX1M4MUJtM21VbzRFQjM2OFNqMHRjbVJSeGF0R1E?oc=5",
+          "seen": "2026-10-07T15:04:00.000Z"
+        },
+        {
           "title": "Israel’s embrace of Serb nationalist Milorad Dodik threatens Bosnia and the wider Balkans - Middle East Eye",
           "source": "Middle East Eye",
           "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQZUN3ek1FNFAzNUhZeHpNaUpqOGY3WVd5ZkZFdzlCVnJ5ZGhwRWZ3TzUwM2RCLWhrWDJFUkpodVlTeTBCSkpsdG5sRjdqRFVHcFVtN0JNREVHeWpMVVZrU3Zkb2hKdEtCZ0w5WERrZjhEbDhxVGdsUTFaWmRJaURfSFdVTXFsaU9jTmY5YkgxTUdCN1JkWGNPSFlsRzh0STZWTzZjVzhEUFBkVll1cXF5Y0thLXc0RWs?oc=5",
@@ -3576,12 +3576,6 @@
           "source": "WFMZ.com",
           "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPdWFjUEZuZ0lyMTZ6ZmVSVnJXV3I4UEFqVU4xenVEcllhZVlHZHlFaDJwZ1JDOTdPaDJOSjNRLXlqNEkyTm1aQ2lYbURUNGFReXNwSXJBZDd4bjQydVJnX213SXZ6SkpPV1BOSGtHTThIU3FSR3hGNEwtR3Y0dExOakhrZktFWVgtUVFOZUF1YzBjT2RKWmd0bENONzlxUm5GeHZNUllvS2RmTVVVMDdlVE5wZ05JYmlkQjFRZVZjT09oVWNvbngtZmVndDJnUWk2OXZuTWd6dEZlWUM3UTB5Zm5EcWVJU0FuQzhUajRmRUt1Wnh4RWhNakYwTQ?oc=5",
           "seen": "2026-10-07T07:00:00.000Z"
-        },
-        {
-          "title": "Amid Midterm Crunch, Trump Advisers Took Time to Help Russia-Aligned Government - The New York Times",
-          "source": "The New York Times",
-          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPUXRfT1BjTE1GZVlqZTQwdmJ4dlZUUVZnazJVYjQyTlJOWXE5eDZzQzlZSHhUa0hycE5OV1hpVS1tMEhLclFBcW11dm5sT2IxTkJPRnY4WVVvMENkVWZFR0JvR0x2a0o1cHctNkdfdGZLUGVFbGZmWG9nR3J0aHhhZlJZZ002X1htSHZv?oc=5",
-          "seen": "2026-10-06T21:52:04.000Z"
         }
       ],
       "scan_articles": 0,
@@ -3600,16 +3594,16 @@
         "dropped": 10,
         "gate": "actors-or-specific-topic"
       },
-      "political_calendar_pressure": 71.7,
+      "political_calendar_pressure": 73.6,
       "political_events": [
         {
           "id": "SRB-2026-SNAP",
           "country": "SRB",
           "name": "Serbia anticipated early parliamentary election",
           "date": "2026-10-18",
-          "days_to_event": 6,
+          "days_to_event": 5,
           "status": "window",
-          "pressure": 71.7
+          "pressure": 73.6
         }
       ],
       "dependencies": {
@@ -3624,7 +3618,7 @@
         "period": "2025",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3656,22 +3650,22 @@
       },
       "score": 53,
       "trend": 0,
-      "gearwatch_pressure": 2.6,
+      "gearwatch_pressure": 2.3,
       "gearwatch_impacts": [
         {
           "id": "EUROPE_STRATEGIC_AUTONOMY",
           "label": "European strategic autonomy",
-          "score": 21,
+          "score": 19,
           "state": "DORMANT",
           "delta": -2,
-          "pressure": 2.6
+          "pressure": 2.3
         }
       ],
       "drivers": [
         "territorial 81",
         "military 60",
         "diplomatic 59",
-        "GearWatch: European strategic autonomy 21",
+        "GearWatch: European strategic autonomy 19",
         "Comtrade: bilateral import dependence up to 4.2%",
         "Comtrade: HS27 energy-import dependence up to 3.4%"
       ],
@@ -3723,14 +3717,14 @@
       "scan_articles": 7,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 9,
+        "google_news": 10,
         "gdelt": 0
       },
       "bot_moves": [],
       "news_quality": {
-        "before": 9,
+        "before": 10,
         "accepted": 7,
-        "dropped": 2,
+        "dropped": 3,
         "gate": "actors-or-specific-topic"
       },
       "political_calendar_pressure": 0,
@@ -3747,7 +3741,7 @@
         "period": "2025",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3794,12 +3788,6 @@
           "seen": "2026-10-09T07:49:00.000Z"
         },
         {
-          "title": "Armenia-Azerbaijan peace is an accomplished fact – Pashinyan - Trend News Agency",
-          "source": "Trend News Agency",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBReFpvcnlxRmR6ZWNZM2lQanpwc2xNOGdaWWl3V3ZjRjQ3aXBTLWlhd2hiX3ZXM3oxVnZwNmRGd3FTLU1ZQVM2R2UxOTZjdEdBaENRbzh2VEd6cmJ2bUZHLQ?oc=5",
-          "seen": "2026-10-09T06:30:00.000Z"
-        },
-        {
           "title": "Pashinyan: Almaty Declaration played key role in establishing peace between Armenia and Azerbaijan - Apa.az",
           "source": "Apa.az",
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZGF6TlNYa1h6Rkd6d1dGRW05Vi13R01McnI0WFliTFQwQnNfOUpxZWhUdGVkTG9kUFlSMUJabmJ6Z0NrMDVOUHFwR3pNdml3M3A3LXZnYzc5WTFPeU81aUtDaUFpV19USGFBR1pWeUZ6YkwzWmY1NXVtcVFlbm1qaFhKSXVJclhmbTRSaDQyWGJTMllZeHdjekh6ZXF2aEtzLVNDdUxVMkJ6MUtfVEFGVmZhMG5jVFBxNWhDX0Fxbl9fTS1YQnUtN0stRUphWGZxdk5n?oc=5",
@@ -3812,7 +3800,7 @@
           "seen": "2026-10-08T13:53:02.000Z"
         }
       ],
-      "scan_articles": 4,
+      "scan_articles": 3,
       "sensor_status": "fresh",
       "sensors": {
         "google_news": 16,
@@ -3824,8 +3812,8 @@
       ],
       "news_quality": {
         "before": 10,
-        "accepted": 4,
-        "dropped": 6,
+        "accepted": 3,
+        "dropped": 7,
         "gate": "actors-or-specific-topic"
       },
       "political_calendar_pressure": 0,
@@ -3842,7 +3830,7 @@
         "period": "2025",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3872,7 +3860,7 @@
         "deterrence": 47
       },
       "score": 62,
-      "trend": -2,
+      "trend": 0,
       "gearwatch_pressure": 0,
       "gearwatch_impacts": [],
       "drivers": [
@@ -3880,19 +3868,25 @@
         "diplomatic 79",
         "territorial 72"
       ],
-      "summary": "Latest relevant signal: Congo’s former President Kabila launches an anti-government front including M23 rebels - myMotherLode.com",
+      "summary": "Latest relevant signal: Congo's former President Kabila launches an anti-government front including M23 rebels - The Washington Post",
       "news": [
         {
-          "title": "Congo’s former President Kabila launches an anti-government front including M23 rebels - myMotherLode.com",
-          "source": "myMotherLode.com",
-          "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQcTJfaUxKLXNJQ1BzcFAxb2tqWHpUcG5rbUowekRjcjVXUmdaWnJHb0RURzBuQXB1R1gtVXA5aEVtd0dyMkdoVWx5TkRJcXh3Y3AtMmJRbUU1RFZNT1NRODd3b1NwX25taWlRemdXZkF3eFRJUzk0SUNzX29pMVZ2MUcwTWxEcnpfZ1c5T3JNRy1DdThWRWZYT2prUkw2TFFwZDNLamVZdG9MU0NaZFZoal9jeTdJRV9YSjh0cVRyVW9DMFUyaUgzaF9KLTllNWRkWEY1TE9sMNIB1wFBVV95cUxQcTJfaUxKLXNJQ1BzcFAxb2tqWHpUcG5rbUowekRjcjVXUmdaWnJHb0RURzBuQXB1R1gtVXA5aEVtd0dyMkdoVWx5TkRJcXh3Y3AtMmJRbUU1RFZNT1NRODd3b1NwX25taWlRemdXZkF3eFRJUzk0SUNzX29pMVZ2MUcwTWxEcnpfZ1c5T3JNRy1DdThWRWZYT2prUkw2TFFwZDNLamVZdG9MU0NaZFZoal9jeTdJRV9YSjh0cVRyVW9DMFUyaUgzaF9KLTllNWRkWEY1TE9sMA?oc=5",
-          "seen": "2026-10-12T22:07:56.000Z"
+          "title": "Congo's former President Kabila launches an anti-government front including M23 rebels - The Washington Post",
+          "source": "The Washington Post",
+          "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNT1RXWXg5ZkN3Y2dDVDVPLXJVSXd0SDBWMjVHUUFGdHk2NGpSZkZsb3JTWElMZy1RWmU0YlFQTDYtMnJsT25ZMVNOV1lZM1gzV0cyWFNBc1FCdk1kRnFod3U1LWNNVkV0Zzh4d1pFODdnR1d4akdSRTZmU1ZtQkVYOFZOdU5GN1lKNUQzOWJSRzJUSmFSMGhVeEI1THE4a0ZCTm1wclRwTHVtYWlfTXZWMGliNU1rRmJ3em5BQ0Y2aXI2clhwU0tHeFlUR3BvSlBn?oc=5",
+          "seen": "2026-10-13T03:28:28.000Z"
+        },
+        {
+          "title": "AFC-M23 Leaders Inspect Goma-Gisenyi Border Operations - Taarifa Rwanda",
+          "source": "Taarifa Rwanda",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQRHpDWWZsTEVYeDZQeGVaZHJsTXVRZzJIclgycFpoOUcyYlI4UVFFVzlyUy1YbE12Qm1kUTE5RDlEQzJDVmpJUHFHZFRZZGpvRXMzMFphNXVxcmpYbTNNSWRuVFM1UG1WemRUWUVzMUVVaWNuTngyYVVwcGJqWGlWYUFqVU01Z0R0RnYtSmZ30gGOAUFVX3lxTFBEekNZZmxMRVh4NlB4ZVpkcmxNdVFnMkhyWDJwWmg5RzJiUjhRUUVXOXJTLVhsTXZCbWRRMTlEOURDMkNWaklQcUdkVFlkam9FczMwWmE1dXFyalhtM01JZG5UUzVQbVZ6ZFRZRXMxRVVpY25OeDJhVXBwYmpYaVZhQWpVTTVnRHRGdi1KZnc?oc=5",
+          "seen": "2026-10-07T12:47:17.000Z"
         }
       ],
-      "scan_articles": 1,
+      "scan_articles": 2,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 1,
+        "google_news": 2,
         "gdelt": 0
       },
       "bot_moves": [
@@ -3900,8 +3894,8 @@
         "Rwanda: DIVERSIFY_TRADE — Reduce bilateral exposure before coercion becomes costly."
       ],
       "news_quality": {
-        "before": 1,
-        "accepted": 1,
+        "before": 2,
+        "accepted": 2,
         "dropped": 0,
         "gate": "actors-or-specific-topic"
       },
@@ -3919,7 +3913,7 @@
         "period": "2024",
         "coverage": 1,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -3937,9 +3931,9 @@
         "diplomatic": 64,
         "military": 53,
         "territorial": 96,
-        "trade": 42,
+        "trade": 43,
         "energy": 80,
-        "domestic": 59,
+        "domestic": 61,
         "information": 58
       },
       "restraints": {
@@ -3950,15 +3944,15 @@
       },
       "score": 61,
       "trend": 0,
-      "gearwatch_pressure": 6.9,
+      "gearwatch_pressure": 12,
       "gearwatch_impacts": [
         {
           "id": "GLOBAL_REFINANCING_STRESS",
           "label": "Global refinancing stress",
-          "score": 44,
+          "score": 84,
           "state": "WATCH",
-          "delta": -8,
-          "pressure": 5.5
+          "delta": 40,
+          "pressure": 10.6
         },
         {
           "id": "OIL_SERVICE_CAPEX_SECOND_WAVE",
@@ -3973,7 +3967,7 @@
         "territorial 96",
         "energy 80",
         "diplomatic 64",
-        "GearWatch: Global refinancing stress 44",
+        "GearWatch: Global refinancing stress 84",
         "GearWatch: Oil-service CAPEX second wave 12"
       ],
       "summary": "Latest signal: Brazil tests fourth Riachuelo-Class submarine as Argentina lacks active fleet - Escudo Digital - Nuevo Enfoque Urbano",
@@ -4027,7 +4021,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.790Z"
+        "updated_at": "2026-10-13T03:38:52.147Z"
       }
     },
     {
@@ -4047,7 +4041,7 @@
         "territorial": 68,
         "trade": 46,
         "energy": 38,
-        "domestic": 54,
+        "domestic": 53,
         "information": 48
       },
       "restraints": {
@@ -4076,20 +4070,14 @@
         {
           "title": "Pulling Ethiopia and Eritrea Back from War - Nigerian Voice",
           "source": "Nigerian Voice",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSG8zd0VCLTZxMW9SdE9mTXVuTjhtWVgtZDBoa1VfNzFnUWZFczZiRjhwT0JvYTcyTFUweDR3QkZKeENIZFIzQ2kxQ2ZyMFY0TmYyZC1Pa2IxMVBPTlU3Q3kwclNWOG9qZDJmci1OLWtwbDRVaC1wNlZQdml1ZF9YUWNTY1d5OGpCME4yb3dCNGxDeEVmZ3E40gGcAUFVX3lxTE5XZGktX2JXZU1kQlUzaWhKM1lXN0dicXdqQkpJcWNBTkR2UEtLOFhYUFFtelEtWl9NRzhFbExETklZcDNMb1cwS1k5dm5hc0MwN1A0NHRORzdRMm55Z0MySTNyX2dJQ3BWTGkySEVudVY5SnF2ZUozX0oybjNxMWZmTG5lT29ZYlUtRWYtbkd2cWNlX2hkcGx1dFZfVQ?oc=5",
-          "seen": "2026-10-12T21:56:13.000Z"
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOV2RpLV9iV2VNZEJVM2loSjNZVzdHYnF3akJKSXFjQU5EdlBLSzhYWFBRbXpRLVpfTUc4RWxMRE5JWXAzTG9XMEtZOXZuYXNDMDdQNDR0Tkc3UTJueWdDMkkzcl9nSUNwVkxpMkhFbnVWOUpxdmVKM19KMm4zcTFmZkxuZU9vWWJVLUVmLW5HdnFjZV9oZHBsdXRWX1XSAZwBQVVfeXFMTldkaS1fYldlTWRCVTNpaEozWVc3R2Jxd2pCSklxY0FORHZQS0s4WFhQUW16US1aX01HOEVsTEROSVlwM0xvVzBLWTl2bmFzQzA3UDQ0dE5HN1EybnlnQzJJM3JfZ0lDcFZMaTJIRW51VjlKcXZlSjNfSjJuM3ExZmZMbmVPb1liVS1FZi1uR3ZxY2VfaGRwbHV0Vl9V?oc=5",
+          "seen": "2026-10-12T21:56:14.000Z"
         },
         {
           "title": "Daily_Brief: #Sudan’s al-Burhan inspects army division in #Kassala near #Ethiopia, #Eritrea borders - Addis Standard",
           "source": "Addis Standard",
           "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE93bEFnNmR3ZDByLTlJRThzNW9mS09sVlRCYTlXNlFaX0lrQ1FFbmoyUVdZYjFGWjJCSFRUZERZWHcxTWlaTEZZNHlmMEtOTFBLdUE?oc=5",
           "seen": "2026-10-12T08:26:18.000Z"
-        },
-        {
-          "title": "Somalia says it remains neutral as tensions rise between Ethiopia and Eritrea - Garowe Online",
-          "source": "Garowe Online",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPWFRkN1VyUGFocnl0VkRhaE9UYm5MNEJpdEU3ZEdOcU9sMFlwMkFFa0N3QnpkcWJhMlBQbEd6b1cxWi1kX2k4XzJHeFFYaVFaY2JQUTR2dWRiQTN0Zy1OdjFETVZoenhHZDliTGJBXzQ5ZWpXanhLT3JxdnVMSDBmbkdFbUdZcnRnN0FxUEdEcURFVlk1RzJPeThNZndnaVBhN3NMdVJydGtZbk9zS3FmQmFCVF9NZDhNcVlaaVVfcw?oc=5",
-          "seen": "2026-10-12T06:12:17.000Z"
         },
         {
           "title": "Ethiopia, Eritrea ramp up rhetoric: Are they inching towards war? - Al Jazeera",
@@ -4120,12 +4108,18 @@
           "source": "Devdiscourse",
           "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNS0RTbU1FdnNtTHQ4LUxXdWFGOGo0cE5qSzB0WFZ6MDFEcGJLSnNUZU5XRlJrS0RpcUR1d2poQ3NYTS1XWGs2THROblRNRlJjbzYySFVwc0FpTnBTelpLcTVxOU80eDFFOG1zZGV6SllIdWNHQTdVWVA5QU1yNlJmZ1NGbnFwZ2hQLXdyRjEtaldLeklYM0ZNbUZPckhSZldWWmRGTnpIdDJSdmRoYUVPdC1VZ0ZISmptdTJhcTRNTHRpcmx0QmU4RnprSjdtUldmbHRUajMxb3dfRVnSAdsBQVVfeXFMTUtEU21NRXZzbUx0OC1MV3VhRjhqNHBOakswdFhWejAxRHBiS0pzVGVOV0ZSa0tEaXFEdXdqaENzWE0tV1hrNkx0Tm5UTUZSY282MkhVcHNBaU5wU3paS3E1cTlPNHgxRThtc2RlekpZSHVjR0E3VVlQOUFNcjZSZmdTRm5xcGdoUC13ckYxLWpXS3pJWDNGTW1GT3JIUmZXVlpkRk56SHQyUnZkaGFFT3QtVWdGSEpqbXUyYXE0TUx0aXJsdEJlOEZ6a0o3bVJXZmx0VGozMW93X0VZ?oc=5",
           "seen": "2026-10-10T12:44:00.000Z"
+        },
+        {
+          "title": "Ethiopian-Eritrean fighting raises fears of escalation across the region - The Jerusalem Post",
+          "source": "The Jerusalem Post",
+          "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFB5U2d6WXdRcXl3YU5DSWhuaW14b2Zra0dvcHo3SmZZVGRpdldneHVaVnp2WjBDRmd2TnN4d2pOb3NBUzFWQmNOOE5fVEZibFVHU1d6Z1FUazVRU2l1anhF?oc=5",
+          "seen": "2026-10-10T12:32:47.000Z"
         }
       ],
       "scan_articles": 9,
       "sensor_status": "fresh",
       "sensors": {
-        "google_news": 40,
+        "google_news": 39,
         "gdelt": 0
       },
       "bot_moves": [],
@@ -4178,7 +4172,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.794Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Algeria sources 6.7% of observed imports and 51.0% of HS27 energy imports from Italy in the cached Comtrade period.",
       "news": [],
@@ -4231,7 +4225,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.794Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Azerbaijan sources 15.3% of observed imports and 68.5% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -4284,7 +4278,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Armenia sources 36.7% of observed imports and 60.1% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -4337,7 +4331,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Bosnia and Herzegovina sources 8.6% of observed imports and 25.5% of HS27 energy imports from Croatia in the cached Comtrade period.",
       "news": [],
@@ -4390,7 +4384,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Bosnia and Herzegovina sources 11.8% of observed imports and 29.1% of HS27 energy imports from Italy in the cached Comtrade period.",
       "news": [],
@@ -4442,7 +4436,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Canada sources 100.0% of observed imports and 4.3% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -4494,7 +4488,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Canada sources 100.0% of observed imports and 2.0% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -4546,7 +4540,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Canada sources 100.0% of observed imports and 0.0% of HS27 energy imports from Mexico in the cached Comtrade period.",
       "news": [],
@@ -4598,7 +4592,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Canada sources 98.2% of observed imports and 3.8% of HS27 energy imports from United Kingdom in the cached Comtrade period.",
       "news": [],
@@ -4650,7 +4644,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Congo sources 1.3% of observed imports and 29.7% of HS27 energy imports from DR Congo in the cached Comtrade period.",
       "news": [],
@@ -4702,7 +4696,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Congo sources 1.1% of observed imports and 31.2% of HS27 energy imports from Togo in the cached Comtrade period.",
       "news": [],
@@ -4755,7 +4749,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: DR Congo sources 9.3% of observed imports and 32.4% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -4808,7 +4802,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Finland sources 22.9% of observed imports and 39.3% of HS27 energy imports from Sweden in the cached Comtrade period.",
       "news": [],
@@ -4860,7 +4854,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Greece sources 4.9% of observed imports and 24.0% of HS27 energy imports from Iraq in the cached Comtrade period.",
       "news": [],
@@ -4913,7 +4907,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Guyana sources 11.8% of observed imports and 69.6% of HS27 energy imports from Trinidad and Tobago in the cached Comtrade period.",
       "news": [],
@@ -4965,7 +4959,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Lithuania sources 4.7% of observed imports and 28.8% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -5018,7 +5012,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Pakistan sources 10.7% of observed imports and 33.7% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -5071,7 +5065,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Rwanda sources 5.9% of observed imports and 35.6% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -5123,7 +5117,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Saudi Arabia sources 2.6% of observed imports and 32.6% of HS27 energy imports from Egypt in the cached Comtrade period.",
       "news": [],
@@ -5175,7 +5169,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Slovenia sources 80.3% of observed imports and 0.0% of HS27 energy imports from Austria in the cached Comtrade period.",
       "news": [],
@@ -5227,7 +5221,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Slovenia sources 100.0% of observed imports and 1.0% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -5279,7 +5273,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Slovenia sources 59.6% of observed imports and 0.0% of HS27 energy imports from Croatia in the cached Comtrade period.",
       "news": [],
@@ -5331,7 +5325,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Slovenia sources 56.0% of observed imports and 0.0% of HS27 energy imports from Cyprus in the cached Comtrade period.",
       "news": [],
@@ -5384,7 +5378,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Slovenia sources 100.0% of observed imports and 8.2% of HS27 energy imports from Czechia in the cached Comtrade period.",
       "news": [],
@@ -5437,7 +5431,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Türkiye sources 11.6% of observed imports and 47.7% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -5490,7 +5484,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Yemen sources 29.9% of observed imports and 100.0% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -5543,7 +5537,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Philippines sources 7.9% of observed imports and 19.7% of HS27 energy imports from South Korea in the cached Comtrade period.",
       "news": [],
@@ -5595,7 +5589,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: DR Congo sources 30.9% of observed imports and 0.7% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -5647,7 +5641,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Pakistan sources 31.4% of observed imports and 0.1% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -5700,7 +5694,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Japan sources 6.0% of observed imports and 20.7% of HS27 energy imports from Australia in the cached Comtrade period.",
       "news": [],
@@ -5752,7 +5746,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Congo sources 24.8% of observed imports and 4.7% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -5804,7 +5798,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Japan sources 4.3% of observed imports and 21.1% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -5857,7 +5851,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Ukraine sources 9.9% of observed imports and 16.1% of HS27 energy imports from Poland in the cached Comtrade period.",
       "news": [],
@@ -5909,7 +5903,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Saudi Arabia sources 27.5% of observed imports and 0.8% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -5962,7 +5956,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Pakistan sources 6.4% of observed imports and 17.6% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -6014,7 +6008,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: South Korea sources 4.3% of observed imports and 18.9% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -6066,7 +6060,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Yemen sources 26.4% of observed imports and 0.1% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -6118,7 +6112,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: China sources 4.8% of observed imports and 17.6% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -6170,7 +6164,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Pakistan sources 4.9% of observed imports and 17.6% of HS27 energy imports from Qatar in the cached Comtrade period.",
       "news": [],
@@ -6223,7 +6217,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Saudi Arabia sources 5.7% of observed imports and 16.5% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -6276,7 +6270,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Philippines sources 7.7% of observed imports and 14.8% of HS27 energy imports from Indonesia in the cached Comtrade period.",
       "news": [],
@@ -6328,7 +6322,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Serbia sources 3.0% of observed imports and 18.2% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -6380,7 +6374,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Guyana sources 25.0% of observed imports and 0.1% of HS27 energy imports from Singapore in the cached Comtrade period.",
       "news": [],
@@ -6432,7 +6426,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Japan sources 23.6% of observed imports and 1.1% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -6484,7 +6478,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Japan sources 3.5% of observed imports and 17.2% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -6536,7 +6530,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Yemen sources 18.9% of observed imports and 4.6% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -6588,7 +6582,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Algeria sources 22.3% of observed imports and 0.8% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -6640,7 +6634,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Saudi Arabia sources 1.3% of observed imports and 17.8% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -6692,7 +6686,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Morocco sources 2.9% of observed imports and 16.5% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -6744,7 +6738,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: South Korea sources 22.5% of observed imports and 0.4% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -6796,7 +6790,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Ukraine sources 2.9% of observed imports and 15.7% of HS27 energy imports from Greece in the cached Comtrade period.",
       "news": [],
@@ -6806,58 +6800,6 @@
         "Comtrade exposure relevance 74",
         "trade dependence 2.9%",
         "energy dependence 15.7%"
-      ],
-      "bot_moves": []
-    },
-    {
-      "id": "CHN-ISR",
-      "a": "CHN",
-      "b": "ISR",
-      "origin": "dependency-discovery",
-      "relation_type": "exposure",
-      "strategic_relevance": 73,
-      "domains": [
-        "trade"
-      ],
-      "vector": {
-        "diplomatic": 12,
-        "military": 8,
-        "territorial": 6,
-        "trade": 53,
-        "energy": 14,
-        "domestic": 10,
-        "information": 8
-      },
-      "restraints": {
-        "economic_interdependence": 95,
-        "alliance_mediation": 35,
-        "security_cooperation": 22,
-        "deterrence": 30
-      },
-      "score": 18,
-      "trend": 0,
-      "dependencies": {
-        "trade": {
-          "a_on_b": 0,
-          "b_on_a": 21.78
-        },
-        "energy": {
-          "a_on_b": 0,
-          "b_on_a": 0.06
-        },
-        "period": "2025",
-        "coverage": 0.5,
-        "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
-      },
-      "summary": "Silent dependency edge: Israel sources 21.8% of observed imports and 0.1% of HS27 energy imports from China in the cached Comtrade period.",
-      "news": [],
-      "scan_articles": 0,
-      "sensor_status": "dependency-cache",
-      "drivers": [
-        "Comtrade exposure relevance 73",
-        "trade dependence 21.8%",
-        "energy dependence 0.1%"
       ],
       "bot_moves": []
     },
@@ -6901,7 +6843,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Congo sources 11.8% of observed imports and 8.1% of HS27 energy imports from Namibia in the cached Comtrade period.",
       "news": [],
@@ -6953,7 +6895,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Serbia sources 1.8% of observed imports and 16.1% of HS27 energy imports from Kazakhstan in the cached Comtrade period.",
       "news": [],
@@ -7006,7 +6948,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Armenia sources 5.3% of observed imports and 12.6% of HS27 energy imports from Iran in the cached Comtrade period.",
       "news": [],
@@ -7058,7 +7000,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Ukraine sources 20.3% of observed imports and 0.2% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -7110,7 +7052,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Azerbaijan sources 19.6% of observed imports and 0.2% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -7162,7 +7104,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: DR Congo sources 2.6% of observed imports and 13.6% of HS27 energy imports from Bahrain in the cached Comtrade period.",
       "news": [],
@@ -7214,7 +7156,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Rwanda sources 18.4% of observed imports and 0.6% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -7266,7 +7208,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Rwanda sources 14.2% of observed imports and 3.5% of HS27 energy imports from Tanzania in the cached Comtrade period.",
       "news": [],
@@ -7319,7 +7261,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: South Korea sources 5.1% of observed imports and 10.7% of HS27 energy imports from Australia in the cached Comtrade period.",
       "news": [],
@@ -7371,7 +7313,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Serbia sources 4.5% of observed imports and 10.9% of HS27 energy imports from Hungary in the cached Comtrade period.",
       "news": [],
@@ -7423,7 +7365,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Saudi Arabia sources 1.7% of observed imports and 12.8% of HS27 energy imports from Oman in the cached Comtrade period.",
       "news": [],
@@ -7475,7 +7417,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Greece sources 2.5% of observed imports and 12.0% of HS27 energy imports from Kazakhstan in the cached Comtrade period.",
       "news": [],
@@ -7527,7 +7469,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Algeria sources 4.3% of observed imports and 9.9% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -7579,7 +7521,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Italy sources 1.3% of observed imports and 11.8% of HS27 energy imports from Azerbaijan in the cached Comtrade period.",
       "news": [],
@@ -7631,7 +7573,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Lithuania sources 13.9% of observed imports and 1.5% of HS27 energy imports from Poland in the cached Comtrade period.",
       "news": [],
@@ -7683,7 +7625,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Italy sources 14.4% of observed imports and 1.0% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -7735,7 +7677,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Serbia sources 15.4% of observed imports and 0.1% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -7787,7 +7729,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Finland sources 13.3% of observed imports and 1.8% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -7839,7 +7781,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Greece sources 2.2% of observed imports and 10.8% of HS27 energy imports from Libya in the cached Comtrade period.",
       "news": [],
@@ -7849,6 +7791,58 @@
         "Comtrade exposure relevance 59",
         "trade dependence 2.2%",
         "energy dependence 10.8%"
+      ],
+      "bot_moves": []
+    },
+    {
+      "id": "CHN-ISR",
+      "a": "CHN",
+      "b": "ISR",
+      "origin": "dependency-discovery",
+      "relation_type": "exposure",
+      "strategic_relevance": 59,
+      "domains": [
+        "trade"
+      ],
+      "vector": {
+        "diplomatic": 12,
+        "military": 8,
+        "territorial": 6,
+        "trade": 42,
+        "energy": 14,
+        "domestic": 10,
+        "information": 8
+      },
+      "restraints": {
+        "economic_interdependence": 82,
+        "alliance_mediation": 35,
+        "security_cooperation": 22,
+        "deterrence": 30
+      },
+      "score": 16,
+      "trend": 0,
+      "dependencies": {
+        "trade": {
+          "a_on_b": 0,
+          "b_on_a": 15.42
+        },
+        "energy": {
+          "a_on_b": 0,
+          "b_on_a": 0.05
+        },
+        "period": "2025",
+        "coverage": 0.5,
+        "source": "UN Comtrade preview",
+        "updated_at": "2026-10-13T03:38:52.151Z"
+      },
+      "summary": "Silent dependency edge: Israel sources 15.4% of observed imports and 0.1% of HS27 energy imports from China in the cached Comtrade period.",
+      "news": [],
+      "scan_articles": 0,
+      "sensor_status": "dependency-cache",
+      "drivers": [
+        "Comtrade exposure relevance 59",
+        "trade dependence 15.4%",
+        "energy dependence 0.1%"
       ],
       "bot_moves": []
     },
@@ -7891,7 +7885,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Guyana sources 1.8% of observed imports and 10.9% of HS27 energy imports from Suriname in the cached Comtrade period.",
       "news": [],
@@ -7943,7 +7937,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Spain sources 1.4% of observed imports and 11.2% of HS27 energy imports from Algeria in the cached Comtrade period.",
       "news": [],
@@ -7995,7 +7989,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: DR Congo sources 8.2% of observed imports and 5.4% of HS27 energy imports from South Africa in the cached Comtrade period.",
       "news": [],
@@ -8047,7 +8041,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Rwanda sources 12.7% of observed imports and 1.3% of HS27 energy imports from Kenya in the cached Comtrade period.",
       "news": [],
@@ -8099,7 +8093,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Ukraine sources 6.0% of observed imports and 6.8% of HS27 energy imports from Türkiye in the cached Comtrade period.",
       "news": [],
@@ -8151,7 +8145,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Canada sources 0.0% of observed imports and 11.6% of HS27 energy imports from Nigeria in the cached Comtrade period.",
       "news": [],
@@ -8203,7 +8197,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Lithuania sources 2.3% of observed imports and 9.7% of HS27 energy imports from United Kingdom in the cached Comtrade period.",
       "news": [],
@@ -8255,7 +8249,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Finland sources 14.2% of observed imports and 0.0% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -8307,7 +8301,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Armenia sources 14.0% of observed imports and 0.0% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -8359,7 +8353,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: China sources 3.4% of observed imports and 8.5% of HS27 energy imports from Malaysia in the cached Comtrade period.",
       "news": [],
@@ -8411,7 +8405,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Lithuania sources 12.9% of observed imports and 0.8% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -8463,7 +8457,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: South Korea sources 2.2% of observed imports and 9.4% of HS27 energy imports from United Arab Emirates in the cached Comtrade period.",
       "news": [],
@@ -8515,7 +8509,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Türkiye sources 13.6% of observed imports and 0.0% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -8567,7 +8561,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Lithuania sources 8.5% of observed imports and 4.0% of HS27 energy imports from Latvia in the cached Comtrade period.",
       "news": [],
@@ -8619,7 +8613,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Finland sources 6.5% of observed imports and 5.4% of HS27 energy imports from Estonia in the cached Comtrade period.",
       "news": [],
@@ -8671,7 +8665,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Bosnia and Herzegovina sources 11.4% of observed imports and 1.3% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -8723,7 +8717,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Azerbaijan sources 9.6% of observed imports and 2.8% of HS27 energy imports from Türkiye in the cached Comtrade period.",
       "news": [],
@@ -8775,7 +8769,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Philippines sources 1.3% of observed imports and 9.5% of HS27 energy imports from Saudi Arabia in the cached Comtrade period.",
       "news": [],
@@ -8827,7 +8821,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Morocco sources 12.7% of observed imports and 0.2% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -8879,7 +8873,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Yemen sources 12.8% of observed imports and 0.0% of HS27 energy imports from Brazil in the cached Comtrade period.",
       "news": [],
@@ -8931,7 +8925,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Azerbaijan sources 0.6% of observed imports and 9.9% of HS27 energy imports from Turkmenistan in the cached Comtrade period.",
       "news": [],
@@ -8983,7 +8977,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Guyana sources 12.5% of observed imports and 0.2% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -9035,7 +9029,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Ukraine sources 1.7% of observed imports and 8.9% of HS27 energy imports from Lithuania in the cached Comtrade period.",
       "news": [],
@@ -9087,7 +9081,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Serbia sources 11.7% of observed imports and 0.7% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -9139,7 +9133,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Italy sources 1.0% of observed imports and 9.4% of HS27 energy imports from Libya in the cached Comtrade period.",
       "news": [],
@@ -9191,7 +9185,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Greece sources 11.3% of observed imports and 0.6% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -9243,7 +9237,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Spain sources 11.1% of observed imports and 0.3% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -9295,7 +9289,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Bosnia and Herzegovina sources 10.8% of observed imports and 0.5% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -9347,7 +9341,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Philippines sources 7.9% of observed imports and 2.8% of HS27 energy imports from Japan in the cached Comtrade period.",
       "news": [],
@@ -9399,7 +9393,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Spain sources 11.0% of observed imports and 0.3% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -9451,7 +9445,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Spain sources 6.9% of observed imports and 3.6% of HS27 energy imports from Italy in the cached Comtrade period.",
       "news": [],
@@ -9503,7 +9497,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Congo sources 10.4% of observed imports and 0.0% of HS27 energy imports from Hong Kong in the cached Comtrade period.",
       "news": [],
@@ -9555,7 +9549,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Greece sources 8.6% of observed imports and 1.5% of HS27 energy imports from Italy in the cached Comtrade period.",
       "news": [],
@@ -9607,7 +9601,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Italy sources 10.2% of observed imports and 0.1% of HS27 energy imports from China in the cached Comtrade period.",
       "news": [],
@@ -9659,7 +9653,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Yemen sources 10.3% of observed imports and 0.0% of HS27 energy imports from Russia in the cached Comtrade period.",
       "news": [],
@@ -9711,7 +9705,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: South Korea sources 7.7% of observed imports and 1.1% of HS27 energy imports from Japan in the cached Comtrade period.",
       "news": [],
@@ -9763,7 +9757,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Türkiye sources 8.2% of observed imports and 0.3% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -9815,7 +9809,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Algeria sources 5.4% of observed imports and 2.3% of HS27 energy imports from Türkiye in the cached Comtrade period.",
       "news": [],
@@ -9867,7 +9861,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Armenia sources 8.2% of observed imports and 0.0% of HS27 energy imports from Vietnam in the cached Comtrade period.",
       "news": [],
@@ -9919,7 +9913,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Morocco sources 5.1% of observed imports and 2.3% of HS27 energy imports from Türkiye in the cached Comtrade period.",
       "news": [],
@@ -9971,7 +9965,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Pakistan sources 6.7% of observed imports and 0.5% of HS27 energy imports from Indonesia in the cached Comtrade period.",
       "news": [],
@@ -9990,7 +9984,7 @@
       "b": "ISR",
       "origin": "dependency-discovery",
       "relation_type": "exposure",
-      "strategic_relevance": 40,
+      "strategic_relevance": 41,
       "domains": [
         "trade"
       ],
@@ -9998,40 +9992,40 @@
         "diplomatic": 12,
         "military": 8,
         "territorial": 6,
-        "trade": 27,
+        "trade": 28,
         "energy": 15,
         "domestic": 10,
         "information": 8
       },
       "restraints": {
-        "economic_interdependence": 62,
+        "economic_interdependence": 63,
         "alliance_mediation": 35,
         "security_cooperation": 22,
         "deterrence": 30
       },
-      "score": 12,
+      "score": 13,
       "trend": 0,
       "dependencies": {
         "trade": {
           "a_on_b": 0,
-          "b_on_a": 6.2
+          "b_on_a": 6.79
         },
         "energy": {
           "a_on_b": 0,
-          "b_on_a": 0.33
+          "b_on_a": 0.3
         },
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
-      "summary": "Silent dependency edge: Israel sources 6.2% of observed imports and 0.3% of HS27 energy imports from Germany in the cached Comtrade period.",
+      "summary": "Silent dependency edge: Israel sources 6.8% of observed imports and 0.3% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
       "scan_articles": 0,
       "sensor_status": "dependency-cache",
       "drivers": [
-        "Comtrade exposure relevance 40",
-        "trade dependence 6.2%",
+        "Comtrade exposure relevance 41",
+        "trade dependence 6.8%",
         "energy dependence 0.3%"
       ],
       "bot_moves": []
@@ -10075,7 +10069,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Rwanda sources 6.5% of observed imports and 0.0% of HS27 energy imports from Cameroon in the cached Comtrade period.",
       "news": [],
@@ -10127,7 +10121,7 @@
         "period": "2024",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Algeria sources 6.4% of observed imports and 0.0% of HS27 energy imports from Brazil in the cached Comtrade period.",
       "news": [],
@@ -10179,7 +10173,7 @@
         "period": "2025",
         "coverage": 0.5,
         "source": "UN Comtrade preview",
-        "updated_at": "2026-10-12T23:04:18.795Z"
+        "updated_at": "2026-10-13T03:38:52.151Z"
       },
       "summary": "Silent dependency edge: Morocco sources 5.4% of observed imports and 0.1% of HS27 energy imports from Germany in the cached Comtrade period.",
       "news": [],
@@ -10207,7 +10201,7 @@
         "shipping"
       ],
       "score": 84,
-      "gearwatch_pressure": 9.1
+      "gearwatch_pressure": 9
     },
     {
       "id": "SUEZ",
@@ -10222,7 +10216,7 @@
         "trade"
       ],
       "score": 74,
-      "gearwatch_pressure": 10.6
+      "gearwatch_pressure": 10.5
     },
     {
       "id": "BAB",
@@ -10237,7 +10231,7 @@
         "security"
       ],
       "score": 70,
-      "gearwatch_pressure": 4.6
+      "gearwatch_pressure": 5.1
     },
     {
       "id": "MALACCA",
@@ -10252,8 +10246,8 @@
         "trade",
         "energy"
       ],
-      "score": 59,
-      "gearwatch_pressure": 4
+      "score": 58,
+      "gearwatch_pressure": 3
     },
     {
       "id": "GIBRALTAR",
@@ -10282,59 +10276,22 @@
         "shipping",
         "trade"
       ],
-      "score": 44,
+      "score": 45,
       "gearwatch_pressure": 0
     }
   ],
   "gearwatch": {
     "source": "jandromani/HolaInframundo",
-    "updated_at": "2026-10-12T15:29:55.210Z",
+    "updated_at": "2026-10-13T00:49:25.398Z",
     "headline": "GearWatch causal radar connected",
     "briefing": "",
     "mechanisms": [
       {
-        "id": "DIESEL_REFINING_CRISIS",
-        "label": "Diesel / refining crisis",
-        "score": 45,
-        "state": "ARMING",
-        "delta": 35,
-        "map": {
-          "domains": {
-            "energy": 0.45,
-            "trade": 0.16
-          },
-          "pairs": [
-            "USA-IRN",
-            "RUS-UKR",
-            "ESP-MAR"
-          ],
-          "chokes": [
-            "HORMUZ",
-            "SUEZ"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "energy": 0.45,
-            "trade": 0.16
-          },
-          "pairs": [
-            "USA-IRN",
-            "RUS-UKR",
-            "ESP-MAR"
-          ],
-          "chokes": [
-            "HORMUZ",
-            "SUEZ"
-          ]
-        }
-      },
-      {
         "id": "GLOBAL_REFINANCING_STRESS",
         "label": "Global refinancing stress",
-        "score": 44,
+        "score": 84,
         "state": "WATCH",
-        "delta": -8,
+        "delta": 40,
         "map": {
           "domains": {
             "trade": 0.22,
@@ -10363,9 +10320,9 @@
       {
         "id": "JAPAN_CARRY_UNWIND",
         "label": "Japan carry unwind",
-        "score": 39,
-        "state": "WATCH",
-        "delta": 16,
+        "score": 53,
+        "state": "ARMING",
+        "delta": 14,
         "map": {
           "domains": {
             "trade": 0.2,
@@ -10386,85 +10343,63 @@
             "USA-CHN",
             "CHN-TWN",
             "PRK-KOR"
+          ]
+        }
+      },
+      {
+        "id": "DIESEL_REFINING_CRISIS",
+        "label": "Diesel / refining crisis",
+        "score": 47,
+        "state": "ARMING",
+        "delta": 2,
+        "map": {
+          "domains": {
+            "energy": 0.45,
+            "trade": 0.16
+          },
+          "pairs": [
+            "USA-IRN",
+            "RUS-UKR",
+            "ESP-MAR"
+          ],
+          "chokes": [
+            "HORMUZ",
+            "SUEZ"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "energy": 0.45,
+            "trade": 0.16
+          },
+          "pairs": [
+            "USA-IRN",
+            "RUS-UKR",
+            "ESP-MAR"
+          ],
+          "chokes": [
+            "HORMUZ",
+            "SUEZ"
           ]
         }
       },
       {
         "id": "MILITARY_ENERGY_AUTONOMY",
         "label": "Military energy autonomy",
-        "score": 33,
+        "score": 40,
         "state": "WATCH",
-        "delta": -6,
+        "delta": 7,
         "map": null,
         "impact_map": null
       },
       {
-        "id": "ENERGETICS_SHORTAGE",
-        "label": "Energetics / explosives shortage",
+        "id": "STRATEGIC_ALUMINIUM",
+        "label": "Strategic aluminium",
         "score": 32,
         "state": "WATCH",
-        "delta": 9,
-        "map": {
-          "domains": {
-            "military": 0.4
-          },
-          "pairs": [
-            "RUS-UKR",
-            "ISR-IRN",
-            "USA-IRN"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "military": 0.4
-          },
-          "pairs": [
-            "RUS-UKR",
-            "ISR-IRN",
-            "USA-IRN"
-          ]
-        }
-      },
-      {
-        "id": "LNG_REROUTING",
-        "label": "LNG rerouting",
-        "score": 31,
-        "state": "WATCH",
-        "delta": -1,
-        "map": {
-          "domains": {
-            "energy": 0.5,
-            "trade": 0.18
-          },
-          "pairs": [
-            "USA-IRN",
-            "ESP-MAR",
-            "CHN-TWN",
-            "PRK-KOR"
-          ],
-          "chokes": [
-            "HORMUZ",
-            "SUEZ",
-            "MALACCA"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "energy": 0.5,
-            "trade": 0.18
-          },
-          "pairs": [
-            "USA-IRN",
-            "ESP-MAR",
-            "CHN-TWN",
-            "PRK-KOR"
-          ],
-          "chokes": [
-            "HORMUZ",
-            "SUEZ",
-            "MALACCA"
-          ]
-        }
+        "delta": 3,
+        "map": null,
+        "impact_map": null
       },
       {
         "id": "COUNTER_UAS_COST_CURVE",
@@ -10494,143 +10429,57 @@
         }
       },
       {
-        "id": "NUCLEAR_FUEL_SOVEREIGNTY",
-        "label": "Nuclear fuel sovereignty",
-        "score": 31,
-        "state": "WATCH",
-        "delta": -1,
-        "map": {
-          "domains": {
-            "energy": 0.24,
-            "military": 0.12
-          },
-          "pairs": [
-            "USA-IRN",
-            "RUS-UKR",
-            "USA-CHN"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "energy": 0.24,
-            "military": 0.12
-          },
-          "pairs": [
-            "USA-IRN",
-            "RUS-UKR",
-            "USA-CHN"
-          ]
-        }
-      },
-      {
-        "id": "STRATEGIC_ALUMINIUM",
-        "label": "Strategic aluminium",
-        "score": 29,
-        "state": "WATCH",
-        "delta": -7,
-        "map": null,
-        "impact_map": null
-      },
-      {
-        "id": "AI_TIME_TO_POWER",
-        "label": "AI time-to-power",
-        "score": 29,
-        "state": "WATCH",
-        "delta": 6,
-        "map": {
-          "domains": {
-            "energy": 0.18,
-            "trade": 0.12
-          },
-          "pairs": [
-            "USA-CHN",
-            "CHN-TWN"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "energy": 0.18,
-            "trade": 0.12
-          },
-          "pairs": [
-            "USA-CHN",
-            "CHN-TWN"
-          ]
-        }
-      },
-      {
         "id": "BEHIND_METER_AI_POWER",
         "label": "Behind-the-meter AI power",
-        "score": 28,
+        "score": 31,
         "state": "WATCH",
-        "delta": 10,
+        "delta": 3,
         "map": null,
         "impact_map": null
       },
       {
-        "id": "ROBOTICS_DECOUPLING",
-        "label": "Robotics decoupling",
-        "score": 28,
+        "id": "CRUDE_TANKER_DISLOCATION",
+        "label": "Crude tanker dislocation",
+        "score": 29,
         "state": "WATCH",
-        "delta": -4,
+        "delta": 9,
         "map": {
           "domains": {
-            "trade": 0.2,
-            "information": 0.08
+            "energy": 0.38,
+            "trade": 0.24
           },
           "pairs": [
-            "USA-CHN",
-            "CHN-TWN"
+            "USA-IRN",
+            "ISR-IRN"
+          ],
+          "chokes": [
+            "HORMUZ",
+            "SUEZ",
+            "BAB"
           ]
         },
         "impact_map": {
           "domains": {
-            "trade": 0.2,
-            "information": 0.08
+            "energy": 0.38,
+            "trade": 0.24
           },
           "pairs": [
-            "USA-CHN",
-            "CHN-TWN"
-          ]
-        }
-      },
-      {
-        "id": "ARSENAL_DEPLETION",
-        "label": "Arsenal depletion / replenishment",
-        "score": 25,
-        "state": "WATCH",
-        "delta": 4,
-        "map": {
-          "domains": {
-            "military": 0.48,
-            "diplomatic": 0.12
-          },
-          "pairs": [
-            "RUS-UKR",
-            "ISR-IRN",
             "USA-IRN",
-            "PRK-KOR"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "military": 0.48,
-            "diplomatic": 0.12
-          },
-          "pairs": [
-            "RUS-UKR",
-            "ISR-IRN",
-            "USA-IRN",
-            "PRK-KOR"
+            "ISR-IRN"
+          ],
+          "chokes": [
+            "HORMUZ",
+            "SUEZ",
+            "BAB"
           ]
         }
       },
       {
         "id": "ROCKET_MOTOR_SHORTAGE",
         "label": "Rocket motor bottleneck",
-        "score": 24,
-        "state": "DORMANT",
-        "delta": -19,
+        "score": 27,
+        "state": "WATCH",
+        "delta": 3,
         "map": {
           "domains": {
             "military": 0.42
@@ -10645,6 +10494,188 @@
         "impact_map": {
           "domains": {
             "military": 0.42
+          },
+          "pairs": [
+            "RUS-UKR",
+            "ISR-IRN",
+            "USA-IRN",
+            "PRK-KOR"
+          ]
+        }
+      },
+      {
+        "id": "ROBOTICS_DECOUPLING",
+        "label": "Robotics decoupling",
+        "score": 27,
+        "state": "WATCH",
+        "delta": -1,
+        "map": {
+          "domains": {
+            "trade": 0.2,
+            "information": 0.08
+          },
+          "pairs": [
+            "USA-CHN",
+            "CHN-TWN"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "trade": 0.2,
+            "information": 0.08
+          },
+          "pairs": [
+            "USA-CHN",
+            "CHN-TWN"
+          ]
+        }
+      },
+      {
+        "id": "AI_TIME_TO_POWER",
+        "label": "AI time-to-power",
+        "score": 25,
+        "state": "WATCH",
+        "delta": -4,
+        "map": {
+          "domains": {
+            "energy": 0.18,
+            "trade": 0.12
+          },
+          "pairs": [
+            "USA-CHN",
+            "CHN-TWN"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "energy": 0.18,
+            "trade": 0.12
+          },
+          "pairs": [
+            "USA-CHN",
+            "CHN-TWN"
+          ]
+        }
+      },
+      {
+        "id": "CHEAP_DRONE_SCALING",
+        "label": "Cheap-drone scaling",
+        "score": 22,
+        "state": "DORMANT",
+        "delta": 7,
+        "map": {
+          "domains": {
+            "military": 0.4
+          },
+          "pairs": [
+            "RUS-UKR",
+            "ISR-IRN",
+            "USA-IRN"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "military": 0.4
+          },
+          "pairs": [
+            "RUS-UKR",
+            "ISR-IRN",
+            "USA-IRN"
+          ]
+        }
+      },
+      {
+        "id": "NUCLEAR_FUEL_SOVEREIGNTY",
+        "label": "Nuclear fuel sovereignty",
+        "score": 21,
+        "state": "DORMANT",
+        "delta": -10,
+        "map": {
+          "domains": {
+            "energy": 0.24,
+            "military": 0.12
+          },
+          "pairs": [
+            "USA-IRN",
+            "RUS-UKR",
+            "USA-CHN"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "energy": 0.24,
+            "military": 0.12
+          },
+          "pairs": [
+            "USA-IRN",
+            "RUS-UKR",
+            "USA-CHN"
+          ]
+        }
+      },
+      {
+        "id": "LNG_REROUTING",
+        "label": "LNG rerouting",
+        "score": 20,
+        "state": "DORMANT",
+        "delta": -11,
+        "map": {
+          "domains": {
+            "energy": 0.5,
+            "trade": 0.18
+          },
+          "pairs": [
+            "USA-IRN",
+            "ESP-MAR",
+            "CHN-TWN",
+            "PRK-KOR"
+          ],
+          "chokes": [
+            "HORMUZ",
+            "SUEZ",
+            "MALACCA"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "energy": 0.5,
+            "trade": 0.18
+          },
+          "pairs": [
+            "USA-IRN",
+            "ESP-MAR",
+            "CHN-TWN",
+            "PRK-KOR"
+          ],
+          "chokes": [
+            "HORMUZ",
+            "SUEZ",
+            "MALACCA"
+          ]
+        }
+      },
+      {
+        "id": "ARSENAL_DEPLETION",
+        "label": "Arsenal depletion / replenishment",
+        "score": 20,
+        "state": "DORMANT",
+        "delta": -5,
+        "map": {
+          "domains": {
+            "military": 0.48,
+            "diplomatic": 0.12
+          },
+          "pairs": [
+            "RUS-UKR",
+            "ISR-IRN",
+            "USA-IRN",
+            "PRK-KOR"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "military": 0.48,
+            "diplomatic": 0.12
           },
           "pairs": [
             "RUS-UKR",
@@ -10657,16 +10688,16 @@
       {
         "id": "ROBOTICS_ACTUATOR_SCALE",
         "label": "Robotics actuator scale",
-        "score": 24,
+        "score": 19,
         "state": "DORMANT",
-        "delta": -4,
+        "delta": -5,
         "map": null,
         "impact_map": null
       },
       {
         "id": "EUROPE_STRATEGIC_AUTONOMY",
         "label": "European strategic autonomy",
-        "score": 21,
+        "score": 19,
         "state": "DORMANT",
         "delta": -2,
         "map": {
@@ -10693,48 +10724,38 @@
         }
       },
       {
-        "id": "CRUDE_TANKER_DISLOCATION",
-        "label": "Crude tanker dislocation",
-        "score": 20,
+        "id": "ENERGETICS_SHORTAGE",
+        "label": "Energetics / explosives shortage",
+        "score": 18,
         "state": "DORMANT",
-        "delta": 7,
+        "delta": -14,
         "map": {
           "domains": {
-            "energy": 0.38,
-            "trade": 0.24
+            "military": 0.4
           },
           "pairs": [
-            "USA-IRN",
-            "ISR-IRN"
-          ],
-          "chokes": [
-            "HORMUZ",
-            "SUEZ",
-            "BAB"
+            "RUS-UKR",
+            "ISR-IRN",
+            "USA-IRN"
           ]
         },
         "impact_map": {
           "domains": {
-            "energy": 0.38,
-            "trade": 0.24
+            "military": 0.4
           },
           "pairs": [
-            "USA-IRN",
-            "ISR-IRN"
-          ],
-          "chokes": [
-            "HORMUZ",
-            "SUEZ",
-            "BAB"
+            "RUS-UKR",
+            "ISR-IRN",
+            "USA-IRN"
           ]
         }
       },
       {
         "id": "UNDERWATER_SECURITY",
         "label": "Mine / underwater security",
-        "score": 19,
+        "score": 18,
         "state": "DORMANT",
-        "delta": -10,
+        "delta": -1,
         "map": {
           "domains": {
             "military": 0.24,
@@ -10771,9 +10792,9 @@
       {
         "id": "PRODUCT_TANKER_TONMILES",
         "label": "Product tanker ton-miles",
-        "score": 18,
+        "score": 17,
         "state": "DORMANT",
-        "delta": -5,
+        "delta": -1,
         "map": {
           "domains": {
             "trade": 0.35,
@@ -10802,50 +10823,12 @@
             "HORMUZ",
             "SUEZ",
             "BAB"
-          ]
-        }
-      },
-      {
-        "id": "RARE_EARTH_MAGNET_SHORTAGE",
-        "label": "Rare-earth magnets",
-        "score": 18,
-        "state": "DORMANT",
-        "delta": 2,
-        "map": {
-          "domains": {
-            "trade": 0.34,
-            "military": 0.16
-          },
-          "pairs": [
-            "USA-CHN",
-            "CHN-TWN",
-            "IND-CHN"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "trade": 0.34,
-            "military": 0.16
-          },
-          "pairs": [
-            "USA-CHN",
-            "CHN-TWN",
-            "IND-CHN"
           ]
         }
       },
       {
         "id": "AI_GHOST_DEMAND",
         "label": "AI ghost demand",
-        "score": 16,
-        "state": "DORMANT",
-        "delta": -2,
-        "map": null,
-        "impact_map": null
-      },
-      {
-        "id": "ATLANTIC_BARREL_PREMIUM",
-        "label": "Atlantic barrels replace Gulf supply",
         "score": 15,
         "state": "DORMANT",
         "delta": -1,
@@ -10853,36 +10836,18 @@
         "impact_map": null
       },
       {
-        "id": "CHEAP_DRONE_SCALING",
-        "label": "Cheap-drone scaling",
-        "score": 15,
+        "id": "ATLANTIC_BARREL_PREMIUM",
+        "label": "Atlantic barrels replace Gulf supply",
+        "score": 12,
         "state": "DORMANT",
-        "delta": -11,
-        "map": {
-          "domains": {
-            "military": 0.4
-          },
-          "pairs": [
-            "RUS-UKR",
-            "ISR-IRN",
-            "USA-IRN"
-          ]
-        },
-        "impact_map": {
-          "domains": {
-            "military": 0.4
-          },
-          "pairs": [
-            "RUS-UKR",
-            "ISR-IRN",
-            "USA-IRN"
-          ]
-        }
+        "delta": -3,
+        "map": null,
+        "impact_map": null
       },
       {
         "id": "CEYHAN_BYPASS",
         "label": "Ceyhan / Kurdistan bypass",
-        "score": 13,
+        "score": 12,
         "state": "DORMANT",
         "delta": -1,
         "map": null,
@@ -10918,6 +10883,35 @@
         }
       },
       {
+        "id": "RARE_EARTH_MAGNET_SHORTAGE",
+        "label": "Rare-earth magnets",
+        "score": 11,
+        "state": "DORMANT",
+        "delta": -7,
+        "map": {
+          "domains": {
+            "trade": 0.34,
+            "military": 0.16
+          },
+          "pairs": [
+            "USA-CHN",
+            "CHN-TWN",
+            "IND-CHN"
+          ]
+        },
+        "impact_map": {
+          "domains": {
+            "trade": 0.34,
+            "military": 0.16
+          },
+          "pairs": [
+            "USA-CHN",
+            "CHN-TWN",
+            "IND-CHN"
+          ]
+        }
+      },
+      {
         "id": "OT_CYBER_SHOCK",
         "label": "Cyber to physical infrastructure",
         "score": 0,
@@ -10929,29 +10923,6 @@
     ]
   },
   "history": [
-    {
-      "at": "2026-09-09T18:42:23.912Z",
-      "scores": {
-        "ESP-MAR": 65,
-        "MAR-DZA": 65,
-        "USA-IRN": 81,
-        "ISR-IRN": 82,
-        "CHN-TWN": 85,
-        "USA-CHN": 60,
-        "CHN-PHL": 68,
-        "RUS-UKR": 96,
-        "PRK-KOR": 74,
-        "IND-PAK": 64,
-        "IND-CHN": 60,
-        "SRB-BIH": 54,
-        "GRC-TUR": 55,
-        "ARM-AZE": 56,
-        "COD-RWA": 63,
-        "VEN-GUY": 60,
-        "ETH-ERI": 54
-      },
-      "global_risk": 79
-    },
     {
       "at": "2026-09-09T21:45:14.799Z",
       "scores": {
@@ -14792,14 +14763,37 @@
         "ETH-ERI": 56
       },
       "global_risk": 79
+    },
+    {
+      "at": "2026-10-13T03:38:09.062Z",
+      "scores": {
+        "ESP-MAR": 66,
+        "MAR-DZA": 64,
+        "USA-IRN": 82,
+        "ISR-IRN": 81,
+        "CHN-TWN": 83,
+        "USA-CHN": 61,
+        "CHN-PHL": 67,
+        "RUS-UKR": 96,
+        "PRK-KOR": 73,
+        "IND-PAK": 65,
+        "IND-CHN": 55,
+        "SRB-BIH": 58,
+        "GRC-TUR": 53,
+        "ARM-AZE": 58,
+        "COD-RWA": 62,
+        "VEN-GUY": 61,
+        "ETH-ERI": 56
+      },
+      "global_risk": 79
     }
   ],
   "news_quality": {
     "gate": "actors-or-specific-topic",
-    "updated_at": "2026-10-12T23:03:43.495Z",
+    "updated_at": "2026-10-13T03:38:14.785Z",
     "pairs_with_relevant_news": 15,
-    "total_accepted": 83,
-    "total_dropped": 65
+    "total_accepted": 82,
+    "total_dropped": 68
   },
   "political_calendar": {
     "updated_at": "2026-09-07",
@@ -14813,7 +14807,7 @@
         "confirmed": true,
         "impact": 68,
         "source": "https://www.val.se/english/future-elections/2026-elections---the-riksdag-and-regional-and-municipal-councils",
-        "days_to_event": -29,
+        "days_to_event": -30,
         "pressure": 0,
         "status": "confirmed"
       },
@@ -14826,7 +14820,7 @@
         "confirmed": true,
         "impact": 62,
         "source": "https://odihr.osce.org/odihr/elections",
-        "days_to_event": -22,
+        "days_to_event": -23,
         "pressure": 0,
         "status": "confirmed"
       },
@@ -14839,7 +14833,7 @@
         "confirmed": true,
         "impact": 82,
         "source": "https://www.maroc.ma/fr/elections-legislatives-marocaines-2026",
-        "days_to_event": -19,
+        "days_to_event": -20,
         "pressure": 0,
         "status": "confirmed"
       },
@@ -14852,7 +14846,7 @@
         "confirmed": true,
         "impact": 58,
         "source": "https://odihr.osce.org/odihr/elections",
-        "days_to_event": -9,
+        "days_to_event": -10,
         "pressure": 0,
         "status": "confirmed"
       },
@@ -14865,7 +14859,7 @@
         "confirmed": true,
         "impact": 78,
         "source": "https://www.izbori.ba/?CategoryID=183&Id=6034&Lang=6",
-        "days_to_event": -8,
+        "days_to_event": -9,
         "pressure": 0,
         "status": "confirmed"
       },
@@ -14879,8 +14873,8 @@
         "confirmed": false,
         "impact": 84,
         "source": "https://www.reuters.com/world/serbias-government-propose-dissolving-parliament-an-election-report-says-2026-09-07/",
-        "days_to_event": 6,
-        "pressure": 71.7,
+        "days_to_event": 5,
+        "pressure": 73.6,
         "status": "window"
       },
       {
@@ -14892,8 +14886,8 @@
         "confirmed": true,
         "impact": 62,
         "source": "https://www.parliament.bg/en/news/ID/6600",
-        "days_to_event": 13,
-        "pressure": 44,
+        "days_to_event": 12,
+        "pressure": 45.2,
         "status": "confirmed"
       },
       {
@@ -14905,14 +14899,14 @@
         "confirmed": true,
         "impact": 74,
         "source": "https://odihr.osce.org/odihr/elections",
-        "days_to_event": 22,
-        "pressure": 41.5,
+        "days_to_event": 21,
+        "pressure": 42.6,
         "status": "confirmed"
       }
     ]
   },
   "auto_discovery": {
-    "updated_at": "2026-10-12T23:03:44.223Z",
+    "updated_at": "2026-10-13T03:38:15.378Z",
     "memory_version": 2,
     "catalog_countries": 250,
     "articles_scanned": 90,
@@ -14927,7 +14921,7 @@
     }
   },
   "dependency_graph": {
-    "updated_at": "2026-10-12T23:04:18.797Z",
+    "updated_at": "2026-10-13T03:38:52.153Z",
     "source": "UN Comtrade preview API",
     "cache_ttl_days": 7,
     "failure_cooldown_hours": 12,
@@ -14936,7 +14930,7 @@
     "reporters_cached": 28,
     "reporters_refreshed": 2,
     "reporters_failed": 2,
-    "reporters_in_cooldown": 6,
+    "reporters_in_cooldown": 8,
     "relationships_enriched": 15,
     "exposure_edges_created": 116,
     "remaining_candidate_reporters": 9,
@@ -15027,7 +15021,7 @@
         "hottest_front": "ESP-MAR",
         "hottest_score": 66
       },
-      "generated_at": "2026-10-12T23:04:18.831Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "MAR": {
@@ -15110,7 +15104,7 @@
         "hottest_front": "ESP-MAR",
         "hottest_score": 66
       },
-      "generated_at": "2026-10-12T23:04:18.831Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "DZA": {
@@ -15182,7 +15176,7 @@
         "hottest_front": "MAR-DZA",
         "hottest_score": 64
       },
-      "generated_at": "2026-10-12T23:04:18.831Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "USA": {
@@ -15193,9 +15187,9 @@
         "security": 71,
         "economy": 37,
         "energy": 28,
-        "stability": 62,
+        "stability": 63,
         "influence": 62,
-        "domestic": 69
+        "domestic": 70
       },
       "goals": [
         {
@@ -15209,8 +15203,8 @@
         },
         {
           "id": "manage_domestic_cycle",
-          "priority": 70,
-          "value": 41.5
+          "priority": 71,
+          "value": 42.6
         }
       ],
       "next_moves": [
@@ -15229,7 +15223,7 @@
           "type": "NARRATIVE_CONTROL",
           "target": "IRN",
           "front": "USA-IRN",
-          "utility": 67,
+          "utility": 68,
           "effects": {
             "domestic": -1,
             "information": 1
@@ -15249,13 +15243,13 @@
         }
       ],
       "constraints": {
-        "election_pressure": 41.5,
+        "election_pressure": 42.6,
         "trade_dependency": 0,
         "energy_dependency": 0,
         "hottest_front": "USA-IRN",
         "hottest_score": 82
       },
-      "generated_at": "2026-10-12T23:04:18.831Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "IRN": {
@@ -15308,7 +15302,7 @@
           "type": "NARRATIVE_CONTROL",
           "target": "USA",
           "front": "USA-IRN",
-          "utility": 41,
+          "utility": 42,
           "effects": {
             "domestic": -1,
             "information": 1
@@ -15323,7 +15317,7 @@
         "hottest_front": "USA-IRN",
         "hottest_score": 82
       },
-      "generated_at": "2026-10-12T23:04:18.831Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "ISR": {
@@ -15332,7 +15326,7 @@
       "posture": "DETER_AND_CONTAIN",
       "utility_weights": {
         "security": 71,
-        "economy": 64,
+        "economy": 57,
         "energy": 36,
         "stability": 42,
         "influence": 53,
@@ -15340,14 +15334,14 @@
       },
       "goals": [
         {
-          "id": "diversify_trade",
-          "priority": 89,
-          "value": 21.8
-        },
-        {
           "id": "contain_hot_front",
           "priority": 81,
           "target": "IRN"
+        },
+        {
+          "id": "diversify_trade",
+          "priority": 76,
+          "value": 15.4
         },
         {
           "id": "preserve_influence",
@@ -15359,7 +15353,7 @@
           "type": "DIVERSIFY_TRADE",
           "target": "IRN",
           "front": "ISR-IRN",
-          "utility": 70,
+          "utility": 58,
           "effects": {
             "trade": -2,
             "economic_interdependence": -1
@@ -15370,7 +15364,7 @@
           "type": "DEESCALATE_CHANNEL",
           "target": "IRN",
           "front": "ISR-IRN",
-          "utility": 45,
+          "utility": 44,
           "effects": {
             "diplomatic": -5,
             "mediation": 5
@@ -15391,12 +15385,12 @@
       ],
       "constraints": {
         "election_pressure": 0,
-        "trade_dependency": 21.8,
+        "trade_dependency": 15.4,
         "energy_dependency": 0.3,
         "hottest_front": "ISR-IRN",
         "hottest_score": 81
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "CHN": {
@@ -15483,7 +15477,7 @@
         "hottest_front": "CHN-TWN",
         "hottest_score": 83
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "TWN": {
@@ -15562,7 +15556,7 @@
         "hottest_front": "CHN-TWN",
         "hottest_score": 83
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "PHL": {
@@ -15634,7 +15628,7 @@
         "hottest_front": "CHN-PHL",
         "hottest_score": 67
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.187Z",
       "mode": "deterministic-utility"
     },
     "RUS": {
@@ -15713,7 +15707,7 @@
         "hottest_front": "RUS-UKR",
         "hottest_score": 96
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "UKR": {
@@ -15800,7 +15794,7 @@
         "hottest_front": "RUS-UKR",
         "hottest_score": 96
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "PRK": {
@@ -15864,7 +15858,7 @@
         "hottest_front": "PRK-KOR",
         "hottest_score": 73
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "KOR": {
@@ -15951,7 +15945,7 @@
         "hottest_front": "PRK-KOR",
         "hottest_score": 73
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "IND": {
@@ -16030,7 +16024,7 @@
         "hottest_front": "IND-PAK",
         "hottest_score": 65
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "PAK": {
@@ -16113,7 +16107,7 @@
         "hottest_front": "IND-PAK",
         "hottest_score": 65
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "SRB": {
@@ -16121,18 +16115,18 @@
       "name": "Serbia",
       "posture": "HEDGE_DEPENDENCIES",
       "utility_weights": {
-        "security": 61,
+        "security": 62,
         "economy": 61,
         "energy": 63,
-        "stability": 81,
+        "stability": 82,
         "influence": 42,
-        "domestic": 92
+        "domestic": 94
       },
       "goals": [
         {
           "id": "manage_domestic_cycle",
-          "priority": 88,
-          "value": 71.7
+          "priority": 89,
+          "value": 73.6
         },
         {
           "id": "diversify_trade",
@@ -16150,7 +16144,7 @@
           "type": "NARRATIVE_CONTROL",
           "target": "BIH",
           "front": "SRB-BIH",
-          "utility": 80,
+          "utility": 82,
           "effects": {
             "domestic": -1,
             "information": 1
@@ -16179,13 +16173,13 @@
         }
       ],
       "constraints": {
-        "election_pressure": 71.7,
+        "election_pressure": 73.6,
         "trade_dependency": 15.4,
         "energy_dependency": 18.2,
         "hottest_front": "SRB-BIH",
-        "hottest_score": 57
+        "hottest_score": 58
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "BIH": {
@@ -16250,9 +16244,9 @@
         "trade_dependency": 11.8,
         "energy_dependency": 29.1,
         "hottest_front": "SRB-BIH",
-        "hottest_score": 57
+        "hottest_score": 58
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "COD": {
@@ -16324,7 +16318,7 @@
         "hottest_front": "COD-RWA",
         "hottest_score": 62
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "RWA": {
@@ -16396,7 +16390,7 @@
         "hottest_front": "COD-RWA",
         "hottest_score": 62
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "VEN": {
@@ -16438,7 +16432,7 @@
         "hottest_front": "VEN-GUY",
         "hottest_score": 61
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "GUY": {
@@ -16499,7 +16493,7 @@
         "hottest_front": "VEN-GUY",
         "hottest_score": 61
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "GRC": {
@@ -16544,7 +16538,7 @@
         "hottest_front": "GRC-TUR",
         "hottest_score": 53
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "TUR": {
@@ -16604,7 +16598,7 @@
         "hottest_front": "GRC-TUR",
         "hottest_score": 53
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "ARM": {
@@ -16671,7 +16665,7 @@
         "hottest_front": "ARM-AZE",
         "hottest_score": 58
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "AZE": {
@@ -16738,7 +16732,7 @@
         "hottest_front": "ARM-AZE",
         "hottest_score": 58
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "ETH": {
@@ -16762,7 +16756,7 @@
         "hottest_front": "ETH-ERI",
         "hottest_score": 56
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "ERI": {
@@ -16786,7 +16780,7 @@
         "hottest_front": "ETH-ERI",
         "hottest_score": 56
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "ITA": {
@@ -16831,7 +16825,7 @@
         "hottest_front": "DZA-ITA",
         "hottest_score": 29
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "HRV": {
@@ -16855,7 +16849,7 @@
         "hottest_front": "HRV-SVN",
         "hottest_score": 33
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "CAN": {
@@ -16900,7 +16894,7 @@
         "hottest_front": "CAN-CHN",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "DEU": {
@@ -16924,7 +16918,7 @@
         "hottest_front": "CAN-DEU",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "MEX": {
@@ -16948,7 +16942,7 @@
         "hottest_front": "CAN-MEX",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.832Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "GBR": {
@@ -16972,7 +16966,7 @@
         "hottest_front": "CAN-GBR",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "COG": {
@@ -17017,7 +17011,7 @@
         "hottest_front": "COG-TGO",
         "hottest_score": 22
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "TGO": {
@@ -17041,7 +17035,7 @@
         "hottest_front": "COG-TGO",
         "hottest_score": 22
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "ARE": {
@@ -17065,7 +17059,7 @@
         "hottest_front": "ARE-YEM",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "FIN": {
@@ -17110,7 +17104,7 @@
         "hottest_front": "FIN-SWE",
         "hottest_score": 25
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "SWE": {
@@ -17134,7 +17128,7 @@
         "hottest_front": "FIN-SWE",
         "hottest_score": 25
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "IRQ": {
@@ -17158,7 +17152,7 @@
         "hottest_front": "GRC-IRQ",
         "hottest_score": 19
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "TTO": {
@@ -17182,7 +17176,7 @@
         "hottest_front": "GUY-TTO",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "LTU": {
@@ -17227,7 +17221,7 @@
         "hottest_front": "LTU-SAU",
         "hottest_score": 21
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "SAU": {
@@ -17272,7 +17266,7 @@
         "hottest_front": "EGY-SAU",
         "hottest_score": 22
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "EGY": {
@@ -17296,7 +17290,7 @@
         "hottest_front": "EGY-SAU",
         "hottest_score": 22
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "SVN": {
@@ -17341,7 +17335,7 @@
         "hottest_front": "AUT-SVN",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.188Z",
       "mode": "deterministic-utility"
     },
     "AUT": {
@@ -17365,7 +17359,7 @@
         "hottest_front": "AUT-SVN",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "CYP": {
@@ -17389,7 +17383,7 @@
         "hottest_front": "CYP-SVN",
         "hottest_score": 31
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "CZE": {
@@ -17413,7 +17407,7 @@
         "hottest_front": "CZE-SVN",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "YEM": {
@@ -17458,7 +17452,7 @@
         "hottest_front": "ARE-YEM",
         "hottest_score": 34
       },
-      "generated_at": "2026-10-12T23:04:18.833Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "JPN": {
@@ -17503,7 +17497,7 @@
         "hottest_front": "CHN-JPN",
         "hottest_score": 19
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "AUS": {
@@ -17527,7 +17521,7 @@
         "hottest_front": "AUS-JPN",
         "hottest_score": 18
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "POL": {
@@ -17551,7 +17545,7 @@
         "hottest_front": "POL-UKR",
         "hottest_score": 16
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "QAT": {
@@ -17575,7 +17569,7 @@
         "hottest_front": "PAK-QAT",
         "hottest_score": 17
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "IDN": {
@@ -17599,7 +17593,7 @@
         "hottest_front": "IDN-PHL",
         "hottest_score": 16
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "SGP": {
@@ -17623,7 +17617,7 @@
         "hottest_front": "GUY-SGP",
         "hottest_score": 20
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "NAM": {
@@ -17647,7 +17641,7 @@
         "hottest_front": "COG-NAM",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "KAZ": {
@@ -17671,7 +17665,7 @@
         "hottest_front": "KAZ-SRB",
         "hottest_score": 16
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "BHR": {
@@ -17695,7 +17689,7 @@
         "hottest_front": "BHR-COD",
         "hottest_score": 15
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "TZA": {
@@ -17719,7 +17713,7 @@
         "hottest_front": "RWA-TZA",
         "hottest_score": 15
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "HUN": {
@@ -17743,7 +17737,7 @@
         "hottest_front": "HUN-SRB",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "OMN": {
@@ -17767,7 +17761,7 @@
         "hottest_front": "OMN-SAU",
         "hottest_score": 15
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "LBY": {
@@ -17791,7 +17785,7 @@
         "hottest_front": "GRC-LBY",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "SUR": {
@@ -17815,7 +17809,7 @@
         "hottest_front": "GUY-SUR",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "ZAF": {
@@ -17839,7 +17833,7 @@
         "hottest_front": "COD-ZAF",
         "hottest_score": 13
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "KEN": {
@@ -17863,7 +17857,7 @@
         "hottest_front": "KEN-RWA",
         "hottest_score": 15
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "NGA": {
@@ -17887,7 +17881,7 @@
         "hottest_front": "CAN-NGA",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "MYS": {
@@ -17911,7 +17905,7 @@
         "hottest_front": "CHN-MYS",
         "hottest_score": 13
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "LVA": {
@@ -17935,7 +17929,7 @@
         "hottest_front": "LTU-LVA",
         "hottest_score": 13
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "EST": {
@@ -17959,7 +17953,7 @@
         "hottest_front": "EST-FIN",
         "hottest_score": 12
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "BRA": {
@@ -17983,7 +17977,7 @@
         "hottest_front": "BRA-YEM",
         "hottest_score": 15
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "TKM": {
@@ -18007,7 +18001,7 @@
         "hottest_front": "AZE-TKM",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "HKG": {
@@ -18031,7 +18025,7 @@
         "hottest_front": "COG-HKG",
         "hottest_score": 14
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "VNM": {
@@ -18055,7 +18049,7 @@
         "hottest_front": "ARM-VNM",
         "hottest_score": 13
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     },
     "CMR": {
@@ -18079,12 +18073,12 @@
         "hottest_front": "CMR-RWA",
         "hottest_score": 12
       },
-      "generated_at": "2026-10-12T23:04:18.834Z",
+      "generated_at": "2026-10-13T03:38:52.189Z",
       "mode": "deterministic-utility"
     }
   },
   "country_brain": {
-    "updated_at": "2026-10-12T23:04:18.834Z",
+    "updated_at": "2026-10-13T03:38:52.189Z",
     "countries": 73,
     "llm_enabled": false,
     "method": "utility-weighted deterministic strategy; optional LLM rationale"
